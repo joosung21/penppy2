@@ -1,0 +1,25 @@
+{
+  "name": "penppy2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://joosung21@github.com/joosung21/penppy2.git"
+  },
+  "author": "Jay Ahn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joosung21/penppy2/issues"
+  },
+  "homepage": "https://github.com/joosung21/penppy2#readme",
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "express": "^4.16.2",
+    "jquery": "^3.3.1",
+    "pug": "^2.0.0-rc.4"
+  }
+}

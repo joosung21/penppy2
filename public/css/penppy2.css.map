@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../sass/penppy2.sass"
+    ],
+    "names": [],
+    "file": "penppy2.css"
+}
