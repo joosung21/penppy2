@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="9px" height="9px" viewBox="0 0 9 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="상태아이콘_전화문의" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-6.000000, -6.000000)">
+        <path d="M7.81,9.895 C8.53,11.31 9.69,12.465 11.105,13.19 L12.205,12.09 C12.34,11.955 12.54,11.91 12.715,11.97 C13.275,12.155 13.88,12.255 14.5,12.255 C14.775,12.255 15,12.48 15,12.755 L15,14.5 C15,14.775 14.775,15 14.5,15 C9.805,15 6,11.195 6,6.5 C6,6.225 6.225,6 6.5,6 L8.25,6 C8.525,6 8.75,6.225 8.75,6.5 C8.75,7.125 8.85,7.725 9.035,8.285 C9.09,8.46 9.05,8.655 8.91,8.795 L7.81,9.895 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+    </g>
+</svg>

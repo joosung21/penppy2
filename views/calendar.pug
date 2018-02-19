@@ -1,0 +1,577 @@
+include ./includes/header.pug
+
+//-------- 객실달력 Page ---------//
+body
+  #main-nav.left
+    .brand 데이먼 해달별펜션
+    .onda-logo
+      img(src='/images/onda-logo-white.svg')
+  #sub-nav
+    | 실시간 예약창
+  .content-container
+    .artboard
+      .row
+        .col-lg.calendar-controler
+          .form-inline
+            .year-month 2018년 1월
+            .btn-group.mx-3
+              button.btn.btn-light(type='button')
+                i.fa.fa-angle-left.fa-lg
+              button.btn.btn-light(type='button')
+                i.fa.fa-angle-right.fa-lg
+            button.btn.btn-light.active.mr-2(type='button')
+              | month
+            button.btn.btn-light(type='button')
+              | week
+
+        .col-lg.status-model.d-flex.justify-content-end
+          .status-badge.available
+          | 예약가능
+          .status-badge.waiting
+          | 예약대기
+          .status-badge.complete
+          | 예약완료
+          .status-badge.callonly
+          | 전화문의
+          .status-badge.blocked
+          | 예약불가
+
+      .table-responsive.mt-3
+        table.table-bordered.table-calendar
+          thead
+            tr
+              th.text-red 일
+              th 월
+              th 화
+              th 수
+              th 목
+              th 금
+              th.text-blue 토
+          tbody
+            tr
+              td.dimed
+                .day-header
+                  .date.text-red 12/31
+                  .season 공휴일 전날
+              td.dimed
+                .day-header
+                  .date.text-red 1
+                  .season 비수기
+                .room
+                  .status-badge.available
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.available
+                  .name S(복층스파)
+                  .stock 2/2
+              td.dimed
+                .day-header
+                  .date 2
+                  .season 비수기
+                .room
+                  .status-badge.available
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.available
+                  .name S(복층스파)
+                  .stock 2/2
+              td.dimed
+                .day-header
+                  .date 3
+                  .season 비수기
+                .room
+                  .status-badge.available
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.available
+                  .name S(복층스파)
+                  .stock 2/2
+              td.dimed
+                .day-header
+                  .date 4
+                  .season 비수기
+                .room
+                  .status-badge.available
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.available
+                  .name S(복층스파)
+                  .stock 2/2
+              td.dimed
+                .day-header
+                  .date 5
+                  .season 비수기
+                .room
+                  .status-badge.available
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.available
+                  .name S(복층스파)
+                  .stock 2/2
+              td.dimed
+                .day-header
+                  .date.text-blue 6
+                  .season 비수기
+                .room
+                  .status-badge.available
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.available
+                  .name S(복층스파)
+                  .stock 2/2
+            tr
+              td.dimed
+                .day-header
+                  .date.text-red 7
+                  .season 비수기
+                .room
+                  .status-badge.available
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.available
+                  .name S(복층스파)
+                  .stock 2/2
+              td.dimed
+                .day-header
+                  .date 8
+                  .season 비수기
+                .room
+                  .status-badge.available
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.available
+                  .name S(복층스파)
+                  .stock 2/2
+              td.dimed
+                .day-header
+                  .date 9
+                  .season 비수기
+                .room
+                  .status-badge.available
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.available
+                  .name S(복층스파)
+                  .stock 2/2
+              td.dimed
+                .day-header
+                  .date 10
+                  .season 비수기
+                .room
+                  .status-badge.available
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.available
+                  .name S(복층스파)
+                  .stock 2/2
+              td.dimed
+                .day-header
+                  .date 11
+                  .season 비수기
+                .room
+                  .status-badge.available
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.available
+                  .name S(복층스파)
+                  .stock 2/2
+              td.dimed
+                .day-header
+                  .date 12
+                  .season 비수기
+                .room
+                  .status-badge.available
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.available
+                  .name S(복층스파)
+                  .stock 2/2
+              td.dimed
+                .day-header
+                  .date.text-blue 13
+                  .season 비수기
+                .room
+                  .status-badge.available
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.available
+                  .name S(복층스파)
+                  .stock 2/2
+            tr
+              td.dimed
+                .day-header
+                  .date.text-red 14
+                  .season 비수기
+                .room
+                  .status-badge.available
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.available
+                  .name S(복층스파)
+                  .stock 2/2
+              td.dimed
+                .day-header
+                  .date 15
+                  .season 비수기
+                .room
+                  .status-badge.available
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.available
+                  .name S(복층스파)
+                  .stock 2/2
+              td.dimed
+                .day-header
+                  .date 16
+                  .season 비수기
+                .room
+                  .status-badge.available
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.available
+                  .name S(복층스파)
+                  .stock 2/2
+              td
+                .day-header
+                  .date 17
+                  .season 비수기
+                .room(data-toggle='tooltip', data-placement='bottom', data-html='true', title='임승아<br>5555')
+                  .status-badge.available
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.available
+                  .name 룸타입 이름이 아주긴경우
+                  .stock 4/5
+                .room.dimed
+                  .status-badge.complete
+                  .name S(복층스파)
+                  .stock 2/2
+              td
+                .day-header
+                  .date 18
+                  .season 비수기
+                .room
+                  .status-badge.available
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.available
+                  .name S(복층스파)
+                  .stock 2/2
+              td
+                .day-header
+                  .date 19
+                  .season 비수기
+                .room
+                  .status-badge.available
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.available
+                  .name S(복층스파)
+                  .stock 2/2
+              td
+                .day-header
+                  .date.text-blue 20
+                  .season 비수기
+                .room
+                  .status-badge.callonly
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.callonly
+                  .name S(복층스파)
+                  .stock 2/2
+            tr
+              td
+                .day-header
+                  .date.text-red 21
+                  .season 비수기
+                .room
+                  .status-badge.available
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.available
+                  .name S(복층스파)
+                  .stock 2/2
+              td
+                .day-header
+                  .date 22
+                  .season 비수기
+                .room
+                  .status-badge.available
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.available
+                  .name S(복층스파)
+                  .stock 2/2
+              td
+                .day-header
+                  .date 23
+                  .season 비수기
+                .room
+                  .status-badge.available
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.available
+                  .name S(복층스파)
+                  .stock 2/2
+              td
+                .day-header
+                  .date 24
+                  .season 비수기
+                .room
+                  .status-badge.available
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.available
+                  .name S(복층스파)
+                  .stock 2/2
+              td
+                .day-header
+                  .date 25
+                  .season 비수기
+                .room
+                  .status-badge.available
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.available
+                  .name S(복층스파)
+                  .stock 2/2
+              td
+                .day-header
+                  .date 26
+                  .season 비수기
+                .room.dimed
+                  .status-badge.complete
+                  .name A
+                  .stock 1/6
+                .room.dimed
+                  .status-badge.complete
+                  .name B(테라스)
+                  .stock 4/5
+                .room.dimed
+                  .status-badge.blocked
+                  .name S(복층스파)
+                  .stock 2/2
+              td
+                .day-header
+                  .date.text-blue 27
+                  .season 비수기
+                .room
+                  .status-badge.waiting
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.waiting
+                  .name B(테라스)
+                  .stock 4/5
+                .room.dimed
+                  .status-badge.blocked
+                  .name S(복층스파)
+                  .stock 2/2
+            tr
+              td
+                .day-header
+                  .date.text-red 28
+                  .season 비수기
+                .room
+                  .status-badge.available
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.available
+                  .name S(복층스파)
+                  .stock 2/2
+              td
+                .day-header
+                  .date 29
+                  .season 비수기
+                .room
+                  .status-badge.available
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.available
+                  .name S(복층스파)
+                  .stock 2/2
+              td
+                .day-header
+                  .date 30
+                  .season 비수기
+                .room
+                  .status-badge.available
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.available
+                  .name S(복층스파)
+                  .stock 2/2
+              td
+                .day-header
+                  .date 31
+                  .season 비수기
+                .room
+                  .status-badge.available
+                  .name A
+                  .stock 1/6
+                .room
+                  .status-badge.available
+                  .name B(테라스)
+                  .stock 4/5
+                .room
+                  .status-badge.available
+                  .name S(복층스파)
+                  .stock 2/2
+              td.dimed
+                .day-header
+                  .date 2/1
+                  .season 비수기
+              td.dimed
+                .day-header
+                  .date 2
+                  .season 비수기
+              td.dimed
+                .day-header
+                  .date.text-blue 3
+                  .season 비수기
+
+
+
+
+
+

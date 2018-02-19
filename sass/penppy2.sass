@@ -1,16 +1,211 @@
-$gray: #999999
+//----------- Variables -----------//
+
+$onda: #67ABFF
+$navy-blue: #4275C4
+$blue: #4B95FF
+$red: #F4516C
+$light: #C4C4C4
+$white-gray: #f8f9fb
+// $dark: #384C67
+
+
+$available: #BDDDFF
+$waiting: $blue
+$complete: $red
+$callonly: #FFB822
+$blocked: $light
+
+$left-side-width: 190px
+$left-side-padding: 2rem
+
+//------------ Extends -------------//
+%box-shadow
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, .05)
 
 
 
+//------------ Bootstrap Overides ----------//
+.btn-light:not(:disabled):not(.disabled):active, .btn-light:not(:disabled):not(.disabled).active, .show>.btn-light.dropdown-toggle
+  color: white
+  background-color: $navy-blue
+  border-color: $navy-blue
+.table-bordered thead th, .table-bordered thead td
+    border-bottom-width: 1px
 
+
+
+//------------ Quick Css Utilities ----------//
+.text-red
+  color: $red
+.text-blue
+  color: $blue
+
+
+
+//----------- Initiate -----------//
 html
-  font-size: 15px
+  font-size: 14px
+body
+
+
+
+
+
+//----------- Layout -----------//
+#main-nav
+  display: flex
+  flex-direction: column
+  position: fixed
+  left: 0
+  top: 0
+  width: $left-side-width
+  height: 100vh
+  background-color: $onda
+  z-index: 3
+  color: white
+  .brand
+    padding: 1.5rem $left-side-padding
+    text-align: center
+    font-size: 1.5rem
+    word-break: keep-all
+  .onda-logo
+    padding: 1.5rem $left-side-padding
+    margin-top: auto
+
+#sub-nav
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 4.5rem
+  padding: 1.5rem 2rem 1.5rem calc(#{$left-side-width} + 2rem)
+  background-color: white
+  @extend %box-shadow
+  z-index: 2
+.content-container
+  background-color: #f2f3f8
+  min-height: 100vh
+  padding: 7rem 2.5rem 2.5rem calc(#{$left-side-width} + 2.5rem)
+  .artboard
+    background-color: white
+    padding: 2.5rem
+    @extend %box-shadow
+
+
+
+
+
+//----------- 객실달력 Page -----------//
+
+.calendar-controler
+  .year-month
+    font-size: 2rem
+    font-weight: 400
+
+.status-model
+  align-items: center
+  .status-badge
+    padding: .15rem
+    margin-left: 1.5rem
+    margin-right: .3rem
+    flex-shrink: 0
+    &.callonly
+      background-position: 3px 3px
+    &.blocked
+      background-position: 2px 2px
+
+.table-calendar
+  width: 100%
+  min-width: 900px
+  th, td
+    padding: .8rem
+    width: 14.29%
+    vertical-align: top
+  thead
+    th
+      text-align: center
+      font-weight: 300
+  tbody
+    td.dimed
+      background-color: $white-gray
+    .day-header
+      display: flex
+      align-items: center
+      margin-bottom: .5rem
+      .season
+        margin-left: auto
+        color: $light
+        font-size: .9rem
+    .room
+      display: flex
+      align-items: center
+      margin: 0 -.8rem
+      padding: .2rem .8rem
+      cursor: pointer
+      .name
+        padding: 0 5px
+        line-height: 1rem
+      .stock
+        margin-left: auto
+        font-size: .8rem
+      &.dimed
+        color: $light
+      &:hover
+        background-color: lighten($white-gray, 1%)
+
+.status-badge
+  position: relative
+  display: inline-block
+  flex-shrink: 0
+  background-color: $available
+  color: white
+  width: 12px
+  height: 12px
+  box-sizing: content-box
+  padding: 8px
+  &:before
+    position: absolute
+    left: calc(50% - 6px)
+    top: calc(50% - 6px)
+    font-size: 12px
+    line-height: 12px
+    font-weight: 400
+  &.available
+    background-color: $available
+    &:before
+      content: '가'
+  &.complete
+    background-color: $complete
+    &:before
+      content: '완'
+  &.waiting
+    background-color: $waiting
+    &:before
+      content: '대'
+  &.callonly
+    background: $callonly url('/images/callonly.svg') 8px 9px no-repeat
+    background-size: 11px
+  &.blocked
+    background: $blocked url('/images/blocked.svg') 8px 8px no-repeat
+    background-size: 13px
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 //------- Chart Test -------//
 h4.month
-  color: $gray
+  color: #999999
 
 .table-chart
   th, td
@@ -18,9 +213,8 @@ h4.month
   thead
     .day
       font-weight: 400
-      font-size: .9rem
-      line-height: .9rem
-      color: $gray
+      line-height: 1rem
+      color: #999999
     .date
       font-size: 3rem
       line-height: 3rem
@@ -53,14 +247,21 @@ h4.month
 
 
 
+//---------- Responsive: Smaller than 1200px ----------//
 
-
-
-
-
-//------- Responsive ----------//
-@media only screen and (max-width: 1200px)
+@media only screen and (max-width: 1199px)
   html
-    font-size: 10px
+    font-size: 12px
+  #main-nav.left, #sub-nav
+    display: none
+  .content-container
+    padding-top: 2.5rem
+    padding-left: 2.5rem
+  .status-badge
+    padding: .15rem
+    &.callonly
+      background-position: 3px 3px
+    &.blocked
+      background-position: 2px 2px
 
 
