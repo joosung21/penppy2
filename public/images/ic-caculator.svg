@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="20px" viewBox="0 0 17 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_정산목록</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="업체설정_객실등록" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-32.000000, -301.000000)">
+        <g id="GNB">
+            <g id="1depth">
+                <g id="icon_정산목록" transform="translate(30.000000, 301.000000)">
+                    <g id="Page-1" transform="translate(2.000000, 0.000000)">
+                        <path d="M4.752,6.353 L12.492,6.353 L12.492,4.543 L4.752,4.543 L4.752,6.353 Z M3.816,7.29 L13.429,7.29 L13.429,3.607 L3.816,3.607 L3.816,7.29 Z" id="Fill-2" fill="#FFFFFF"></path>
+                        <path d="M0.5,19.5 L16.5,19.5 L16.5,0.5 L0.5,0.5 L0.5,19.5 Z" id="Fill-1" stroke="#FFFFFF"></path>
+                        <polygon id="Fill-3" fill="#FFFFFF" points="4.392 15.784 5.416 15.784 5.416 14.825 4.392 14.825"></polygon>
+                        <polygon id="Fill-4" fill="#FFFFFF" points="4.392 12.712 5.416 12.712 5.416 11.752 4.392 11.752"></polygon>
+                        <polygon id="Fill-5" fill="#FFFFFF" points="4.392 9.64 5.416 9.64 5.416 8.68 4.392 8.68"></polygon>
+                        <polygon id="Fill-6" fill="#FFFFFF" points="8.093 15.784 9.117 15.784 9.117 14.825 8.093 14.825"></polygon>
+                        <polygon id="Fill-7" fill="#FFFFFF" points="8.093 12.712 9.117 12.712 9.117 11.752 8.093 11.752"></polygon>
+                        <polygon id="Fill-8" fill="#FFFFFF" points="8.093 9.64 9.117 9.64 9.117 8.68 8.093 8.68"></polygon>
+                        <polygon id="Fill-9" fill="#FFFFFF" points="11.695 15.784 12.719 15.784 12.719 14.825 11.695 14.825"></polygon>
+                        <polygon id="Fill-10" fill="#FFFFFF" points="11.695 12.712 12.719 12.712 12.719 11.752 11.695 11.752"></polygon>
+                        <polygon id="Fill-11" fill="#FFFFFF" points="11.695 9.64 12.719 9.64 12.719 8.68 11.695 8.68"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

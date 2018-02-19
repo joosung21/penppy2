@@ -68,8 +68,39 @@ body
     text-align: center
     font-size: 1.5rem
     word-break: keep-all
-  .onda-logo
+  nav
+    margin: 4rem 0
+    a
+      display: flex
+      align-items: center
+      padding: 1.5rem $left-side-padding
+      color: white
+      text-decoration: none
+      transition: all .3s
+      img
+        margin-right: .75rem
+      span
+      &:hover
+        background-color: darken($onda, 1%)
+      &.active
+        background-color: $navy-blue
+  .widget-timer
     padding: 1.5rem $left-side-padding
+    .day, .month
+      font-size: .8rem
+      opacity: .5
+    .date
+      margin-top: 1rem
+      text-align: center
+      font-size: 4rem
+      font-weight: 400
+      &:after
+        content: '일'
+        font-size: 1rem
+        font-weight: 300
+        margin-left: .25rem
+  .onda-logo
+    padding: 1rem $left-side-padding
     margin-top: auto
 
 #sub-nav
@@ -85,12 +116,17 @@ body
 .content-container
   background-color: #f2f3f8
   min-height: 100vh
-  padding: 7rem 2.5rem 2.5rem calc(#{$left-side-width} + 2.5rem)
+  padding: 7rem 2.5rem 0 calc(#{$left-side-width} + 2.5rem)
   .artboard
     background-color: white
     padding: 2.5rem
     @extend %box-shadow
 
+footer
+  padding: 1rem 2.5rem
+  margin: 4rem -2.5rem 0 -2.5rem
+  font-size: .9rem
+  border-top: 1px solid #e5e5e5
 
 
 

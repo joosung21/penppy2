@@ -2,12 +2,8 @@ include ./includes/header.pug
 
 //-------- 객실달력 Page ---------//
 body
-  #main-nav.left
-    .brand 데이먼 해달별펜션
-    .onda-logo
-      img(src='/images/onda-logo-white.svg')
-  #sub-nav
-    | 실시간 예약창
+  include ./includes/main-nav-left.pug
+  include ./includes/sub-nav.pug
   .content-container
     .artboard
       .row
@@ -570,6 +566,7 @@ body
                   .date.text-blue 3
                   .season 비수기
 
+    include ./includes/footer.pug
 
 
 
