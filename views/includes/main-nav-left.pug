@@ -1,27 +1,45 @@
 #main-nav.left
-  .brand 데이먼 해달별펜션
-  nav
-    a(href='#')
-      img(src='/images/ic-list.svg')
-      span 예약목록
-    a.active(href='#')
-      img(src='/images/ic-calendar.svg')
-      span 객실달력
-    a(href='#')
-      img(src='/images/ic-block.svg')
-      span 방막기
-    a(href='#')
-      img(src='/images/ic-caculator.svg')
-      span 정산목록
-    a(href='#')
-      img(src='/images/ic-gear.svg')
-      span 업체설정
-  .widget-timer
-    .d-flex.justify-content-between
-      .day Friday
-      .month Feb. 2018
-    .date 12
+  .first-depth
+    .brand 데이먼 해달별펜션
+    nav
+      a(href='#')
+        img(src='/images/ic-list.svg')
+        span 예약목록
+      a.calendar(href='/calendar')
+        img(src='/images/ic-calendar.svg')
+        span 객실달력
+      a(href='#')
+        img(src='/images/ic-block.svg')
+        span 방막기
+      a(href='#')
+        img(src='/images/ic-caculator.svg')
+        span 정산목록
+      a.setting(href='/setting/property')
+        img(src='/images/ic-gear.svg')
+        span 업체설정
+    .widget-timer
+      .d-flex.justify-content-between
+        .day Friday
+        .month Feb. 2018
+      .date 12
+  .second-depth
+    .nav-group
+      .group-title 판매 환경설정
+      a.property(href='/setting/property') 숙소정보
+      a.rooms(href='/setting/rooms') 객실정보
+      a.service(href='/setting/service') 부가서비스
+      a(href='#') 기본요금
+      a(href='#') 일자별 요금
+      a(href='#') 추가인원 요금
+      a(href='#') 할인/프로모션
+    hr
+    .nav-group
+      .group-title 업체 환경설정
+      a(href='#') 사업자 정보
+      a(href='#') 예약운영 정보
+      a(href='#') 문자발송 정보
+    hr
+    .nav-group
+      .group-title 온라인 판매대행
+      a(href='#') 판매사 연동신청
 
-
-  .onda-logo
-    img(src='/images/onda-logo-white.svg')

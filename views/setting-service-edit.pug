@@ -1,0 +1,48 @@
+include ./includes/header.pug
+
+//-------- 업체설정: 서비스 수정 Page ---------//
+body.two-depth(name='setting', page='service')
+  include ./includes/main-nav-left.pug
+  include ./includes/sub-nav.pug
+  .content-container
+    .artboard
+      .board-title 부가서비스 - 수정
+      .board-container
+        .form-group.row
+          label.col-sm-2.pt-1 부가서비스명
+          .col-sm-10
+            input.form-control(type='text', placeholder='숯불, 바베큐, 조식, 파티, 이벤트 등 부가서비스 명을 입력하세요.')
+        .form-group.row
+          label.col-sm-2.pt-1 객실소개
+          .col-sm-10
+            textarea.form-control(rows='5', placeholder='상세설명은 실시간 예약창의 부가서비스 상세설명에 보여집니다.')
+        .form-group.row
+          label.col-sm-2.pt-1 기본/최대수량
+          .col-sm-10
+            .form-row
+              .col-sm
+                .input-group
+                  .input-group-prepend
+                    .input-group-text 기본
+                  input.form-control(type='number', min='0')
+                  .input-group-append
+                    .input-group-text 개
+              .col-sm
+                .input-group
+                  .input-group-prepend
+                    .input-group-text 최대
+                  input.form-control(type='number', min='0')
+                  .input-group-append
+                    .input-group-text 개
+
+        .row.text-center.py-4.no-gutters
+          .col-8.offset-2
+            button.btn.btn-secondary.btn-lg.px-5.mr-2(type='button') 취소
+            button.btn.btn-primary.btn-lg.px-5(type='button') 저장
+          .col-2.text-right
+            button.btn.btn-white(type='button')
+              i.fa.fa-trash.fa-lg.mr-2
+              | 부가서비스 삭제
+
+
+    include ./includes/footer.pug

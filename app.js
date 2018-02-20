@@ -11,8 +11,14 @@ app.use('/node_modules/', express.static('node_modules'))
 app.get('/', function (req, res){res.render('calendar')})
 app.get('/calendar', function (req, res){res.render('calendar')})
 
+// 업체설정
+app.get('/setting/property', function (req, res){res.render('setting-property')})
+app.get('/setting/rooms', function (req, res){res.render('setting-rooms')})
+app.get('/setting/rooms/edit', function (req, res){res.render('setting-room-edit')})
+app.get('/setting/service', function (req, res){res.render('setting-service')})
+app.get('/setting/service/edit', function (req, res){res.render('setting-service-edit')})
+
 //-- Temporary Pages
-app.get('/chart', function (req, res){res.render('chart')})
 app.get('/test', function (req, res){res.render('test')})
 
 app.listen(3200, function () {

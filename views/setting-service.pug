@@ -1,0 +1,166 @@
+include ./includes/header.pug
+
+//-------- 업체설정: 부가서비스 Page ---------//
+body.two-depth(name='setting', page='service')
+  include ./includes/main-nav-left.pug
+  include ./includes/sub-nav.pug
+  .content-container
+    .artboard
+      .board-title 부가서비스
+
+      table.table.text-center.align-middle
+        thead.bg-light
+          tr
+            th 순서
+            th 부가서비스명
+            th 가격
+            th 기본/최대수량
+            th 결제방법
+            th 당일판매
+            th 상태
+        tbody
+          tr
+            td 01
+            td.text-left 바베큐그릴 2인
+            td 15,000원
+            td 1/10
+            td
+              label.switch
+                input(type="checkbox")
+                span.slider.round
+            td
+              label.switch
+                input(type="checkbox", checked)
+                span.slider.round
+            td
+              label.switch
+                input(type="checkbox")
+                span.slider.round
+          tr
+            td 02
+            td.text-left 바베큐그릴 4인
+            td 25,000원
+            td 1/10
+            td
+              label.switch
+                input(type="checkbox")
+                span.slider.round
+            td
+              label.switch
+                input(type="checkbox", checked)
+                span.slider.round
+            td
+              label.switch
+                input(type="checkbox")
+                span.slider.round
+          tr
+            td 03
+            td.text-left 프로포즈 풍선 이벤트
+            td 50,000원
+            td 2/2
+            td
+              label.switch
+                input(type="checkbox", checked)
+                span.slider.round
+            td
+              label.switch
+                input(type="checkbox")
+                span.slider.round
+            td
+              label.switch
+                input(type="checkbox", checked)
+                span.slider.round
+      .row.mt-4
+        .col
+          button.btn.btn-white(type='button')
+            i.fa.fa-arrows-v.mr-1
+            | 순서변경
+        .col.text-right
+          a.btn.btn-white(href='/setting/service/edit')
+            i.fa.fa-plus.fa-lg.mr-1
+            | 부가서비스 등록
+
+      //- 임시 간격: 지울 것
+      .py-5
+
+      //- 순서변경 시
+      table.table.text-center.align-middle
+        thead.bg-light
+          tr
+            th 순서
+            th 부가서비스명
+            th 가격
+            th 기본/최대수량
+            th 결제방법
+            th 당일판매
+            th 상태
+        tbody
+          tr.move
+            th.text-blue
+              i.fa.fa-arrows-v.fa-lg
+            td.text-left 바베큐그릴 2인
+            td 15,000원
+            td 1/10
+            td
+              label.switch
+                input(type="checkbox")
+                span.slider.round
+            td
+              label.switch
+                input(type="checkbox", checked)
+                span.slider.round
+            td
+              label.switch
+                input(type="checkbox")
+                span.slider.round
+          tr.move
+            th.text-blue
+              i.fa.fa-arrows-v.fa-lg
+            td.text-left 바베큐그릴 4인
+            td 25,000원
+            td 1/10
+            td
+              label.switch
+                input(type="checkbox")
+                span.slider.round
+            td
+              label.switch
+                input(type="checkbox", checked)
+                span.slider.round
+            td
+              label.switch
+                input(type="checkbox")
+                span.slider.round
+          tr.move
+            th.text-blue
+              i.fa.fa-arrows-v.fa-lg
+            td.text-left 프로포즈 풍선 이벤트
+            td 50,000원
+            td 2/2
+            td
+              label.switch
+                input(type="checkbox", checked)
+                span.slider.round
+            td
+              label.switch
+                input(type="checkbox")
+                span.slider.round
+            td
+              label.switch
+                input(type="checkbox", checked)
+                span.slider.round
+
+      .row.mt-4
+        .col.d-flex.align-items-center
+          button.btn.btn-secondary.mr-2(type='button')
+            | 취소
+          button.btn.btn-primary.mr-4(type='button')
+            | 저장
+          .text-blue 화살표를 위,아래로 드래그해서 순서를 변경할 수 있습니다.
+
+        .col.text-right
+          a.btn.btn-white(href='/setting/service/edit')
+            i.fa.fa-plus.fa-lg.mr-1
+            | 부가서비스 등록
+
+    include ./includes/footer.pug

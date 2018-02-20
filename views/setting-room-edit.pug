@@ -1,0 +1,227 @@
+include ./includes/header.pug
+
+//-------- 업체설정: 객실정보 수정 Page ---------//
+body.two-depth(name='setting', page='rooms')
+  include ./includes/main-nav-left.pug
+  include ./includes/sub-nav.pug
+  .content-container
+    .artboard
+      .board-title 객실정보 - 수정
+      .board-container
+        .form-group.row
+          label.col-sm-2.pt-1 객실명
+          .col-sm-10
+            input.form-control(type='text', value='테스트테스트')
+        .form-group.row
+          label.col-sm-2.pt-1 객실소개
+          .col-sm-10
+            textarea.form-control(rows='5')
+        .form-group.row
+          label.col-sm-2.pt-1 수용인원
+          .col-sm-10
+            .form-row
+              .col-sm
+                .input-group
+                  .input-group-prepend
+                    .input-group-text 기준
+                  input.form-control(type='number', min='0')
+                  .input-group-append
+                    .input-group-text 명
+              .col-sm
+                .input-group
+                  .input-group-prepend
+                    .input-group-text 최대
+                  input.form-control(type='number', min='0')
+                  .input-group-append
+                    .input-group-text 명
+        .form-group.row
+          label.col-sm-2.pt-1 객실크기
+          .col-sm-10
+            .form-row
+              .col-sm
+                .input-group
+                  input.form-control(type='number', min='0')
+                  .input-group-append
+                    .input-group-text m²
+              .col-sm
+                .input-group
+                  input.form-control(type='number', min='0')
+                  .input-group-append
+                    .input-group-text 평
+        .form-group.row
+          label.col-sm-2.pt-1 객실내부
+          .col-sm-10
+            .form-row
+              .col-sm-6.mb-2
+                .input-group
+                  .input-group-prepend
+                    .input-group-text 주방
+                  input.form-control(type='number', min='0')
+                  .input-group-append
+                    .input-group-text 개
+              .col-sm-6.mb-2
+                .input-group
+                  .input-group-prepend
+                    .input-group-text 거실
+                  input.form-control(type='number', min='0')
+                  .input-group-append
+                    .input-group-text 개
+              .col-sm-6.mb-2
+                .input-group
+                  .input-group-prepend
+                    .input-group-text 화장실
+                  input.form-control(type='number', min='0')
+                  .input-group-append
+                    .input-group-text 개
+              .col-sm-6.mb-2
+                .input-group
+                  .input-group-prepend
+                    .input-group-text 온돌방
+                  input.form-control(type='number', min='0')
+                  .input-group-append
+                    .input-group-text 개
+              .col-sm-6
+                .input-group
+                  .input-group-prepend
+                    .input-group-text 침대방
+                  input.form-control(type='number', min='0')
+                  .input-group-append
+                    .input-group-text 개
+        .form-group.row
+          label.col-sm-2.pt-1 사진
+          .col-sm-10
+            button.btn.btn-white(type='button')
+              i.fa.fa-camera.fa-lg.mr-2
+              | 이미지 추가
+            .text-onda.py-2 사진순서는 드래그로 변경 가능하며, 1번 사진이 대표 사진으로 설정됩니다.
+            .image-upload.form-row.mt-3
+              .unit.grabbable.col-3.first-image(draggable='true')
+                .image(style='background-image: url("/images/temp-image.jpg")')
+                  a.delete(href='#')
+                    i.fa.fa-trash.fa-lg
+                input.form-control.mt-2(type='text', placeholder='사진설명')
+              .unit.grabbable.col-3(draggable='true')
+                .image(style='background-image: url("/images/temp-image.jpg")')
+                  a.delete(href='#')
+                    i.fa.fa-trash.fa-lg
+                input.form-control.mt-2(type='text', placeholder='사진설명')
+              .unit.grabbable.col-3(draggable='true')
+                .image(style='background-image: url("/images/temp-image.jpg")')
+                  a.delete(href='#')
+                    i.fa.fa-trash.fa-lg
+                input.form-control.mt-2(type='text', placeholder='사진설명')
+              .unit.grabbable.col-3(draggable='true')
+                .image(style='background-image: url("/images/temp-image.jpg")')
+                  a.delete(href='#')
+                    i.fa.fa-trash.fa-lg
+                input.form-control.mt-2(type='text', placeholder='사진설명')
+              .unit.grabbable.col-3(draggable='true')
+                .image(style='background-image: url("/images/temp-image.jpg")')
+                  a.delete(href='#')
+                    i.fa.fa-trash.fa-lg
+                input.form-control.mt-2(type='text', placeholder='사진설명')
+              .unit.grabbable.col-3(draggable='true')
+                .image(style='background-image: url("/images/temp-image.jpg")')
+                  a.delete(href='#')
+                    i.fa.fa-trash.fa-lg
+                input.form-control.mt-2(type='text', placeholder='사진설명')
+              .unit.grabbable.col-3(draggable='true')
+                .image(style='background-image: url("/images/temp-image.jpg")')
+                  a.delete(href='#')
+                    i.fa.fa-trash.fa-lg
+                input.form-control.mt-2(type='text', placeholder='사진설명')
+              .unit.grabbable.col-3(draggable='true')
+                .image(style='background-image: url("/images/temp-image.jpg")')
+                  a.delete(href='#')
+                    i.fa.fa-trash.fa-lg
+                input.form-control.mt-2(type='text', placeholder='사진설명')
+        .form-group.row
+          label.col-sm-2.pt-1 객실형태
+          .col-sm-10
+            .bg-light.px-4.py-3.border.rounded
+              .check-group
+                .custom-control.custom-checkbox
+                  input#check1.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check1') 도미토리형
+                .custom-control.custom-checkbox
+                  input#check2.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check2') 독채형
+                .custom-control.custom-checkbox
+                  input#check3.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check3') 복층형
+                .custom-control.custom-checkbox
+                  input#check4.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check4') 원룸형
+                .custom-control.custom-checkbox
+                  input#check5.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check6') 분리형
+
+        .form-group.row
+          label.col-sm-2.pt-1 객실 내 시설
+          .col-sm-10
+            .bg-light.px-4.py-3.border.rounded
+              .check-group
+                .custom-control.custom-checkbox
+                  input#check7.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check7') 냉장고
+                .custom-control.custom-checkbox
+                  input#check8.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check8') 다리미
+                .custom-control.custom-checkbox
+                  input#check9.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check9') 드라이기
+                .custom-control.custom-checkbox
+                  input#check10.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check10') 미니바
+                .custom-control.custom-checkbox
+                  input#check11.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check11') 쇼파
+                .custom-control.custom-checkbox
+                  input#check12.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check12') 스파/월풀
+                .custom-control.custom-checkbox
+                  input#check13.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check13') 에어컨
+                .custom-control.custom-checkbox
+                  input#check14.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check14') 욕실용품
+                .custom-control.custom-checkbox
+                  input#check15.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check15') 욕조
+                .custom-control.custom-checkbox
+                  input#check16.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check16') 전기밥솥
+                .custom-control.custom-checkbox
+                  input#check17.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check17') 커피포트
+                .custom-control.custom-checkbox
+                  input#check18.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check18') TV
+                .custom-control.custom-checkbox
+                  input#check19.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check19') 흡연가능
+                .custom-control.custom-checkbox
+                  input#check20.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check20') 파티룸
+
+        .form-group.row
+          label.col-sm-2.pt-1 판매상태
+          .col-sm-10
+            .custom-control.custom-radio.custom-control-inline.mr-4
+              input#radio1.custom-control-input(type='radio', name='statusRadio')
+              label.custom-control-label(for='radio1') 판매
+            .custom-control.custom-radio.custom-control-inline
+              input#radio2.custom-control-input(type='radio', name='statusRadio', checked)
+              label.custom-control-label(for='radio2') 미판매
+
+        .row.text-center.py-4.no-gutters
+          .col-8.offset-2
+            button.btn.btn-secondary.btn-lg.px-5.mr-2(type='button') 취소
+            button.btn.btn-primary.btn-lg.px-5(type='button') 저장
+          .col-2.text-right
+            button.btn.btn-white(type='button')
+              i.fa.fa-trash.fa-lg.mr-2
+              | 객실 삭제
+
+
+    include ./includes/footer.pug

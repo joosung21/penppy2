@@ -6,8 +6,7 @@ $blue: #4B95FF
 $red: #F4516C
 $light: #C4C4C4
 $white-gray: #f8f9fb
-// $dark: #384C67
-
+$border-color: #E5E5E5
 
 $available: #BDDDFF
 $waiting: $blue
@@ -15,13 +14,19 @@ $complete: $red
 $callonly: #FFB822
 $blocked: $light
 
-$left-side-width: 190px
+$left-side-width: 14rem
 $left-side-padding: 2rem
 
 //------------ Extends -------------//
 %box-shadow
   box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, .05)
 
+%cover-image
+  background: url('/images/no-image.png') no-repeat center center
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
 
 
 //------------ Bootstrap Overides ----------//
@@ -31,15 +36,39 @@ $left-side-padding: 2rem
   border-color: $navy-blue
 .table-bordered thead th, .table-bordered thead td
     border-bottom-width: 1px
+.input-group-text
+  color: #929292
+  background-color: $white-gray
+.form-group
+  margin-bottom: 1.5rem
+.border
+  border: 1px solid $border-color !important
+.btn
+  &.btn-primary, &.btn-secondary
+    color: white
+
+.table
+  thead th
+    border: 0
+  tbody
+    td, th
+      border-top: 0
+      border-bottom: 1px solid $border-color
+  &.align-middle
+    td, th
+      vertical-align: middle
+  tr.move
+    td
+      opacity: .4
 
 
-
-//------------ Quick Css Utilities ----------//
+//------------ CSS Style Utilities ----------//
 .text-red
   color: $red
 .text-blue
   color: $blue
-
+.text-onda
+  color: $onda
 
 
 //----------- Initiate -----------//
@@ -47,14 +76,130 @@ html
   font-size: 14px
 body
 
+.form-group label
+  font-weight: 400
 
+.btn-white
+  border-color: $border-color
+  color: #4F4F4F
+  &:hover
+    color: #4F4F4F
+    background-color: $white-gray
+  i.fa
+    color: #929292
 
+.grabbable
+  cursor: move
+  cursor: -webkit-grab
+
+.custom-control
+  .custom-control-label
+    font-weight: 300
+    padding-left: 1px
+  &.custom-checkbox
+    margin-left: .2em
+    .custom-control-label
+      &:after
+        width: 20px
+        height: 20px
+        background-color: white
+        border: 1px solid #bbb
+        border-radius: 3px
+        left: -.2em
+        top: 1px
+    .custom-control-input:checked
+      + .custom-control-label
+        &:after
+          background: white url('/images/checkbox_check.svg') center center no-repeat
+  &.custom-radio
+    .custom-control-label
+      &:after
+        width: 20px
+        height: 20px
+        background-color: white
+        border: 1px solid #bbb
+        border-radius: 20px
+        left: -.2em
+        top: 0
+    .custom-control-input:checked
+      + .custom-control-label
+        &:after
+          background: $light url('/images/Oval.svg') center center no-repeat
+
+.check-group
+  .custom-checkbox
+    display: inline-block
+    width: 132px
+    margin: .4rem 0
+    font-size: .9rem
+    .custom-control-label
+      padding-top: 1px
+      &:after
+        width: 20px
+        height: 20px
+
+/* The switch - the box around the slider
+.switch
+  position: relative
+  display: inline-block
+  width: 70px
+  height: 30px
+  margin: 6px 0 0 0
+  input
+    display: none
+  &.disabled
+    .slider
+      background-color: #eaeaea
+.slider
+  position: absolute
+  cursor: pointer
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: $onda
+  -webkit-transition: .3s
+  transition: .3s
+  &:after
+    content: '판매'
+    position: absolute
+    z-index: 10
+    right: 35px
+    top: 6px
+    color: #fff
+    font-size: 12px
+  &:before
+    position: absolute
+    content: ' '
+    height: 26px
+    width: 26px
+    left: 42px
+    bottom: 2px
+    background-color: #fff
+    -webkit-transition: .3s
+    transition: .3s
+input
+  &:checked + .slider
+    background-color: #ccc
+    &:after
+      content: '마감'
+      right: 11px
+      color: white
+  &:focus + .slider
+    box-shadow: 0 0 1px #ccc
+  &:checked + .slider:before
+    -webkit-transform: translateX(-32px)
+    -ms-transform: translateX(-32px)
+    transform: translateX(-40px)
+.slider.round
+  border-radius: 34px
+  &:before
+    border-radius: 50%
 
 
 //----------- Layout -----------//
 #main-nav
   display: flex
-  flex-direction: column
   position: fixed
   left: 0
   top: 0
@@ -63,6 +208,9 @@ body
   background-color: $onda
   z-index: 3
   color: white
+  .first-dapth
+    display: flex
+    flex-direction: column
   .brand
     padding: 1.5rem $left-side-padding
     text-align: center
@@ -99,10 +247,36 @@ body
         font-size: 1rem
         font-weight: 300
         margin-left: .25rem
-  .onda-logo
-    padding: 1rem $left-side-padding
-    margin-top: auto
 
+// Two Depth Nav
+#main-nav
+  .first-depth
+    width: $left-side-width
+  .second-depth
+    display: none
+    width: $left-side-width
+    background-color: $navy-blue
+#main-nav.two-depth
+  width: calc(#{$left-side-width} * 2)
+  .second-depth
+    display: block
+  .nav-group
+    padding: 1.5rem $left-side-padding
+    .group-title
+      font-size: .8rem
+      opacity: .7
+      margin-bottom: 1rem
+    a
+      display: block
+      color: white
+      text-decoration: none
+      padding: .5rem 1rem
+      &.active
+        color: #A3F2BF
+  hr
+    border-color: $onda
+
+// Sub Nav
 #sub-nav
   position: fixed
   top: 0
@@ -113,23 +287,45 @@ body
   background-color: white
   @extend %box-shadow
   z-index: 2
+
+// Content Container
 .content-container
+  display: flex
+  flex-direction: column
   background-color: #f2f3f8
   min-height: 100vh
   padding: 7rem 2.5rem 0 calc(#{$left-side-width} + 2.5rem)
-  .artboard
-    background-color: white
-    padding: 2.5rem
-    @extend %box-shadow
+
+// Artboard
+.artboard
+  background-color: white
+  padding: 2.5rem 2.5rem 5rem 2.5rem
+  @extend %box-shadow
+  margin-bottom: 2.5rem
+  .board-title
+    font-weight: 600
+    font-size: 1.4rem
+    border-bottom: 1px solid $border-color
+    padding: 0 2rem 1.5rem 2rem
+    margin: -1rem -2.5rem 2.5rem -2.5rem
+  .board-container
+    max-width: 900px
+
+
+// Two Depth Layout
+body.two-depth
+  #sub-nav
+    padding: 1.5rem 2rem 1.5rem calc(#{$left-side-width} * 2 + 2rem)
+  .content-container
+    padding: 7rem 2.5rem 0 calc(#{$left-side-width} * 2 + 2.5rem)
 
 footer
+  display: flex
+  align-items: center
   padding: 1rem 2.5rem
-  margin: 4rem -2.5rem 0 -2.5rem
+  margin: auto -2.5rem 0 -2.5rem
   font-size: .9rem
-  border-top: 1px solid #e5e5e5
-
-
-
+  border-top: 1px solid $border-color
 
 //----------- 객실달력 Page -----------//
 
@@ -226,61 +422,37 @@ footer
     background-size: 13px
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-//------- Chart Test -------//
-h4.month
-  color: #999999
-
-.table-chart
-  th, td
-    width: 12.5%
-  thead
-    .day
-      font-weight: 400
-      line-height: 1rem
-      color: #999999
-    .date
-      font-size: 3rem
-      line-height: 3rem
-      font-weight: 400
-  tbody
-    td
-      button
-        margin: .25rem
-    .roomtype
-      font-weight: 400
-
-.table-chart-month
-  tbody
-    td
-      width: 14.29%
-      border-bottom: 2px solid #666
-      .day, .date
-        font-weight: 400
-      .date
-        margin-bottom: 2rem
-        font-size: 1.4rem
-      .roomtype
-        border-top: 1px solid #eee
-        padding: .5rem 0
-        button
-          margin: .25rem
-
-
-
-
+//---------- Setting Pages --------------//
+.image-upload
+  .unit
+    padding-bottom: .75rem
+    .image
+      position: relative
+      height: 130px
+      border: 1px solid $border-color
+      @extend %cover-image
+    &.first-image
+      .image:before
+        position: absolute
+        left: 0
+        top: 0
+        content: '대표사진'
+        padding: .25rem .5rem
+        background-color: #384C67
+        color: white
+        font-size: .8rem
+    .delete
+      position: absolute
+      right: 0
+      bottom: 0
+      background-color: #384C67
+      color: white
+      text-decoration: none
+      padding: .25rem
+      opacity: .7
+      transition: all .3s
+      &:hover
+        opacity: 1
 
 
 //---------- Responsive: Smaller than 1200px ----------//
@@ -291,8 +463,7 @@ h4.month
   #main-nav.left, #sub-nav
     display: none
   .content-container
-    padding-top: 2.5rem
-    padding-left: 2.5rem
+    padding: 2.5rem !important
   .status-badge
     padding: .15rem
     &.callonly

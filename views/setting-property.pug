@@ -1,0 +1,259 @@
+include ./includes/header.pug
+
+//-------- 업체설정: 숙소정보 Page ---------//
+body.two-depth(name='setting', page='property')
+  include ./includes/main-nav-left.pug
+  include ./includes/sub-nav.pug
+  .content-container
+    .artboard
+      .board-title 숙소정보
+      .board-container
+        .form-group.row
+          label.col-sm-2.pt-1 숙소명
+          .col-sm-10
+            input.form-control(type='text', value='테스트테스트')
+        .form-group.row
+          label.col-sm-2.pt-1 주소
+          .col-sm-10
+            button.btn.btn-white.mb-2(type='button') 주소찾기
+            .input-group.mb-2
+              .input-group-prepend
+                .input-group-text 지번
+              input.form-control(type='number', min='0')
+            .input-group
+              .input-group-prepend
+                .input-group-text 도로명
+              input.form-control(type='number', min='0')
+        .form-group.row
+          label.col-sm-2.pt-1 체크인/체크아웃
+          .col-sm-10
+            .form-row
+              .col-sm
+                .input-group
+                  .input-group-prepend
+                    .input-group-text 체크인
+                  input.form-control(type='number', min='0')
+              .col-sm
+                .input-group
+                  .input-group-prepend
+                    .input-group-text 최크아웃
+                  input.form-control(type='number', min='0')
+        .form-group.row
+          label.col-sm-2.pt-1 소개
+          .col-sm-10
+            textarea.form-control(rows='5')
+        .form-group.row
+          label.col-sm-2.pt-1 예약안내
+          .col-sm-10
+            textarea.form-control(rows='5')
+        .form-group.row
+          label.col-sm-2.pt-1 추가인원 요금안내
+          .col-sm-10
+            textarea.form-control(rows='5')
+        .form-group.row
+          label.col-sm-2.pt-1 사진
+          .col-sm-10
+            button.btn.btn-white(type='button')
+              i.fa.fa-camera.fa-lg.mr-2
+              | 이미지 추가
+            .text-onda.py-2 사진순서는 드래그로 변경 가능하며, 1번 사진이 대표 사진으로 설정됩니다.
+            .image-upload.form-row.mt-3
+              .unit.grabbable.col-3.first-image(draggable='true')
+                .image(style='background-image: url("/images/temp-image.jpg")')
+                  a.delete(href='#')
+                    i.fa.fa-trash.fa-lg
+                input.form-control.mt-2(type='text', placeholder='사진설명')
+              .unit.grabbable.col-3(draggable='true')
+                .image(style='background-image: url("/images/temp-image.jpg")')
+                  a.delete(href='#')
+                    i.fa.fa-trash.fa-lg
+                input.form-control.mt-2(type='text', placeholder='사진설명')
+              .unit.grabbable.col-3(draggable='true')
+                .image(style='background-image: url("/images/temp-image.jpg")')
+                  a.delete(href='#')
+                    i.fa.fa-trash.fa-lg
+                input.form-control.mt-2(type='text', placeholder='사진설명')
+              .unit.grabbable.col-3(draggable='true')
+                .image(style='background-image: url("/images/temp-image.jpg")')
+                  a.delete(href='#')
+                    i.fa.fa-trash.fa-lg
+                input.form-control.mt-2(type='text', placeholder='사진설명')
+              .unit.grabbable.col-3(draggable='true')
+                .image(style='background-image: url("/images/temp-image.jpg")')
+                  a.delete(href='#')
+                    i.fa.fa-trash.fa-lg
+                input.form-control.mt-2(type='text', placeholder='사진설명')
+              .unit.grabbable.col-3(draggable='true')
+                .image(style='background-image: url("/images/temp-image.jpg")')
+                  a.delete(href='#')
+                    i.fa.fa-trash.fa-lg
+                input.form-control.mt-2(type='text', placeholder='사진설명')
+              .unit.grabbable.col-3(draggable='true')
+                .image(style='background-image: url("/images/temp-image.jpg")')
+                  a.delete(href='#')
+                    i.fa.fa-trash.fa-lg
+                input.form-control.mt-2(type='text', placeholder='사진설명')
+              .unit.grabbable.col-3(draggable='true')
+                .image(style='background-image: url("/images/temp-image.jpg")')
+                  a.delete(href='#')
+                    i.fa.fa-trash.fa-lg
+                input.form-control.mt-2(type='text', placeholder='사진설명')
+        .form-group.row
+          label.col-sm-2.pt-1 숙소특성
+          .col-sm-10
+            .bg-light.px-4.py-3.border.rounded
+              .check-group
+                .custom-control.custom-checkbox
+                  input#check1.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check1') 가족
+                .custom-control.custom-checkbox
+                  input#check2.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check2') 고급/럭셔리
+                .custom-control.custom-checkbox
+                  input#check3.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check3') 단체/MT
+                .custom-control.custom-checkbox
+                  input#check4.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check4') 커플
+                .custom-control.custom-checkbox
+                  input#check5.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check6') 풀빌라
+                .custom-control.custom-checkbox
+                  input#check7.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check7') 한옥
+                .custom-control.custom-checkbox
+                  input#check8.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check8') 애견펜션
+                .custom-control.custom-checkbox
+                  input#check9.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check9') 키즈펜션
+        .form-group.row
+          label.col-sm-2.pt-1 공용시설
+          .col-sm-10
+            .bg-light.px-4.py-3.border.rounded
+              .check-group
+                .custom-control.custom-checkbox
+                  input#check10.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check10') 노래방
+                .custom-control.custom-checkbox
+                  input#check11.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check11') 매점/편의점
+                .custom-control.custom-checkbox
+                  input#check12.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check12') 바베큐장
+                .custom-control.custom-checkbox
+                  input#check13.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check13') 세미나실
+                .custom-control.custom-checkbox
+                  input#check14.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check14') 수영장
+                .custom-control.custom-checkbox
+                  input#check15.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check15') 카페
+                .custom-control.custom-checkbox
+                  input#check16.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check16') 피트니스
+                .custom-control.custom-checkbox
+                  input#check17.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check17') 공용스파
+                .custom-control.custom-checkbox
+                  input#check18.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check18') 골프장
+                .custom-control.custom-checkbox
+                  input#check19.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check19') 레스토랑
+                .custom-control.custom-checkbox
+                  input#check20.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check20') 키즈플레이
+        .form-group.row
+          label.col-sm-2.pt-1 서비스
+          .col-sm-10
+            .bg-light.px-4.py-3.border.rounded
+              .check-group
+                .custom-control.custom-checkbox
+                  input#check21.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check21') WIFI
+                .custom-control.custom-checkbox
+                  input#check22.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check22') 반려동물
+                .custom-control.custom-checkbox
+                  input#check23.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check23') 발렛파킹
+                .custom-control.custom-checkbox
+                  input#check24.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check24') 셔틀버스
+                .custom-control.custom-checkbox
+                  input#check25.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check25') 조식
+                .custom-control.custom-checkbox
+                  input#check26.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check26') 짐보관
+                .custom-control.custom-checkbox
+                  input#check27.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check27') 취사가능
+                .custom-control.custom-checkbox
+                  input#check28.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check28') 프린터사용
+                .custom-control.custom-checkbox
+                  input#check29.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check29') 픽업
+                .custom-control.custom-checkbox
+                  input#check30.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check30') 금연
+                .custom-control.custom-checkbox
+                  input#check31.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check31') 객실내흡연
+                .custom-control.custom-checkbox
+                  input#check32.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check32') 개인사물함
+                .custom-control.custom-checkbox
+                  input#check33.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check33') 무료주차
+                .custom-control.custom-checkbox
+                  input#check34.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check34') 장애인편의
+                .custom-control.custom-checkbox
+                  input#check35.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check35') 공항셔틀
+                .custom-control.custom-checkbox
+                  input#check36.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check36') 바/라운지
+                .custom-control.custom-checkbox
+                  input#check37.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check37') 마사지
+        .form-group.row
+          label.col-sm-2.pt-1 주변관광지
+          .col-sm-10
+            .bg-light.px-4.py-3.border.rounded
+              .check-group
+                .custom-control.custom-checkbox
+                  input#check38.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check38') 골프장 주변
+                .custom-control.custom-checkbox
+                  input#check39.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check39') 수목원 주변
+                .custom-control.custom-checkbox
+                  input#check40.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check40') 스키장 주변
+                .custom-control.custom-checkbox
+                  input#check41.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check41') 해수욕장
+                .custom-control.custom-checkbox
+                  input#check42.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='check42') 강/호수주변
+        .form-group.row
+          label.col-sm-2.pt-1 판매상태
+          .col-sm-10
+            .custom-control.custom-radio.custom-control-inline.mr-4
+              input#radio1.custom-control-input(type='radio', name='statusRadio')
+              label.custom-control-label(for='radio1') 판매
+            .custom-control.custom-radio.custom-control-inline
+              input#radio2.custom-control-input(type='radio', name='statusRadio', checked)
+              label.custom-control-label(for='radio2') 미판매
+
+        .text-center.py-4
+          button.btn.btn-primary.btn-lg.px-5(type='button') 저장
+
+
+
+    include ./includes/footer.pug

@@ -1,0 +1,71 @@
+include ./includes/header.pug
+
+//-------- 업체설정: 객실정보 Page ---------//
+body.two-depth(name='setting', page='rooms')
+  include ./includes/main-nav-left.pug
+  include ./includes/sub-nav.pug
+  .content-container
+    .artboard
+      .board-title 객실정보
+
+      table.table.text-center.align-middle
+        thead.bg-light
+          tr
+            th 순서
+            th 객실명
+            th 객실수
+            th 기준/최대인원
+            th 상태
+        tbody
+          tr
+            td 01
+            td.text-left 황토동-은하수201호
+            td 1
+            td 3/5
+            td
+              label.switch
+                input(type="checkbox")
+                span.slider.round
+          tr
+            td 02
+            td.text-left 황토동-은하수202호
+            td 1
+            td 3/5
+            td
+              label.switch
+                input(type="checkbox")
+                span.slider.round
+          tr
+            td 03
+            td.text-left 황토동-은하수203호
+            td 1
+            td 3/5
+            td
+              label.switch
+                input(type="checkbox")
+                span.slider.round
+          tr
+            td 04
+            td.text-left 하늘채(스파)
+            td 1
+            td 2/2
+            td
+              label.switch
+                input(type="checkbox", checked)
+                span.slider.round
+          tr
+            td 05
+            td.text-left 복층(테라스)
+            td 1
+            td 6/8
+            td
+              label.switch
+                input(type="checkbox")
+                span.slider.round
+
+      .text-right.mt-4
+        a.btn.btn-white(href='/setting/rooms/edit')
+          i.fa.fa-plus.fa-lg.mr-1
+          | 객실 등록
+
+    include ./includes/footer.pug
