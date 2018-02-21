@@ -93,6 +93,7 @@ body
   cursor: -webkit-grab
 
 .custom-control
+  margin-left: .25rem
   .custom-control-label
     font-weight: 300
     padding-left: 1px
@@ -124,7 +125,8 @@ body
     .custom-control-input:checked
       + .custom-control-label
         &:after
-          background: $light url('/images/Oval.svg') center center no-repeat
+          background: $onda url('/images/Oval.svg') center center no-repeat
+          border-color: $onda
 
 .check-group
   .custom-checkbox
@@ -135,8 +137,8 @@ body
     .custom-control-label
       padding-top: 1px
       &:after
-        width: 20px
-        height: 20px
+        width: 19px
+        height: 19px
 
 /* The switch - the box around the slider
 .switch
@@ -299,15 +301,15 @@ input
 // Artboard
 .artboard
   background-color: white
-  padding: 2.5rem 2.5rem 5rem 2.5rem
+  padding: 3rem 3rem 6rem 3rem
   @extend %box-shadow
-  margin-bottom: 2.5rem
+  margin-bottom: 3rem
   .board-title
     font-weight: 600
     font-size: 1.4rem
     border-bottom: 1px solid $border-color
     padding: 0 2rem 1.5rem 2rem
-    margin: -1rem -2.5rem 2.5rem -2.5rem
+    margin: -1rem -3rem 3rem -3rem
   .board-container
     max-width: 900px
 
@@ -345,6 +347,18 @@ footer
       background-position: 3px 3px
     &.blocked
       background-position: 2px 2px
+  .color-amended, .color-eve
+    display: inline-block
+    width: 1.2rem
+    height: 1.2rem
+    margin-right: .25rem
+    margin-left: 1.5rem
+    position: relative
+    top: 1px
+  .color-amended
+    background-color: #EAEAFF
+  .color-eve
+    background-color: #FCE6E6
 
 .table-calendar
   width: 100%
@@ -353,12 +367,19 @@ footer
     padding: .8rem
     width: 14.29%
     vertical-align: top
+  .dimed
+      opacity: .4
+  .today
+    box-shadow: inset 0 0 0 1px #222222
+    .room
+      margin: 0 -.7rem
+      padding: .2rem .7rem
   thead
     th
       text-align: center
-      font-weight: 300
+      font-weight: 400
   tbody
-    td.dimed
+    td.other-month
       background-color: $white-gray
     .day-header
       display: flex
@@ -384,6 +405,46 @@ footer
         color: $light
       &:hover
         background-color: lighten($white-gray, 1%)
+
+.table-calendar-week
+  th, td
+    width: 12.5%
+    vertical-align: middle
+  thead
+    th
+      text-align: left
+      .day
+        line-height: 1rem
+      .header
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        .date
+          font-size: 2.2rem
+          line-height: 2.2rem
+          padding-top: .3rem
+        .season
+          color: $light
+        font-size: .9rem
+  tbody
+    .status-badge
+      margin: .2rem
+      cursor: pointer
+      transition: all .3s
+      &:hover
+        box-shadow: inset 0 0 0 1rem rgba(0, 0, 0, .05)
+    th
+      font-weight: 300
+    td
+      line-height: 1rem
+
+.table-calendar-daily
+  .custom-control
+    margin-top: .5rem
+  td.amended
+    background-color: #EAEAFF
+  td.eve
+    background-color: #FCE6E6
 
 .status-badge
   position: relative

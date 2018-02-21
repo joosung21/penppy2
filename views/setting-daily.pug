@@ -1,0 +1,542 @@
+
+include ./includes/header.pug
+
+//-------- 업체설정: 일자별 요금 Page ---------//
+body.two-depth(name='setting', page='daily')
+  include ./includes/main-nav-left.pug
+  include ./includes/sub-nav.pug
+  .content-container
+    .artboard
+      .board-title 일자별 요금 설정
+
+      .row
+        .col-lg.calendar-controler
+          .form-inline
+            .year-month 2018년 1월
+            .btn-group.mx-3
+              button.btn.btn-light(type='button')
+                i.fa.fa-angle-left.fa-lg
+              button.btn.btn-light(type='button')
+                i.fa.fa-angle-right.fa-lg
+
+        .col-lg.status-model.d-flex.justify-content-end
+          .color-amended
+          | 강제 변경한 날
+          .color-eve
+          | 공휴일 전날
+
+      .table-responsive.mt-3
+        table.table-bordered.table-calendar.table-calendar-daily
+          thead
+            tr
+              th.text-red 일
+              th 월
+              th 화
+              th 수
+              th 목
+              th 금
+              th.text-blue 토
+          tbody
+            tr
+              td.other-month
+                .day-header
+                  .date.text-red 12/31
+                  .season 공휴일 전날
+                .text-center.py-5 비수기-주중
+              td
+                .day-header
+                  .date.text-red 1
+                  .season 비수기
+                .text-center.py-5 비수기-주중
+              td
+                .day-header
+                  .date 2
+                  .season 비수기
+                .text-center.py-5 비수기-주중
+              td
+                .day-header
+                  .date 3
+                  .season 비수기
+                .text-center.py-5 비수기-주중
+              td
+                .day-header
+                  .date 4
+                  .season 비수기
+                .text-center.py-5 비수기-주중
+              td
+                .day-header
+                  .date 5
+                  .season 비수기
+                .text-center.py-5 비수기-주중
+              td
+                .day-header
+                  .date.text-blue 6
+                  .season 비수기
+                .text-center.py-5 비수기-주중
+            tr
+              td
+                .day-header
+                  .date.text-red 7
+                  .season 비수기
+                .text-center.py-5 비수기-주중
+              td
+                .day-header
+                  .date 8
+                  .season 비수기
+                .text-center.py-5 비수기-주중
+              td
+                .day-header
+                  .date 9
+                  .season 비수기
+                .text-center.py-5 비수기-주중
+              td
+                .day-header
+                  .date 10
+                  .season 비수기
+                .text-center.py-5 비수기-주중
+              td
+                .day-header
+                  .date 11
+                  .season 비수기
+                .text-center.py-5 비수기-주중
+              td
+                .day-header
+                  .date 12
+                  .season 비수기
+                .text-center.py-5 추석황금연휴-금요일
+              td
+                .day-header
+                  .date.text-blue 13
+                  .season 비수기
+                .text-center.py-5 비수기-주중
+            tr
+              td
+                .day-header
+                  .date.text-red 14
+                  .season 비수기
+                .text-center.py-5 비수기-주중
+              td
+                .day-header
+                  .date 15
+                  .season 비수기
+                .text-center.py-5 비수기-주중
+              td
+                .day-header
+                  .date 16
+                  .season 비수기
+                .text-center.py-5 비수기-주중
+              td.today
+                .day-header
+                  .date 17
+                  .season 비수기
+                .custom-control.custom-radio
+                  input#radio17-1.custom-control-input(type='radio', name='seasonRadio17', checked)
+                  label.custom-control-label(for='radio17-1') 비수기
+                .custom-control.custom-radio
+                  input#radio17-2.custom-control-input(type='radio', name='seasonRadio17')
+                  label.custom-control-label(for='radio17-2') 성수기
+                .custom-control.custom-radio
+                  input#radio17-3.custom-control-input(type='radio', name='seasonRadio17')
+                  label.custom-control-label(for='radio17-3') 준성수기
+                .custom-control.custom-radio
+                  input#radio17-4.custom-control-input(type='radio', name='seasonRadio17')
+                  label.custom-control-label(for='radio17-4') 추석황금연휴
+                .d-flex.justify-content-between
+                  .custom-control.custom-radio
+                    input#radio17-5.custom-control-input(type='radio', name='dayRadio17', checked)
+                    label.custom-control-label(for='radio17-5') 주중
+                  .custom-control.custom-radio
+                    input#radio17-6.custom-control-input(type='radio', name='dayRadio17')
+                    label.custom-control-label(for='radio17-6') 금
+                  .custom-control.custom-radio
+                    input#radio17-7.custom-control-input(type='radio', name='dayRadio17')
+                    label.custom-control-label(for='radio17-7') 토
+              td
+                .day-header
+                  .date 18
+                  .season 비수기
+                .custom-control.custom-radio
+                  input#radio18-1.custom-control-input(type='radio', name='seasonRadio18', checked)
+                  label.custom-control-label(for='radio18-1') 비수기
+                .custom-control.custom-radio
+                  input#radio18-2.custom-control-input(type='radio', name='seasonRadio18')
+                  label.custom-control-label(for='radio18-2') 성수기
+                .custom-control.custom-radio
+                  input#radio18-3.custom-control-input(type='radio', name='seasonRadio18')
+                  label.custom-control-label(for='radio18-3') 준성수기
+                .custom-control.custom-radio
+                  input#radio18-4.custom-control-input(type='radio', name='seasonRadio18')
+                  label.custom-control-label(for='radio18-4') 추석황금연휴
+                .d-flex.justify-content-between
+                  .custom-control.custom-radio
+                    input#radio18-5.custom-control-input(type='radio', name='dayRadio18', checked)
+                    label.custom-control-label(for='radio18-5') 주중
+                  .custom-control.custom-radio
+                    input#radio18-6.custom-control-input(type='radio', name='dayRadio18')
+                    label.custom-control-label(for='radio18-6') 금
+                  .custom-control.custom-radio
+                    input#radio18-7.custom-control-input(type='radio', name='dayRadio18')
+                    label.custom-control-label(for='radio18-7') 토
+              td
+                .day-header
+                  .date 19
+                  .season 비수기
+                .custom-control.custom-radio
+                  input#radio19-1.custom-control-input(type='radio', name='seasonRadio19', checked)
+                  label.custom-control-label(for='radio19-1') 비수기
+                .custom-control.custom-radio
+                  input#radio19-2.custom-control-input(type='radio', name='seasonRadio19')
+                  label.custom-control-label(for='radio19-2') 성수기
+                .custom-control.custom-radio
+                  input#radio19-3.custom-control-input(type='radio', name='seasonRadio19')
+                  label.custom-control-label(for='radio19-3') 준성수기
+                .custom-control.custom-radio
+                  input#radio19-4.custom-control-input(type='radio', name='seasonRadio19')
+                  label.custom-control-label(for='radio19-4') 추석황금연휴
+                .d-flex.justify-content-between
+                  .custom-control.custom-radio
+                    input#radio19-5.custom-control-input(type='radio', name='dayRadio19')
+                    label.custom-control-label(for='radio19-5') 주중
+                  .custom-control.custom-radio
+                    input#radio19-6.custom-control-input(type='radio', name='dayRadio19', checked)
+                    label.custom-control-label(for='radio19-6') 금
+                  .custom-control.custom-radio
+                    input#radio19-7.custom-control-input(type='radio', name='dayRadio19')
+                    label.custom-control-label(for='radio19-7') 토
+              td
+                .day-header
+                  .date.text-blue 20
+                  .season 비수기
+                .custom-control.custom-radio
+                  input#radio20-1.custom-control-input(type='radio', name='seasonRadio20', checked)
+                  label.custom-control-label(for='radio20-1') 비수기
+                .custom-control.custom-radio
+                  input#radio20-2.custom-control-input(type='radio', name='seasonRadio20')
+                  label.custom-control-label(for='radio20-2') 성수기
+                .custom-control.custom-radio
+                  input#radio20-3.custom-control-input(type='radio', name='seasonRadio20')
+                  label.custom-control-label(for='radio20-3') 준성수기
+                .custom-control.custom-radio
+                  input#radio20-4.custom-control-input(type='radio', name='seasonRadio20')
+                  label.custom-control-label(for='radio20-4') 추석황금연휴
+                .d-flex.justify-content-between
+                  .custom-control.custom-radio
+                    input#radio20-5.custom-control-input(type='radio', name='dayRadio20')
+                    label.custom-control-label(for='radio20-5') 주중
+                  .custom-control.custom-radio
+                    input#radio20-6.custom-control-input(type='radio', name='dayRadio20')
+                    label.custom-control-label(for='radio20-6') 금
+                  .custom-control.custom-radio
+                    input#radio20-7.custom-control-input(type='radio', name='dayRadio20', checked)
+                    label.custom-control-label(for='radio20-7') 토
+            tr
+              td
+                .day-header
+                  .date.text-red 21
+                  .season 비수기
+                .custom-control.custom-radio
+                  input#radio21-1.custom-control-input(type='radio', name='seasonRadio21', checked)
+                  label.custom-control-label(for='radio21-1') 비수기
+                .custom-control.custom-radio
+                  input#radio21-2.custom-control-input(type='radio', name='seasonRadio21')
+                  label.custom-control-label(for='radio21-2') 성수기
+                .custom-control.custom-radio
+                  input#radio21-3.custom-control-input(type='radio', name='seasonRadio21')
+                  label.custom-control-label(for='radio21-3') 준성수기
+                .custom-control.custom-radio
+                  input#radio21-4.custom-control-input(type='radio', name='seasonRadio21')
+                  label.custom-control-label(for='radio21-4') 추석황금연휴
+                .d-flex.justify-content-between
+                  .custom-control.custom-radio
+                    input#radio21-5.custom-control-input(type='radio', name='dayRadio21', checked)
+                    label.custom-control-label(for='radio21-5') 주중
+                  .custom-control.custom-radio
+                    input#radio21-6.custom-control-input(type='radio', name='dayRadio21')
+                    label.custom-control-label(for='radio21-6') 금
+                  .custom-control.custom-radio
+                    input#radio21-7.custom-control-input(type='radio', name='dayRadio21')
+                    label.custom-control-label(for='radio21-7') 토
+              td
+                .day-header
+                  .date 22
+                  .season 비수기
+                .custom-control.custom-radio
+                  input#radio22-1.custom-control-input(type='radio', name='seasonRadio22', checked)
+                  label.custom-control-label(for='radio22-1') 비수기
+                .custom-control.custom-radio
+                  input#radio22-2.custom-control-input(type='radio', name='seasonRadio22')
+                  label.custom-control-label(for='radio22-2') 성수기
+                .custom-control.custom-radio
+                  input#radio22-3.custom-control-input(type='radio', name='seasonRadio22')
+                  label.custom-control-label(for='radio22-3') 준성수기
+                .custom-control.custom-radio
+                  input#radio22-4.custom-control-input(type='radio', name='seasonRadio22')
+                  label.custom-control-label(for='radio22-4') 추석황금연휴
+                .d-flex.justify-content-between
+                  .custom-control.custom-radio
+                    input#radio22-5.custom-control-input(type='radio', name='dayRadio22', checked)
+                    label.custom-control-label(for='radio22-5') 주중
+                  .custom-control.custom-radio
+                    input#radio22-6.custom-control-input(type='radio', name='dayRadio22')
+                    label.custom-control-label(for='radio22-6') 금
+                  .custom-control.custom-radio
+                    input#radio22-7.custom-control-input(type='radio', name='dayRadio22')
+                    label.custom-control-label(for='radio22-7') 토
+              td.amended
+                .day-header
+                  .date 23
+                  .season 비수기
+                .custom-control.custom-radio
+                  input#radio23-1.custom-control-input(type='radio', name='seasonRadio23', checked)
+                  label.custom-control-label(for='radio23-1') 비수기
+                .custom-control.custom-radio
+                  input#radio23-2.custom-control-input(type='radio', name='seasonRadio23')
+                  label.custom-control-label(for='radio23-2') 성수기
+                .custom-control.custom-radio
+                  input#radio23-3.custom-control-input(type='radio', name='seasonRadio23')
+                  label.custom-control-label(for='radio23-3') 준성수기
+                .custom-control.custom-radio
+                  input#radio23-4.custom-control-input(type='radio', name='seasonRadio23')
+                  label.custom-control-label(for='radio23-4') 추석황금연휴
+                .d-flex.justify-content-between
+                  .custom-control.custom-radio
+                    input#radio23-5.custom-control-input(type='radio', name='dayRadio23', checked)
+                    label.custom-control-label(for='radio23-5') 주중
+                  .custom-control.custom-radio
+                    input#radio23-6.custom-control-input(type='radio', name='dayRadio23')
+                    label.custom-control-label(for='radio23-6') 금
+                  .custom-control.custom-radio
+                    input#radio23-7.custom-control-input(type='radio', name='dayRadio23')
+                    label.custom-control-label(for='radio23-7') 토
+              td
+                .day-header
+                  .date 24
+                  .season 비수기
+                .custom-control.custom-radio
+                  input#radio24-1.custom-control-input(type='radio', name='seasonRadio24', checked)
+                  label.custom-control-label(for='radio24-1') 비수기
+                .custom-control.custom-radio
+                  input#radio24-2.custom-control-input(type='radio', name='seasonRadio24')
+                  label.custom-control-label(for='radio24-2') 성수기
+                .custom-control.custom-radio
+                  input#radio24-3.custom-control-input(type='radio', name='seasonRadio24')
+                  label.custom-control-label(for='radio24-3') 준성수기
+                .custom-control.custom-radio
+                  input#radio24-4.custom-control-input(type='radio', name='seasonRadio24')
+                  label.custom-control-label(for='radio24-4') 추석황금연휴
+                .d-flex.justify-content-between
+                  .custom-control.custom-radio
+                    input#radio24-5.custom-control-input(type='radio', name='dayRadio24', checked)
+                    label.custom-control-label(for='radio24-5') 주중
+                  .custom-control.custom-radio
+                    input#radio24-6.custom-control-input(type='radio', name='dayRadio24')
+                    label.custom-control-label(for='radio24-6') 금
+                  .custom-control.custom-radio
+                    input#radio24-7.custom-control-input(type='radio', name='dayRadio24')
+                    label.custom-control-label(for='radio24-7') 토
+              td
+                .day-header
+                  .date 25
+                  .season 비수기
+                .custom-control.custom-radio
+                  input#radio25-1.custom-control-input(type='radio', name='seasonRadio25', checked)
+                  label.custom-control-label(for='radio25-1') 비수기
+                .custom-control.custom-radio
+                  input#radio25-2.custom-control-input(type='radio', name='seasonRadio25')
+                  label.custom-control-label(for='radio25-2') 성수기
+                .custom-control.custom-radio
+                  input#radio25-3.custom-control-input(type='radio', name='seasonRadio25')
+                  label.custom-control-label(for='radio25-3') 준성수기
+                .custom-control.custom-radio
+                  input#radio25-4.custom-control-input(type='radio', name='seasonRadio25')
+                  label.custom-control-label(for='radio25-4') 추석황금연휴
+                .d-flex.justify-content-between
+                  .custom-control.custom-radio
+                    input#radio25-5.custom-control-input(type='radio', name='dayRadio25', checked)
+                    label.custom-control-label(for='radio25-5') 주중
+                  .custom-control.custom-radio
+                    input#radio25-6.custom-control-input(type='radio', name='dayRadio25')
+                    label.custom-control-label(for='radio25-6') 금
+                  .custom-control.custom-radio
+                    input#radio25-7.custom-control-input(type='radio', name='dayRadio25')
+                    label.custom-control-label(for='radio25-7') 토
+              td
+                .day-header
+                  .date 26
+                  .season 비수기
+                .custom-control.custom-radio
+                  input#radio26-1.custom-control-input(type='radio', name='seasonRadio26', checked)
+                  label.custom-control-label(for='radio26-1') 비수기
+                .custom-control.custom-radio
+                  input#radio26-2.custom-control-input(type='radio', name='seasonRadio26')
+                  label.custom-control-label(for='radio26-2') 성수기
+                .custom-control.custom-radio
+                  input#radio26-3.custom-control-input(type='radio', name='seasonRadio26')
+                  label.custom-control-label(for='radio26-3') 준성수기
+                .custom-control.custom-radio
+                  input#radio26-4.custom-control-input(type='radio', name='seasonRadio26')
+                  label.custom-control-label(for='radio26-4') 추석황금연휴
+                .d-flex.justify-content-between
+                  .custom-control.custom-radio
+                    input#radio26-5.custom-control-input(type='radio', name='dayRadio26')
+                    label.custom-control-label(for='radio26-5') 주중
+                  .custom-control.custom-radio
+                    input#radio26-6.custom-control-input(type='radio', name='dayRadio26', checked)
+                    label.custom-control-label(for='radio26-6') 금
+                  .custom-control.custom-radio
+                    input#radio26-7.custom-control-input(type='radio', name='dayRadio26')
+                    label.custom-control-label(for='radio26-7') 토
+              td
+                .day-header
+                  .date.text-blue 27
+                  .season 비수기
+                .custom-control.custom-radio
+                  input#radio27-1.custom-control-input(type='radio', name='seasonRadio27', checked)
+                  label.custom-control-label(for='radio27-1') 비수기
+                .custom-control.custom-radio
+                  input#radio27-2.custom-control-input(type='radio', name='seasonRadio27')
+                  label.custom-control-label(for='radio27-2') 성수기
+                .custom-control.custom-radio
+                  input#radio27-3.custom-control-input(type='radio', name='seasonRadio27')
+                  label.custom-control-label(for='radio27-3') 준성수기
+                .custom-control.custom-radio
+                  input#radio27-4.custom-control-input(type='radio', name='seasonRadio27')
+                  label.custom-control-label(for='radio27-4') 추석황금연휴
+                .d-flex.justify-content-between
+                  .custom-control.custom-radio
+                    input#radio27-5.custom-control-input(type='radio', name='dayRadio27')
+                    label.custom-control-label(for='radio27-5') 주중
+                  .custom-control.custom-radio
+                    input#radio27-6.custom-control-input(type='radio', name='dayRadio27')
+                    label.custom-control-label(for='radio27-6') 금
+                  .custom-control.custom-radio
+                    input#radio27-7.custom-control-input(type='radio', name='dayRadio27', checked)
+                    label.custom-control-label(for='radio27-7') 토
+            tr
+              td
+                .day-header
+                  .date.text-red 28
+                  .season 비수기
+                .custom-control.custom-radio
+                  input#radio28-1.custom-control-input(type='radio', name='seasonRadio28', checked)
+                  label.custom-control-label(for='radio28-1') 비수기
+                .custom-control.custom-radio
+                  input#radio28-2.custom-control-input(type='radio', name='seasonRadio28')
+                  label.custom-control-label(for='radio28-2') 성수기
+                .custom-control.custom-radio
+                  input#radio28-3.custom-control-input(type='radio', name='seasonRadio28')
+                  label.custom-control-label(for='radio28-3') 준성수기
+                .custom-control.custom-radio
+                  input#radio28-4.custom-control-input(type='radio', name='seasonRadio28')
+                  label.custom-control-label(for='radio28-4') 추석황금연휴
+                .d-flex.justify-content-between
+                  .custom-control.custom-radio
+                    input#radio28-5.custom-control-input(type='radio', name='dayRadio28', checked)
+                    label.custom-control-label(for='radio28-5') 주중
+                  .custom-control.custom-radio
+                    input#radio28-6.custom-control-input(type='radio', name='dayRadio28')
+                    label.custom-control-label(for='radio28-6') 금
+                  .custom-control.custom-radio
+                    input#radio28-7.custom-control-input(type='radio', name='dayRadio28')
+                    label.custom-control-label(for='radio28-7') 토
+              td
+                .day-header
+                  .date 29
+                  .season 비수기
+                .custom-control.custom-radio
+                  input#radio29-1.custom-control-input(type='radio', name='seasonRadio29', checked)
+                  label.custom-control-label(for='radio29-1') 비수기
+                .custom-control.custom-radio
+                  input#radio29-2.custom-control-input(type='radio', name='seasonRadio29')
+                  label.custom-control-label(for='radio29-2') 성수기
+                .custom-control.custom-radio
+                  input#radio29-3.custom-control-input(type='radio', name='seasonRadio29')
+                  label.custom-control-label(for='radio29-3') 준성수기
+                .custom-control.custom-radio
+                  input#radio29-4.custom-control-input(type='radio', name='seasonRadio29')
+                  label.custom-control-label(for='radio29-4') 추석황금연휴
+                .d-flex.justify-content-between
+                  .custom-control.custom-radio
+                    input#radio29-5.custom-control-input(type='radio', name='dayRadio29', checked)
+                    label.custom-control-label(for='radio29-5') 주중
+                  .custom-control.custom-radio
+                    input#radio29-6.custom-control-input(type='radio', name='dayRadio29')
+                    label.custom-control-label(for='radio29-6') 금
+                  .custom-control.custom-radio
+                    input#radio29-7.custom-control-input(type='radio', name='dayRadio29')
+                    label.custom-control-label(for='radio29-7') 토
+              td
+                .day-header
+                  .date 30
+                  .season 비수기
+                .custom-control.custom-radio
+                  input#radio30-1.custom-control-input(type='radio', name='seasonRadio30', checked)
+                  label.custom-control-label(for='radio30-1') 비수기
+                .custom-control.custom-radio
+                  input#radio30-2.custom-control-input(type='radio', name='seasonRadio30')
+                  label.custom-control-label(for='radio30-2') 성수기
+                .custom-control.custom-radio
+                  input#radio30-3.custom-control-input(type='radio', name='seasonRadio30')
+                  label.custom-control-label(for='radio30-3') 준성수기
+                .custom-control.custom-radio
+                  input#radio30-4.custom-control-input(type='radio', name='seasonRadio30')
+                  label.custom-control-label(for='radio30-4') 추석황금연휴
+                .d-flex.justify-content-between
+                  .custom-control.custom-radio
+                    input#radio30-5.custom-control-input(type='radio', name='dayRadio30', checked)
+                    label.custom-control-label(for='radio30-5') 주중
+                  .custom-control.custom-radio
+                    input#radio30-6.custom-control-input(type='radio', name='dayRadio30')
+                    label.custom-control-label(for='radio30-6') 금
+                  .custom-control.custom-radio
+                    input#radio30-7.custom-control-input(type='radio', name='dayRadio30')
+                    label.custom-control-label(for='radio30-7') 토
+              td.eve
+                .day-header
+                  .date 31
+                  .season 비수기
+                .custom-control.custom-radio
+                  input#radio31-1.custom-control-input(type='radio', name='seasonRadio31', checked)
+                  label.custom-control-label(for='radio31-1') 비수기
+                .custom-control.custom-radio
+                  input#radio31-2.custom-control-input(type='radio', name='seasonRadio31')
+                  label.custom-control-label(for='radio31-2') 성수기
+                .custom-control.custom-radio
+                  input#radio31-3.custom-control-input(type='radio', name='seasonRadio31')
+                  label.custom-control-label(for='radio31-3') 준성수기
+                .custom-control.custom-radio
+                  input#radio31-4.custom-control-input(type='radio', name='seasonRadio31')
+                  label.custom-control-label(for='radio31-4') 추석황금연휴
+                .d-flex.justify-content-between
+                  .custom-control.custom-radio
+                    input#radio31-5.custom-control-input(type='radio', name='dayRadio31', checked)
+                    label.custom-control-label(for='radio31-5') 주중
+                  .custom-control.custom-radio
+                    input#radio31-6.custom-control-input(type='radio', name='dayRadio31')
+                    label.custom-control-label(for='radio31-6') 금
+                  .custom-control.custom-radio
+                    input#radio31-7.custom-control-input(type='radio', name='dayRadio31')
+                    label.custom-control-label(for='radio31-7') 토
+              td.dimed.other-month
+                .day-header
+                  .date.text-red(data-toggle='tooltip', data-placement='bottom', title='크리스마스') 2/1
+                  .season 비수기
+              td.dimed.other-month
+                .day-header
+                  .date 2
+                  .season 비수기
+              td.dimed.other-month
+                .day-header
+                  .date.text-blue 3
+                  .season 비수기
+
+      .text-center.py-4.mt-5
+        button.btn.btn-secondary.btn-lg.px-5.mr-2(type='button') 취소
+        button.btn.btn-primary.btn-lg.px-5(type='button') 저장
+
+    include ./includes/footer.pug
+
+
+
+
+

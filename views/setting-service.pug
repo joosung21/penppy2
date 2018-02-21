@@ -83,7 +83,7 @@ body.two-depth(name='setting', page='service')
       //- 임시 간격: 지울 것
       .py-5
 
-      //- 순서변경 시
+      //- 순서변경 시 UI
       table.table.text-center.align-middle
         thead.bg-light
           tr
@@ -103,15 +103,15 @@ body.two-depth(name='setting', page='service')
             td 1/10
             td
               label.switch
-                input(type="checkbox")
+                input(type="checkbox", disabled)
                 span.slider.round
             td
               label.switch
-                input(type="checkbox", checked)
+                input(type="checkbox", checked, disabled)
                 span.slider.round
             td
               label.switch
-                input(type="checkbox")
+                input(type="checkbox", disabled)
                 span.slider.round
           tr.move
             th.text-blue
@@ -121,15 +121,15 @@ body.two-depth(name='setting', page='service')
             td 1/10
             td
               label.switch
-                input(type="checkbox")
+                input(type="checkbox", disabled)
                 span.slider.round
             td
               label.switch
-                input(type="checkbox", checked)
+                input(type="checkbox", checked, disabled)
                 span.slider.round
             td
               label.switch
-                input(type="checkbox")
+                input(type="checkbox", disabled)
                 span.slider.round
           tr.move
             th.text-blue
@@ -139,15 +139,15 @@ body.two-depth(name='setting', page='service')
             td 2/2
             td
               label.switch
-                input(type="checkbox", checked)
+                input(type="checkbox", checked, disabled)
                 span.slider.round
             td
               label.switch
-                input(type="checkbox")
+                input(type="checkbox", disabled)
                 span.slider.round
             td
               label.switch
-                input(type="checkbox", checked)
+                input(type="checkbox", checked, disabled)
                 span.slider.round
 
       .row.mt-4
