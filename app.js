@@ -11,6 +11,7 @@ app.use('/node_modules/', express.static('node_modules'))
 app.get('/', function (req, res){res.render('calendar')})
 app.get('/calendar', function (req, res){res.render('calendar')})
 app.get('/calendar-week', function (req, res){res.render('calendar-week')})
+app.get('/rateplan', function (req, res){res.render('rateplan')})
 
 // 업체설정
 app.get('/setting/property', function (req, res){res.render('setting-property')})

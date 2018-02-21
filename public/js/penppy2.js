@@ -23,9 +23,21 @@ $( document ).ready(function() {
     }
   });
 
+  // Show Second Depth Nav
   if ($('body').hasClass('two-depth')) {
     $('#main-nav').addClass('two-depth');
-  }
 
+    var thisPage = $('body').attr('name');
+    switch(thisPage) {
+      case 'setting':
+        $('#nav-setting').show();
+        break;
+      case 'rateplan':
+        $('#nav-rateplan').show();
+        break;
+      default:
+        break;
+    }
+  }
 
 });

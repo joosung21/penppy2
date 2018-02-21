@@ -1,0 +1,100 @@
+include ./includes/header.pug
+
+//-------- 요금설정 Page ---------//
+body.two-depth(name='rateplan', page='season02')
+  include ./includes/main-nav-left.pug
+  include ./includes/sub-nav.pug
+  .content-container
+    .artboard
+      .board-title 요금설정 - 준성수기
+      .board-container(style='max-width:none')
+
+        table.bar-calendar-season.season1
+          tr
+            td
+            td
+              .bar-calendar-title(style='grid-template-columns: repeat(365, 1fr)')
+                .month(style='grid-column: span 31') 1월
+                .month(style='grid-column: span 28') 2월
+                .month(style='grid-column: span 31') 3월
+                .month(style='grid-column: span 30') 4월
+                .month(style='grid-column: span 31') 5월
+                .month(style='grid-column: span 30') 6월
+                .month(style='grid-column: span 31') 7월
+                .month(style='grid-column: span 31') 8월
+                .month(style='grid-column: span 30') 9월
+                .month(style='grid-column: span 31') 10월
+                .month(style='grid-column: span 30') 11월
+                .month(style='grid-column: span 31') 12월
+          tr
+            td 비수기
+            td
+              .bar-grid(style='grid-template-columns: repeat(365, 1fr)')
+                .bar.season1(style='grid-column: 1/span 365', data-toggle='tooltip', title='설정이 안된 모든 기간')
+          tr
+            td 준성수기
+            td
+              .bar-grid(style='grid-template-columns: repeat(365, 1fr)')
+                .bar.season2(style='grid-column: 36/span 15', data-toggle='tooltip', title='2월 4일 - 2월 19일')
+                .bar.season2(style='grid-column: 150/span 30', data-toggle='tooltip', title='5월 30일 - 6월 30일')
+                .bar.season2(style='grid-column: 355/span 4', data-toggle='tooltip', title='12월 24일 - 12월 28일')
+          tr
+            td 성수기
+            td
+              .bar-grid(style='grid-template-columns: repeat(365, 1fr)')
+                .bar.season3(style='grid-column: 180/span 45', data-toggle='tooltip', title='6월 30일 - 8월 13일')
+
+        .py-5.my-5
+
+        table.bar-calendar-season.season1
+          tr
+            td
+              .bar-calendar-title(style='grid-template-columns: repeat(365, 1fr)')
+                .month(style='grid-column: span 31') 1월
+                .month(style='grid-column: span 28') 2월
+                .month(style='grid-column: span 31') 3월
+                .month(style='grid-column: span 30') 4월
+                .month(style='grid-column: span 31') 5월
+                .month(style='grid-column: span 30') 6월
+                .month(style='grid-column: span 31') 7월
+                .month(style='grid-column: span 31') 8월
+                .month(style='grid-column: span 30') 9월
+                .month(style='grid-column: span 31') 10월
+                .month(style='grid-column: span 30') 11월
+                .month(style='grid-column: span 31') 12월
+          tr
+            td
+              .bar-grid(style='grid-template-columns: repeat(365, 1fr)')
+                .bar.season1(style='grid-column: 1/span 365', data-toggle='tooltip', title='비수기: 설정이 안된 모든 기간')
+                .bar.season2(style='grid-column: 36/span 15', data-toggle='tooltip', title='준성수기: 2월 4일 - 2월 19일')
+                .bar.season2(style='grid-column: 150/span 30', data-toggle='tooltip', title='준성수기: 5월 30일 - 6월 30일')
+                .bar.season2(style='grid-column: 355/span 4', data-toggle='tooltip', title='준성수기: 12월 24일 - 12월 28일')
+                .bar.season3(style='grid-column: 180/span 45', data-toggle='tooltip', title='성수기: 6월 30일 - 8월 13일')
+
+
+        .py-5.my-5
+
+        table.bar-calendar-season.season1
+          tr
+            td
+              .bar-calendar-title(style='grid-template-columns: repeat(365, 1fr)')
+                .month(style='grid-column: span 31') 1월
+                .month(style='grid-column: span 28') 2월
+                .month(style='grid-column: span 31') 3월
+                .month(style='grid-column: span 30') 4월
+                .month(style='grid-column: span 31') 5월
+                .month(style='grid-column: span 30') 6월
+                .month(style='grid-column: span 31') 7월
+                .month(style='grid-column: span 31') 8월
+                .month(style='grid-column: span 30') 9월
+                .month(style='grid-column: span 31') 10월
+                .month(style='grid-column: span 30') 11월
+                .month(style='grid-column: span 31') 12월
+          tr
+            td
+              .bar-grid(style='grid-template-columns: repeat(365, 1fr)')
+                .bar.season1(style='grid-column: 1/span 365', data-toggle='tooltip', title='비수기: 설정이 안된 모든 기간')
+                .bar.season2(style='grid-column: 36/span 15', data-toggle='tooltip', title='2월 4일 - 2월 19일') 준성수기
+                .bar.season2(style='grid-column: 150/span 30', data-toggle='tooltip', title='5월 30일 - 6월 30일') 준성수기
+                .bar.season2(style='grid-column: 355/span 4', data-toggle='tooltip', title='12월 24일 - 12월 28일') 준성수기
+                .bar.season3(style='grid-column: 180/span 45', data-toggle='tooltip', title='6월 30일 - 8월 13일') 성수기

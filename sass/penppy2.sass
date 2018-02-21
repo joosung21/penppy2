@@ -101,13 +101,13 @@ body
     margin-left: .2em
     .custom-control-label
       &:after
-        width: 20px
-        height: 20px
+        width: 1.5em
+        height: 1.5em
         background-color: white
         border: 1px solid #bbb
         border-radius: 3px
         left: -.2em
-        top: 1px
+        top: .1em
     .custom-control-input:checked
       + .custom-control-label
         &:after
@@ -115,13 +115,13 @@ body
   &.custom-radio
     .custom-control-label
       &:after
-        width: 20px
-        height: 20px
+        width: 1.4rem
+        height: 1.4rem
         background-color: white
         border: 1px solid #bbb
-        border-radius: 20px
+        border-radius: 1.4rem
         left: -.2em
-        top: 0
+        top: .1em
     .custom-control-input:checked
       + .custom-control-label
         &:after
@@ -136,9 +136,6 @@ body
     font-size: .9rem
     .custom-control-label
       padding-top: 1px
-      &:after
-        width: 19px
-        height: 19px
 
 /* The switch - the box around the slider
 .switch
@@ -260,8 +257,6 @@ input
     background-color: $navy-blue
 #main-nav.two-depth
   width: calc(#{$left-side-width} * 2)
-  .second-depth
-    display: block
   .nav-group
     padding: 1.5rem $left-side-padding
     .group-title
@@ -329,8 +324,8 @@ footer
   font-size: .9rem
   border-top: 1px solid $border-color
 
-//----------- 객실달력 Page -----------//
 
+//----------- 객실달력, 일별요금 달력 -----------//
 .calendar-controler
   .year-month
     font-size: 2rem
@@ -482,8 +477,41 @@ footer
     background: $blocked url('/images/blocked.svg') 8px 8px no-repeat
     background-size: 13px
 
+//----------- 요금설정 Page -----------//
+.bar-calendar-title
+  display: grid
+  padding-bottom: 1rem
+  .month
+    border-bottom: 1px solid #222222
+    text-align: center
+    border-right: 1px solid $border-color
+    padding: .5rem 0
+.bar-calendar-season
+  width: 100%
+  border-spacing: 0
+  border-collapse: separate
+  .bar-grid
+    display: grid
+    .bar
+      grid-row: 1
+      height: 1.5rem
+      color: white
+      font-size: .8rem
+      vertical-align: middle
+      padding: .2rem
+      white-space: nowrap
+      overflow: hidden
+      // &:hover
+      //   box-shadow: inset 0 0 0 1rem rgba(0, 0, 0, .07)
+      &.season1
+        background-color: $border-color
+      &.season2
+        background-color: $blue
+      &.season3
+        background-color: $red
 
-//---------- Setting Pages --------------//
+
+//---------- 업체설정 Pages --------------//
 .image-upload
   .unit
     padding-bottom: .75rem
@@ -515,9 +543,10 @@ footer
       &:hover
         opacity: 1
 
+//
+
 
 //---------- Responsive: Smaller than 1200px ----------//
-
 @media only screen and (max-width: 1199px)
   html
     font-size: 12px
@@ -532,4 +561,7 @@ footer
     &.blocked
       background-position: 2px 2px
 
-
+//---------- Responsive: Larger than 2000px ----------//
+@media only screen and (min-width: 2000px)
+  html
+    font-size: 16px
