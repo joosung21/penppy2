@@ -8,93 +8,215 @@ body.two-depth(name='rateplan', page='season02')
     .artboard
       .board-title 요금설정 - 준성수기
       .board-container(style='max-width:none')
+        .form-group.row
+          label.col-sm-2.pt-1 시즌명
+          .col-sm-10
+            input.form-control-plaintext(type='text', value='준성수기', readonly)
+        .form-group.row
+          label.col-sm-2.pt-1 기간
+          .col-sm-10
+            .mb-2
+              | 2017년 7월 16일 ~ 2017년 8월 11일
+              button.btn.btn-white.btn-sm.p-1.ml-2.mb-1(type='button')
+                i.fa.fa-times.fa-lg
+            .mb-2
+              | 2017년 9월 1일 ~ 2017년 9월 4일
+              button.btn.btn-white.btn-sm.p-1.ml-2.mb-1(type='button')
+                i.fa.fa-times.fa-lg
+            .mb-2
+              | 2017년 12월 22일 ~ 2017년 12월 22일
+              button.btn.btn-white.btn-sm.p-1.ml-2.mb-1(type='button')
+                i.fa.fa-times.fa-lg
+            .mb-2
+              button.btn.btn-white.mr-1(type='button')
+                i.fa.fa-plus.fa-lg.mr-1
+                | 기간 추가
+              button.btn.btn-white(type='button')
+                | 시즌달력 보기
+            .form-inline.my-3
+              input.form-control.form-control-datepicker(type='text', value='2017.07.16', size='14')
+              span.px-2 ~
+              input.form-control.form-control-datepicker.mr-2(type='text', value='2017.08.20', size='14')
+              button.btn.btn-secondary.mr-1(type='button') 취소
+              button.btn.btn-primary(type='button') 저장
+        .d-flex.justify-content-between.align-items-end.mb-3
+          .custom-control.custom-checkbox
+            input#check1.custom-control-input(type='checkbox', checked)
+            label.custom-control-label(for='check1') 일료일 요금 사용
+          .dropdown
+            button.btn.btn-white.dropdown-toggle(type='button', data-toggle='dropdown')
+              | 요금 불러오기
+            .dropdown-menu.dropdown-menu-right
+              a.dropdown-item(href='#') 비수기
+              a.dropdown-item(href='#') 준성수기
+              a.dropdown-item(href='#') 성수기
 
-        table.bar-calendar-season.season1
-          tr
-            td
-            td
-              .bar-calendar-title(style='grid-template-columns: repeat(365, 1fr)')
-                .month(style='grid-column: span 31') 1월
-                .month(style='grid-column: span 28') 2월
-                .month(style='grid-column: span 31') 3월
-                .month(style='grid-column: span 30') 4월
-                .month(style='grid-column: span 31') 5월
-                .month(style='grid-column: span 30') 6월
-                .month(style='grid-column: span 31') 7월
-                .month(style='grid-column: span 31') 8월
-                .month(style='grid-column: span 30') 9월
-                .month(style='grid-column: span 31') 10월
-                .month(style='grid-column: span 30') 11월
-                .month(style='grid-column: span 31') 12월
-          tr
-            td 비수기
-            td
-              .bar-grid(style='grid-template-columns: repeat(365, 1fr)')
-                .bar.season1(style='grid-column: 1/span 365', data-toggle='tooltip', title='설정이 안된 모든 기간')
-          tr
-            td 준성수기
-            td
-              .bar-grid(style='grid-template-columns: repeat(365, 1fr)')
-                .bar.season2(style='grid-column: 36/span 15', data-toggle='tooltip', title='2월 4일 - 2월 19일')
-                .bar.season2(style='grid-column: 150/span 30', data-toggle='tooltip', title='5월 30일 - 6월 30일')
-                .bar.season2(style='grid-column: 355/span 4', data-toggle='tooltip', title='12월 24일 - 12월 28일')
-          tr
-            td 성수기
-            td
-              .bar-grid(style='grid-template-columns: repeat(365, 1fr)')
-                .bar.season3(style='grid-column: 180/span 45', data-toggle='tooltip', title='6월 30일 - 8월 13일')
+        .table-responsive
+          table.table.table-rate.text-center.align-middle.border(style='min-width: 1000px')
+            thead.bg-light
+              tr
+                th.border-right.border-bottom(colspan='2') 객실
+                th.border-right.border-bottom(colspan='5') 객실 기본요금
+                th.border-bottom(colspan='3') 추가인원 요금
+              tr.sub-header
+                th.text-left.px-4(style='width: 15%; min-width: 12rem') 객실명
+                th.border-right.px-4 기준
+                th.checkbox.border-right(style='width: 6%')
+                  .custom-control.custom-checkbox
+                    input#check2.custom-control-input(type='checkbox', onclick='openSlider()')
+                    label.custom-control-label(for='check2')
+                th 일요일
+                th 주중
+                th 금요일
+                th.border-right 토요일(공휴일 전날)
+                th 성인
+                th 아동
+                th 유아
+            tbody
+              tr
+                td.text-left.px-4 황토동-은하수 201호
+                td.border-right 2인
+                td.checkbox.border-right
+                  .custom-control.custom-checkbox
+                    input#check3.custom-control-input(type='checkbox', onclick='openSlider()')
+                    label.custom-control-label(for='check3')
+                td
+                  input.form-control(type='text', value='120,000')
+                td
+                  input.form-control(type='text', value='100,000')
+                td
+                  input.form-control(type='text', value='120,000')
+                td.border-right
+                  input.form-control(type='text', value='140,000')
+                td
+                  input.form-control(type='text', value='10,000')
+                td
+                  input.form-control(type='text', value='5,000')
+                td
+                  input.form-control(type='text', value='0')
+              tr
+                td.text-left.px-4 황토동-은하수 202호
+                td.border-right 2인
+                td.checkbox.border-right
+                  .custom-control.custom-checkbox
+                    input#check4.custom-control-input(type='checkbox', onclick='openSlider()')
+                    label.custom-control-label(for='check4')
+                td
+                  input.form-control(type='text', value='120,000')
+                td
+                  input.form-control(type='text', value='100,000')
+                td
+                  input.form-control(type='text', value='120,000')
+                td.border-right
+                  input.form-control(type='text', value='140,000')
+                td
+                  input.form-control(type='text', value='10,000')
+                td
+                  input.form-control(type='text', value='5,000')
+                td
+                  input.form-control(type='text', value='0')
+              tr
+                td.text-left.px-4 황토동-은하수 203호
+                td.border-right 2인
+                td.checkbox.border-right
+                  .custom-control.custom-checkbox
+                    input#check5.custom-control-input(type='checkbox', onclick='openSlider()')
+                    label.custom-control-label(for='check5')
+                td
+                  input.form-control(type='text', value='120,000')
+                td
+                  input.form-control(type='text', value='100,000')
+                td
+                  input.form-control(type='text', value='120,000')
+                td.border-right
+                  input.form-control(type='text', value='140,000')
+                td
+                  input.form-control(type='text', value='10,000')
+                td
+                  input.form-control(type='text', value='5,000')
+                td
+                  input.form-control(type='text', value='0')
+              tr
+                td.text-left.px-4 하늘채(스파)
+                td.border-right 2인
+                td.checkbox.border-right
+                  .custom-control.custom-checkbox
+                    input#check6.custom-control-input(type='checkbox', onclick='openSlider()')
+                    label.custom-control-label(for='check6')
+                td
+                  input.form-control.dirty(type='text', value='120,000')
+                td
+                  input.form-control.dirty(type='text', value='100,000')
+                td
+                  input.form-control.dirty(type='text', value='120,000')
+                td.border-right
+                  input.form-control.dirty(type='text', value='140,000')
+                td
+                  input.form-control.dirty(type='text', value='10,000')
+                td
+                  input.form-control.dirty(type='text', value='5,000')
+                td
+                  input.form-control.dirty(type='text', value='0')
+              tr
+                td.text-left.px-4 복층(테라스)
+                td.border-right 2인
+                td.checkbox.border-right
+                  .custom-control.custom-checkbox
+                    input#check7.custom-control-input(type='checkbox', onclick='openSlider()')
+                    label.custom-control-label(for='check7')
+                td
+                  input.form-control.dirty(type='text', value='120,000')
+                td
+                  input.form-control.dirty(type='text', value='100,000')
+                td
+                  input.form-control.dirty(type='text', value='120,000')
+                td.border-right
+                  input.form-control.dirty(type='text', value='140,000')
+                td
+                  input.form-control.dirty(type='text', value='10,000')
+                td
+                  input.form-control.dirty(type='text', value='5,000')
+                td
+                  input.form-control.dirty(type='text', value='0')
 
-        .py-5.my-5
+        .row.text-center.py-4.no-gutters
+          .col-8.offset-2
+            button.btn.btn-secondary.btn-lg.px-5.mr-2(type='button') 취소
+            button.btn.btn-primary.btn-lg.px-5(type='button') 저장
 
-        table.bar-calendar-season.season1
+    .slider-ui.text-center.hidden
+      table.table-rate.mx-auto(style='width: 70rem')
+        thead
+          tr
+            th(style='width: 12.5%') 일요일
+            th(style='width: 12.5%') 주중
+            th(style='width: 12.5%') 금요일
+            th(style='width: 12.5%') 토요일(공휴일 전날)
+            th(style='width: 12.5%') 성인
+            th(style='width: 12.5%') 아동
+            th(style='width: 12.5%') 아동
+            th(style='width: 12.5%')
+        tbody
           tr
             td
-              .bar-calendar-title(style='grid-template-columns: repeat(365, 1fr)')
-                .month(style='grid-column: span 31') 1월
-                .month(style='grid-column: span 28') 2월
-                .month(style='grid-column: span 31') 3월
-                .month(style='grid-column: span 30') 4월
-                .month(style='grid-column: span 31') 5월
-                .month(style='grid-column: span 30') 6월
-                .month(style='grid-column: span 31') 7월
-                .month(style='grid-column: span 31') 8월
-                .month(style='grid-column: span 30') 9월
-                .month(style='grid-column: span 31') 10월
-                .month(style='grid-column: span 30') 11월
-                .month(style='grid-column: span 31') 12월
-          tr
+              input.form-control(type='text', value='120,000')
             td
-              .bar-grid(style='grid-template-columns: repeat(365, 1fr)')
-                .bar.season1(style='grid-column: 1/span 365', data-toggle='tooltip', title='비수기: 설정이 안된 모든 기간')
-                .bar.season2(style='grid-column: 36/span 15', data-toggle='tooltip', title='준성수기: 2월 4일 - 2월 19일')
-                .bar.season2(style='grid-column: 150/span 30', data-toggle='tooltip', title='준성수기: 5월 30일 - 6월 30일')
-                .bar.season2(style='grid-column: 355/span 4', data-toggle='tooltip', title='준성수기: 12월 24일 - 12월 28일')
-                .bar.season3(style='grid-column: 180/span 45', data-toggle='tooltip', title='성수기: 6월 30일 - 8월 13일')
+              input.form-control(type='text', value='100,000')
+            td
+              input.form-control(type='text', value='120,000')
+            td
+              input.form-control(type='text', value='140,000')
+            td
+              input.form-control(type='text', value='10,000')
+            td
+              input.form-control(type='text', value='5,000')
+            td
+              input.form-control(type='text', value='0')
+            td
+              button.btn.btn-primary.px-4(type='button', onclick='closeSlider()') 일괄 입력
+
+      .close(onclick='closeSlider()')
+        img(src='/images/close-x.svg')
 
 
-        .py-5.my-5
 
-        table.bar-calendar-season.season1
-          tr
-            td
-              .bar-calendar-title(style='grid-template-columns: repeat(365, 1fr)')
-                .month(style='grid-column: span 31') 1월
-                .month(style='grid-column: span 28') 2월
-                .month(style='grid-column: span 31') 3월
-                .month(style='grid-column: span 30') 4월
-                .month(style='grid-column: span 31') 5월
-                .month(style='grid-column: span 30') 6월
-                .month(style='grid-column: span 31') 7월
-                .month(style='grid-column: span 31') 8월
-                .month(style='grid-column: span 30') 9월
-                .month(style='grid-column: span 31') 10월
-                .month(style='grid-column: span 30') 11월
-                .month(style='grid-column: span 31') 12월
-          tr
-            td
-              .bar-grid(style='grid-template-columns: repeat(365, 1fr)')
-                .bar.season1(style='grid-column: 1/span 365', data-toggle='tooltip', title='비수기: 설정이 안된 모든 기간')
-                .bar.season2(style='grid-column: 36/span 15', data-toggle='tooltip', title='2월 4일 - 2월 19일') 준성수기
-                .bar.season2(style='grid-column: 150/span 30', data-toggle='tooltip', title='5월 30일 - 6월 30일') 준성수기
-                .bar.season2(style='grid-column: 355/span 4', data-toggle='tooltip', title='12월 24일 - 12월 28일') 준성수기
-                .bar.season3(style='grid-column: 180/span 45', data-toggle='tooltip', title='6월 30일 - 8월 13일') 성수기

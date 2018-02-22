@@ -16,37 +16,54 @@
         span 요금설정
       a(href='#')
         img(src='/images/ic-caculator.svg')
+        span 할인설정
+      a(href='#')
+        img(src='/images/ic-caculator.svg')
         span 정산목록
+      a(href='#')
+        img(src='/images/ic-caculator.svg')
+        span 리포트
       a.setting(href='/setting/property')
         img(src='/images/ic-gear.svg')
-        span 업체설정
+        span 설정
     .widget-timer
       .d-flex.justify-content-between
         .day Friday
         .month Feb. 2018
       .date 12
 
+  //- 업체설정 메뉴
   #nav-setting.second-depth
     .nav-group
-      .group-title 판매 환경설정
-      a.property(href='/setting/property') 숙소정보
-      a.rooms(href='/setting/rooms') 객실정보
-      a.service(href='/setting/service') 부가서비스
-      a(href='#') 기본요금
-      a.daily(href='/setting/daily') 일자별 요금
-      a(href='#') 추가인원 요금
-      a(href='#') 할인/프로모션
+      .group-title 업체설정
+      .pl-3
+        a.property(href='/setting/property') 숙소정보
+        a.rooms(href='/setting/rooms') 객실정보
+        a.service(href='/setting/service') 부가서비스
+        a(href='#') 취소환불정책
     hr
     .nav-group
-      .group-title 업체 환경설정
-      a(href='#') 사업자 정보
-      a(href='#') 예약운영 정보
-      a(href='#') 문자발송 정보
+      .group-title 판매설정
+      .pl-3
+        a(href='#') 자동할인 설정
+        a(href='#') 연박 설정
+        a.daily(href='/setting/daily') 일자별 요금 설정
+        a(href='#') 추가인원 요금 설정
+    hr
+    .nav-group
+      .group-title 실시간 예약창
+      .pl-3
+        a(href='#') 예약운영 정보
+        a(href='#') 문자발송 정보
+        a(href='#') 예약창 공지사항
     hr
     .nav-group
       .group-title 온라인 판매대행
-      a(href='#') 판매사 연동신청
+      .pl-3
+        a(href='#') 판매사 연동신청
+        a(href='#') 판매사 연동현황
 
+  //- 요금설정 메뉴
   #nav-rateplan.second-depth
     .nav-group
       a.season00(href='#') 전체시즌

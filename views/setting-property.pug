@@ -15,7 +15,7 @@ body.two-depth(name='setting', page='property')
         .form-group.row
           label.col-sm-2.pt-1 주소
           .col-sm-10
-            button.btn.btn-white.mb-2(type='button') 주소찾기
+            button.btn.btn-small.btn-white.mb-2(type='button') 주소찾기
             .input-group.mb-2
               .input-group-prepend
                 .input-group-text 지번
@@ -53,10 +53,10 @@ body.two-depth(name='setting', page='property')
         .form-group.row
           label.col-sm-2.pt-1 사진
           .col-sm-10
-            button.btn.btn-white(type='button')
-              i.fa.fa-camera.fa-lg.mr-2
+            button.btn.btn-white.btn-small(type='button')
+              i.fa.fa-camera.fa-lg.mr-1
               | 이미지 추가
-            .text-onda.py-2 사진순서는 드래그로 변경 가능하며, 1번 사진이 대표 사진으로 설정됩니다.
+            .info 사진순서는 드래그로 변경 가능하며, 1번 사진이 대표 사진으로 설정됩니다.
             .image-upload.form-row.mt-3
               .unit.grabbable.col-3.first-image(draggable='true')
                 .image(style='background-image: url("/images/temp-image.jpg")')

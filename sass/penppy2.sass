@@ -14,7 +14,7 @@ $complete: $red
 $callonly: #FFB822
 $blocked: $light
 
-$left-side-width: 14rem
+$left-side-width: 13rem
 $left-side-padding: 2rem
 
 //------------ Extends -------------//
@@ -30,6 +30,8 @@ $left-side-padding: 2rem
 
 
 //------------ Bootstrap Overides ----------//
+.btn
+  font-weight: 400
 .btn-light:not(:disabled):not(.disabled):active, .btn-light:not(:disabled):not(.disabled).active, .show>.btn-light.dropdown-toggle
   color: white
   background-color: $navy-blue
@@ -46,7 +48,10 @@ $left-side-padding: 2rem
 .btn
   &.btn-primary, &.btn-secondary
     color: white
-
+.btn.btn-small
+  font-size: .9rem
+  font-weight: 300
+  padding: .5rem .7rem
 .table
   thead th
     border: 0
@@ -60,7 +65,19 @@ $left-side-padding: 2rem
   tr.move
     td
       opacity: .4
-
+  .checkbox
+    .custom-control
+      width: 1rem
+      padding: 0 .2rem
+      margin: 0 auto
+      .custom-control-label
+        &:after
+.form-control
+  font-weight: 300
+  &.dirty
+    background-color: #FFF5DB
+.bg-light
+  background-color: #F2F3F8 !important
 
 //------------ CSS Style Utilities ----------//
 .text-red
@@ -73,7 +90,7 @@ $left-side-padding: 2rem
 
 //----------- Initiate -----------//
 html
-  font-size: 14px
+  font-size: 13px
 body
 
 .form-group label
@@ -92,6 +109,7 @@ body
   cursor: move
   cursor: -webkit-grab
 
+// Custom Checkbox & Radio
 .custom-control
   margin-left: .25rem
   .custom-control-label
@@ -115,8 +133,8 @@ body
   &.custom-radio
     .custom-control-label
       &:after
-        width: 1.4rem
-        height: 1.4rem
+        width: 1.45rem
+        height: 1.45rem
         background-color: white
         border: 1px solid #bbb
         border-radius: 1.4rem
@@ -128,6 +146,7 @@ body
           background: $onda url('/images/Oval.svg') center center no-repeat
           border-color: $onda
 
+// Checkbox group
 .check-group
   .custom-checkbox
     display: inline-block
@@ -136,6 +155,46 @@ body
     font-size: .9rem
     .custom-control-label
       padding-top: 1px
+
+// Slider ui
+.slider-ui
+  box-sizing: border-box
+  color: white
+  width: 100vw
+  z-index: 15
+  position: fixed
+  bottom: 0
+  left: 0
+  background-color: #53627E
+  padding: 40px
+  height: 10rem
+  white-space: nowrap
+  color: white
+  .close
+    position: absolute
+    right: 1rem
+    top: 1.5rem
+    transition: all .3s
+    &:hover
+      filter: brightness(1)
+  &.show
+    bottom: 0
+    transition: all 0.5s
+  &.hidden
+    bottom: -10rem
+    transition: all 0.5s
+  table
+    th
+      font-weight: 300
+
+.form-control-datepicker
+  background: url('/images/ic-calendar-gray.svg') center right .5rem no-repeat
+
+.info
+  color: $onda
+  font-size: .9rem
+  font-weight: 400
+  padding: 1rem 0
 
 /* The switch - the box around the slider
 .switch
@@ -267,7 +326,7 @@ input
       display: block
       color: white
       text-decoration: none
-      padding: .5rem 1rem
+      padding: .5rem 0
       &.active
         color: #A3F2BF
   hr
@@ -303,7 +362,7 @@ input
     font-weight: 600
     font-size: 1.4rem
     border-bottom: 1px solid $border-color
-    padding: 0 2rem 1.5rem 2rem
+    padding: 0 3rem 1.5rem 3rem
     margin: -1rem -3rem 3rem -3rem
   .board-container
     max-width: 900px
@@ -478,37 +537,14 @@ footer
     background-size: 13px
 
 //----------- 요금설정 Page -----------//
-.bar-calendar-title
-  display: grid
-  padding-bottom: 1rem
-  .month
-    border-bottom: 1px solid #222222
-    text-align: center
-    border-right: 1px solid $border-color
-    padding: .5rem 0
-.bar-calendar-season
-  width: 100%
-  border-spacing: 0
-  border-collapse: separate
-  .bar-grid
-    display: grid
-    .bar
-      grid-row: 1
-      height: 1.5rem
-      color: white
-      font-size: .8rem
-      vertical-align: middle
-      padding: .2rem
-      white-space: nowrap
-      overflow: hidden
-      // &:hover
-      //   box-shadow: inset 0 0 0 1rem rgba(0, 0, 0, .07)
-      &.season1
-        background-color: $border-color
-      &.season2
-        background-color: $blue
-      &.season3
-        background-color: $red
+.table-rate
+  tr.sub-header
+    th
+      font-weight: 400
+  .form-control
+    text-align: right
+    width: 7rem
+    margin: 0 auto
 
 
 //---------- 업체설정 Pages --------------//
