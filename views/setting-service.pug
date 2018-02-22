@@ -11,8 +11,8 @@ body.two-depth(name='setting', page='service')
       table.table.text-center.align-middle
         thead.bg-light
           tr
-            th 순서
-            th 부가서비스명
+            th(style='width: 7%') 순서
+            th(style='width: 40%') 부가서비스명
             th 가격
             th 기본/최대수량
             th 결제방법
@@ -25,11 +25,11 @@ body.two-depth(name='setting', page='service')
             td 15,000원
             td 1/10
             td
-              label.switch
+              label.switch.online
                 input(type="checkbox")
                 span.slider.round
             td
-              label.switch
+              label.switch.available
                 input(type="checkbox", checked)
                 span.slider.round
             td
@@ -42,11 +42,11 @@ body.two-depth(name='setting', page='service')
             td 25,000원
             td 1/10
             td
-              label.switch
+              label.switch.online
                 input(type="checkbox")
                 span.slider.round
             td
-              label.switch
+              label.switch.available
                 input(type="checkbox", checked)
                 span.slider.round
             td
@@ -59,11 +59,11 @@ body.two-depth(name='setting', page='service')
             td 50,000원
             td 2/2
             td
-              label.switch
+              label.switch.online
                 input(type="checkbox", checked)
                 span.slider.round
             td
-              label.switch
+              label.switch.available
                 input(type="checkbox")
                 span.slider.round
             td
@@ -87,8 +87,8 @@ body.two-depth(name='setting', page='service')
       table.table.text-center.align-middle
         thead.bg-light
           tr
-            th 순서
-            th 부가서비스명
+            th(style='width: 7%') 순서
+            th(style='width: 40%') 부가서비스명
             th 가격
             th 기본/최대수량
             th 결제방법
@@ -102,11 +102,11 @@ body.two-depth(name='setting', page='service')
             td 15,000원
             td 1/10
             td
-              label.switch
+              label.switch.online
                 input(type="checkbox", disabled)
                 span.slider.round
             td
-              label.switch
+              label.switch.available
                 input(type="checkbox", checked, disabled)
                 span.slider.round
             td
@@ -120,11 +120,11 @@ body.two-depth(name='setting', page='service')
             td 25,000원
             td 1/10
             td
-              label.switch
+              label.switch.online
                 input(type="checkbox", disabled)
                 span.slider.round
             td
-              label.switch
+              label.switch.available
                 input(type="checkbox", checked, disabled)
                 span.slider.round
             td
@@ -138,11 +138,11 @@ body.two-depth(name='setting', page='service')
             td 50,000원
             td 2/2
             td
-              label.switch
+              label.switch.online
                 input(type="checkbox", checked, disabled)
                 span.slider.round
             td
-              label.switch
+              label.switch.available
                 input(type="checkbox", disabled)
                 span.slider.round
             td
@@ -152,11 +152,11 @@ body.two-depth(name='setting', page='service')
 
       .row.mt-4
         .col.d-flex.align-items-center
-          button.btn.btn-secondary.mr-2(type='button')
+          button.btn.btn-secondary.mr-1(type='button')
             | 취소
-          button.btn.btn-primary.mr-4(type='button')
+          button.btn.btn-primary.mr-2(type='button')
             | 저장
-          .text-blue 화살표를 위,아래로 드래그해서 순서를 변경할 수 있습니다.
+          .info 화살표를 위,아래로 드래그해서 순서를 변경할 수 있습니다.
 
         .col.text-right
           a.btn.btn-white(href='/setting/service/edit')

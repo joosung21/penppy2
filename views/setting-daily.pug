@@ -14,10 +14,10 @@ body.two-depth(name='setting', page='daily')
           .form-inline
             .year-month 2018년 1월
             .btn-group.mx-3
-              button.btn.btn-light(type='button')
-                i.fa.fa-angle-left.fa-lg
-              button.btn.btn-light(type='button')
-                i.fa.fa-angle-right.fa-lg
+              button.btn.btn-white.border-right-0(type='button')
+                i.fa.fa-angle-left.fa-lg.text-dark
+              button.btn.btn-white.border-left-0(type='button')
+                i.fa.fa-angle-right.fa-lg.text-dark
 
         .col-lg.status-model.d-flex.justify-content-end
           .color-amended
@@ -47,84 +47,84 @@ body.two-depth(name='setting', page='daily')
                 .day-header
                   .date.text-red 1
                   .season 비수기
-                .text-center.py-5 비수기-주중
+                .text-center.py-5 비수기 - 주중
               td
                 .day-header
                   .date 2
                   .season 비수기
-                .text-center.py-5 비수기-주중
+                .text-center.py-5 비수기 - 주중
               td
                 .day-header
                   .date 3
                   .season 비수기
-                .text-center.py-5 비수기-주중
+                .text-center.py-5 비수기 - 주중
               td
                 .day-header
                   .date 4
                   .season 비수기
-                .text-center.py-5 비수기-주중
+                .text-center.py-5 비수기 - 주중
               td
                 .day-header
                   .date 5
                   .season 비수기
-                .text-center.py-5 비수기-주중
+                .text-center.py-5 비수기 - 주중
               td
                 .day-header
                   .date.text-blue 6
                   .season 비수기
-                .text-center.py-5 비수기-주중
+                .text-center.py-5 비수기 - 주중
             tr
               td
                 .day-header
                   .date.text-red 7
                   .season 비수기
-                .text-center.py-5 비수기-주중
+                .text-center.py-5 비수기 - 주중
               td
                 .day-header
                   .date 8
                   .season 비수기
-                .text-center.py-5 비수기-주중
+                .text-center.py-5 비수기 - 주중
               td
                 .day-header
                   .date 9
                   .season 비수기
-                .text-center.py-5 비수기-주중
+                .text-center.py-5 비수기 - 주중
               td
                 .day-header
                   .date 10
                   .season 비수기
-                .text-center.py-5 비수기-주중
+                .text-center.py-5 비수기 - 주중
               td
                 .day-header
                   .date 11
                   .season 비수기
-                .text-center.py-5 비수기-주중
+                .text-center.py-5 비수기 - 주중
               td
                 .day-header
                   .date 12
                   .season 비수기
-                .text-center.py-5 추석황금연휴-금요일
+                .text-center.py-5 추석황금연휴 - 금요일
               td
                 .day-header
                   .date.text-blue 13
                   .season 비수기
-                .text-center.py-5 비수기-주중
+                .text-center.py-5 비수기 - 주중
             tr
               td
                 .day-header
                   .date.text-red 14
                   .season 비수기
-                .text-center.py-5 비수기-주중
+                .text-center.py-5 비수기 - 주중
               td
                 .day-header
                   .date 15
                   .season 비수기
-                .text-center.py-5 비수기-주중
+                .text-center.py-5 비수기 - 주중
               td
                 .day-header
                   .date 16
                   .season 비수기
-                .text-center.py-5 비수기-주중
+                .text-center.py-5 비수기 - 주중
               td.today
                 .day-header
                   .date 17
@@ -530,9 +530,9 @@ body.two-depth(name='setting', page='daily')
                   .date.text-blue 3
                   .season 비수기
 
-      .text-center.py-4.mt-5
-        button.btn.btn-secondary.btn-lg.px-5.mr-2(type='button') 취소
-        button.btn.btn-primary.btn-lg.px-5(type='button') 저장
+      .text-center.pt-4.mt-4
+        button.btn.btn-secondary.btn-lg.mr-1(type='button') 취소
+        button.btn.btn-primary.btn-lg(type='button') 저장
 
     include ./includes/footer.pug
 

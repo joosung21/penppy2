@@ -14,7 +14,7 @@ $complete: $red
 $callonly: #FFB822
 $blocked: $light
 
-$left-side-width: 13rem
+$left-side-width: 16rem
 $left-side-padding: 2rem
 
 //------------ Extends -------------//
@@ -36,6 +36,8 @@ $left-side-padding: 2rem
   color: white
   background-color: $navy-blue
   border-color: $navy-blue
+.btn-light
+  background-color: #F2F3F8
 .table-bordered thead th, .table-bordered thead td
     border-bottom-width: 1px
 .input-group-text
@@ -52,9 +54,17 @@ $left-side-padding: 2rem
   font-size: .9rem
   font-weight: 300
   padding: .5rem .7rem
+.btn.btn-lg
+  font-size: 1.15rem
+  padding: .5rem 2.3rem
+
 .table
+  td
+    padding: .5rem
   thead th
     border: 0
+    padding: 1.2rem .5rem
+    font-weight: 600
   tbody
     td, th
       border-top: 0
@@ -76,8 +86,11 @@ $left-side-padding: 2rem
   font-weight: 300
   &.dirty
     background-color: #FFF5DB
+.form-control-plaintext
+  font-weight: 300
 .bg-light
-  background-color: #F2F3F8 !important
+  background-color: #F8F9FB !important
+
 
 //------------ CSS Style Utilities ----------//
 .text-red
@@ -86,22 +99,26 @@ $left-side-padding: 2rem
   color: $blue
 .text-onda
   color: $onda
+.text-dark
+  color: #4f4f4f
+.font-xsmall
+  font-size: 0.85rem
 
 
 //----------- Initiate -----------//
 html
   font-size: 14px
 body
-
-.form-group label
-  font-weight: 400
+.form-group
+  margin-bottom: 20px
+  label
+    font-weight: 400
 
 .btn-white
   border-color: $border-color
   color: #4F4F4F
   &:hover
     color: #4F4F4F
-    background-color: $white-gray
   i.fa
     color: #929292
 
@@ -192,16 +209,16 @@ body
 
 .info
   color: $onda
-  font-size: .9rem
+  font-size: .85rem
   font-weight: 400
-  padding: 1rem 0
+  padding: .5rem 0
 
 /* The switch - the box around the slider
 .switch
   position: relative
   display: inline-block
-  width: 70px
-  height: 30px
+  width: 76px
+  height: 28px
   margin: 6px 0 0 0
   input
     display: none
@@ -222,37 +239,52 @@ body
     content: '판매'
     position: absolute
     z-index: 10
-    right: 35px
-    top: 6px
+    left: 0
+    top: 4px
     color: #fff
     font-size: 12px
+    width: 3.8rem
+    text-align: center
   &:before
     position: absolute
     content: ' '
     height: 26px
     width: 26px
-    left: 42px
-    bottom: 2px
+    left: 49px
+    bottom: 1px
     background-color: #fff
-    -webkit-transition: .3s
-    transition: .3s
+    -webkit-transition: .2s
+    transition: .2s
 input
   &:checked + .slider
     background-color: #ccc
     &:after
-      content: '마감'
-      right: 11px
+      content: '미판매'
+      width: 7rem
+      right: 0
+      text-align: center
       color: white
   &:focus + .slider
     box-shadow: 0 0 1px #ccc
   &:checked + .slider:before
-    -webkit-transform: translateX(-32px)
-    -ms-transform: translateX(-32px)
-    transform: translateX(-40px)
+    -webkit-transform: translateX(-48px)
+    -ms-transform: translateX(-48px)
+    transform: translateX(-48px)
 .slider.round
   border-radius: 34px
   &:before
     border-radius: 50%
+
+.switch.online
+  .slider:after
+    content: '온라인'
+  input:checked + .slider:after
+    content: '현장'
+.switch.available
+  .slider:after
+    content: '가능'
+  input:checked + .slider:after
+    content: '불가'
 
 
 //----------- Layout -----------//
@@ -266,6 +298,7 @@ input
   background-color: $onda
   z-index: 3
   color: white
+  font-weight: 100
   .first-dapth
     display: flex
     flex-direction: column
@@ -279,7 +312,7 @@ input
     a
       display: flex
       align-items: center
-      padding: 1.5rem $left-side-padding
+      padding: 1.2rem $left-side-padding
       color: white
       text-decoration: none
       transition: all .3s
@@ -293,7 +326,7 @@ input
   .widget-timer
     padding: 1.5rem $left-side-padding
     .day, .month
-      font-size: .8rem
+      font-size: .85rem
       opacity: .5
     .date
       margin-top: 1rem
@@ -314,23 +347,26 @@ input
     display: none
     width: $left-side-width
     background-color: $navy-blue
+    vertical-align: center
 #main-nav.two-depth
   width: calc(#{$left-side-width} * 2)
   .nav-group
     padding: 1.5rem $left-side-padding
     .group-title
-      font-size: .8rem
-      opacity: .7
+      font-size: .85rem
+      opacity: .5
       margin-bottom: 1rem
+      font-weight: 100
     a
       display: block
       color: white
       text-decoration: none
-      padding: .5rem 0
+      padding: .3rem 0
       &.active
         color: #A3F2BF
   hr
-    border-color: $onda
+    border-color: lighten($navy-blue, 7%)
+    margin: 0 1.8rem
 
 // Sub Nav
 #sub-nav
@@ -355,15 +391,15 @@ input
 // Artboard
 .artboard
   background-color: white
-  padding: 3rem 3rem 6rem 3rem
+  padding: 3rem 3rem 4rem 3rem
   @extend %box-shadow
   margin-bottom: 3rem
   .board-title
     font-weight: 600
-    font-size: 1.4rem
+    font-size: 1.3rem
     border-bottom: 1px solid $border-color
     padding: 0 3rem 1.5rem 3rem
-    margin: -1rem -3rem 3rem -3rem
+    margin: -1.5rem -3rem 1.5rem -3rem
   .board-container
     max-width: 900px
 
@@ -391,7 +427,8 @@ footer
     font-weight: 400
 
 .status-model
-  align-items: center
+  align-items: flex-end
+  font-size: 0.85rem
   .status-badge
     padding: .15rem
     margin-left: 1.5rem
@@ -454,7 +491,7 @@ footer
         line-height: 1rem
       .stock
         margin-left: auto
-        font-size: .8rem
+        font-size: .85rem
       &.dimed
         color: $light
       &:hover
@@ -493,8 +530,10 @@ footer
       line-height: 1rem
 
 .table-calendar-daily
+  td
+    padding-bottom: 1.5rem
   .custom-control
-    margin-top: .5rem
+    margin-top: .7rem
   td.amended
     background-color: #EAEAFF
   td.eve
@@ -540,7 +579,7 @@ footer
 .table-rate
   tr.sub-header
     th
-      font-weight: 400
+      font-weight: 300
   .form-control
     text-align: right
     width: 7rem
@@ -565,19 +604,17 @@ footer
         padding: .25rem .5rem
         background-color: #384C67
         color: white
-        font-size: .8rem
+        font-size: .85rem
     .delete
       position: absolute
       right: 0
       bottom: 0
-      background-color: #384C67
+      background-color: lighten(#384C67, 10%)
       color: white
       text-decoration: none
       padding: .25rem
-      opacity: .7
       transition: all .3s
-      &:hover
-        opacity: 1
+      border-radius: 2px
 
 //
 
@@ -596,8 +633,3 @@ footer
       background-position: 3px 3px
     &.blocked
       background-position: 2px 2px
-
-//---------- Responsive: Larger than 2000px ----------//
-@media only screen and (min-width: 2000px)
-  html
-    font-size: 16px

@@ -87,14 +87,14 @@ body.two-depth(name='setting', page='rooms')
                   input.form-control(type='number', min='0')
                   .input-group-append
                     .input-group-text 개
-        .form-group.row
+        .form-group.row.mb-3
           label.col-sm-2.pt-1 사진
           .col-sm-10
-            button.btn.btn-white(type='button')
-              i.fa.fa-camera.fa-lg.mr-2
-              | 이미지 추가
+            button.btn.btn-white.btn-small(type='button')
+              img(src='/images/ic-camera.svg', style='position:relative; top:-2px; margin-right: 5px')
+              span 이미지 추가
             .info 사진순서는 드래그로 변경 가능하며, 1번 사진이 대표 사진으로 설정됩니다.
-            .image-upload.form-row.mt-3
+            .image-upload.form-row.mt-2
               .unit.grabbable.col-3.first-image(draggable='true')
                 .image(style='background-image: url("/images/temp-image.jpg")')
                   a.delete(href='#')
@@ -138,7 +138,7 @@ body.two-depth(name='setting', page='rooms')
         .form-group.row
           label.col-sm-2.pt-1 객실형태
           .col-sm-10
-            .bg-light.px-4.py-3.border.rounded
+            .bg-light.px-4.py-3.rounded
               .check-group
                 .custom-control.custom-checkbox
                   input#check1.custom-control-input(type='checkbox')
@@ -159,7 +159,7 @@ body.two-depth(name='setting', page='rooms')
         .form-group.row
           label.col-sm-2.pt-1 객실 내 시설
           .col-sm-10
-            .bg-light.px-4.py-3.border.rounded
+            .bg-light.px-4.py-3.rounded
               .check-group
                 .custom-control.custom-checkbox
                   input#check7.custom-control-input(type='checkbox')
@@ -214,13 +214,13 @@ body.two-depth(name='setting', page='rooms')
               input#radio2.custom-control-input(type='radio', name='statusRadio', checked)
               label.custom-control-label(for='radio2') 미판매
 
-        .row.text-center.py-4.no-gutters
+        .row.text-center.pt-4.no-gutters
           .col-8.offset-2
-            button.btn.btn-secondary.btn-lg.px-5.mr-2(type='button') 취소
-            button.btn.btn-primary.btn-lg.px-5(type='button') 저장
-          .col-2.text-right
+            button.btn.btn-secondary.btn-lg.mr-1(type='button') 취소
+            button.btn.btn-primary.btn-lg(type='button') 저장
+          .col-2.text-right.pt-1
             button.btn.btn-white(type='button')
-              i.fa.fa-trash.fa-lg.mr-2
+              i.fa.fa-trash.fa-lg.mr-1
               | 객실 삭제
 
 
