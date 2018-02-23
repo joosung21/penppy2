@@ -73,15 +73,22 @@ $( document ).ready(function() {
       }
     }
     if( windowWidth <= 1199 ) {
-      $('#main-nav.two-depth .second-depth').hide();
+      slideSecondNav();
     }
   });
 
   // Slide Second Nav
   if( windowWidth <= 1199 ) {
-    $('#main-nav.two-depth .second-depth').hide();
+    slideSecondNav();
+  }
+
+});
+
+slideSecondNav = function(){
+  $('#main-nav.two-depth .second-depth').hide();
     var isOpend1 = false;
     var isOpend2 = false;
+
     $('#main-nav.two-depth .first-depth a').mouseover(function(){
       if($(this).hasClass('setting')) {
         if(isOpend1 == false) {
@@ -105,8 +112,4 @@ $( document ).ready(function() {
       isOpend1 = false;
       isOpend2 = false;
     });
-  }
-
-
-
-});
+}
