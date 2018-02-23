@@ -6,12 +6,17 @@ body.two-depth(name='rateplan', page='season02')
   include ./includes/sub-nav.pug
   .content-container
     .artboard
-      .board-title 요금설정 - 준성수기
+      .board-title.d-flex.justify-content-between.align-items-center
+        | 요금설정 - 준성수기
+        button.btn.btn-small.btn-white(type='button')
+          img.mr-2(src='/images/ic-calendar-gray.svg')
+          | 시즌달력 보기
+
       .board-container(style='max-width:none')
         .form-group.row
           label.col-sm-2.pt-1 시즌명
-          .col-sm-10
-            input.form-control-plaintext(type='text', value='준성수기', readonly)
+          .col-sm-6
+            input.form-control(type='text', value='준성수기', disabled)
         .form-group.row
           label.col-sm-2.pt-1 기간
           .col-sm-10
@@ -27,22 +32,16 @@ body.two-depth(name='rateplan', page='season02')
               | 2017년 12월 22일 ~ 2017년 12월 22일
               button.btn.btn-white.btn-sm.p-1.ml-2.mb-1(type='button')
                 i.fa.fa-times.fa-lg
-            .mb-2
+            .form-inline.my-3
               button.btn.btn-white.mr-1(type='button')
                 i.fa.fa-plus.fa-lg.mr-1
                 | 기간 추가
-              button.btn.btn-white(type='button')
-                | 시즌달력 보기
-            .form-inline.my-3
               input.form-control.form-control-datepicker(type='text', value='2017.07.16', size='14')
               span.px-2 ~
               input.form-control.form-control-datepicker.mr-2(type='text', value='2017.08.20', size='14')
               button.btn.btn-secondary.mr-1(type='button') 취소
               button.btn.btn-primary(type='button') 저장
-        .d-flex.justify-content-between.align-items-end.mb-3
-          .custom-control.custom-checkbox.font-xsmall
-            input#check1.custom-control-input(type='checkbox', checked)
-            label.custom-control-label(for='check1') 일요일 요금 사용
+        .text-right.mb-3
           .dropdown
             button.btn.btn-white.dropdown-toggle(type='button', data-toggle='dropdown')
               | 요금 불러오기
@@ -56,7 +55,7 @@ body.two-depth(name='rateplan', page='season02')
             thead.bg-light
               tr
                 th.border-right.border-bottom(colspan='2') 객실
-                th.border-right.border-bottom(colspan='5') 객실 기본요금
+                th.border-right.border-bottom(colspan='6') 객실 기본요금
                 th.border-bottom(colspan='3') 추가인원 요금
               tr.sub-header
                 th.text-left.px-4(style='width: 15%; min-width: 12rem') 객실명
@@ -65,10 +64,14 @@ body.two-depth(name='rateplan', page='season02')
                   .custom-control.custom-checkbox
                     input#check2.custom-control-input(type='checkbox', onclick='openSlider()')
                     label.custom-control-label(for='check2')
+                th.border-right 시즌
                 th 일요일
                 th 주중
                 th 금요일
-                th.border-right 토요일(공휴일 전날)
+                th.border-right(style='line-height: 1.2rem')
+                  | 토요일
+                  br
+                  small (공휴일전날)
                 th 성인
                 th 아동
                 th 유아
@@ -80,6 +83,7 @@ body.two-depth(name='rateplan', page='season02')
                   .custom-control.custom-checkbox
                     input#check3.custom-control-input(type='checkbox', onclick='openSlider()')
                     label.custom-control-label(for='check3')
+                td.border-right 준성수기
                 td
                   input.form-control(type='text', value='120,000')
                 td
@@ -101,6 +105,7 @@ body.two-depth(name='rateplan', page='season02')
                   .custom-control.custom-checkbox
                     input#check4.custom-control-input(type='checkbox', onclick='openSlider()')
                     label.custom-control-label(for='check4')
+                td.border-right 준성수기
                 td
                   input.form-control(type='text', value='120,000')
                 td
@@ -122,6 +127,7 @@ body.two-depth(name='rateplan', page='season02')
                   .custom-control.custom-checkbox
                     input#check5.custom-control-input(type='checkbox', onclick='openSlider()')
                     label.custom-control-label(for='check5')
+                td.border-right 준성수기
                 td
                   input.form-control(type='text', value='120,000')
                 td
@@ -143,6 +149,7 @@ body.two-depth(name='rateplan', page='season02')
                   .custom-control.custom-checkbox
                     input#check6.custom-control-input(type='checkbox', onclick='openSlider()')
                     label.custom-control-label(for='check6')
+                td.border-right 준성수기
                 td
                   input.form-control.dirty(type='text', value='120,000')
                 td
@@ -164,6 +171,7 @@ body.two-depth(name='rateplan', page='season02')
                   .custom-control.custom-checkbox
                     input#check7.custom-control-input(type='checkbox', onclick='openSlider()')
                     label.custom-control-label(for='check7')
+                td.border-right 준성수기
                 td
                   input.form-control.dirty(type='text', value='120,000')
                 td
