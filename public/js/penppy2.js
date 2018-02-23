@@ -15,6 +15,7 @@ function closeSlider(){
 }
 
 
+var windowWidth = $(window).width();
 
 // Document Ready
 $( document ).ready(function() {
@@ -52,7 +53,6 @@ $( document ).ready(function() {
   }
 
   // Responsive: Second Depth Show
-  var windowWidth = $(window).width();
 
   // Resize Detect
   $(window).resize(function() {
@@ -85,11 +85,13 @@ $( document ).ready(function() {
 });
 
 slideSecondNav = function(){
+
   $('#main-nav.two-depth .second-depth').hide();
     var isOpend1 = false;
     var isOpend2 = false;
 
-    $('#main-nav.two-depth .first-depth a').mouseover(function(){
+  $('#main-nav.two-depth .first-depth a').mouseover(function(){
+    if(windowWidth <= 1199) {
       if($(this).hasClass('setting')) {
         if(isOpend1 == false) {
           $('#main-nav.two-depth .second-depth').hide();
@@ -106,10 +108,15 @@ slideSecondNav = function(){
           isOpend2 = true;
         }
       }
-    });
-    $('#main-nav').mouseleave(function(){
+    }
+  });
+  $('#main-nav').mouseleave(function(){
+    // console.log(windowWidth)
+    if(windowWidth <= 1199) {
       $('#main-nav.two-depth .second-depth').slideUp(300);
       isOpend1 = false;
       isOpend2 = false;
-    });
+    }
+  });
+
 }
