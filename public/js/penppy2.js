@@ -56,13 +56,14 @@ $( document ).ready(function() {
   $( window ).resize(function() {
     windowWidth = $(window).width();
     if( windowWidth >= 1200 ) {
-      $('#main-nav').addClass('two-depth');
       var thisPage = $('body').attr('name');
       switch(thisPage) {
         case 'setting':
+          $('#main-nav').addClass('two-depth');
           $('#nav-setting').show();
           break;
         case 'rateplan':
+          $('#main-nav').addClass('two-depth');
           $('#nav-rateplan').show();
           break;
         default:
