@@ -53,7 +53,9 @@ $( document ).ready(function() {
 
   // Responsive: Second Depth Show
   var windowWidth = $(window).width();
-  $( window ).resize(function() {
+
+  // Resize Detect
+  $(window).resize(function() {
     windowWidth = $(window).width();
     if( windowWidth >= 1200 ) {
       var thisPage = $('body').attr('name');
@@ -75,6 +77,7 @@ $( document ).ready(function() {
     }
   });
 
+  // Slide Second Nav
   if( windowWidth <= 1199 ) {
     $('#main-nav.two-depth .second-depth').hide();
     var isOpend1 = false;
@@ -84,6 +87,7 @@ $( document ).ready(function() {
         if(isOpend1 == false) {
           $('#main-nav.two-depth .second-depth').hide();
           $('#main-nav.two-depth #nav-setting').slideDown(300);
+          isOpend2 = false;
           isOpend1 = true;
         }
       }
@@ -91,6 +95,7 @@ $( document ).ready(function() {
         if(isOpend2 == false) {
           $('#main-nav.two-depth .second-depth').hide();
           $('#main-nav.two-depth #nav-rateplan').slideDown(300);
+          isOpend1 = false;
           isOpend2 = true;
         }
       }
