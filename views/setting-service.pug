@@ -17,7 +17,8 @@ body.two-depth(name='setting', page='service')
             th 기본/최대수량
             th 결제방법
             th 당일판매
-            th 상태
+            th 실시간 예약창
+            th 온라인 판매대행
         tbody
           tr
             td 01
@@ -36,6 +37,10 @@ body.two-depth(name='setting', page='service')
               label.switch
                 input(type="checkbox")
                 span.slider.round
+            td
+              label.switch
+                input(type="checkbox")
+                span.slider.round
           tr
             td 02
             td.text-left 바베큐그릴 4인
@@ -47,6 +52,10 @@ body.two-depth(name='setting', page='service')
                 span.slider.round
             td
               label.switch.available
+                input(type="checkbox", checked)
+                span.slider.round
+            td
+              label.switch
                 input(type="checkbox", checked)
                 span.slider.round
             td
@@ -69,6 +78,10 @@ body.two-depth(name='setting', page='service')
             td
               label.switch
                 input(type="checkbox", checked)
+                span.slider.round
+            td
+              label.switch
+                input(type="checkbox")
                 span.slider.round
       .row.mt-4
         .col
@@ -93,7 +106,8 @@ body.two-depth(name='setting', page='service')
             th 기본/최대수량
             th 결제방법
             th 당일판매
-            th 상태
+            th 실시간 예약창
+            th 온라인 판매대행
         tbody
           tr.move
             th.text-blue
@@ -108,6 +122,10 @@ body.two-depth(name='setting', page='service')
             td
               label.switch.available
                 input(type="checkbox", checked, disabled)
+                span.slider.round
+            td
+              label.switch
+                input(type="checkbox", disabled)
                 span.slider.round
             td
               label.switch
@@ -131,6 +149,10 @@ body.two-depth(name='setting', page='service')
               label.switch
                 input(type="checkbox", disabled)
                 span.slider.round
+            td
+              label.switch
+                input(type="checkbox", disabled)
+                span.slider.round
           tr.move
             th.text-blue
               i.fa.fa-arrows-v.fa-lg
@@ -144,6 +166,10 @@ body.two-depth(name='setting', page='service')
             td
               label.switch.available
                 input(type="checkbox", disabled)
+                span.slider.round
+            td
+              label.switch
+                input(type="checkbox", checked, disabled)
                 span.slider.round
             td
               label.switch

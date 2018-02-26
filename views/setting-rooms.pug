@@ -12,16 +12,21 @@ body.two-depth(name='setting', page='rooms')
         thead.bg-light
           tr
             th 순서
-            th(style='width: 60%') 객실명
+            th(style='width: 50%') 객실명
             th 객실수
             th 기준/최대인원
-            th(style='width: 10%') 상태
+            th(style='width: 13%') 실시간 예약창
+            th(style='width: 13%') 온라인 판매대행
         tbody
           tr
             td 01
             td.text-left 황토동-은하수201호
             td 1
             td 3/5
+            td
+              label.switch
+                input(type="checkbox")
+                span.slider.round
             td
               label.switch
                 input(type="checkbox")
@@ -33,6 +38,10 @@ body.two-depth(name='setting', page='rooms')
             td 3/5
             td
               label.switch
+                input(type="checkbox", checked)
+                span.slider.round
+            td
+              label.switch
                 input(type="checkbox")
                 span.slider.round
           tr
@@ -42,6 +51,10 @@ body.two-depth(name='setting', page='rooms')
             td 3/5
             td
               label.switch
+                input(type="checkbox", checked)
+                span.slider.round
+            td
+              label.switch
                 input(type="checkbox")
                 span.slider.round
           tr
@@ -49,6 +62,10 @@ body.two-depth(name='setting', page='rooms')
             td.text-left 하늘채(스파)
             td 1
             td 2/2
+            td
+              label.switch
+                input(type="checkbox")
+                span.slider.round
             td
               label.switch
                 input(type="checkbox", checked)
@@ -62,10 +79,19 @@ body.two-depth(name='setting', page='rooms')
               label.switch
                 input(type="checkbox")
                 span.slider.round
+            td
+              label.switch
+                input(type="checkbox")
+                span.slider.round
 
-      .text-right.mt-4
-        a.btn.btn-white(href='/setting/rooms/edit')
-          i.fa.fa-plus.fa-lg.mr-1
-          | 객실 등록
+      .row.mt-4
+        .col
+          button.btn.btn-white(type='button')
+            i.fa.fa-arrows-v.mr-1
+            | 순서변경
+        .col.text-right
+          a.btn.btn-white(href='/setting/rooms/edit')
+            i.fa.fa-plus.fa-lg.mr-1
+            | 객실 등록
 
     include ./includes/footer.pug

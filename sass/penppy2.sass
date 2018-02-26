@@ -95,6 +95,9 @@ $left-side-padding: 2rem
 .bg-light
   background-color: #F8F9FB !important
 
+select.custom-select
+  background: #fff url('/images/angle-down.svg') no-repeat right .75rem center
+
 
 //------------ CSS Style Utilities ----------//
 .text-red
@@ -415,6 +418,11 @@ body.two-depth
   .content-container
     padding: 7rem 2.5rem 0 calc(#{$left-side-width} * 2 + 2.5rem)
 
+#nav-rateplan.second-depth
+  .nav-group
+    padding-top: 22rem
+
+// Footer
 footer
   display: flex
   align-items: center
@@ -643,22 +651,25 @@ footer
     position: relative
     display: block
     width: 100%
-    min-width: 1000px
+    min-width: 1050px
     height: auto
     .first-depth
       display: flex
+      justify-content: space-between
       width: 100%
       .brand
         display: inline-block
         padding: .9rem 2.5rem
       nav
-        margin: 0
+        margin: 0 1rem 0 0
         a
           display: inline-block
-          padding: 1.3rem 2rem
+          padding: 1.3rem 1.4rem
           font-size: 1.2rem
           img
-            display: none
+            position: relative
+            top: -2px
+            margin-right: .5rem
     .widget-timer
       display: none
 
