@@ -1,0 +1,51 @@
+include ./includes/header.pug
+
+//-------- 업체설정: 예약창 공지사항 수정 Page ---------//
+body.two-depth(name='setting', page='notice')
+  include ./includes/main-nav-left.pug
+  include ./includes/sub-nav.pug
+  .content-container
+    .artboard
+      .board-title 설정 - 예약창 공지사항
+      .board-container
+        .form-group.row
+          label.col-sm-2.pt-1 제목
+          .col-sm-10
+            input.form-contro(type='text')
+        .form-group.row
+          label.col-sm-2.pt-1 내용
+          .col-sm-10
+            textarea.form-control(rows='7')
+        .form-group.row
+          label.col-sm-2.pt-1 노출기간
+          .col-sm-10
+            .form-inline
+              .custom-control.custom-radio.custom-control-inline.mr-4
+                input#radio3.custom-control-input(type='radio', name='cancelDelayRadio')
+                label.custom-control-label(for='radio3') 상시노출
+              .custom-control.custom-radio.custom-control-inline
+                input#radio4.custom-control-input(type='radio', name='cancelDelayRadio', checked)
+                label.custom-control-label(for='radio4') 기간노출
+              input.form-control.form-control-datepicker(type='text', value='2017.07.16(수)', size='18')
+              span.px-2 ~
+              input.form-control.form-control-datepicker.mr-2(type='text', value='2017.08.20(목)', size='18')
+        .form-group.row
+          label.col-sm-2.pt-1 노출영역
+          .col-sm-10
+            .custom-control.custom-checkbox.custom-control-inline.mr-4
+              input#check1.custom-control-input(type='checkbox')
+              label.custom-control-label(for='check1') 팝업
+            .custom-control.custom-checkbox.custom-control-inline
+              input#check2.custom-control-input(type='checkbox')
+              label.custom-control-label(for='check2') 공지사항
+
+        .row.text-center.pt-4.no-gutters
+          .col-8.offset-2
+            button.btn.btn-secondary.btn-lg.mr-1(type='button') 취소
+            button.btn.btn-primary.btn-lg(type='button') 저장
+          .col-2.text-right
+            button.btn.btn-white(type='button')
+              i.fa.fa-trash.fa-lg.mr-2
+              | 공지사항 삭제
+
+    include ./includes/footer.pug

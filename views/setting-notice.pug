@@ -1,0 +1,41 @@
+include ./includes/header.pug
+
+//-------- 업체설정: 예약창 공지사항 Page ---------//
+body.two-depth(name='setting', page='notice')
+  include ./includes/main-nav-left.pug
+  include ./includes/sub-nav.pug
+  .content-container
+    .artboard
+      .board-title 설정 - 예약창 공지사항
+
+      table.table.table-comfort.text-center.align-middle
+        thead.bg-light
+          tr
+            th 번호
+            th(style='width: 30%') 제목
+            th 노출기간
+            th 노출영역
+            th 등록자
+            th 등록일시
+        tbody
+          tr.link(onclick='location.href="/setting/notice/edit"')
+            td 02
+            td.text-left 오픈기념 할인
+            td 2018.03.05(월)~2018.03.09(금)
+            td 팝업, 공지사항 게시판
+            td 김온다
+            td 2018.03.05 15:32
+          tr.link(onclick='location.href="/setting/notice/edit"')
+            td 01
+            td.text-left 애견동반 가능
+            td 상시노출
+            td 공지사항 게시판
+            td 김온다
+            td 2018.02.14 07:08
+
+      .text-right.mt-4
+        a.btn.btn-white(href='/setting/notice/edit')
+          i.fa.fa-plus.fa-lg.mr-1
+          | 공지사항 등록
+
+    include ./includes/footer.pug

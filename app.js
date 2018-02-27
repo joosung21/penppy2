@@ -24,6 +24,8 @@ app.get('/setting/daily', function (req, res){res.render('setting-daily')})
 app.get('/setting/sms', function (req, res){res.render('setting-sms')})
 app.get('/setting/policy', function (req, res){res.render('setting-policy')})
 app.get('/setting/bp', function (req, res){res.render('setting-bp')})
+app.get('/setting/notice', function (req, res){res.render('setting-notice')})
+app.get('/setting/notice/edit', function (req, res){res.render('setting-notice-edit')})
 
 //-- Temporary Pages
 app.get('/test', function (req, res){res.render('test')})
