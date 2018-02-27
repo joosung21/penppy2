@@ -1,0 +1,157 @@
+include ./includes/header.pug
+
+//-------- 업체설정:  문자발송정보 Page ---------//
+body.two-depth(name='setting', page='sms')
+  include ./includes/main-nav-left.pug
+  include ./includes/sub-nav.pug
+  .content-container
+    .artboard
+      .board-title 설정 - 문자발송 정보
+      p
+        | 실시간 예약창 문자발송 비용은 온다에서 부담합니다.
+        br
+        | 휴대폰 인증이 완료되면 해당 번호로 문자가 발신/수신됩니다.
+      .form-inline
+        label
+          b 휴대폰 인증
+        input.form-control.mx-2(type='text', size='27')
+        button.btn.btn-primary(type='button') 인증하기
+
+      table.table.table-comfort.text-center.align-middle.mt-5
+        thead.bg-light
+          tr
+            th.text-left(width='25%') 발송조건
+            th 업주 수신 메세지
+            th 고객 수신 메세지
+        tbody
+          tr
+            td.text-left 예약대기(무통장 선택시)
+            td
+              textarea.form-control.sms-form(rows='7').
+                [TPORT] @고객명님 @객실명방 입금대기중
+                - 이용일: @입실일
+                - 결제금액: @결제금액원
+              .text-length
+                b 78
+                | /200
+            td
+              textarea.form-control.sms-form(rows='7').
+                [@업체명] @결제금액원을 입금해주세요.
+                @입금대기시간 시간내 미입금시 예약이 자동취소됩니다.
+
+                - 객실명: @객실명방
+                - 이용일: @입실일
+                - 입금계좌: @계좌번호
+              .text-length
+                b 78
+          tr
+            td.text-left 대기중 취소
+            td
+              textarea.form-control.sms-form(rows='2').
+                [TPORT] @고객명님 @객실명방 @입실일 미입금 자동취소
+              .text-length
+                b 78
+                | /200
+            td
+              textarea.form-control.sms-form(rows='2').
+                [@업체명] @고객명님의 @객실명방 예약이 대기중 미입금으로 자동취소되었습니다.
+              .text-length
+                b 78
+                | /200
+          tr
+            td.text-left 예약완료(카드)
+            td
+              textarea.form-control.sms-form(rows='15').
+                [TPORT] @고객명님 예약완료
+
+                - 객실명: @객실명방
+                - 이용일: @입실일
+                - 이용인원: @객실이용인원명
+
+                - 고객전화: @고객전화번호
+                - 고객요청사항: @고객요청사항
+
+                - 결제금액: @결제금액원
+                - 결제방식: 카드
+              .text-length
+                b 78
+                | /200
+            td
+              textarea.form-control.sms-form(rows='15').
+                [@업체명] @고객명님 예약이 완료되었습니다.
+
+                - 객실명: @객실명방
+                - 이용일: @입실일
+                - 이용인원: @객실이용인원명
+
+                - 펜션주소: @업체주소
+                - 펜션전화: @업체전화번호
+                - 고객요청사항: @고객요청사항
+
+                - 결제금액: @결제금액원
+                - 결제방식: 카드
+
+                오시기 전에 필요하신 사항을 알려주시면 준비해드리겠습니다.
+              .text-length
+                b 78
+                | /200
+          tr
+            td.text-left 예약완료(무통장)
+            td
+              textarea.form-control.sms-form(rows='15').
+                [TPORT] @고객명님 예약완료
+
+                - 객실명: @객실명방
+                - 이용일: @입실일
+                - 이용인원: @객실이용인원명
+
+                - 고객전화: @고객전화번호
+                - 고객요청사항: @고객요청사항
+
+                - 결제금액: @결제금액원
+                - 결제방식: 무통장입금
+              .text-length
+                b 78
+                | /200
+            td
+              textarea.form-control.sms-form(rows='15').
+                [@업체명] @고객명님 예약이 완료되었습니다.(입금완료)
+
+                - 객실명: @객실명방
+                - 이용일: @입실일
+                - 이용인원: @객실이용인원명
+
+                - 펜션주소: @업체주소
+                - 펜션전화: @업체전화번호
+                - 고객요청사항: @고객요청사항
+                - 입실시간: 오후 3시
+
+                - 결제금액: @결제금액원
+                - 결제방식: 무통장입금
+
+                오시기 전에 필요하신 사항을 알려주시면 준비해드리겠습니다.
+              .text-length
+                b 78
+                | /200
+          tr
+            td.text-left 예약완료(무통장)
+            td
+              textarea.form-control.sms-form(rows='1').
+                [TPORT] @고객명님 @객실명방 @입실일 예약취소
+              .text-length
+                b 78
+                | /200
+            td
+              textarea.form-control.sms-form(rows='1').
+                [@업체명] @고객명님의 예약이 취소되었습니다.
+              .text-length
+                b 78
+                | /200
+
+      .info SMS 메세지 변경이 필요한 경우 담당자에게 문의해주세요.
+
+      .text-center.pt-4
+        button.btn.btn-secondary.btn-lg.mr-1(type='button') 취소
+        button.btn.btn-primary.btn-lg(type='button') 저장
+
+    include ./includes/footer.pug
