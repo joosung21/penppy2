@@ -12,10 +12,19 @@ body.two-depth(name='setting', page='sms')
         br
         | 휴대폰 인증이 완료되면 해당 번호로 문자가 발신/수신됩니다.
       .form-inline
-        label
+        //- label.mr-2
+        //-   b 휴대폰 인증
+        //- input.form-control.mr-2(type='text', size='27')
+        //- button.btn.btn-primary(type='button') 인증하기
+        label.mr-2
           b 휴대폰 인증
-        input.form-control.mx-2(type='text', size='27')
+        input.form-control.mr-2(type='text', value='010-5562-5300', size='27', disabled)
+        input.form-control.mr-2(type='text', size='27', placeholder='인증번호 입력')
         button.btn.btn-primary(type='button') 인증하기
+        small.text-blue.ml-2
+          b (2:57 남음)
+        //- small.text-red.ml-2
+        //-   b 이미 등록된 번호입니다.
 
       table.table.table-comfort.text-center.align-middle.mt-5
         thead.bg-light

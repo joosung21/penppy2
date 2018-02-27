@@ -30,7 +30,9 @@
       .d-flex.justify-content-between
         .day Friday
         .month Feb. 2018
-      .date 12
+      .date
+        | 12
+        small 일
 
   //- 업체설정 메뉴
   #nav-setting.second-depth
@@ -40,7 +42,7 @@
         a.property(href='/setting/property') 숙소정보
         a.rooms(href='/setting/rooms') 객실정보
         a.service(href='/setting/service') 부가서비스
-        a(href='#') 취소환불정책
+        a.policy(href='/setting/policy') 취소환불정책
     hr
     .nav-group
       .group-title 판매설정

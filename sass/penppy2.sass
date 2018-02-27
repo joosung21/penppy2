@@ -38,8 +38,12 @@ $left-side-padding: 2rem
   border-color: $navy-blue
 .btn-light
   background-color: #F2F3F8
-.table-bordered thead th, .table-bordered thead td
-    border-bottom-width: 1px
+.table-bordered
+  thead
+    th, td
+      border: 1px solid $border-color !important
+
+
 .input-group-text
   color: #929292
   background-color: $white-gray
@@ -345,11 +349,9 @@ input
       text-align: center
       font-size: 4rem
       font-weight: 400
-      &:after
-        content: '일'
+      small
         font-size: 1rem
-        font-weight: 300
-        margin-left: .25rem
+        margin-left: .5rem
 
 // Two Depth Nav
 #main-nav
@@ -609,10 +611,19 @@ footer
   tr.sub-header
     th
       font-weight: 300
-  .form-control
+  input.form-control[type='text']
     text-align: right
     width: 6rem
     margin: 0 auto
+  .percentage-form
+    display: flex
+    align-items: center
+    justify-content: center
+    input.form-control
+      width: 5rem
+    span
+      margin-left: .5rem
+      color: #aaa
 
 
 //---------- 업체설정 Pages --------------//

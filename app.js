@@ -22,6 +22,7 @@ app.get('/setting/service', function (req, res){res.render('setting-service')})
 app.get('/setting/service/edit', function (req, res){res.render('setting-service-edit')})
 app.get('/setting/daily', function (req, res){res.render('setting-daily')})
 app.get('/setting/sms', function (req, res){res.render('setting-sms')})
+app.get('/setting/policy', function (req, res){res.render('setting-policy')})
 
 //-- Temporary Pages
 app.get('/test', function (req, res){res.render('test')})
