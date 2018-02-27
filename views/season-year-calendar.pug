@@ -1,0 +1,739 @@
+include ./includes/header.pug
+
+//-------- 시즌달력 ---------//
+body
+  include ./includes/main-nav-left.pug
+  include ./includes/sub-nav.pug
+  .content-container
+    .artboard
+      .board-title 시즌달력
+      .row
+        .col-md-4
+          .calendar-controler.mb-3
+            .form-inline
+              .year-month 2018년 1월
+              .btn-group.mx-3
+                button.btn.btn-white.border-right-0(type='button')
+                  i.fa.fa-angle-left.fa-lg.text-dark
+                button.btn.btn-white.border-left-0(type='button')
+                  i.fa.fa-angle-right.fa-lg.text-dark
+
+          table.table.text-center.align-middle
+            thead.bg-light
+              tr
+                th 순위
+                th(style='width: 50%') 시즌명
+                th 색상
+            tbody
+              tr
+                td 01
+                td.text-left 비수기
+                td
+                  .rectangle.season01
+              tr
+                td 02
+                td.text-left 준성수기
+                td
+                  .rectangle.season02
+              tr
+                td 03
+                td.text-left 성수기
+                td
+                  .rectangle.season03
+              tr
+                td 04
+                td.text-left 기타1
+                td
+                  .rectangle.season04
+              tr
+                td 05
+                td.text-left 기타2
+                td
+                  .rectangle.season05
+              tr
+                td 06
+                td.text-left 기타3
+                td
+                  .rectangle.season06
+              tr
+                td 07
+                td.text-left 기타4
+                td
+                  .rectangle.season07
+              tr
+                td 08
+                td.text-left 기타5
+                td
+                  .rectangle.season08
+
+          .mt-4
+            button.btn.btn-white(type='button')
+              i.fa.fa-arrows-v.mr-1
+              | 우선순위 변경
+
+        .col-md-8.calendar-group
+          .month-wrapper
+            .month-title 1월
+            table.tabel-calendar-small
+              thead
+                tr
+                  th.text-red 일
+                  th 월
+                  th 화
+                  th 수
+                  th 목
+                  th 금
+                  th 토
+              tbody
+                tr
+                  td
+                  td.season03.holiday(data-toggle='tooltip', title='새해') 1
+                  td.season03 2
+                  td.season03 3
+                  td 4
+                  td 5
+                  td 6
+                tr
+                  td.text-red 7
+                  td 8
+                  td.season02.today 9
+                  td.season02 10
+                  td.season02 11
+                  td.season02 12
+                  td 13
+                tr
+                  td.text-red.season04 14
+                  td.season04 15
+                  td.season04 16
+                  td.season04 17
+                  td 18
+                  td 19
+                  td 20
+                tr
+                  td.text-red 21
+                  td 22
+                  td 23
+                  td 24
+                  td 25
+                  td 26
+                  td 27
+                tr
+                  td.text-red 28
+                  td 29
+                  td 30
+                  td 31
+                  td
+                  td
+                  td
+
+          .month-wrapper
+            .month-title 2월
+            table.tabel-calendar-small
+              thead
+                tr
+                  th.text-red 일
+                  th 월
+                  th 화
+                  th 수
+                  th 목
+                  th 금
+                  th 토
+              tbody
+                tr
+                  td
+                  td
+                  td
+                  td
+                  td 1
+                  td 2
+                  td 3
+                tr
+                  td.text-red 4
+                  td 5
+                  td 6
+                  td 7
+                  td 8
+                  td 9
+                  td 10
+                tr
+                  td.text-red 11
+                  td 12
+                  td 13
+                  td 14
+                  td.text-red 15
+                  td.text-red 16
+                  td.text-red 17
+                tr
+                  td.text-red 18
+                  td 19
+                  td 20
+                  td 21
+                  td 22
+                  td 23
+                  td 24
+                tr
+                  td.text-red 25
+                  td 26
+                  td 27
+                  td 28
+                  td
+                  td
+                  td
+
+          .month-wrapper
+            .month-title 3월
+            table.tabel-calendar-small
+              thead
+                tr
+                  th.text-red 일
+                  th 월
+                  th 화
+                  th 수
+                  th 목
+                  th 금
+                  th 토
+              tbody
+                tr
+                  td
+                  td
+                  td
+                  td
+                  td.text-red 1
+                  td 2
+                  td 3
+                tr
+                  td.text-red 4
+                  td 5
+                  td 6
+                  td 7
+                  td 8
+                  td 9
+                  td 10
+                tr
+                  td.text-red 11
+                  td 12
+                  td 13
+                  td 14
+                  td 15
+                  td 16
+                  td 17
+                tr
+                  td.text-red 18
+                  td 19
+                  td 20
+                  td 21
+                  td 22
+                  td 23
+                  td 24
+                tr
+                  td.text-red 25
+                  td 26
+                  td 27
+                  td 28
+                  td 29
+                  td 30
+                  td 31
+
+          .month-wrapper
+            .month-title 4월
+            table.tabel-calendar-small
+              thead
+                tr
+                  th.text-red 일
+                  th 월
+                  th 화
+                  th 수
+                  th 목
+                  th 금
+                  th 토
+              tbody
+                tr
+                  td.text-red 1
+                  td 2
+                  td 3
+                  td 4
+                  td 5
+                  td 6
+                  td 7
+                tr
+                  td.text-red 8
+                  td 9
+                  td 10
+                  td 11
+                  td 12
+                  td 13
+                  td 14
+                tr
+                  td.text-red 15
+                  td 16
+                  td 17
+                  td 18
+                  td 19
+                  td 20
+                  td 21
+                tr
+                  td.text-red 22
+                  td 23
+                  td 24
+                  td 25
+                  td 26
+                  td 27
+                  td 28
+                tr
+                  td.text-red 29
+                  td 30
+                  td
+                  td
+                  td
+                  td
+                  td
+
+          .month-wrapper
+            .month-title 5월
+            table.tabel-calendar-small
+              thead
+                tr
+                  th.text-red 일
+                  th 월
+                  th 화
+                  th 수
+                  th 목
+                  th 금
+                  th 토
+              tbody
+                tr
+                  td.text-red
+                  td
+                  td 1
+                  td 2
+                  td 3
+                  td 4
+                  td 5
+                tr
+                  td.text-red 6
+                  td.text-red 7
+                  td 8
+                  td 9
+                  td 10
+                  td 11
+                  td 12
+                tr
+                  td.text-red 13
+                  td 14
+                  td 15
+                  td 16
+                  td 17
+                  td 18
+                  td 19
+                tr
+                  td.text-red 20
+                  td 21
+                  td.text-red 22
+                  td 23
+                  td 24
+                  td 25
+                  td 26
+                tr
+                  td.text-red 27
+                  td 28
+                  td 29
+                  td 30
+                  td 31
+                  td
+                  td
+
+          .month-wrapper
+            .month-title 6월
+            table.tabel-calendar-small
+              thead
+                tr
+                  th.text-red 일
+                  th 월
+                  th 화
+                  th 수
+                  th 목
+                  th 금
+                  th 토
+              tbody
+                tr
+                  td.text-red
+                  td
+                  td
+                  td
+                  td
+                  td 1
+                  td 2
+                tr
+                  td.text-red 3
+                  td 4
+                  td 5
+                  td.text-red 6
+                  td 7
+                  td 8
+                  td 9
+                tr
+                  td.text-red 10
+                  td 11
+                  td 12
+                  td.text-red 13
+                  td 14
+                  td 15
+                  td 16
+                tr
+                  td.text-red 17
+                  td 18
+                  td 19
+                  td 20
+                  td 21
+                  td 22
+                  td 23
+                tr
+                  td.text-red 24
+                  td 25
+                  td 26
+                  td 27
+                  td 28
+                  td 29
+                  td 30
+
+          .month-wrapper
+            .month-title 7월
+            table.tabel-calendar-small
+              thead
+                tr
+                  th.text-red 일
+                  th 월
+                  th 화
+                  th 수
+                  th 목
+                  th 금
+                  th 토
+              tbody
+                tr
+                  td.text-red 1
+                  td 2
+                  td 3
+                  td 4
+                  td 5
+                  td 6
+                  td 7
+                tr
+                  td.text-red 8
+                  td 9
+                  td 10
+                  td 11
+                  td 12
+                  td 13
+                  td 14
+                tr
+                  td.text-red 15
+                  td 16
+                  td 17
+                  td 18
+                  td 19
+                  td 20
+                  td 21
+                tr
+                  td.text-red 22
+                  td 23
+                  td 24
+                  td 25
+                  td 26
+                  td 27
+                  td 28
+                tr
+                  td.text-red 29
+                  td 30
+                  td 31
+                  td
+                  td
+                  td
+                  td
+
+          .month-wrapper
+            .month-title 8월
+            table.tabel-calendar-small
+              thead
+                tr
+                  th.text-red 일
+                  th 월
+                  th 화
+                  th 수
+                  th 목
+                  th 금
+                  th 토
+              tbody
+                tr
+                  td.text-red
+                  td
+                  td
+                  td 1
+                  td 2
+                  td 3
+                  td 4
+                tr
+                  td.text-red 5
+                  td 6
+                  td 7
+                  td 8
+                  td 9
+                  td 10
+                  td 11
+                tr
+                  td.text-red 12
+                  td 13
+                  td 14
+                  td.text-red 15
+                  td 16
+                  td 17
+                  td 18
+                tr
+                  td.text-red 19
+                  td 20
+                  td 21
+                  td 22
+                  td 23
+                  td 24
+                  td 25
+                tr
+                  td.text-red 26
+                  td 27
+                  td 28
+                  td 29
+                  td 30
+                  td 31
+                  td
+
+          .month-wrapper
+            .month-title 9월
+            table.tabel-calendar-small
+              thead
+                tr
+                  th.text-red 일
+                  th 월
+                  th 화
+                  th 수
+                  th 목
+                  th 금
+                  th 토
+              tbody
+                tr
+                  td.text-red
+                  td
+                  td
+                  td
+                  td
+                  td
+                  td 1
+                tr
+                  td.text-red 2
+                  td 3
+                  td 4
+                  td 5
+                  td 6
+                  td 7
+                  td 8
+                tr
+                  td.text-red 9
+                  td 10
+                  td 11
+                  td.text-red 12
+                  td 13
+                  td 14
+                  td 15
+                tr
+                  td.text-red 16
+                  td 17
+                  td 18
+                  td 19
+                  td 20
+                  td 21
+                  td 22
+                tr
+                  td.text-red 23
+                  td.text-red 24
+                  td.text-red 25
+                  td.text-red 26
+                  td 27
+                  td 28
+                  td 29
+                tr
+                  td.text-red 30
+                  td
+                  td
+                  td
+                  td
+                  td
+                  td
+
+          .month-wrapper
+            .month-title 10월
+            table.tabel-calendar-small
+              thead
+                tr
+                  th.text-red 일
+                  th 월
+                  th 화
+                  th 수
+                  th 목
+                  th 금
+                  th 토
+              tbody
+                tr
+                  td.text-red
+                  td 1
+                  td 2
+                  td.text-red 3
+                  td 4
+                  td 5
+                  td 6
+                tr
+                  td.text-red 7
+                  td 8
+                  td.text-red 9
+                  td 10
+                  td 11
+                  td 12
+                  td 13
+                tr
+                  td.text-red 14
+                  td 15
+                  td 16
+                  td 17
+                  td 18
+                  td 19
+                  td 20
+                tr
+                  td.text-red 21
+                  td 22
+                  td 23
+                  td 24
+                  td 25
+                  td 26
+                  td 27
+                tr
+                  td.text-red 28
+                  td 29
+                  td 30
+                  td 31
+                  td
+                  td
+                  td
+
+          .month-wrapper
+            .month-title 11월
+            table.tabel-calendar-small
+              thead
+                tr
+                  th.text-red 일
+                  th 월
+                  th 화
+                  th 수
+                  th 목
+                  th 금
+                  th 토
+              tbody
+                tr
+                  td.text-red
+                  td
+                  td
+                  td
+                  td 1
+                  td 2
+                  td 3
+                tr
+                  td.text-red 4
+                  td 5
+                  td 6
+                  td 7
+                  td 8
+                  td 9
+                  td 10
+                tr
+                  td.text-red 11
+                  td 12
+                  td 13
+                  td 14
+                  td 15
+                  td 16
+                  td 17
+                tr
+                  td.text-red 18
+                  td 19
+                  td 20
+                  td 21
+                  td 22
+                  td 23
+                  td 24
+                tr
+                  td.text-red 25
+                  td 26
+                  td 27
+                  td 28
+                  td 29
+                  td 30
+                  td
+
+          .month-wrapper
+            .month-title 12월
+            table.tabel-calendar-small
+              thead
+                tr
+                  th.text-red 일
+                  th 월
+                  th 화
+                  th 수
+                  th 목
+                  th 금
+                  th 토
+              tbody
+                tr
+                  td.text-red
+                  td
+                  td
+                  td
+                  td
+                  td
+                  td 1
+                tr
+                  td.text-red.season02 2
+                  td.season02 3
+                  td.season03 4
+                  td.season03 5
+                  td.season03 6
+                  td.season04 7
+                  td.season04 8
+                tr
+                  td.text-red.season05 9
+                  td.season05 10
+                  td.season05 11
+                  td.season06 12
+                  td.season06 13
+                  td.season07 14
+                  td.season07 15
+                tr
+                  td.text-red.season08 16
+                  td.season08 17
+                  td.season08 18
+                  td.season08 19
+                  td.season08 20
+                  td.season08 21
+                  td 22
+                tr
+                  td.text-red 23
+                  td.text-red 24
+                  td.text-red 25
+                  td 26
+                  td 27
+                  td 28
+                  td 29
+                tr
+                  td.text-red 30
+                  td 31
+                  td
+                  td
+                  td
+                  td
+                  td
+
+

@@ -380,12 +380,22 @@ input
   position: fixed
   top: 0
   left: 0
+  display: flex
+  justify-content: flex-end
   width: 100%
   height: 4.5rem
   padding: 1.5rem 2rem 1.5rem calc(#{$left-side-width} + 2rem)
   background-color: white
   @extend %box-shadow
   z-index: 2
+  a
+    color: #4f4f4f
+    padding: 0 1rem
+    text-decoration: none
+    &:last-child
+      padding-right: 0
+
+
 
 // Content Container
 .content-container
@@ -630,7 +640,104 @@ footer
       transition: all .3s
       border-radius: 2px
 
-//
+//----------- 시즌달력 page -----------------//
+
+// 비수기
+$cal-season01: white
+// 준성수기
+$cal-season02: #86A9E9
+// 성수기
+$cal-season03: #F16C6C
+// 커스텀 시즌스
+$cal-season04: #F2BC48
+$cal-season05: #8BCE54
+$cal-season06: #8F85F4
+$cal-season07: #D288DB
+$cal-season08: #64C2D0
+
+.rectangle
+  width: 1.5rem
+  height: 1.5rem
+  background: $white-gray
+  display: inline-block
+  &.season01
+    background-color: $cal-season01
+    box-shadow: inset 0 0 0 1px $border-color
+  &.season02
+    background-color: $cal-season02
+  &.season03
+    background-color: $cal-season03
+  &.season04
+    background-color: $cal-season04
+  &.season05
+    background-color: $cal-season05
+  &.season06
+    background-color: $cal-season06
+  &.season07
+    background-color: $cal-season07
+  &.season08
+    background-color: $cal-season08
+
+.table
+  .rectangle
+    margin: .5rem 0 .25rem 0
+
+.calendar-group
+  margin-top: 4rem
+  .month-wrapper
+    float: left
+    margin: 0 0 3rem 3rem
+    .month-title
+      font-size: 1.1rem
+      font-weight: 400
+      margin-bottom: .5rem
+    .tabel-calendar-small
+      // border: 1px solid $border-color
+      th, td
+        // border: 1px solid $border-color
+        text-align: center
+        width: 2rem
+        height: 2rem
+        vertical-align: middle
+      th
+        font-weight: 300
+      tbody
+        td
+          position: relative
+          overflow: hidden
+          cursor: default
+          &.today
+            box-shadow: inset 0 0 0 2px #222222
+          &.holiday
+            &:after
+              position: absolute
+              right: -6px
+              top: -6px
+              content: ''
+              width: 12px
+              height: 12px
+              transform: rotate(45deg)
+              background-color: #222222
+          &.season02, &.season03, &.season04, &.season05, &.season06, &.season07, &.season08
+            color: white
+          &.season01
+            background-color: $cal-season01
+          &.season02
+            background-color: $cal-season02
+          &.season03
+            background-color: $cal-season03
+          &.season04
+            background-color: $cal-season04
+          &.season05
+            background-color: $cal-season05
+          &.season06
+            background-color: $cal-season06
+          &.season07
+            background-color: $cal-season07
+          &.season08
+            background-color: $cal-season08
+
+
 
 
 //---------- Responsive: Smaller than 1200px ----------//

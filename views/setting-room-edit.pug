@@ -8,6 +8,14 @@ body.two-depth(name='setting', page='rooms')
     .artboard
       .board-title 설정 - 객실정보
       .board-container
+        .text-right.mb-2
+          .dropdown
+            button.btn.btn-white.dropdown-toggle(type='button', data-toggle='dropdown')
+              | 다른 객실정보 불러오기
+            .dropdown-menu.dropdown-menu-right
+              a.dropdown-item(href='#') 객실 1
+              a.dropdown-item(href='#') 객실 2
+              a.dropdown-item(href='#') 객실 3
         .form-group.row
           label.col-sm-2.pt-1 객실명
           .col-sm-10
@@ -203,16 +211,6 @@ body.two-depth(name='setting', page='rooms')
                 .custom-control.custom-checkbox
                   input#check20.custom-control-input(type='checkbox')
                   label.custom-control-label(for='check20') 파티룸
-
-        .form-group.row
-          label.col-sm-2.pt-1 판매상태
-          .col-sm-10
-            .custom-control.custom-radio.custom-control-inline.mr-4
-              input#radio1.custom-control-input(type='radio', name='statusRadio')
-              label.custom-control-label(for='radio1') 판매
-            .custom-control.custom-radio.custom-control-inline
-              input#radio2.custom-control-input(type='radio', name='statusRadio', checked)
-              label.custom-control-label(for='radio2') 미판매
 
         .row.text-center.pt-4.no-gutters
           .col-8.offset-2
