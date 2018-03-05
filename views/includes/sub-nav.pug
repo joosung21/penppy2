@@ -3,3 +3,8 @@
     input.form-control-plaintext(type='text', onfocus='this.placeholder = "고객명/판매사/전화번호 검색"', onblur='this.placeholder = " "' )
   a(href='#') 실시간 예약창
   a(href='/season-year-calendar') 시즌달력보기
+  a.dropdown(href='#', data-toggle='dropdown')
+    img(src='/images/user.svg')
+  .dropdown-menu
+    a.dropdown-item(href='#') 계정정보
+    a.dropdown-item(href='/login') 로그아웃

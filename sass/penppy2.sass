@@ -586,14 +586,16 @@ input
       box-shadow: none
       padding: 1.4rem
       padding-left: 4.5rem
+      width: 3rem
       transition: width .4s
       background: url('/images/search.svg') 2.5rem center no-repeat
       cursor: pointer
       &:focus
-        background-color: $white-gray
+        // background-color: $white-gray
         width: 30vw
-        background-position: right 1rem center
+        background-position: right 1.5rem center
         padding-left: 2.5rem
+        border-right: 1px solid lighten($border-color, 5%)
 
 // Content Container
 .content-container
