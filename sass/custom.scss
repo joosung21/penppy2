@@ -4,25 +4,40 @@
 // Custom variable overrides
 $font-family-sans-serif:      'Spoqa Han Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
+// Border
 $border-radius:     2px;
 $border-radius-lg:  2px;
 $border-radius-sm:  2px;
 
+// Body
 $body-bg: #f2f3f8;
 $body-color: #4F4F4F;
 
+// Border Color
 $table-border-color: #e5e5e5;
 $input-border-color: #e5e5e5;
 
+// Theme Colors
 $primary: #67ABFF;
 $secondary: #C6CCD5;
 
+// Tootip
 $tooltip-bg:                  #384C67;
+
+// Font Weight
 $font-weight-light:           100;
 $font-weight-normal:          300;
 $font-weight-bold:            600;
 
+// Table
 $table-hover-bg:             white;
+
+// Modal
+$modal-inner-padding:         2.5rem;
+$modal-header-padding:        1.5rem 0 1.5rem 2.5rem;
+$modal-lg:                          1200px;
+$modal-md:                          800px;
+$modal-sm:                          300px;
 
 // Bootstrap and its default variables
 @import "./../node_modules/bootstrap/scss/bootstrap";

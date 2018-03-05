@@ -1,0 +1,217 @@
+include ./includes/header.pug
+
+//-------- 업체설정:  판매사 연동신청 Page ---------//
+body.two-depth(name='setting', page='gds')
+  include ./includes/main-nav-left.pug
+  include ./includes/sub-nav.pug
+  .content-container
+    .artboard
+      .board-title 설정 - 판매사 연동신청
+      .lead.mb-3 데이먼 해달별 펜션의 온라인 판매를 지원해 드립니다.
+      p
+        | 안녕하세요. 사장님.
+        br
+        | 온라인 판매 증대에 대한 고민과 함께 여러 사이트를 관리하는 불편함을 겪고 계시지는 않으신가요?
+      P
+        | 이제, ONDA 온라인 판매대행 서비스를 통해 국내외 유명 사이트에서 숙소를 판매해보세요.
+        br
+        | 단 한번의 연동으로 아래 소개된 여러 사이트에서 숙소를 판매하고 관리할 수 있습니다.
+      P
+        | 저희와 제휴 된 제휴사 간에는 재고가 연동되어 중복예약이 발생하지 않으며, 어떤 사이트에서 판매가 발생되었는지에 관계없이
+        br
+        | 매주 금요일에 정산금액을 일괄 지급해드립니다. (매주 금요일 지난주(월요일~일요일) 이용 건에 대해 입금)
+
+      .form-group.row.mt-5.mb-4
+        label.col-sm-2.pt-1 연동 완료 사이트
+        .col-sm-10
+          .bi-wrapper
+            .image
+              img(src='/images/bi-tmon.png', alt='티몬')
+            a.link.view-detail(href='#', data-toggle='modal', data-target='#detailModal') 상세정보
+          .bi-wrapper
+            .image
+              img(src='/images/bi-naver.png', alt='네이버')
+            a.link.view-detail(href='#', data-toggle='modal', data-target='#detailModal') 상세정보
+          .bi-wrapper
+            .image
+              img(src='/images/bi-11.png', alt='11번가')
+            a.link.view-detail(href='#', data-toggle='modal', data-target='#detailModal') 상세정보
+          .bi-wrapper
+            .image
+              img(src='/images/bi-goco.png', alt='고코투어')
+            a.link.view-detail(href='#', data-toggle='modal', data-target='#detailModal') 상세정보
+          .bi-wrapper
+            .image
+              img(src='/images/bi-yeogiya.png', alt='여기야')
+            a.link.view-detail(href='#', data-toggle='modal', data-target='#detailModal') 상세정보
+
+
+      .form-group.row.mt-4
+        label.col-sm-2.pt-1 연동 예정 사이트
+        .col-sm-10
+          .bi-wrapper
+            .image
+              img(src='/images/bi-goodchoice.png', alt='여기어때')
+          .bi-wrapper
+            .image
+              img(src='/images/bi-yanolja.png', alt='야놀자펜션')
+          .bi-wrapper
+            .image
+              img(src='/images/bi-hotelenjoy.png', alt='호텔엔조이')
+          .bi-wrapper
+            .image
+              img(src='/images/bi-pensionlife.png', alt='펜션라이프')
+          .bi-wrapper
+            .image
+              img(src='/images/bi-dailyhotel.png', alt='데일리호텔')
+          .bi-wrapper
+            .image
+              img(src='/images/bi-allstay.png', alt='올스테이')
+          .bi-wrapper
+            .image
+              img(src='/images/bi-action.png', alt='옥션')
+          .bi-wrapper
+            .image
+              img(src='/images/bi-gmarket.png', alt='지마켓')
+          .bi-wrapper
+            .image
+              img(src='/images/bi-airbnb.png', alt='에어비앤비')
+          .bi-wrapper
+            .image
+              img(src='/images/bi-ctrip.png', alt='씨트립')
+          .bi-wrapper
+            .image
+              img(src='/images/bi-agoda.png', alt='아고다')
+          .bi-wrapper
+            .image
+              img(src='/images/bi-expedia.png', alt='익스피디아')
+          .bi-wrapper
+            .image
+              img(src='/images/bi-booking.png', alt='Booking.com')
+      .text-center.pt-4
+        button.btn.btn-primary.btn-lg(type='button', data-toggle='modal', data-target='#requestModal') 판매사 연동 신청하기
+
+//- 판매사 연동신청 Modal
+#requestModal.modal.fade
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h5#exampleModalLabel.modal-title 판매사 연동신청
+        a.close(data-dismiss='modal')
+          img(src='/images/close.svg')
+      .modal-body
+        .form-group.row
+          label.col-sm-3.pt-1 연동요청 사이트
+          .col-sm-9
+            .check-group
+              .custom-control.custom-checkbox
+                input#check1.custom-control-input(type='checkbox')
+                label.custom-control-label(for='check1') 티몬
+              .custom-control.custom-checkbox
+                input#check2.custom-control-input(type='checkbox')
+                label.custom-control-label(for='check2') 네이버
+              .custom-control.custom-checkbox
+                input#check3.custom-control-input(type='checkbox')
+                label.custom-control-label(for='check3') 11번가
+              .custom-control.custom-checkbox
+                input#check4.custom-control-input(type='checkbox')
+                label.custom-control-label(for='check4') 여기야
+              .custom-control.custom-checkbox
+                input#check5.custom-control-input(type='checkbox')
+                label.custom-control-label(for='check6') 가자닷컴
+              .custom-control.custom-checkbox
+                input#check7.custom-control-input(type='checkbox')
+                label.custom-control-label(for='check7') 가나다라
+              .custom-control.custom-checkbox
+                input#check8.custom-control-input(type='checkbox')
+                label.custom-control-label(for='check8') 마바사
+              .custom-control.custom-checkbox
+                input#check9.custom-control-input(type='checkbox')
+                label.custom-control-label(for='check9') 아자
+        .form-group.row
+          label.col-sm-3.pt-1 업체명
+          .col-sm-9
+            input.form-control(type='text', value='데이먼 해달별 펜션')
+        .form-group.row
+          label.col-sm-3.pt-1 대표자명
+          .col-sm-9
+            input.form-control(type='text', value='조영수')
+        .form-group.row
+          label.col-sm-3.pt-1 연락처
+          .col-sm-9
+            input.form-control(type='text', value='010-2533-6088')
+        .custom-control.custom-checkbox
+          input#check10.custom-control-input(type='checkbox')
+          label.custom-control-label(for='check10') 판매동의 및 판매사별 취소수수료 규정에 동의합니다.
+        -
+          var message01 = `
+            swal({
+              type: "success",
+              title: "판매사 연동 신청이 완료되었습니다.",
+              text: "운영자 확인 후 빠르게 연락드리겠습니다.",
+              confirmButtonText: "확인",
+            });
+          `
+        .text-center.pt-5
+          button.btn.btn-primary.btn-lg(type='button', data-dismiss='modal', onclick= message01) 신청
+
+//- 판매사 연동 상세정보 Modal
+#detailModal.modal.fade
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h5#exampleModalLabel.modal-title 판매사 연동상세정보
+        a.close(data-dismiss='modal')
+          img(src='/images/close.svg')
+      .modal-body
+        .form-group.row
+          label.col-sm-3 판매사명
+          .col-sm-9
+            | 티몬
+        .form-group.row
+          label.col-sm-3 사이트
+          .col-sm-9
+            | http://www.ticketmonster.co.kr
+        .form-group.row
+          label.col-sm-3 상품 노출 채널
+          .col-sm-9
+            | 티몬 실시간 빈방 검색
+        .form-group.row
+          label.col-sm-3 연동 방법
+          .col-sm-9
+            | 티포트 판매대행 신청 후 운영팀 검수 및 오픈
+        .form-group.row
+          label.col-sm-3 오픈 소요기간
+          .col-sm-9
+            | 신청 후 약 1주일
+        .form-group.row
+          label.col-sm-3 취소수수료 정책
+          .col-sm-9
+            | - 방문 당일
+            span.text-red.mx-1 0%
+            | 환불
+            br
+            | - 방문 1일전
+            span.text-red.mx-1 30%
+            | 환불
+            br
+            | - 방문 2일전
+            span.text-red.mx-1 50%
+            | 환불
+            br
+            | - 방문 3일전
+            span.text-red.mx-1 70%
+            | 환불
+            br
+            | - 방문 4일전
+            span.text-red.mx-1 80%
+            | 환불
+            br
+            | - 방문 5일전
+            span.text-red.mx-1 90%
+            | 환불
+            br
+            | - 방문 6일전
+            span.text-red.mx-1 100%
+            | 환불
+

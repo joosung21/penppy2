@@ -5,7 +5,7 @@ body.two-depth(name='rateplan', page='season02')
   include ./includes/main-nav-left.pug
   include ./includes/sub-nav.pug
   .content-container
-    .artboard
+    .artboard(style='min-width: 1200px')
       .board-title.d-flex.justify-content-between.align-items-center
         | 요금설정 - 준성수기
         a.btn.btn-small.btn-white(href='/season-year-calendar')
@@ -50,142 +50,141 @@ body.two-depth(name='rateplan', page='season02')
               a.dropdown-item(href='#') 준성수기
               a.dropdown-item(href='#') 성수기
 
-        .table-responsive
-          table.table.table-rate.text-center.align-middle.border(style='min-width: 1000px')
-            thead.bg-light
-              tr
-                th.border-right.border-bottom(colspan='2') 객실
-                th.border-right.border-bottom(colspan='6') 객실 기본요금
-                th.border-bottom(colspan='3') 추가인원 요금
-              tr.sub-header
-                th.text-left.px-4(style='width: 15%; min-width: 12rem') 객실명
-                th.border-right.px-4 기준
-                th.checkbox.border-right(style='width: 6%')
-                  .custom-control.custom-checkbox
-                    input#check2.custom-control-input(type='checkbox', onclick='openSlider()')
-                    label.custom-control-label(for='check2')
-                th.border-right 시즌
-                th 일요일
-                th 주중
-                th 금요일
-                th.border-right(style='line-height: 1.2rem')
-                  | 토요일
-                  br
-                  small (공휴일전날)
-                th 성인
-                th 아동
-                th 유아
-            tbody
-              tr
-                td.text-left.px-4 황토동-은하수 201호
-                td.border-right 2인
-                td.checkbox.border-right
-                  .custom-control.custom-checkbox
-                    input#check3.custom-control-input(type='checkbox', onclick='openSlider()')
-                    label.custom-control-label(for='check3')
-                td.border-right 준성수기
-                td
-                  input.form-control(type='text', value='120,000')
-                td
-                  input.form-control(type='text', value='100,000')
-                td
-                  input.form-control(type='text', value='120,000')
-                td.border-right
-                  input.form-control(type='text', value='140,000')
-                td
-                  input.form-control(type='text', value='10,000')
-                td
-                  input.form-control(type='text', value='5,000')
-                td
-                  input.form-control(type='text', value='0')
-              tr
-                td.text-left.px-4 황토동-은하수 202호
-                td.border-right 2인
-                td.checkbox.border-right
-                  .custom-control.custom-checkbox
-                    input#check4.custom-control-input(type='checkbox', onclick='openSlider()')
-                    label.custom-control-label(for='check4')
-                td.border-right 준성수기
-                td
-                  input.form-control(type='text', value='120,000')
-                td
-                  input.form-control(type='text', value='100,000')
-                td
-                  input.form-control(type='text', value='120,000')
-                td.border-right
-                  input.form-control(type='text', value='140,000')
-                td
-                  input.form-control(type='text', value='10,000')
-                td
-                  input.form-control(type='text', value='5,000')
-                td
-                  input.form-control(type='text', value='0')
-              tr
-                td.text-left.px-4 황토동-은하수 203호
-                td.border-right 2인
-                td.checkbox.border-right
-                  .custom-control.custom-checkbox
-                    input#check5.custom-control-input(type='checkbox', onclick='openSlider()')
-                    label.custom-control-label(for='check5')
-                td.border-right 준성수기
-                td
-                  input.form-control(type='text', value='120,000')
-                td
-                  input.form-control(type='text', value='100,000')
-                td
-                  input.form-control(type='text', value='120,000')
-                td.border-right
-                  input.form-control(type='text', value='140,000')
-                td
-                  input.form-control(type='text', value='10,000')
-                td
-                  input.form-control(type='text', value='5,000')
-                td
-                  input.form-control(type='text', value='0')
-              tr
-                td.text-left.px-4 하늘채(스파)
-                td.border-right 2인
-                td.checkbox.border-right
-                  .custom-control.custom-checkbox
-                    input#check6.custom-control-input(type='checkbox', onclick='openSlider()')
-                    label.custom-control-label(for='check6')
-                td.border-right 준성수기
-                td
-                  input.form-control.dirty(type='text', value='120,000')
-                td
-                  input.form-control.dirty(type='text', value='100,000')
-                td
-                  input.form-control.dirty(type='text', value='120,000')
-                td.border-right
-                  input.form-control.dirty(type='text', value='140,000')
-                td
-                  input.form-control.dirty(type='text', value='10,000')
-                td
-                  input.form-control.dirty(type='text', value='5,000')
-                td
-                  input.form-control.dirty(type='text', value='0')
-              tr
-                td.text-left.px-4 복층(테라스)
-                td.border-right 2인
-                td.checkbox.border-right
-                  .custom-control.custom-checkbox
-                    input#check7.custom-control-input(type='checkbox', onclick='openSlider()')
-                    label.custom-control-label(for='check7')
-                td.border-right 준성수기
-                td
-                  input.form-control.dirty(type='text', value='120,000')
-                td
-                  input.form-control.dirty(type='text', value='100,000')
-                td
-                  input.form-control.dirty(type='text', value='120,000')
-                td.border-right
-                  input.form-control.dirty(type='text', value='140,000')
-                td
-                  input.form-control.dirty(type='text', value='10,000')
-                td
-                  input.form-control.dirty(type='text', value='5,000')
-                td
-                  input.form-control.dirty(type='text', value='0')
+        table.table.table-rate.text-center.align-middle.border
+          thead.bg-light
+            tr
+              th.border-right.border-bottom(colspan='2') 객실
+              th.border-right.border-bottom(colspan='6') 객실 기본요금
+              th.border-bottom(colspan='3') 추가인원 요금
+            tr.sub-header
+              th.text-left.px-4(style='width: 15%; min-width: 12rem') 객실명
+              th.border-right.px-4 기준
+              th.checkbox.border-right(style='width: 6%')
+                .custom-control.custom-checkbox
+                  input#check2.custom-control-input(type='checkbox', onclick='openSlider()')
+                  label.custom-control-label(for='check2')
+              th.border-right 시즌
+              th 일요일
+              th 주중
+              th 금요일
+              th.border-right(style='line-height: 1.2rem')
+                | 토요일
+                br
+                small (공휴일전날)
+              th 성인
+              th 아동
+              th 유아
+          tbody
+            tr
+              td.text-left.px-4 황토동-은하수 201호
+              td.border-right 2인
+              td.checkbox.border-right
+                .custom-control.custom-checkbox
+                  input#check3.custom-control-input(type='checkbox', onclick='openSlider()')
+                  label.custom-control-label(for='check3')
+              td.border-right 준성수기
+              td
+                input.form-control(type='text', value='120,000')
+              td
+                input.form-control(type='text', value='100,000')
+              td
+                input.form-control(type='text', value='120,000')
+              td.border-right
+                input.form-control(type='text', value='140,000')
+              td
+                input.form-control(type='text', value='10,000')
+              td
+                input.form-control(type='text', value='5,000')
+              td
+                input.form-control(type='text', value='0')
+            tr
+              td.text-left.px-4 황토동-은하수 202호
+              td.border-right 2인
+              td.checkbox.border-right
+                .custom-control.custom-checkbox
+                  input#check4.custom-control-input(type='checkbox', onclick='openSlider()')
+                  label.custom-control-label(for='check4')
+              td.border-right 준성수기
+              td
+                input.form-control(type='text', value='120,000')
+              td
+                input.form-control(type='text', value='100,000')
+              td
+                input.form-control(type='text', value='120,000')
+              td.border-right
+                input.form-control(type='text', value='140,000')
+              td
+                input.form-control(type='text', value='10,000')
+              td
+                input.form-control(type='text', value='5,000')
+              td
+                input.form-control(type='text', value='0')
+            tr
+              td.text-left.px-4 황토동-은하수 203호
+              td.border-right 2인
+              td.checkbox.border-right
+                .custom-control.custom-checkbox
+                  input#check5.custom-control-input(type='checkbox', onclick='openSlider()')
+                  label.custom-control-label(for='check5')
+              td.border-right 준성수기
+              td
+                input.form-control(type='text', value='120,000')
+              td
+                input.form-control(type='text', value='100,000')
+              td
+                input.form-control(type='text', value='120,000')
+              td.border-right
+                input.form-control(type='text', value='140,000')
+              td
+                input.form-control(type='text', value='10,000')
+              td
+                input.form-control(type='text', value='5,000')
+              td
+                input.form-control(type='text', value='0')
+            tr
+              td.text-left.px-4 하늘채(스파)
+              td.border-right 2인
+              td.checkbox.border-right
+                .custom-control.custom-checkbox
+                  input#check6.custom-control-input(type='checkbox', onclick='openSlider()')
+                  label.custom-control-label(for='check6')
+              td.border-right 준성수기
+              td
+                input.form-control.dirty(type='text', value='120,000')
+              td
+                input.form-control.dirty(type='text', value='100,000')
+              td
+                input.form-control.dirty(type='text', value='120,000')
+              td.border-right
+                input.form-control.dirty(type='text', value='140,000')
+              td
+                input.form-control.dirty(type='text', value='10,000')
+              td
+                input.form-control.dirty(type='text', value='5,000')
+              td
+                input.form-control.dirty(type='text', value='0')
+            tr
+              td.text-left.px-4 복층(테라스)
+              td.border-right 2인
+              td.checkbox.border-right
+                .custom-control.custom-checkbox
+                  input#check7.custom-control-input(type='checkbox', onclick='openSlider()')
+                  label.custom-control-label(for='check7')
+              td.border-right 준성수기
+              td
+                input.form-control.dirty(type='text', value='120,000')
+              td
+                input.form-control.dirty(type='text', value='100,000')
+              td
+                input.form-control.dirty(type='text', value='120,000')
+              td.border-right
+                input.form-control.dirty(type='text', value='140,000')
+              td
+                input.form-control.dirty(type='text', value='10,000')
+              td
+                input.form-control.dirty(type='text', value='5,000')
+              td
+                input.form-control.dirty(type='text', value='0')
 
         .text-center.pt-4
           button.btn.btn-secondary.btn-lg.mr-1(type='button') 취소

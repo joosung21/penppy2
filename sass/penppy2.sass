@@ -14,7 +14,7 @@ $complete: $red
 $callonly: #FFB822
 $blocked: $light
 
-$left-side-width: 16rem
+$left-side-width: 14rem
 $left-side-padding: 2rem
 
 //------------ Extends -------------//
@@ -112,7 +112,9 @@ $left-side-padding: 2rem
 select.custom-select
   background: #fff url('/images/angle-down.svg') no-repeat right .75rem center
 
-
+.modal-header .close
+  padding: 0 1.5rem
+  opacity: 1
 
 //------------ CSS Style Utilities ----------//
 .text-red
@@ -130,8 +132,6 @@ select.custom-select
 a.link
   color: #4C4C4C
   text-decoration: none
-  &:hover
-    color: lighten(#4C4C4C, 50%)
 
 //----------- Initiate -----------//
 html
@@ -141,6 +141,10 @@ body
   margin-bottom: 40px
   label
     font-weight: 400
+
+a:focus, a:active, .btn:focus, .btn:active
+  outline: none !important
+  box-shadow: none
 
 .btn-white
   border-color: $border-color
@@ -195,8 +199,8 @@ body
 .check-group
   .custom-checkbox
     display: inline-block
-    width: 132px
-    margin: .4rem 0
+    width: 128px
+    margin: .4rem 0 .4rem .2rem
     font-size: .9rem
     .custom-control-label
       padding-top: 1px
@@ -345,7 +349,7 @@ body
 .swal2-container
   .swal2-popup
     width: auto !important
-    padding: 2rem 5rem !important
+    padding: 4rem 5rem !important
     -webkit-border-radius: 0
     -moz-border-radius: 0
     border-radius: 0
@@ -359,14 +363,23 @@ body
       .swal2-activeprogressstep
         background-color: $onda !important
 
+    .swal2-icon
+      font-size: 13.8px
+      &.swal2-success
+        border-color: $onda
+        .swal2-success-ring
+          border-color: rgba($onda, .3)
+        [class^=swal2-success-line]
+          background-color: $onda
+
     .swal2-title
       margin: 0 0 .6em
       padding: 0 5rem !important
       font-size: 1.5rem
-      font-weight: 300
+      font-weight: 400
 
     .swal2-content
-      padding: 3rem 0
+      padding: 0 0 2rem 0
       white-space: pre
 
     .swal2-input
@@ -918,7 +931,7 @@ table
           &.season08
             background-color: $cal-season08
 
-//----------- 문자발송 정보 Page --------------//
+// 문자발송 정보 //
 .sms-form
   background-color: #F0F7FF
   border-radius: 10px
@@ -931,6 +944,23 @@ table
   margin: .5rem auto 0 auto
   font-size: .85rem
   color: #4f4f4f
+
+// 판매사 연동신청 //
+.bi-wrapper
+  border: 1px solid $border-color
+  float: left
+  margin: 0 .5rem 1rem .5rem
+  .image
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 120px
+    height: 60px
+  .view-detail
+    display: block
+    text-align: center
+    padding: .5rem 0
+    border-top: 1px solid $border-color
 
 
 //---------- Responsive: Smaller than 1200px ----------//
