@@ -493,9 +493,12 @@ input
   z-index: 3
   color: white
   font-weight: 100
+  transition: all .3s
   .first-dapth
     display: flex
     flex-direction: column
+    flex-shrink: 1
+    transition: all .7s
   .brand
     display: block
     padding: 1.5rem $left-side-padding
@@ -504,6 +507,7 @@ input
     word-break: keep-all
     color: white
     text-decoration: none
+    transition: all .3s
   nav
     margin: 2.5rem 0 4rem 0
     a
@@ -512,16 +516,29 @@ input
       padding: 1.2rem $left-side-padding
       color: white
       text-decoration: none
-      transition: all .3s
+      width: 100%
       img
         margin-right: .75rem
       span
+        white-space: nowrap
+        display: inline-block
       &:hover
         background-color: darken($onda, 1%)
       &.active
         background-color: $navy-blue
+    .foldOpt
+      margin-left: -2px
+      i.fa
+        font-size: 1.7rem
+        transition: all .3s
+        transform: rotate(1deg)
+      span
+        padding-left: .5rem
+
   .widget-timer
     padding: 1.5rem $left-side-padding
+    min-width: 14rem
+    transition: all .3s
     .day, .month
       font-size: .85rem
       opacity: .5
@@ -538,11 +555,14 @@ input
 #main-nav
   .first-depth
     width: $left-side-width
+    flex-shrink: 0
+    transition: all .3s
   .second-depth
     display: none
     width: $left-side-width
     background-color: $navy-blue
     vertical-align: center
+    flex-shrink: 0
 #main-nav.two-depth
   width: calc(#{$left-side-width} * 2)
   .nav-group
@@ -607,6 +627,36 @@ input
   background-color: #f2f3f8
   min-height: 100vh
   padding: 7rem 2.5rem 0 calc(#{$left-side-width} + 2.5rem)
+
+
+// Folded: Main Nav, Sub Nav, Container
+#main-nav.folded
+  width: 4rem
+  overflow: hidden
+  .first-depth
+    width: 4rem
+    .brand
+      opacity: 0
+    .widget-timer
+      opacity: 0
+    nav
+      a
+        transition: all .3s linear
+        padding-left: 1.3rem
+        width: 4rem
+        span
+          visibility: hidden
+      .foldOpt
+        i.fa
+          transform: rotate(-180deg)
+
+#sub-nav.folded
+  transition: padding .3s
+  padding-left: 3.5rem !important
+
+.content-container.folded
+  transition: padding .3s
+  padding-left: 6.5rem !important
 
 // Artboard
 .artboard
@@ -1012,6 +1062,7 @@ table
       nav
         margin: 0 1rem 0 0
         a
+          width: auto
           display: inline-block
           padding: 1.3rem 1.4rem
           font-size: 1.2rem
@@ -1019,6 +1070,8 @@ table
             position: relative
             top: -2px
             margin-right: .5rem
+        .foldOpt
+          display: none
     .widget-timer
       display: none
 

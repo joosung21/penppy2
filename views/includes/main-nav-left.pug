@@ -2,28 +2,31 @@
   .first-depth
     a.brand(href='/') 데이먼 해달별펜션
     nav
-      a(href='#')
+      a.foldOpt(href='#', onclick='foldNav()', title='메뉴 펼치기')
+        i.fa.fa-angle-left.fa-lg
+        span 메뉴접기
+      a(href='#', title='예약목록')
         img(src='/images/ic-list.svg')
         span 예약목록
-      a.calendar(href='/calendar')
+      a.calendar(href='/calendar', title='객실달력')
         img(src='/images/ic-calendar.svg')
         span 객실달력
-      a(href='#')
+      a(href='#', title='방막기')
         img(src='/images/ic-block.svg')
         span 방막기
-      a.rateplan(href='/rateplan')
+      a.rateplan(href='/rateplan', title='요금설정')
         img(src='/images/ic-block.svg')
         span 요금설정
-      a(href='#')
+      a(href='#', title='할인설정')
         img(src='/images/ic-caculator.svg')
         span 할인설정
-      a(href='#')
+      a(href='#', title='정산목록')
         img(src='/images/ic-caculator.svg')
         span 정산목록
-      a(href='#')
+      a(href='#', title='리포트')
         img(src='/images/ic-caculator.svg')
         span 리포트
-      a.setting(href='/setting/property')
+      a.setting(href='/setting/property', title='설정')
         img(src='/images/ic-gear.svg')
         span 설정
     .widget-timer

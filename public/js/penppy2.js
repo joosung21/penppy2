@@ -20,6 +20,15 @@ var windowWidth = $(window).width();
 // Document Ready
 $( document ).ready(function() {
 
+  // Tootip at Folded Nav
+  $('#main-nav').mouseover(function(){
+    if($(this).hasClass('folded')) {
+      $('#main-nav nav a').tooltip({ placement: 'right' });
+    } else {
+      $('#main-nav nav a').tooltip('hide');
+    }
+  });
+
   // Left Nav Active Class
   $('#main-nav a').each(function(){
     var thisPage = $('body').attr('name');
@@ -84,8 +93,8 @@ $( document ).ready(function() {
 
 });
 
+// Slide Down Nav
 slideSecondNav = function(){
-
   $('#main-nav.two-depth .second-depth').hide();
     var isOpend1 = false;
     var isOpend2 = false;
@@ -118,5 +127,11 @@ slideSecondNav = function(){
       isOpend2 = false;
     }
   });
+}
 
+// Fold Nav
+foldNav = function(){
+  $('#main-nav').toggleClass('folded');
+  $('#sub-nav').toggleClass('folded');
+  $('.content-container').toggleClass('folded');
 }
