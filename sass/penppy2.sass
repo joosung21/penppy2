@@ -567,20 +567,33 @@ input
   left: 0
   display: flex
   justify-content: flex-end
+  align-items: center
   width: 100%
   height: 4.5rem
-  padding: 1.5rem 2rem 1.5rem calc(#{$left-side-width} + 2rem)
+  padding-left: $left-side-width
+  padding-right: 1.5rem
   background-color: white
   @extend %box-shadow
   z-index: 2
   a
     color: #4f4f4f
-    padding: 0 1rem
+    padding: 1rem
     text-decoration: none
-    &:last-child
-      padding-right: 0
-
-
+  .searchbox
+    margin-right: auto
+    input
+      outline: none !important
+      box-shadow: none
+      padding: 1.4rem
+      padding-left: 4.5rem
+      transition: width .4s
+      background: url('/images/search.svg') 2.5rem center no-repeat
+      cursor: pointer
+      &:focus
+        background-color: $white-gray
+        width: 30vw
+        background-position: right 1rem center
+        padding-left: 2.5rem
 
 // Content Container
 .content-container
@@ -609,9 +622,9 @@ input
 // Two Depth Layout
 body.two-depth
   #sub-nav
-    padding: 1.5rem 2rem 1.5rem calc(#{$left-side-width} * 2 + 2rem)
+    padding-left: calc(#{$left-side-width} * 2)
   .content-container
-    padding: 7rem 2.5rem 0 calc(#{$left-side-width} * 2 + 2.5rem)
+    padding-left: calc(#{$left-side-width} * 2 + 2.5rem)
 
 #nav-rateplan.second-depth
   .nav-group
@@ -1030,4 +1043,4 @@ table
   // Sub Nav
   #sub-nav
     position: relative
-    padding: 1.5rem 2.5rem !important
+    padding-left: 0 !important

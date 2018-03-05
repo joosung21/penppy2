@@ -27,23 +27,23 @@ body.two-depth(name='setting', page='gds')
           .bi-wrapper
             .image
               img(src='/images/bi-tmon.png', alt='티몬')
-            a.link.view-detail(href='#', data-toggle='modal', data-target='#detailModal') 상세정보
+            a.link.view-detail(href='#', data-toggle='modal', data-keyboard='true', data-target='#detailModal') 상세정보
           .bi-wrapper
             .image
               img(src='/images/bi-naver.png', alt='네이버')
-            a.link.view-detail(href='#', data-toggle='modal', data-target='#detailModal') 상세정보
+            a.link.view-detail(href='#', data-toggle='modal', data-keyboard='true', data-target='#detailModal') 상세정보
           .bi-wrapper
             .image
               img(src='/images/bi-11.png', alt='11번가')
-            a.link.view-detail(href='#', data-toggle='modal', data-target='#detailModal') 상세정보
+            a.link.view-detail(href='#', data-toggle='modal', data-keyboard='true', data-target='#detailModal') 상세정보
           .bi-wrapper
             .image
               img(src='/images/bi-goco.png', alt='고코투어')
-            a.link.view-detail(href='#', data-toggle='modal', data-target='#detailModal') 상세정보
+            a.link.view-detail(href='#', data-toggle='modal', data-keyboard='true', data-target='#detailModal') 상세정보
           .bi-wrapper
             .image
               img(src='/images/bi-yeogiya.png', alt='여기야')
-            a.link.view-detail(href='#', data-toggle='modal', data-target='#detailModal') 상세정보
+            a.link.view-detail(href='#', data-toggle='modal', data-keyboard='true', data-target='#detailModal') 상세정보
 
 
       .form-group.row.mt-4
@@ -69,7 +69,7 @@ body.two-depth(name='setting', page='gds')
               img(src='/images/bi-allstay.png', alt='올스테이')
           .bi-wrapper
             .image
-              img(src='/images/bi-action.png', alt='옥션')
+              img(src='/images/bi-auction.png', alt='옥션')
           .bi-wrapper
             .image
               img(src='/images/bi-gmarket.png', alt='지마켓')
@@ -89,10 +89,10 @@ body.two-depth(name='setting', page='gds')
             .image
               img(src='/images/bi-booking.png', alt='Booking.com')
       .text-center.pt-4
-        button.btn.btn-primary.btn-lg(type='button', data-toggle='modal', data-target='#requestModal') 판매사 연동 신청하기
+        button.btn.btn-primary.btn-lg(type='button', data-toggle='modal', data-keyboard='true', data-target='#requestModal') 판매사 연동 신청하기
 
 //- 판매사 연동신청 Modal
-#requestModal.modal.fade
+#requestModal.modal.fade(tabindex='-1')
   .modal-dialog
     .modal-content
       .modal-header
@@ -156,7 +156,7 @@ body.two-depth(name='setting', page='gds')
           button.btn.btn-primary.btn-lg(type='button', data-dismiss='modal', onclick= message01) 신청
 
 //- 판매사 연동 상세정보 Modal
-#detailModal.modal.fade
+#detailModal.modal.fade(tabindex='-1')
   .modal-dialog
     .modal-content
       .modal-header
