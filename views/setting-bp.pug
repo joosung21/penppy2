@@ -11,12 +11,12 @@ body.two-depth(name='setting', page='bp')
         .form-group.row
           label.col-sm-2.pt-1 결제수단 선택
           .col-sm-10
-            .custom-control.custom-checkbox.custom-control-inline.mr-4
-              input#check1.custom-control-input(type='checkbox')
-              label.custom-control-label(for='check1') 카드결제
-            .custom-control.custom-checkbox.custom-control-inline
-              input#check2.custom-control-input(type='checkbox')
-              label.custom-control-label(for='check2') 무통장입금
+            label.custom-control.custom-checkbox.custom-control-inline.mr-4
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 카드결제
+            label.custom-control.custom-checkbox.custom-control-inline
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 무통장입금
             .font-xsmall.mt-3
               | 카드결제 수수료는 고객 결제 금액의 7%입니다.
               br
@@ -128,24 +128,24 @@ body.two-depth(name='setting', page='bp')
         .form-group.row
           label.col-sm-2.pt-1 자동취소 사용여부
           .col-sm-10
-            .custom-control.custom-radio.custom-control-inline.mr-4
-              input#radio1.custom-control-input(type='radio', name='autoCancelRadio', checked)
-              label.custom-control-label(for='radio1') 미사용
-            .custom-control.custom-radio.custom-control-inline
-              input#radio2.custom-control-input(type='radio', name='autoCancelRadio')
-              label.custom-control-label(for='radio2') 사용
+            label.custom-control.custom-radio.custom-control-inline.mr-4
+              input.custom-control-input(type='radio', name='autoCancelRadio', checked)
+              span.custom-control-label 미사용
+            label.custom-control.custom-radio.custom-control-inline
+              input.custom-control-input(type='radio', name='autoCancelRadio')
+              span.custom-control-label 사용
             .font-xsmall.mt-3
               | 입금대기시간이 초과되면 자동으로 예약이 취소됩니다.
         .form-group.row
           label.col-sm-2.pt-1 자동취소 보류시간
           .col-sm-10
             .form-inline
-              .custom-control.custom-radio.custom-control-inline.mr-4
-                input#radio3.custom-control-input(type='radio', name='cancelDelayRadio')
-                label.custom-control-label(for='radio3') 미사용
-              .custom-control.custom-radio.custom-control-inline
-                input#radio4.custom-control-input(type='radio', name='cancelDelayRadio', checked)
-                label.custom-control-label(for='radio4') 사용
+              label.custom-control.custom-radio.custom-control-inline.mr-4
+                input.custom-control-input(type='radio', name='cancelDelayRadio')
+                span.custom-control-label 미사용
+              label.custom-control.custom-radio.custom-control-inline
+                input.custom-control-input(type='radio', name='cancelDelayRadio', checked)
+                span.custom-control-label 사용
               input.form-control(type='time', value='23:00')
               .px-2 ~
               input.form-control(type='time', value='07:00')
