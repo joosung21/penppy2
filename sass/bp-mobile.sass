@@ -1,0 +1,109 @@
+$border-color: #eeeeee
+$white-gray: #f8f9fb
+
+html
+  font-size: 14px
+
+body
+  background-color: white
+
+.border, .border-right, .border-bottom, .border-top, .border-left
+  border-color: $border-color !important
+
+#bp-mobile-header
+  background: linear-gradient(141deg, #4275C4 0%, #2cb5e8 75%)
+  color: white
+
+#bp-mobile-body
+  .form-control, .form-control-plaintext
+    outline: none !important
+    box-shadow: none
+  .form-group
+    margin-bottom: .5rem
+  .mobile-container
+    padding: .5rem 1.5rem
+  .date-box
+    padding: .5rem 1.5rem .25rem 1.5rem
+    background: url('/images/angle-down-gray.svg') right 1.25rem center no-repeat
+  .room-list
+    .room
+      display: flex
+      align-items: center
+      height: 5rem
+      padding: 0 1rem
+      border-bottom: 1px solid $border-color
+      .room-name
+        width: 50%
+        font-size: 1.25rem
+        font-weight: 400
+        line-height: 1.25rem
+        small
+          display: block
+          color: #aaaaaa
+          font-size: .8rem
+      .capacity
+        width: 20%
+        color: #929292
+      .price
+        text-align: right
+        width: 30%
+        font-size: 1.25rem
+        line-height: 1.25rem
+        letter-spacing: .03em
+        &.sale
+          color: #dc3545
+        small
+          display: block
+          font-size: .8rem
+        .origin-price
+          text-decoration: line-through
+          color: #aaaaaa
+      &.complete
+        opacity: .5
+  .room-panel
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background-color: $white-gray
+    height: 5rem
+    padding: 0 1rem
+    color: #aaaaaa
+    border-bottom: 1px solid $border-color
+    .age
+      display: flex
+      align-items: center
+      img
+        height: 1.3rem
+      .form-control-plaintext
+        width: 1.75rem
+        margin-left: .4rem
+        font-size: 1.25rem
+        color: #aaaaaa
+        text-align: right
+  .bottom-slider
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 5rem
+    padding: 0 1rem
+    position: fixed
+    bottom: 0
+    width: 100%
+    background-color: white
+    border-top: 1px solid #ccc
+    .price
+      font-size: 1.5rem
+      line-height: 1.5rem
+      font-weight: 400
+      small
+        display: block
+        color: #aaaaaa
+        font-size: .8rem
+  .agreement-box
+    max-height: 30rem
+    overflow: scroll
+    font-size: .9rem
+
+
+
+
