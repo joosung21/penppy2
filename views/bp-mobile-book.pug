@@ -2,11 +2,15 @@ include ./includes/header.pug
 link(rel='stylesheet', href='/css/bp-mobile.css')
 
 body
-  #bp-mobile-header.row.no-gutters.mb-4
+  #bp-mobile-header.row.no-gutters
     .col-2.text-right.pt-4.pr-3
       i.fa.fa-arrow-left.fa-2x(onclick='history.back()')
     .col-10.pt-4
       h4.pt-1.mb-4.font-weight-light 예약하기
+  .d-flex.bg-light.align-items-center.text-info.px-4.py-3.mb-2(data-toggle='modal', data-target='#notice')
+    i.fa.fa-info-circle.fa-2x.mr-1
+    strong.mr-4 예약공지
+    span 애완동물 안내
   #bp-mobile-body
     .mobile-container
       .form-group.row
@@ -68,6 +72,22 @@ body
         label.col-8 현장결제액(부가서비스)
         .col-4.text-right
           strong 15,000 원
+    hr
+    .mobile-container
+      .small.mb-3.text-muted 예약안내
+      p ㅁ 추가요금
+      p
+        | ▶ 기준인원에서 1인 추가시 1만원의 추가요금 발생
+      p ㅁ 가격정보
+      p
+        | ▶[여름성수기:07-17~08-15까지]
+        br
+        | ▶[주말요금] 금,토요일, 공휴일 전날
+      p ㅁ 예약안내
+      p
+        | ▶ 펜션연락처는 예약과 동시에 고객님의 휴대폰으로 자동발송됩니다.
+        br
+        | ▶ 예약 전 취소수수료를 꼭 확인바랍니다.
     hr
     .mobile-container
       .small.mb-3.text-muted 예약자 정보입력
@@ -295,9 +315,19 @@ body
       button.btn.btn-primary.btn-block.py-3(type='button') 결제하기
 
 
-
-
-
+//- 예약공지 Modal
+#notice.modal.fade(tabindex='-1')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h5.modal-title 애완동물 안내
+        a.close(data-dismiss='modal')
+          img(src='/images/close.svg')
+      .modal-body
+        p
+          | 예약후 애완동물 동반입실시에는 입실이 거부되며 예약금을 일체반 환하지 않습니다 이점 유의하시기 바랍니다.
+        .text-right.pt-5
+          button.btn.btn-secondary(type='button', data-dismiss='modal') 닫기
 
 
 
