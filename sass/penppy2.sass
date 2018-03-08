@@ -119,6 +119,11 @@ select.custom-select
 .modal-header .close
   padding: 0 1.5rem
   opacity: 1
+  margin: -.12rem 0
+
+.form-inline
+  .custom-select
+    width: auto
 
 //------------ CSS Style Utilities ----------//
 .text-red
@@ -160,6 +165,14 @@ a:focus, a:active, .btn:focus, .btn:active
     color: #4F4F4F
   i.fa
     color: #929292
+  &.active
+    background-color: #7D90A8
+    border-color: #7D90A8
+    color: white
+  &.focus
+    outline: none !important
+    box-shadow: none
+
 
 .grabbable
   cursor: move
@@ -185,7 +198,8 @@ a:focus, a:active, .btn:focus, .btn:active
     .custom-control-input:checked
       + .custom-control-label
         &:after
-          background: white url('/images/checkbox_check.svg') center center no-repeat
+          background: $onda url('/images/checkbox_check.svg') center center no-repeat
+          border-color: $onda
   &.custom-radio
     .custom-control-label
       &:after
@@ -371,7 +385,6 @@ a:focus, a:active, .btn:focus, .btn:active
         background-color: $onda !important
 
     .swal2-icon
-      font-size: 13.8px
       &.swal2-success
         border-color: $onda
         .swal2-success-ring
@@ -619,11 +632,10 @@ input
       padding: 1.4rem
       padding-left: 4.5rem
       width: 3rem
-      transition: width .4s
+      transition: width .3s
       background: url('/images/search.svg') 2.5rem center no-repeat
       cursor: pointer
       &:focus
-        // background-color: $white-gray
         width: 20vw
         background-position: right 1.5rem center
         padding-left: 2.5rem
@@ -709,6 +721,9 @@ footer
   .year-month
     font-size: 2rem
     font-weight: 400
+  .btn-white
+    padding-bottom: .5rem
+
 
 .status-model
   align-items: flex-end
@@ -880,6 +895,76 @@ footer
       margin-left: .5rem
       color: #aaa
 
+//---------- 할인설정 Pages --------------//
+.chart-row
+  display: flex
+  align-items: center
+  border-bottom: 1px solid $border-color
+  .row-title
+    width: 15%
+    padding-left: 2rem
+  .dd-wrapper
+    display: flex
+    align-items: flex-end
+    width: 85%
+    .dd
+      position: relative
+      width: calc( 100% / 14)
+      text-align: center
+      padding: .7rem .4rem
+      height: 100%
+      *
+        text-align: center
+      .form-control
+        text-align: right
+      .discount
+        color: $red
+        text-align: right
+        font-size: .85rem
+        padding-right: .9rem
+        padding-bottom: .25rem
+        margin-top: -.2rem
+
+
+.chart-row.header
+  align-items: stretch
+  border-bottom: none
+  .row-title, .dd
+    border-top: 1px solid #929292
+  .dd
+    padding-top: 1.25rem
+    cursor: pointer
+    .date
+      font-size: 1.5rem
+      margin-bottom: .25rem
+    .remark
+      font-size: .85rem
+      color: #929292
+      font-weight: 400
+    &.today
+      border: 1px solid #222222
+    &.active
+      border: none
+      color: white
+      background-color: #7D90A8
+
+.chart-row.room-stock, .chart-row.basic-price
+  border-bottom: none
+  .row-title, .dd
+    background-color: $white-gray
+    padding-top: 1.25rem
+    padding-bottom: 1.25rem
+    border-top: 1px solid $border-color
+
+.chart-row.room-stock
+  .row-title
+    font-weight: 400
+
+.chart-row.basic-price
+  .dd
+    color: #929292
+    text-align: right
+    padding-right: 1.2rem
 
 //---------- 업체설정 Pages --------------//
 .image-upload

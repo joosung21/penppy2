@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="12px" viewBox="0 0 15 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>add</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="할인설정" transform="translate(-1544.000000, -272.000000)" fill="#929292" stroke="#929292">
+            <g id="BODY" transform="translate(220.000000, 100.000000)">
+                <g id="객실선택" transform="translate(70.000000, 161.000000)">
+                    <g id="선택" transform="translate(1254.000000, 9.000000)">
+                        <g id="Page-1" transform="translate(0.000000, 2.000000)">
+                            <path d="M14.8953541,0.104431937 C14.7561115,-0.0348106457 14.5304129,-0.0348106457 14.390885,0.104431937 L5.35153047,10.8557855 L0.609007994,5.25697817 C0.469765411,5.11773559 0.24406688,5.11773559 0.104538964,5.25697817 C-0.0349889516,5.39622075 -0.0347036184,5.62191928 0.104538964,5.7614472 L5.09958129,11.612489 C5.16634925,11.679257 5.25737053,11.7169209 5.35181581,11.7169209 C5.44626108,11.7169209 5.53699703,11.679257 5.60405032,11.612489 L14.8953541,0.608900967 C15.034882,0.469658384 15.034882,0.243959853 14.8953541,0.104431937" id="Fill-1" stroke-width="0.2"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

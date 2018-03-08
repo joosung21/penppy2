@@ -12,6 +12,7 @@ app.get('/', function (req, res){res.render('calendar')})
 app.get('/calendar', function (req, res){res.render('calendar')})
 app.get('/calendar-week', function (req, res){res.render('calendar-week')})
 app.get('/rateplan', function (req, res){res.render('rateplan')})
+app.get('/chart', function (req, res){res.render('chart')})
 app.get('/season-year-calendar', function (req, res){res.render('season-year-calendar')})
 
 // 업체설정
