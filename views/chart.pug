@@ -42,63 +42,77 @@ body(name='price-chart')
           .dd.text-blue
             .day 토
             .date 30
+            .remark 비수기
           .dd.text-red
             .day 일
             .date 12/31
+            .remark 비수기
           .dd.text-red
             .day 월
             .date 1/1
-            .remark 새해
+            .remark 비수기
           .dd
             .day 화
             .date 2
+            .remark 비수기
           .dd.today
             .day 수
             .date 3
+            .remark 비수기
           .dd.active
             .day 목
             .date 4
+            .remark 비수기
           .dd
             .day 금
             .date 5
+            .remark 비수기
           .dd.text-blue
             .day 토
             .date 6
+            .remark 준성수기
           .dd.text-red
             .day 일
             .date 7
+            .remark 준성수기
           .dd
             .day 월
             .date 8
+            .remark 준성수기
           .dd
             .day 화
             .date 9
+            .remark 성수기
           .dd
             .day 수
             .date 10
+            .remark 성수기
           .dd
             .day 목
             .date 11
+            .remark 성수기
           .dd
             .day 금
             .date 12
+            .remark 성수기
       .chart-row.room-stock
         .row-title 해
         .dd-wrapper
-          .dd 1
-          .dd 1
-          .dd 1
-          .dd 1
-          .dd 1
-          .dd 1
-          .dd 1
-          .dd 1
-          .dd 1
-          .dd 1
-          .dd 1
-          .dd 1
-          .dd 1
-          .dd 1
+          .dd 완료
+          .dd 완료
+          .dd 완료
+          .dd 가능
+          .dd 가능
+          .dd 가능
+          .dd 완료
+          .dd 완료
+          .dd 완료
+          .dd 방막음
+          .dd 완료
+          .dd 완료
+          .dd 완료
+          .dd 완료
+
       .chart-row.basic-price
         .row-title 기본요금
         .dd-wrapper
@@ -151,7 +165,7 @@ body(name='price-chart')
           .dd
             input.form-control(type='text', value='100,000', disabled)
       .chart-row
-        .row-title 네이버
+        .row-title 온라인 판매대행
         .dd-wrapper
           .dd
             input.form-control(type='text', value='100,000')
@@ -181,114 +195,145 @@ body(name='price-chart')
             input.form-control(type='text', value='100,000', disabled)
           .dd
             input.form-control(type='text', value='100,000', disabled)
-      .chart-row
-        .row-title 티몬
-        .dd-wrapper
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000', disabled)
-          .dd
-            input.form-control(type='text', value='100,000', disabled)
-      .chart-row
-        .row-title 에어비앤비
-        .dd-wrapper
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000', disabled)
-          .dd
-            input.form-control(type='text', value='100,000', disabled)
-      .chart-row
-        .row-title 아고다
-        .dd-wrapper
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000')
-          .dd
-            input.form-control(type='text', value='100,000', disabled)
-          .dd
-            input.form-control(type='text', value='100,000', disabled)
+      //- .chart-row
+      //-   .row-title 네이버
+      //-   .dd-wrapper
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control.dirty(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000', disabled)
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000', disabled)
+      //- .chart-row
+      //-   .row-title 티몬
+      //-   .dd-wrapper
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000', disabled)
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000', disabled)
+      //- .chart-row
+      //-   .row-title 에어비앤비
+      //-   .dd-wrapper
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000', disabled)
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000', disabled)
+      //- .chart-row
+      //-   .row-title 아고다
+      //-   .dd-wrapper
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000')
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000', disabled)
+      //-     .dd
+      //-       input.form-control(type='text', value='100,000', disabled)
       .chart-row.room-stock
         .row-title 달
         .dd-wrapper
-          .dd 1
-          .dd 1
-          .dd 1
-          .dd 1
-          .dd 1
-          .dd 1
-          .dd 1
-          .dd 1
-          .dd 1
-          .dd 1
-          .dd 1
-          .dd 1
+          .dd 완료
+          .dd 3
+          .dd 완료
+          .dd 완료
+          .dd 2
+          .dd 3
+          .dd 3
+          .dd 3
+          .dd 방막음
+          .dd 3
+          .dd 완료
+          .dd 완료
           .dd 1
           .dd 1
       .chart-row.basic-price
@@ -489,7 +534,7 @@ body(name='price-chart')
               input.form-control.form-control-datepicker(type='text', value='2017.07.16(수)', size='18')
               span.px-2 ~
               input.form-control.form-control-datepicker.mr-2(type='text', value='2017.08.20(목)', size='18')
-            .form-inline.mt-3.mb-1
+            .form-inline.mt-3
               .btn-group.btn-group-toggle.d-flex.align-items-center.mr-3(data-toggle='buttons')
                 label.btn.btn-white.active
                   input(type='checkbox', checked='', autocomplete='off')
@@ -518,7 +563,6 @@ body(name='price-chart')
                 u 일~목
               button.btn.btn-white.btn-sm.border-0(type='button')
                 u 금~토
-            .info 위 기간중 선택하신 요일만 연박판매가 적용됩니다.
         .form-group.row
           label.col-sm-2.pt-1 할인률
           .col-sm-10
@@ -534,11 +578,10 @@ body(name='price-chart')
               span.custom-control-label 절사 안함
             label.custom-control.custom-radio.custom-control-inline
               input.custom-control-input(type='radio', name='statusRadio', checked)
-              span.custom-control-label 10원 단위 버림
+              span.custom-control-label 10원 단위 절사
             label.custom-control.custom-radio.custom-control-inline
               input.custom-control-input(type='radio', name='statusRadio', checked)
-              span.custom-control-label 100원 단위 버림
-            .info 절사 안함 선택시 1원 단위까지 적용됩니다.
+              span.custom-control-label 100원 단위 절사
         .form-group.row
           label.col-sm-2 객실 선택
           .col-sm-10
