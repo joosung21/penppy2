@@ -61,6 +61,11 @@ $( document ).ready(function() {
     }
   }
 
+  // DEMO 지울 것: 할인설정 저장버튼 슬라이더
+  $('.chart-row .form-control').click(function(){
+    openSlider();
+  });
+
   // Responsive: Second Depth Show
 
   // Resize Detect
