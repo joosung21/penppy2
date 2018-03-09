@@ -9,148 +9,196 @@ body.two-depth(name='setting', page='bp')
       .board-title 설정 - 예약창 기본설정
       .board-container
         .form-group.row
-          label.col-sm-2.pt-1 결제수단 선택
-          .col-sm-10
+          label.col-sm-3.pt-1 결제수단 선택
+          .col-sm-9
             label.custom-control.custom-checkbox.custom-control-inline.mr-4
               input.custom-control-input(type='checkbox')
               span.custom-control-label 카드결제
             label.custom-control.custom-checkbox.custom-control-inline
-              input.custom-control-input(type='checkbox')
+              input.custom-control-input(type='checkbox', checked)
               span.custom-control-label 무통장입금
-            .font-xsmall.mt-3
+            .info
               | 카드결제 수수료는 고객 결제 금액의 7%입니다.
               br
               | 카드결제 사용을 체크하면 실시간 예약창 결제수단에 카드결제가 자동으로 추가됩니다.
         .form-group.row
-          label.col-sm-2.pt-1 무통장입금 계좌번호
-          .col-sm-10
+          label.col-sm-3.pt-1 무통장입금 계좌번호
+          .col-sm-9
             .form-row
-              .col-sm-4
+              .col-sm-3
                 input.form-control(type='text', placeholder='은행명')
               .col-sm-4
                 input.form-control(type='text', placeholder='계좌번호')
-              .col-sm-4
+              .col-sm-3
                 input.form-control(type='text', placeholder='예금주')
+              .col-sm-2
+                button.btn.btn-white
+                  i.fa.fa-plus.fa-lg.mr-1
+                  | 추가
         .form-group.row
-          label.col-sm-2.pt-1 입금 대기시간
-          .col-sm-10
-            .form-row
-              .col-sm-4
-                .input-group
-                  .input-group-prepend
-                    span.input-group-text 기본
-                  select.custom-select
-                    option 30분
-                    option 1시간
-                    option 2시간
-                    option 3시간
-                    option 4시간
-                    option 5시간
-                    option 6시간
-                    option 7시간
-                    option 8시간
-                    option 9시간
-                    option 10시간
-                    option 11시간
-                    option(selected) 12시간
-                    option 13시간
-                    option 14시간
-                    option 15시간
-                    option 16시간
-                    option 17시간
-                    option 18시간
-                    option 19시간
-                    option 20시간
-                    option 21시간
-                    option 22시간
-                    option 23시간
-                    option 24시간
-              .col-sm-4
-                .input-group
-                  .input-group-prepend
-                    span.input-group-text 1일전
-                  select.custom-select
-                    option 30분
-                    option 1시간
-                    option 2시간
-                    option 3시간
-                    option 4시간
-                    option 5시간
-                    option 6시간
-                    option 7시간
-                    option 8시간
-                    option(selected) 9시간
-                    option 10시간
-                    option 11시간
-                    option 12시간
-                    option 13시간
-                    option 14시간
-                    option 15시간
-                    option 16시간
-                    option 17시간
-                    option 18시간
-                    option 19시간
-                    option 20시간
-                    option 21시간
-                    option 22시간
-                    option 23시간
-                    option 24시간
-              .col-sm-4
-                .input-group
-                  .input-group-prepend
-                    span.input-group-text 당일
-                  select.custom-select
-                    option 30분
-                    option 1시간
-                    option 2시간
-                    option 3시간
-                    option 4시간
-                    option 5시간
-                    option(selected) 6시간
-                    option 7시간
-                    option 8시간
-                    option 9시간
-                    option 10시간
-                    option 11시간
-                    option 12시간
-                    option 13시간
-                    option 14시간
-                    option 15시간
-                    option 16시간
-                    option 17시간
-                    option 18시간
-                    option 19시간
-                    option 20시간
-                    option 21시간
-                    option 22시간
-                    option 23시간
-                    option 24시간
+          label.col-sm-3.pt-1 입금 대기시간
+          .col-sm-9
+            .form-inline
+              span.mr-2 기본
+              select.custom-select.mr-3
+                option 30분
+                option 1시간
+                option 2시간
+                option 3시간
+                option 4시간
+                option 5시간
+                option 6시간
+                option 7시간
+                option 8시간
+                option 9시간
+                option 10시간
+                option 11시간
+                option(selected) 12시간
+                option 13시간
+                option 14시간
+                option 15시간
+                option 16시간
+                option 17시간
+                option 18시간
+                option 19시간
+                option 20시간
+                option 21시간
+                option 22시간
+                option 23시간
+                option 24시간
+              span.mr-2 1일전
+              select.custom-select.mr-3
+                option 30분
+                option 1시간
+                option 2시간
+                option 3시간
+                option 4시간
+                option 5시간
+                option 6시간
+                option 7시간
+                option 8시간
+                option(selected) 9시간
+                option 10시간
+                option 11시간
+                option 12시간
+                option 13시간
+                option 14시간
+                option 15시간
+                option 16시간
+                option 17시간
+                option 18시간
+                option 19시간
+                option 20시간
+                option 21시간
+                option 22시간
+                option 23시간
+                option 24시간
+              span.mr-2 당일
+              select.custom-select
+                option 30분
+                option 1시간
+                option 2시간
+                option 3시간
+                option 4시간
+                option 5시간
+                option(selected) 6시간
+                option 7시간
+                option 8시간
+                option 9시간
+                option 10시간
+                option 11시간
+                option 12시간
+                option 13시간
+                option 14시간
+                option 15시간
+                option 16시간
+                option 17시간
+                option 18시간
+                option 19시간
+                option 20시간
+                option 21시간
+                option 22시간
+                option 23시간
+                option 24시간
         .form-group.row
-          label.col-sm-2.pt-1 자동취소 사용여부
-          .col-sm-10
+          label.col-sm-3.pt-1 자동취소 사용여부
+          .col-sm-9
             label.custom-control.custom-radio.custom-control-inline.mr-4
-              input.custom-control-input(type='radio', name='autoCancelRadio', checked)
+              input.custom-control-input(type='radio', name='radio1', checked)
               span.custom-control-label 미사용
             label.custom-control.custom-radio.custom-control-inline
-              input.custom-control-input(type='radio', name='autoCancelRadio')
+              input.custom-control-input(type='radio', name='radio1')
               span.custom-control-label 사용
-            .font-xsmall.mt-3
+            .info
               | 입금대기시간이 초과되면 자동으로 예약이 취소됩니다.
         .form-group.row
-          label.col-sm-2.pt-1 자동취소 보류시간
-          .col-sm-10
+          label.col-sm-3.pt-1 자동취소 보류시간
+          .col-sm-9
             .form-inline
               label.custom-control.custom-radio.custom-control-inline.mr-4
-                input.custom-control-input(type='radio', name='cancelDelayRadio')
+                input.custom-control-input(type='radio', name='radio2')
                 span.custom-control-label 미사용
               label.custom-control.custom-radio.custom-control-inline
-                input.custom-control-input(type='radio', name='cancelDelayRadio', checked)
+                input.custom-control-input(type='radio', name='radio2', checked)
                 span.custom-control-label 사용
               input.form-control(type='time', value='23:00')
               .px-2 ~
               input.form-control(type='time', value='07:00')
-            .font-xsmall.mt-3
+            .info
               | 입금확인이 어려운 시간에 자동취소가 되는 것을 방지합니다. 자동취소 보류시간이 초과하면 입금확인이 안 된 모든 예약이 자동취소됩니다.
+        .form-group.row
+          label.col-sm-3.pt-1 추가인원요금 결제방법
+          .col-sm-9
+            label.custom-control.custom-radio.custom-control-inline.mr-4
+              input.custom-control-input(type='radio', name='radio3')
+              span.custom-control-label 현장결제
+            label.custom-control.custom-radio.custom-control-inline
+              input.custom-control-input(type='radio', name='radio3', checked)
+              span.custom-control-label 온라인결제
+        .form-group.row
+          label.col-sm-3.pt-1 부가서비스요금 결제방법
+          .col-sm-9
+            label.custom-control.custom-radio.custom-control-inline.mr-4
+              input.custom-control-input(type='radio', name='radio4')
+              span.custom-control-label 현장결제
+            label.custom-control.custom-radio.custom-control-inline
+              input.custom-control-input(type='radio', name='radio4', checked)
+              span.custom-control-label 온라인결제
+        .form-group.row
+          label.col-sm-3.pt-1 당일예약 허용여부
+          .col-sm-9
+            .form-inline
+              label.custom-control.custom-radio.custom-control-inline.mr-4
+                input.custom-control-input(type='radio', name='radio5')
+                span.custom-control-label 비허용
+              label.custom-control.custom-radio.custom-control-inline
+                input.custom-control-input(type='radio', name='radio5', checked)
+                span.custom-control-label 허용
+              select.custom-select.mr-2
+                option 당일 24시
+              span 까지
+        .form-group.row
+          label.col-sm-3.pt-1 추가인원요금 나이 기준
+          .col-sm-9
+            .input-group.mb-2(style='width: 17rem')
+              .input-group-prepend
+                .input-group-text 유아 만
+              input.form-control.text-right(type='number', min='0', max='48', value='24')
+              .input-group-append
+                .input-group-text 개월 까지
+            .input-group.mb-2(style='width: 17rem')
+              .input-group-prepend
+                .input-group-text 아동 만
+              input.form-control.text-right(type='number', min='3', max='20', value='12')
+              .input-group-append
+                .input-group-text(style='padding-right: 1.65rem') 세 까지
+            .input-group(style='width: 17rem')
+              .input-group-prepend
+                .input-group-text 성인 만
+              input.form-control.text-right(type='number', min='3', max='20', value='12')
+              .input-group-append
+                .input-group-text(style='padding-right: 1.65rem') 세 이상
+
 
         .text-center.pt-4
           button.btn.btn-primary.btn-lg(type='button') 저장
