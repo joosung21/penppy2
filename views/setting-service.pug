@@ -15,74 +15,30 @@ body.two-depth(name='setting', page='service')
             th(style='width: 40%') 부가서비스명
             th 가격
             th 기본/최대수량
-            th 결제방법
-            th 당일판매
             th 실시간 예약창
-            th 온라인 판매대행
+            th 당일판매
         tbody
           tr.link(onclick='location.href="/setting/service/edit"')
             td 01
             td.text-left 바베큐그릴 2인
             td 15,000원
             td 1/10
-            td(onclick='event.cancelBubble = true')
-              label.switch.online
-                input(type="checkbox")
-                span.slider.round
-            td(onclick='event.cancelBubble = true')
-              label.switch.available
-                input(type="checkbox", checked)
-                span.slider.round
-            td(onclick='event.cancelBubble = true')
-              label.switch
-                input(type="checkbox")
-                span.slider.round
-            td(onclick='event.cancelBubble = true')
-              label.switch
-                input(type="checkbox")
-                span.slider.round
+            td 가능
+            td 판매
           tr.link(onclick='location.href="/setting/service/edit"')
             td 02
             td.text-left 바베큐그릴 4인
             td 25,000원
             td 1/10
-            td(onclick='event.cancelBubble = true')
-              label.switch.online
-                input(type="checkbox")
-                span.slider.round
-            td(onclick='event.cancelBubble = true')
-              label.switch.available
-                input(type="checkbox", checked)
-                span.slider.round
-            td(onclick='event.cancelBubble = true')
-              label.switch
-                input(type="checkbox", checked)
-                span.slider.round
-            td(onclick='event.cancelBubble = true')
-              label.switch
-                input(type="checkbox")
-                span.slider.round
+            td 가능
+            td 미판매
           tr.link(onclick='location.href="/setting/service/edit"')
             td 03
             td.text-left 프로포즈 풍선 이벤트
             td 50,000원
             td 2/2
-            td(onclick='event.cancelBubble = true')
-              label.switch.online
-                input(type="checkbox", checked)
-                span.slider.round
-            td(onclick='event.cancelBubble = true')
-              label.switch.available
-                input(type="checkbox")
-                span.slider.round
-            td(onclick='event.cancelBubble = true')
-              label.switch
-                input(type="checkbox", checked)
-                span.slider.round
-            td(onclick='event.cancelBubble = true')
-              label.switch
-                input(type="checkbox")
-                span.slider.round
+            td 불가
+            td 판매
       .row.mt-4
         .col
           button.btn.btn-white(type='button')
@@ -104,77 +60,33 @@ body.two-depth(name='setting', page='service')
             th(style='width: 40%') 부가서비스명
             th 가격
             th 기본/최대수량
-            th 결제방법
-            th 당일판매
             th 실시간 예약창
-            th 온라인 판매대행
+            th 당일판매
         tbody
-          tr.move
+          tr.dimed
             th.text-blue
               i.fa.fa-arrows-v.fa-lg
             td.text-left 바베큐그릴 2인
             td 15,000원
             td 1/10
-            td
-              label.switch.online
-                input(type="checkbox", disabled)
-                span.slider.round
-            td
-              label.switch.available
-                input(type="checkbox", checked, disabled)
-                span.slider.round
-            td
-              label.switch
-                input(type="checkbox", disabled)
-                span.slider.round
-            td
-              label.switch
-                input(type="checkbox", disabled)
-                span.slider.round
-          tr.move
+            td 가능
+            td 판매
+          tr.dimed
             th.text-blue
               i.fa.fa-arrows-v.fa-lg
             td.text-left 바베큐그릴 4인
             td 25,000원
             td 1/10
-            td
-              label.switch.online
-                input(type="checkbox", disabled)
-                span.slider.round
-            td
-              label.switch.available
-                input(type="checkbox", checked, disabled)
-                span.slider.round
-            td
-              label.switch
-                input(type="checkbox", disabled)
-                span.slider.round
-            td
-              label.switch
-                input(type="checkbox", disabled)
-                span.slider.round
-          tr.move
+            td 가능
+            td 미판매
+          tr.dimed
             th.text-blue
               i.fa.fa-arrows-v.fa-lg
             td.text-left 프로포즈 풍선 이벤트
             td 50,000원
             td 2/2
-            td
-              label.switch.online
-                input(type="checkbox", checked, disabled)
-                span.slider.round
-            td
-              label.switch.available
-                input(type="checkbox", disabled)
-                span.slider.round
-            td
-              label.switch
-                input(type="checkbox", checked, disabled)
-                span.slider.round
-            td
-              label.switch
-                input(type="checkbox", checked, disabled)
-                span.slider.round
+            td 불가
+            td 판매
 
       .row.mt-4
         .col.d-flex.align-items-center

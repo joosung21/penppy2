@@ -211,6 +211,29 @@ body.two-depth(name='setting', page='rooms')
                 label.custom-control.custom-checkbox
                   input.custom-control-input(type='checkbox')
                   span.custom-control-label 파티룸
+        .form-group.row
+          label.col-sm-2.pt-1
+            | 실기간 예약창
+            .text-red (ADMIN)
+          .col-sm-10
+            label.custom-control.custom-radio.custom-control-inline.mr-4
+              input.custom-control-input(type='radio', name='radio5')
+              span.custom-control-label 미판매
+            label.custom-control.custom-radio.custom-control-inline
+              input.custom-control-input(type='radio', name='radio5', checked)
+              span.custom-control-label 판매
+        .form-group.row
+          label.col-sm-2.pt-1
+            | 온라인 판매대행
+            .text-red (ADMIN)
+          .col-sm-10
+            label.custom-control.custom-radio.custom-control-inline.mr-4
+              input.custom-control-input(type='radio', name='radio6')
+              span.custom-control-label 미판매
+            label.custom-control.custom-radio.custom-control-inline
+              input.custom-control-input(type='radio', name='radio6', checked)
+              span.custom-control-label 판매
+
         .row.text-center.pt-4.no-gutters
           .col-8.offset-2
             button.btn.btn-secondary.btn-lg.mr-1(type='button') 취소

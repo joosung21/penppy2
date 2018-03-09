@@ -141,11 +141,11 @@ body.two-depth(name='setting', page='bp')
               label.custom-control.custom-radio.custom-control-inline
                 input.custom-control-input(type='radio', name='radio2', checked)
                 span.custom-control-label 사용
-              input.form-control(type='time', value='23:00')
+              input.form-control(type='text', value='23:00')
               .px-2 ~
-              input.form-control(type='time', value='07:00')
+              input.form-control(type='text', value='07:00')
             .info
-              | 입금확인이 어려운 시간에 자동취소가 되는 것을 방지합니다. 자동취소 보류시간이 초과하면 입금확인이 안 된 모든 예약이 자동취소됩니다.
+              | 입금확인이 어려운 시간에 자동취소가 되는 것을 방지합니다. 자동취소 보류시간이 초과하면 입금확인이 안 된 모든 예약이 자동으로 취소됩니다.
         .form-group.row
           label.col-sm-3.pt-1 추가인원요금 결제방법
           .col-sm-9

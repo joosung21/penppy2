@@ -1,0 +1,80 @@
+include ./includes/header.pug
+
+//-------- 업체설정: 자동할인 설정 Page ---------//
+body.two-depth(name='setting', page='auto')
+  include ./includes/main-nav-left.pug
+  include ./includes/sub-nav.pug
+  .content-container
+    .artboard
+      .board-title 설정 - 자동할인 설정
+      .board-containe
+        table.table.text-center.align-middle
+          thead.bg-light
+            tr
+              th 번호
+              th(style='width: 30%') 객실
+              th(style='width: 20%') 할인율
+              th 기간
+              th 채널
+              th 상태
+          tbody
+            tr.dimed
+              td 02
+              td.text-left
+                div 해
+                div 달
+                div 별
+                div 하늘
+              td.text-left
+                | 입실 3일전
+                span.text-red.mx-1 30%
+                | 할인
+                br
+                | 입실 2일전
+                span.text-red.mx-1 40%
+                | 할인
+                br
+                | 입실 1일전
+                span.text-red.mx-1 50%
+                | 할인
+                br
+                | 입실 당일
+                span.text-red.mx-1 70%
+                | 할인
+                br
+              td 2018.03.05(월)~2018.03.09(금)
+              td.text-left
+                | 전체 채널
+              td 종료
+            tr
+              td 02
+              td.text-left
+                | 전체 객실
+              td.text-left
+                | 입실 3일전
+                span.text-red.mx-1 30%
+                | 할인
+                br
+                | 입실 2일전
+                span.text-red.mx-1 40%
+                | 할인
+                br
+                | 입실 1일전
+                span.text-red.mx-1 50%
+                | 할인
+                br
+                | 입실 당일
+                span.text-red.mx-1 70%
+                | 할인
+                br
+              td 상시
+              td.text-left
+                div 네이버
+                div 티몬
+              td 종료
+        .text-right
+          a.btn.btn-white(href='/setting/auto-edit')
+            i.fa.fa-plus.mr-1
+            | 자동할인 등록
+
+    include ./includes/footer.pug

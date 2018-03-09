@@ -1,0 +1,62 @@
+include ./includes/header.pug
+
+//-------- 설정: 자동할인설정 수정 Page ---------//
+body.two-depth(name='setting', page='auto')
+  include ./includes/main-nav-left.pug
+  include ./includes/sub-nav.pug
+  .content-container
+    .artboard
+      .board-title 설정 - 자동할인 설정
+      .board-container
+        .form-group.row
+          label.col-sm-2.pt-1 기간 선택
+          .col-sm-10
+            .form-inline
+              label.custom-control.custom-radio.custom-control-inline.mr-4
+                input.custom-control-input(type='radio', name='radio1')
+                span.custom-control-label 상시
+              label.custom-control.custom-radio.custom-control-inline
+                input.custom-control-input(type='radio', name='radio2', checked)
+                span.custom-control-label 기간
+              input.form-control.form-control-datepicker(type='text', value='2017.07.16(수)', size='18')
+              span.px-2 ~
+              input.form-control.form-control-datepicker.mr-2(type='text', value='2017.08.20(목)', size='18')
+        .form-group.row
+          label.col-sm-2.pt-1 할인율
+          .col-sm-10
+            .form-inline.mb-2
+              span 판매요금 기준
+              select.custom-select.mx-2
+                option %
+                option 원
+              span 할인
+            .input-group.mb-2(style='width: 21rem')
+              .input-group-prepend
+                .input-group-text.justify-content-end(style='width: 7rem') 입실 3일전
+              input.form-control.text-right(type='text', value='30')
+              .input-group-append
+                .input-group-text % 자동할인
+            .input-group.mb-2(style='width: 21rem')
+              .input-group-prepend
+                .input-group-text.justify-content-end(style='width: 7rem') 입실 3일전
+              input.form-control.text-right(type='text', value='40')
+              .input-group-append
+                .input-group-text % 자동할인
+            .input-group.mb-2(style='width: 21rem')
+              .input-group-prepend
+                .input-group-text.justify-content-end(style='width: 7rem') 입실 3일전
+              input.form-control.text-right(type='text', value='50')
+              .input-group-append
+                .input-group-text % 자동할인
+            .input-group.mb-2(style='width: 21rem')
+              .input-group-prepend
+                .input-group-text.justify-content-end(style='width: 7rem') 입실 3일전
+              input.form-control.text-right(type='text', value='70')
+              .input-group-append
+                .input-group-text % 자동할인
+
+
+
+
+
+    include ./includes/footer.pug
