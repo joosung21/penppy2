@@ -43,7 +43,6 @@ $left-side-padding: 2rem
     th, td
       border: 1px solid $border-color !important
 
-
 .input-group-text
   color: #929292
   background-color: $white-gray
@@ -177,6 +176,10 @@ a:focus, a:active, .btn:focus, .btn:active
 .grabbable
   cursor: move
   cursor: -webkit-grab
+
+hr.table-devider
+  border-top: 1px solid #929292
+  margin: 0
 
 // Custom Checkbox & Radio
 .custom-control
@@ -1131,6 +1134,21 @@ table
     text-align: center
     padding: .5rem 0
     border-top: 1px solid $border-color
+
+// 판매사 연동현황 //
+.table-gds-status
+  margin: 0
+  td
+    padding: 1rem 1.5rem
+  td.title
+    width: 15%
+  .channel
+    display: flex
+    align-items: center
+    .bi
+      height: 1.3rem
+      margin-right: .5rem
+
 
 
 //---------- Responsive: Smaller than 1200px ----------//
