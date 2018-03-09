@@ -16,6 +16,7 @@ app.get('/chart', function (req, res){res.render('chart')})
 app.get('/season-year-calendar', function (req, res){res.render('season-year-calendar')})
 
 // 업체설정
+app.get('/setting/basic', function (req, res){res.render('setting-basic')})
 app.get('/setting/property', function (req, res){res.render('setting-property')})
 app.get('/setting/rooms', function (req, res){res.render('setting-rooms')})
 app.get('/setting/rooms/edit', function (req, res){res.render('setting-room-edit')})

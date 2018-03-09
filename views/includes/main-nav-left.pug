@@ -40,25 +40,22 @@
   //- 업체설정 메뉴
   #nav-setting.second-depth
     .nav-group
-      .group-title 업체설정
-      .pl-2
-        a.property(href='/setting/property') 숙소정보
-        a.rooms(href='/setting/rooms') 객실정보
-        a.service(href='/setting/service') 부가서비스
-        a.policy(href='/setting/policy') 취소환불정책
-    hr
-    .nav-group
       .group-title 판매설정
       .pl-2
-        a(href='#') 판매환경 설정
+        a.basic(href='/setting/basic') 기본설정
+        a.property(href='/setting/property') 숙소정보
+        a.rooms(href='/setting/rooms') 객실정보
+        a.policy(href='/setting/policy') 취소환불정책
         a(href='#') 자동할인 설정
         a.daily(href='/setting/daily') 일자별 요금 설정
     hr
     .nav-group
       .group-title 실시간 예약창
       .pl-2
-        a.bp(href='/setting/bp') 예약창 운영정보
-        a.notice(href='/setting/notice') 예약창 공지사항
+        a.bp(href='/setting/bp') 예약창 기본설정
+        a.service(href='/setting/service') 부가서비스
+        a(href='#') 연박 설정
+        a.notice(href='/setting/notice') 팝업 공지사항
         a.sms(href='/setting/sms') 문자발송 정보
         a.url(href='/setting/url') 홈페이지 설치안내
     hr
