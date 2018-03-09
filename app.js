@@ -34,6 +34,8 @@ app.get('/setting/gds', function (req, res){res.render('setting-gds')})
 app.get('/setting/gds-status', function (req, res){res.render('setting-gds-status')})
 app.get('/setting/auto', function (req, res){res.render('setting-auto')})
 app.get('/setting/auto-edit', function (req, res){res.render('setting-auto-edit')})
+app.get('/setting/multiday', function (req, res){res.render('setting-multiday')})
+app.get('/setting/multiday-edit', function (req, res){res.render('setting-multiday-edit')})
 
 // 모바일 BP
 app.get('/bp-mobile', function (req, res){res.render('bp-mobile')})

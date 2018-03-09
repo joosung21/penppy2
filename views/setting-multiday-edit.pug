@@ -1,0 +1,114 @@
+include ./includes/header.pug
+
+//-------- 설정: 연박 설정 수정 Page ---------//
+body.two-depth(name='setting', page='multiday')
+  include ./includes/main-nav-left.pug
+  include ./includes/sub-nav.pug
+  .content-container
+    .artboard
+      .board-title 설정 - 연박 설정
+      .board-container
+        .form-group.row
+          label.col-sm-2.pt-1 기간 선택
+          .col-sm-10
+            .form-inline
+              input.form-control.form-control-datepicker(type='text', value='2017.07.16(수)', size='18')
+              span.px-2 ~
+              input.form-control.form-control-datepicker.mr-2(type='text', value='2017.08.20(목)', size='18')
+            .form-inline.mt-3
+              .btn-group.btn-group-toggle.d-flex.align-items-center.mr-3(data-toggle='buttons')
+                label.btn.btn-white.active
+                  input(type='checkbox', checked='', autocomplete='off')
+                  | 월
+                label.btn.btn-white.active
+                  input(type='checkbox', checked='', autocomplete='off')
+                  | 화
+                label.btn.btn-white
+                  input(type='checkbox', checked='', autocomplete='off')
+                  | 수
+                label.btn.btn-white
+                  input(type='checkbox', checked='', autocomplete='off')
+                  | 목
+                label.btn.btn-white
+                  input(type='checkbox', checked='', autocomplete='off')
+                  | 금
+                label.btn.btn-white
+                  input(type='checkbox', checked='', autocomplete='off')
+                  | 토
+                label.btn.btn-white
+                  input(type='checkbox', checked='', autocomplete='off')
+                  | 일
+              button.btn.btn-white.btn-sm.border-0(type='button')
+                u 전체
+              button.btn.btn-white.btn-sm.border-0(type='button')
+                u 일~목
+              button.btn.btn-white.btn-sm.border-0(type='button')
+                u 금~토
+            .info 위 기간중 선택하신 요일만 연박판매가 적용됩니다.
+
+        .form-group.row
+          label.col-sm-2.pt-1 연박 수
+          .col-sm-10
+            .form-inline.mb-2
+              span 위 기간동안
+              select.custom-select.mx-2
+                option 2박
+                option 3박
+                option 4박
+                option 5박
+                option 6박
+                option 7박
+                option 8박
+                option 9박
+                option 10박
+                option 11박
+                option 12박
+                option 13박
+                option 14박
+                option 15박
+              span 이상만 투숙 가능
+        .form-group.row
+          label.col-sm-2.pt-1 객실 선택
+          .col-sm-10
+            label.custom-control.custom-checkbox.mr-4
+              input.custom-control-input(type='checkbox', checked)
+              span.custom-control-label 전체 객실
+            label.custom-control.custom-checkbox.mr-4
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 해
+            label.custom-control.custom-checkbox.mr-4
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 달
+            label.custom-control.custom-checkbox.mr-4
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 별
+        .form-group.row
+          label.col-sm-2.pt-1
+            span.text-red.mr-1 *
+            | 연박 판매규정
+          .col-sm-10
+            | 연박판매는
+            span.text-red.ml-1 실시간 예약창에만 적용
+            | 됩니다.
+            br
+            | 위 기간동안
+            span.text-red.ml-1 모든 판매사에서는 판매가 중지
+            | 됩니다.
+            label.custom-control.custom-checkbox.mr-4.mt-2
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 동의
+
+        .row.text-center.pt-4.no-gutters
+          .col-8.offset-2
+            button.btn.btn-secondary.btn-lg.mr-1(type='button') 취소
+            button.btn.btn-primary.btn-lg(type='button') 저장
+          .col-2.text-right.pt-1
+            button.btn.btn-white(type='button')
+              i.fa.fa-trash.fa-lg.mr-1
+              | 삭제
+
+
+
+
+
+    include ./includes/footer.pug
