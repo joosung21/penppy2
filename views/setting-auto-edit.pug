@@ -54,7 +54,48 @@ body.two-depth(name='setting', page='auto')
               input.form-control.text-right(type='text', value='70')
               .input-group-append
                 .input-group-text % 자동할인
-            bu
+            button.btn.btn-white.btn-small(type='button')
+              i.fa.fa-plus.fa-lg.mr-1
+              | 추가
+        .form-group.row
+          label.col-sm-2.pt-1 객실 선택
+          .col-sm-10
+            label.custom-control.custom-checkbox.mr-4
+              input.custom-control-input(type='checkbox', checked)
+              span.custom-control-label 전체 객실
+            label.custom-control.custom-checkbox.mr-4
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 해
+            label.custom-control.custom-checkbox.mr-4
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 달
+            label.custom-control.custom-checkbox.mr-4
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 별
+        .form-group.row
+          label.col-sm-2.pt-1 채널 선택
+          .col-sm-10
+            label.custom-control.custom-checkbox.mr-4
+              input.custom-control-input(type='checkbox', checked)
+              span.custom-control-label 전체 채널
+            label.custom-control.custom-checkbox.mr-4
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 실시간 예약창
+            label.custom-control.custom-checkbox.mr-4
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 네이버
+            label.custom-control.custom-checkbox.mr-4
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 에어비앤비
+
+        .row.text-center.pt-4.no-gutters
+          .col-8.offset-2
+            button.btn.btn-secondary.btn-lg.mr-1(type='button') 취소
+            button.btn.btn-primary.btn-lg(type='button') 저장
+          .col-2.text-right.pt-1
+            button.btn.btn-white(type='button')
+              i.fa.fa-trash.fa-lg.mr-1
+              | 삭제
 
 
 
