@@ -43,6 +43,7 @@ app.get('/bp-mobile-book', function (req, res){res.render('bp-mobile-book')})
 
 // PC BP
 app.get('/bp-pc', function (req, res){res.render('bp-pc')})
+app.get('/bp-pc-book', function (req, res){res.render('bp-pc-book')})
 
 
 app.listen(3200, function () {
