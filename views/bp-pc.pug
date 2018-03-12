@@ -5,4 +5,77 @@ body
 
   #bp-pc-header
     .brand 데이먼 해달별펜션
+    a.btn.btn-white.active.ml-auto(href='#') 예약하기
+    a.btn.btn-white.ml-2(href='#')
+      i.fa.fa-search.fa-lg.mr-1
+      | 내 예약확인
   #bp-pc-body
+    .container
+      h4.mt-4
+        | 예약하기
+        small.text-muted.ml-2 날짜와 인원을 선택하고 검색을 눌러 주세요.
+      hr
+      .row.mt-4
+        .col-md-4.left-side
+          .input-group
+            .input-group-prepend
+              .input-group-text(style='width: 5.5rem') 체크인
+            input.form-control.form-control-datepicker(type='text', value='2017.07.16(수)')
+          .input-group.mt-3
+            .input-group-prepend
+              .input-group-text(style='width: 5.5rem') 체크아웃
+            input.form-control.form-control-datepicker(type='text', value='2017.08.20(목)')
+          .input-group.mt-3
+            .input-group-prepend
+              .input-group-text
+                img.age-icon(src='/images/adult.svg')
+            input.form-control.mr-1(type='number', min='1', max='99', value='2')
+            .input-group-prepend
+              .input-group-text
+                img.age-icon(src='/images/child.svg')
+            input.form-control.mr-1(type='number', min='1', max='99', value='0')
+            .input-group-prepend
+              .input-group-text
+                img.age-icon(src='/images/baby.svg')
+            input.form-control(type='number', min='1', max='99', value='0')
+          button.btn.btn-primary.btn-lg.btn-block.mt-3(type='button') 검색
+          .mt-4.small
+            P
+              | * 예약 시 인원 수를 꼭 선택해 주세요.
+              br
+              | * 기준인원 초과 시에는 1인당 만원의 추가 요금이 발생합니다.
+              br
+              | * 예약신청완료 후, 예약자명으로 3시간 이내에 입금해주세요. 시간 내 미입금시 예약이 자동취소됩니다.
+              br
+              | [예약자와 입금자명이 다를경우, 반드시 전화나 문자(010-4998-6707)로 연락주세요.]
+              br
+              br
+              | * 체크인 : 오후 3시 ~ 오후 9시까지
+              br
+              | [부득이하게 체크인시간 이후에 오시게 될 경우, 직원근무시간이 아니므로 예약전 미리 체크인가능 여부를 전화로 꼭 확인해주세요!]
+              br
+              | * 체크아웃 : 오전 10시 30분
+
+        .col-md-8
+          .bp-room-list
+            .room-wrapper
+              #roomPicture.carousel.slide(data-ride='carousel')
+                ol.carousel-indicators
+                  li.active(data-target='#roomPicture1', data-slide-to='0')
+                  li(data-target='#roomPicture1', data-slide-to='1')
+                  li(data-target='#roomPicture1', data-slide-to='2')
+                .carousel-inner
+                  .carousel-item.active
+                    img.d-block.w-100(src='...', alt='First slide')
+                  .carousel-item
+                    img.d-block.w-100(src='...', alt='Second slide')
+                  .carousel-item
+                    img.d-block.w-100(src='...', alt='Third slide')
+                a.carousel-control-prev(href='#roomPicture1', role='button', data-slide='prev')
+                  span.carousel-control-prev-icon(aria-hidden='true')
+                  span.sr-only Previous
+                a.carousel-control-next(href='#roomPicture1', role='button', data-slide='next')
+                  span.carousel-control-next-icon(aria-hidden='true')
+                  span.sr-only Next
+
+
