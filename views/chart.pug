@@ -29,7 +29,7 @@ body(name='price-chart')
           option 티몬
           option 에어비앤비
           option 아고다
-        button.btn.btn-white.ml-auto
+        button.btn.btn-white.ml-auto(data-toggle='modal', data-keyboard='true', data-target='#selectedEditModal')
           img.mr-2(src='/images/ic-check.svg')
           | 선택날짜 일괄할인
         button.btn.btn-white.ml-1(data-toggle='modal', data-keyboard='true', data-target='#periodEditModal')
@@ -390,7 +390,65 @@ body(name='price-chart')
 
     include ./includes/footer.pug
 
-//- 판매사 연동 상세정보 Modal
+//- 선택날짜 일괄할인 Modal
+#selectedEditModal.modal.fade(tabindex='-1')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h5#exampleModalLabel.modal-title 선택날짜 일괄할인
+        a.close(data-dismiss='modal')
+          img(src='/images/close.svg')
+      .modal-body
+        .form-group.row
+          label.col-sm-2.pt-1 선택날짜
+          .col-sm-10
+            | 3월 - 18일, 19월, 20화, 21수, 22목
+            br
+            | 4월 - 2월 3화, 4수
+        .form-group.row
+          label.col-sm-2.pt-1 할인률
+          .col-sm-10
+            .form-inline.mb-3
+              span.mr-2 기준요금 기준
+              input.form-control.text-center.mr-1(type='number', style='width: 8rem')
+              select.custom-select.mr-2
+                option %
+                option 원
+              span 할인
+        .form-group.row
+          label.col-sm-2 객실 선택
+          .col-sm-10
+            label.custom-control.custom-checkbox
+              input.custom-control-input(type='checkbox', checked)
+              span.custom-control-label 전체 객실
+            label.custom-control.custom-checkbox
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 해
+            label.custom-control.custom-checkbox
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 달
+            label.custom-control.custom-checkbox
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 별
+        .form-group.row
+          label.col-sm-2 채널 선택
+          .col-sm-10
+            label.custom-control.custom-checkbox
+              input.custom-control-input(type='checkbox', checked)
+              span.custom-control-label 전체 채널
+            label.custom-control.custom-checkbox
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 실시간 예약창
+            label.custom-control.custom-checkbox
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 네이버
+            label.custom-control.custom-checkbox
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 에어비앤비
+        .text-center.pt-5
+          button.btn.btn-primary.btn-lg(type='button', data-dismiss='modal') 저장
+
+//- 기간지정 일괄할인 Modal
 #periodEditModal.modal.fade(tabindex='-1')
   .modal-dialog
     .modal-content
@@ -445,15 +503,6 @@ body(name='price-chart')
                 option %
                 option 원
               span 할인
-            label.custom-control.custom-radio.custom-control-inline.mr-4
-              input.custom-control-input(type='radio', name='statusRadio')
-              span.custom-control-label 절사 안함
-            label.custom-control.custom-radio.custom-control-inline
-              input.custom-control-input(type='radio', name='statusRadio', checked)
-              span.custom-control-label 10원 단위 절사
-            label.custom-control.custom-radio.custom-control-inline
-              input.custom-control-input(type='radio', name='statusRadio', checked)
-              span.custom-control-label 100원 단위 절사
         .form-group.row
           label.col-sm-2 객실 선택
           .col-sm-10

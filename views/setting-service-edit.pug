@@ -13,12 +13,12 @@ body.two-depth(name='setting', page='service')
           .col-sm-10
             input.form-control(type='text', placeholder='숯불, 바베큐, 조식, 파티, 이벤트 등 부가서비스 명을 입력하세요.')
         .form-group.row
-          label.col-sm-2.pt-1 서비스 설명
+          label.col-sm-2.pt-1 상세설명
           .col-sm-10
             textarea.form-control(rows='5', placeholder='상세설명은 실시간 예약창의 부가서비스 상세설명에 보여집니다.')
-        .form-group.row
+        .form-group.form-row
           label.col-sm-2.pt-1 판매요금
-          .col-sm-10
+          .col-sm-5
             .input-group
               input.form-control(type='text')
               .input-group-append
@@ -41,6 +41,27 @@ body.two-depth(name='setting', page='service')
                   input.form-control(type='number', min='0')
                   .input-group-append
                     .input-group-text 개
+            .info 고객이 한 번에 주문할 수 있는 수량입니다.
+        .form-group.row
+          label.col-sm-2.pt-1 당일판매
+          .col-sm-10
+            label.custom-control.custom-radio.custom-control-inline.mr-4
+              input.custom-control-input(type='radio', name='radio1')
+              span.custom-control-label 불가
+            label.custom-control.custom-radio.custom-control-inline
+              input.custom-control-input(type='radio', name='radio1', checked)
+              span.custom-control-label 가능
+            .info
+              | 프로포즈 이벤트, 단체식사준비 등 당일판매가 불가능한 부가서비스는 불가를 선택해주세요.
+        .form-group.row
+          label.col-sm-2.pt-1 판매상태
+          .col-sm-10
+            label.custom-control.custom-radio.custom-control-inline.mr-4
+              input.custom-control-input(type='radio', name='radio1')
+              span.custom-control-label 미판매
+            label.custom-control.custom-radio.custom-control-inline
+              input.custom-control-input(type='radio', name='radio1', checked)
+              span.custom-control-label 판매
 
         .row.text-center.pt-4.no-gutters
           .col-8.offset-2
