@@ -41,6 +41,9 @@ app.get('/setting/multiday-edit', function (req, res){res.render('setting-multid
 app.get('/bp-mobile', function (req, res){res.render('bp-mobile')})
 app.get('/bp-mobile-book', function (req, res){res.render('bp-mobile-book')})
 
+// PC BP
+app.get('/bp-pc', function (req, res){res.render('bp-pc')})
+
 
 app.listen(3200, function () {
   console.log('App listening on port 3200!')
