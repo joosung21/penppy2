@@ -2,13 +2,16 @@ $border-color: #E5E5E5
 $onda: #67ABFF
 $white-gray: #f8f9fb
 
+%display-flex
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+
 body
   background-color: white
 
 #bp-pc-header
-  display: -webkit-box
-  display: -ms-flexbox
-  display: flex
+  @extend %display-flex
   align-items: center
   height: 4rem
   padding: 0 2rem
@@ -36,21 +39,15 @@ body
         // .carousel-inner, .carousel-inner > .carousel-item, .carousel-inner > .carousel-item > img
         //   height: 15rem
       .content
-        display: -webkit-box
-        display: -ms-flexbox
-        display: flex
+        @extend %display-flex
         flex-direction: column
         .room-panel
-          display: -webkit-box
-          display: -ms-flexbox
-          display: flex
+          @extend %display-flex
           align-items: center
           justify-content: flex-end
           margin-top: 1rem
           .age
-            display: -webkit-box
-            display: -ms-flexbox
-            display: flex
+            @extend %display-flex
             align-items: center
             img
               height: 1.5rem

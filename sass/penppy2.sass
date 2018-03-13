@@ -28,6 +28,10 @@ $left-side-padding: 2rem
   -o-background-size: cover
   background-size: cover
 
+%display-flex
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
 
 //------------ Bootstrap Overides ----------//
 .btn
@@ -514,7 +518,7 @@ input
 
 //----------- Layout -----------//
 #main-nav
-  display: flex
+  @extend %display-flex
   position: fixed
   left: 0
   top: 0
@@ -526,7 +530,7 @@ input
   font-weight: 100
   transition: all .3s
   .first-dapth
-    display: flex
+    @extend %display-flex
     flex-direction: column
     flex-shrink: 1
     transition: all .7s
@@ -543,7 +547,7 @@ input
   nav
     margin: 5.5vh 0 4rem 0
     a
-      display: flex
+      @extend %display-flex
       align-items: center
       padding: 1.2rem $left-side-padding
       color: white
@@ -621,7 +625,7 @@ input
   position: fixed
   top: 0
   left: 0
-  display: flex
+  @extend %display-flex
   justify-content: flex-end
   align-items: center
   width: 100%
@@ -654,7 +658,7 @@ input
 
 // Content Container
 .content-container
-  display: flex
+  @extend %display-flex
   flex-direction: column
   background-color: #f2f3f8
   min-height: 100vh
@@ -719,7 +723,7 @@ body.two-depth
 
 // Footer
 footer
-  display: flex
+  @extend %display-flex
   align-items: center
   padding: 1rem 2.5rem
   margin: auto -2.5rem 0 -2.5rem
@@ -783,7 +787,7 @@ footer
     td.other-month
       background-color: $white-gray
     .day-header
-      display: flex
+      @extend %display-flex
       align-items: center
       margin-bottom: .5rem
       .season
@@ -791,7 +795,7 @@ footer
         color: $light
         font-size: .9rem
     .room
-      display: flex
+      @extend %display-flex
       align-items: center
       margin: 0 -.8rem
       padding: .2rem .8rem
@@ -817,7 +821,7 @@ footer
       .day
         line-height: 1rem
       .header
-        display: flex
+        @extend %display-flex
         justify-content: space-between
         align-items: flex-end
         .date
@@ -897,7 +901,7 @@ footer
     width: 6rem
     margin: 0 auto
   .percentage-form
-    display: flex
+    @extend %display-flex
     align-items: center
     justify-content: center
     input.form-control
@@ -908,14 +912,14 @@ footer
 
 //---------- 할인설정 Pages --------------//
 .chart-row
-  display: flex
+  @extend %display-flex
   align-items: center
   border-bottom: 1px solid lighten($border-color, 2%)
   .row-title
     width: 15%
     padding-left: 2rem
   .dd-wrapper
-    display: flex
+    @extend %display-flex
     align-items: flex-end
     width: 85%
     .dd
@@ -1140,7 +1144,7 @@ table
   float: left
   margin: 0 .5rem 1rem .5rem
   .image
-    display: flex
+    @extend %display-flex
     align-items: center
     justify-content: center
     width: 120px
@@ -1159,7 +1163,7 @@ table
   td.title
     width: 15%
   .channel
-    display: flex
+    @extend %display-flex
     align-items: center
     .bi
       height: 1.3rem
@@ -1188,6 +1192,8 @@ table
     min-width: 1050px
     height: auto
     .first-depth
+      display: -webkit-box
+      display: -ms-flexbox
       display: flex
       justify-content: space-between
       align-items: center
