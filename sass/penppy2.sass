@@ -182,6 +182,13 @@ a:focus, a:active, .btn:focus, .btn:active
     outline: none !important
     box-shadow: none
 
+.btn-group-radio
+  .btn-white
+    &.active
+      background-color: $white-gray
+      color: #4F4F4F
+      + .btn-white
+        border-left: 1px solid #7D90A8
 
 .grabbable
   cursor: move
@@ -731,6 +738,13 @@ footer
   border-top: 1px solid $border-color
 
 
+//----------- 예약목록 --------------------//
+.list-top-filter
+  border: 1px solid #929292
+  padding: 1.5rem 2.5rem
+  margin-bottom: 3rem
+
+
 //----------- 객실달력, 일별요금 달력 -----------//
 .calendar-controler
   .year-month
@@ -1073,7 +1087,8 @@ table
   margin-top: 4rem
   .month-wrapper
     float: left
-    margin: 0 0 3rem 3rem
+    height: 18rem
+    margin-left: 3rem
     .month-title
       font-size: 1.1rem
       font-weight: 400

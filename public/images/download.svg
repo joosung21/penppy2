@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>download</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="12.8037491 0.108333333 0.147145283 0.108333333 0.147145283 12.8916125 12.8037491 12.8916125 12.8037491 0.108333333"></polygon>
+    </defs>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="예약목록" transform="translate(-1728.000000, -304.000000)">
+            <g id="BODY" transform="translate(250.000000, 100.000000)">
+                <g id="테이블" transform="translate(40.000000, 194.000000)">
+                    <g id="download" transform="translate(1438.000000, 10.000000)">
+                        <g id="Page-1">
+                            <polygon id="Fill-1" fill="#58A9FE" points="0 15 15 15 15 14 0 14"></polygon>
+                            <g id="Group-4" transform="translate(1.000000, 0.000000)">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <g id="Clip-3"></g>
+                                <path d="M5.98488113,0.108279167 L5.98488113,11.1853625 L0.784881132,6.25619583 L0.147145283,7.06869583 L6.15657925,12.7561958 C6.25469245,12.8374458 6.35280566,12.8916125 6.47544717,12.8916125 C6.59808868,12.8916125 6.69620189,12.8374458 6.79431509,12.7561958 L12.8037491,7.06869583 L12.1660132,6.25619583 L6.96601321,11.1582792 L6.96601321,0.108279167 L5.98488113,0.108279167 Z" id="Fill-2" fill="#58A9FE" mask="url(#mask-2)"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
