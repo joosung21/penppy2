@@ -97,7 +97,7 @@ body(name='reservation-list')
               br
               | 010-1111-2222
               br
-              button.btn.btn-white.btn-small.mt-2(type='button') SMS
+              button.btn.btn-white.btn-small.warning-mark.mt-2(type='button', data-toggle='modal', data-keyboard='true', data-target='#smsModal') SMS
             td
               | 230,000원
             td
@@ -112,5 +112,147 @@ body(name='reservation-list')
               | 23:00
             td.text-left
               | 위메프티켓 J4C3I5GLDL 9K
+          tr
+            td.text-left.pl-4
+              | Mobile 예약창
+              br
+              | 2017-03-20
+              br
+              | 15:20
+            td
+              | 해
+              br
+              | 댤
+            td
+              | 2017.03.20
+              br
+              | (1박)
+            td
+              | 정우성
+              br
+              | 010-1111-2222
+              br
+              button.btn.btn-white.btn-small.mt-2(type='button') SMS
+            td
+              | 230,000원
+            td
+              | 판매사결제
+            td
+              span.text-red 예약취소
+            td.text-left
+              b.mr-1 추가인원 현장결제:
+              | 20,000원
+              br
+              b.mr-1 도착예정:
+              | 23:00
+            td.text-left
+              | 5만원 먼저 입금
+              br
+              | 129,000원은 당일결제
+          tr
+            td.text-left.pl-4
+              | 11번가
+              br
+              | 2017-03-20
+              br
+              | 15:20
+            td
+              | 별
+            td
+              | 2017.03.20
+              br
+              | (1박)
+            td
+              | 정우성
+              br
+              | 010-1111-2222
+              br
+              button.btn.btn-white.btn-small.mt-2(type='button') SMS
+            td
+              del.text-muted 300,000원
+              br
+              | 90,000원
+              br
+              span.text-red (3일전 취소)
+            td
+              | 무통장입금
+            td
+              | 예약완료
+            td.text-left
+            td.text-left
 
+//- SMS Modal
+#smsModal.modal.fade(tabindex='-1')
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h5#exampleModalLabel.modal-title SMS 발신내역
+        a.close(data-dismiss='modal')
+          img(src='/assets/images/close.svg')
+      .modal-body
+        table.table.text-center.align-middle
+          thead.bg-light
+            tr
+              th(style='width: 42%') 메세지
+              th 발신번호
+              th 수신번호
+              th 발송일시
+              th 상태
+          tbody
+            tr
+              td.text-left
+                | [ONDA(티포트)] 예약이 취소되었습니다.
+                br
+                | - 예약채널: TMON
+                br
+                | - 예약번호: TM-P5GGUKA4T
+                br
+                | - 예약자명: 박혜연
+                br
+                | - 연락처: 01029972659
+                br
+                | - 업체명: [파주]임진강리조트
+                br
+                | - 객실명: 콘도(온돌)
+                br
+                | - 이용기간: 2018.03.24.(토)~2018.03.25.(일) (1박 2일)
+                br
+                |- 결제금액: 55,000원
+              td 1544-3812
+              td 010-1111-2222
+              td
+                | 2017.03.20
+                br
+                | 15:20
+              td
+                span.text-red 전송실패
+                br
+                | 1111 전달
+            tr
+              td.text-left
+                | [ONDA(티포트)] 예약이 취소되었습니다.
+                br
+                | - 예약채널: TMON
+                br
+                | - 예약번호: TM-P5GGUKA4T
+                br
+                | - 예약자명: 박혜연
+                br
+                | - 연락처: 01029972659
+                br
+                | - 업체명: [파주]임진강리조트
+                br
+                | - 객실명: 콘도(온돌)
+                br
+                | - 이용기간: 2018.03.24.(토)~2018.03.25.(일) (1박 2일)
+                br
+                |- 결제금액: 55,000원
+              td 1544-3812
+              td 010-1111-2222
+              td
+                | 2017.03.20
+                br
+                | 15:20
+              td
+                | 전송완료
 
