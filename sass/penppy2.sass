@@ -831,8 +831,9 @@ footer
         font-size: .85rem
       &.dimed
         color: $light
-      &:hover
-        background-color: lighten($white-gray, 1%)
+    .price
+      padding-left: 2.4rem
+      margin-top: -.4rem
 
 .table-calendar-week
   th, td
@@ -942,7 +943,7 @@ footer
       margin-left: .5rem
       color: #aaa
 
-//---------- 할인설정 Pages --------------//
+//---------- 할인요금 Pages --------------//
 .chart-row
   @extend %display-flex
   align-items: center
@@ -964,6 +965,7 @@ footer
         text-align: center
       .form-control
         text-align: right
+        min-width: 6rem
       .discount
         color: $red
         text-align: right

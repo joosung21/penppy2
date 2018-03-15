@@ -6,31 +6,35 @@ body(name='calendar')
   include ./includes/sub-nav.pug
   .content-container
     .artboard
+      .board-title 객실 달력
       .row
-        .col-lg.calendar-controler
-          .form-inline
-            .year-month 2018년 1월
-            .btn-group.mx-3
-              button.btn.btn-white.border-right-0(type='button')
-                i.fa.fa-angle-left.fa-lg.text-dark
-              button.btn.btn-white.border-left-0(type='button')
-                i.fa.fa-angle-right.fa-lg.text-dark
-            a.btn.btn-light.active.mr-1.px-4(href='/calendar')
-              | 한달
-            a.btn.btn-light.px-4(href='/calendar-week')
-              | 한주
-
-        .col-lg.status-model.d-flex.justify-content-end
-          .status-badge.available
-          | 예약가능
-          .status-badge.waiting
-          | 예약대기
-          .status-badge.complete
-          | 예약완료
-          .status-badge.callonly
-          | 전화문의
-          .status-badge.blocked
-          | 예약불가
+        .col-sm-3
+          .btn-group
+            button.btn.btn-white(type='button', data-toggle='tooltip', title='달력으로 보기')
+              img(src='/assets/images/view-calendar-on.svg', style='margin-top: -2px')
+            button.btn.btn-white(type='button', data-toggle='tooltip', title='차트로 보기')
+              img(src='/assets/images/view-chart-off.svg', style='margin-top: -2px')
+          button.btn.btn-white.ml-3(type='button') 요금보기
+        .col-sm-6
+          .calendar-controler
+            .form-inline.justify-content-center
+              .year-month 2018년 1월
+              .btn-group.mx-3
+                button.btn.btn-white.border-right-0(type='button')
+                  i.fa.fa-angle-left.fa-lg.text-dark
+                button.btn.btn-white.border-left-0(type='button')
+                  i.fa.fa-angle-right.fa-lg.text-dark
+      .status-model.d-flex.justify-content-end.mt-2
+        .status-badge.available
+        | 예약가능
+        .status-badge.waiting
+        | 예약대기
+        .status-badge.complete
+        | 예약완료
+        .status-badge.callonly
+        | 전화문의
+        .status-badge.blocked
+        | 예약불가
 
       .table-responsive.mt-3
         table.table-bordered.table-calendar
@@ -57,14 +61,17 @@ body(name='calendar')
                   .status-badge.available
                   .name A
                   .stock 1/6
+                .price 68,000원
                 .room
                   .status-badge.available
                   .name B(테라스)
                   .stock 4/5
+                .price 90,000원
                 .room
-                  .status-badge.available
-                  .name S(복층스파)
-                  .stock 2/2
+                  .status-badge.complete
+                  .name.dimed S(복층스파)
+                  .stock.dimed 2/2
+                .price.dimed 170,000
               td
                 .day-header
                   .date 2
@@ -311,7 +318,7 @@ body(name='calendar')
                 .day-header
                   .date 17
                   .season 비수기
-                .room(data-toggle='tooltip', data-placement='bottom', data-html='true', title='임승아<br>5555')
+                .room
                   .status-badge.available
                   .name A
                   .stock 1/6

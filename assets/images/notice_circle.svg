@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="20px" height="21px" viewBox="0 0 20 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
     <title>notice_!</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
@@ -11,7 +11,7 @@
                     <g id="리스트" transform="translate(0.000000, 109.000000)">
                         <g id="Group" transform="translate(505.000000, 1.000000)">
                             <g id="notice_!" transform="translate(64.000000, 42.229560)">
-                                <circle id="Oval" fill="#F17517" cx="10" cy="10" r="10"></circle>
+                                <circle id="Oval" fill="#FF7A16" cx="10" cy="10" r="10"></circle>
                                 <path d="M9.223,11.584 L8.929,4.458 L11.015,4.458 L10.791,11.584 L9.223,11.584 Z M9.069,14.622 L9.069,12.844 L10.945,12.844 L10.945,14.622 L9.069,14.622 Z" id="!" fill="#FFFFFF"></path>
                             </g>
                         </g>
