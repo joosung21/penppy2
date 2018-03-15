@@ -29,10 +29,10 @@ body(name='price-chart')
           option 티몬
           option 에어비앤비
           option 아고다
-        button.btn.btn-white.ml-auto(data-toggle='modal', data-keyboard='true', data-target='#selectedEditModal')
+        button.btn.btn-white.ml-auto(type='button', data-toggle='modal', data-keyboard='true', data-target='#selectedEditModal')
           img.mr-2(src='/assets/images/ic-check.svg')
           | 선택날짜 일괄할인
-        button.btn.btn-white.ml-1(data-toggle='modal', data-keyboard='true', data-target='#periodEditModal')
+        button.btn.btn-white.ml-1(type='button', data-toggle='modal', data-keyboard='true', data-target='#periodEditModal')
           img.mr-2(src='/assets/images/ic-calendar-gray.svg')
           | 기간지정 일괄할인
 
@@ -400,7 +400,7 @@ body(name='price-chart')
           img(src='/assets/images/close.svg')
       .modal-body
         .form-group.row
-          label.col-sm-2.pt-1 선택날짜
+          label.col-sm-2 선택날짜
           .col-sm-10
             | 3월 - 18일, 19월, 20화, 21수, 22목
             br

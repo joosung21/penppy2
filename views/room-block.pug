@@ -1,0 +1,331 @@
+include ./includes/header.pug
+
+//-------- 방막기 page ---------//
+body(name='room-block')
+  include ./includes/main-nav-left.pug
+  include ./includes/sub-nav.pug
+  .content-container
+    .artboard
+      .row
+        .col-lg.calendar-controler
+          .form-inline
+            .year-month 2018년 1월
+            .btn-group.mx-3
+              button.btn.btn-white.border-right-0(type='button')
+                i.fa.fa-angle-left.fa-lg.text-dark
+              button.btn.btn-white.border-left-0(type='button')
+                i.fa.fa-angle-right.fa-lg.text-dark
+            button.btn.btn-white(type='button', data-toggle='modal', data-keyboard='true', data-target='#periodBlockModal')
+              img.mr-2(src='/assets/images/ic-calendar-gray.svg')
+              | 기간지정 일괄 방막기
+
+        .col-lg.status-model.d-flex.justify-content-end
+          .status-badge.available
+          | 예약가능
+          .status-badge.waiting
+          | 예약대기
+          .status-badge.complete
+          | 예약완료
+          .status-badge.callonly
+          | 전화문의
+          .status-badge.blocked
+          | 예약불가
+
+      .table-responsive.mt-3
+        table.table-bordered.table-calendar
+          thead
+            tr
+              th.text-red 일
+              th 월
+              th 화
+              th 수
+              th 목
+              th 금
+              th.text-blue 토
+          tbody
+            tr
+              td.dimed.other-month
+                .day-header
+                  .date.text-red 12/31
+                  .season 공휴일 전날
+              td
+                .day-header
+                  .date.text-red 1
+                  .season 비수기
+              td
+                .day-header
+                  .date 2
+                  .season 비수기
+              td
+                .day-header
+                  .date 3
+                  .season 비수기
+              td
+                .day-header
+                  .date 4
+                  .season 비수기
+              td
+                .day-header
+                  .date 5
+                  .season 비수기
+              td
+                .day-header
+                  .date.text-blue 6
+                  .season 비수기
+            tr
+              td
+                .day-header
+                  .date.text-red 7
+                  .season 비수기
+              td
+                .day-header
+                  .date 8
+                  .season 비수기
+              td
+                .day-header
+                  .date 9
+                  .season 비수기
+              td
+                .day-header
+                  .date 10
+                  .season 비수기
+              td
+                .day-header
+                  .date 11
+                  .season 비수기
+              td
+                .day-header
+                  .date 12
+                  .season 비수기
+              td
+                .day-header
+                  .date.text-blue 13
+                  .season 비수기
+            tr
+              td
+                .day-header
+                  .date.text-red 14
+                  .season 비수기
+              td
+                .day-header
+                  .date 15
+                  .season 비수기
+              td.today
+                .day-header
+                  .date 16
+                  .season 비수기
+              td
+                .day-header
+                  .date 17
+                  .season 비수기
+                label.custom-control.custom-checkbox
+                  input.custom-control-input(type='checkbox', onclick='openSlider()')
+                  span.custom-control-label 전체선택
+                label.custom-control.custom-checkbox.room-block-checkbox(data-toggle='tooltip', title='메모내용 가나다라마바사')
+                  input.custom-control-input(type='checkbox', onclick='openSlider()')
+                  span.custom-control-label.d-block
+                    .room
+                      .status-badge.blocked
+                      .name A
+                      .stock 1/6
+                label.custom-control.custom-checkbox.room-block-checkbox
+                  input.custom-control-input(type='checkbox', onclick='openSlider()')
+                  span.custom-control-label.d-block
+                    .room
+                      .status-badge.available
+                      .name B(테라스)
+                      .stock 4/5
+                label.custom-control.custom-checkbox.room-block-checkbox
+                  input.custom-control-input(type='checkbox', onclick='openSlider()')
+                  span.custom-control-label.d-block
+                    .room
+                      .status-badge.available
+                      .name S(복층스파)
+                      .stock 2/2
+              td
+                .day-header
+                  .date 18
+                  .season 비수기
+              td
+                .day-header
+                  .date 19
+                  .season 비수기
+              td
+                .day-header
+                  .date.text-blue 20
+                  .season 비수기
+            tr
+              td
+                .day-header
+                  .date.text-red 21
+                  .season 비수기
+              td
+                .day-header
+                  .date 22
+                  .season 비수기
+              td
+                .day-header
+                  .date 23
+                  .season 비수기
+              td
+                .day-header
+                  .date 24
+                  .season 비수기
+              td
+                .day-header
+                  .date 25
+                  .season 비수기
+              td
+                .day-header
+                  .date 26
+                  .season 비수기
+              td
+                .day-header
+                  .date.text-blue 27
+                  .season 비수기
+            tr
+              td
+                .day-header
+                  .date.text-red 28
+                  .season 비수기
+              td
+                .day-header
+                  .date 29
+                  .season 비수기
+              td
+                .day-header
+                  .date 30
+                  .season 비수기
+              td
+                .day-header
+                  .date 31
+                  .season 비수기
+              td.dimed.other-month
+                .day-header
+                  .date 2/1
+                  .season 비수기
+              td.dimed.other-month
+                .day-header
+                  .date 2
+                  .season 비수기
+              td.dimed.other-month
+                .day-header
+                  .date.text-blue 3
+                  .season 비수기
+
+    include ./includes/footer.pug
+
+    //- Slider
+    .slider-ui.slider-ui-white.text-center.hidden
+      .row.pt-2
+        .offset-1.col-11
+          button.btn.btn-dark.btn-lg.mr-1(type='button', data-toggle='modal', data-keyboard='true', data-target='#blockModal') 방막기
+          button.btn.btn-primary.btn-lg(type='button', onclick='closeSlider()') 방열기
+
+//- 방막기 Modal
+#blockModal.modal.fade(tabindex='-1')
+  .modal-dialog.modal-sm
+    .modal-content
+      .modal-header
+        h5#exampleModalLabel.modal-title 선택날짜 일괄할인
+        a.close(data-dismiss='modal')
+          img(src='/assets/images/close.svg')
+      .modal-body
+        .form-group.row
+          label.col-sm-2.pt-1 선택날짜
+          .col-sm-10
+            label.custom-control.custom-radio.custom-control-inline.mr-4
+              input.custom-control-input(type='radio', name='cancelDelayRadio', checked)
+              span.custom-control-label 방막기
+            label.custom-control.custom-radio.custom-control-inline
+              input.custom-control-input(type='radio', name='cancelDelayRadio')
+              span.custom-control-label 전화문의만 받기
+            .input-group(style='width: 18rem')
+              .input-group-prepend
+                .input-group-text 총 6개 객실 중
+              input.form-control.text-right(type='number', value='4')
+              .input-group-append
+                .input-group-text 개 방막기
+        .form-group.row
+          label.col-sm-2.pt-1 메모
+          .col-sm-10
+            textarea.form-control(rows='4')
+        .text-center.py-3
+          button.btn.btn-primary.btn-lg(type='button', data-dismiss='modal') 저장
+
+//- 기간지정 일괄 방막기 Modal
+#periodBlockModal.modal.fade(tabindex='-1')
+  .modal-dialog.modal-sm
+    .modal-content
+      .modal-header
+        h5#exampleModalLabel.modal-title 기간지정 일괄 방막기
+        a.close(data-dismiss='modal')
+          img(src='/assets/images/close.svg')
+      .modal-body
+        .form-group.row
+          label.col-sm-2.pt-1 기간 선택
+          .col-sm-10
+            .form-inline
+              input.form-control.form-control-datepicker(type='text', value='2017.07.16(수)', size='18')
+              span.px-2 ~
+              input.form-control.form-control-datepicker.mr-2(type='text', value='2017.08.20(목)', size='18')
+            .form-inline.mt-3
+              .btn-group.btn-group-toggle.d-flex.align-items-center.mr-3(data-toggle='buttons')
+                label.btn.btn-white.active
+                  input(type='checkbox', checked='', autocomplete='off')
+                  | 월
+                label.btn.btn-white.active
+                  input(type='checkbox', checked='', autocomplete='off')
+                  | 화
+                label.btn.btn-white
+                  input(type='checkbox', checked='', autocomplete='off')
+                  | 수
+                label.btn.btn-white
+                  input(type='checkbox', checked='', autocomplete='off')
+                  | 목
+                label.btn.btn-white
+                  input(type='checkbox', checked='', autocomplete='off')
+                  | 금
+                label.btn.btn-white
+                  input(type='checkbox', checked='', autocomplete='off')
+                  | 토
+                label.btn.btn-white
+                  input(type='checkbox', checked='', autocomplete='off')
+                  | 일
+              button.btn.btn-white.btn-sm.border-0(type='button')
+                u 전체
+              button.btn.btn-white.btn-sm.border-0(type='button')
+                u 일~목
+              button.btn.btn-white.btn-sm.border-0(type='button')
+                u 금~토
+        .form-group.row
+          label.col-sm-2.pt-1 기능 선택
+          .col-sm-10
+            label.custom-control.custom-radio.custom-control-inline.mr-4
+              input.custom-control-input(type='radio', name='cancelDelayRadio', checked)
+              span.custom-control-label 방막기
+            label.custom-control.custom-radio.custom-control-inline
+              input.custom-control-input(type='radio', name='cancelDelayRadio')
+              span.custom-control-label 전화문의만 받기
+        .form-group.row
+          label.col-sm-2 객실 선택
+          .col-sm-10
+            label.custom-control.custom-checkbox
+              input.custom-control-input(type='checkbox', checked)
+              span.custom-control-label 전체 객실
+            label.custom-control.custom-checkbox
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 해
+            label.custom-control.custom-checkbox
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 달
+            label.custom-control.custom-checkbox
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 별
+        .form-group.row
+          label.col-sm-2.pt-1 메모
+          .col-sm-10
+            textarea.form-control(rows='4')
+
+        .text-center.pt-5
+          button.btn.btn-primary.btn-lg(type='button', data-dismiss='modal') 저장

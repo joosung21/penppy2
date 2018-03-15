@@ -172,7 +172,7 @@ a:focus, a:active, .btn:focus, .btn:active
     position: absolute
     top: -10px
     right: -10px
-    content: ''
+    content: ' '
     width: 20px
     height: 20px
     background: url('/assets/images/notice_circle.svg') 0 0 no-repeat
@@ -756,15 +756,13 @@ footer
   margin-bottom: 3rem
 
 
-//----------- 객실달력, 일별요금 달력 -----------//
+//----------- 객실달력, 일별요금 달력, 방막기 달력 -----------//
 .calendar-controler
   .year-month
     font-size: 2rem
     font-weight: 400
   .btn-white
     padding-bottom: .5rem
-
-
 .status-model
   align-items: flex-end
   font-size: 0.85rem
@@ -913,6 +911,15 @@ footer
   &.blocked
     background: $blocked url('/assets/images/blocked.svg') 8px 8px no-repeat
     background-size: 13px
+
+
+.room-block-checkbox
+  .custom-control-label
+    &:before
+      top: 0.8rem !important
+    &:after
+      top: 0.5rem !important
+
 
 //----------- 요금설정 Page -----------//
 .table-rate
@@ -1271,3 +1278,11 @@ table
   #sub-nav
     position: relative
     padding-left: 0 !important
+
+  // 방막기 체크박스
+  .room-block-checkbox
+    .custom-control-label
+      &:before
+        top: 0.3rem !important
+      &:after
+        top: 0.1rem !important
