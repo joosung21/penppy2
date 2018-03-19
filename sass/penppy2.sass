@@ -554,7 +554,7 @@ input
   z-index: 3
   color: white
   font-weight: 100
-  transition: all .3s
+  transition: width .3s
   .first-dapth
     @extend %display-flex
     flex-direction: column
@@ -569,7 +569,7 @@ input
     word-break: keep-all
     color: white
     text-decoration: none
-    transition: all .3s
+    transition: opacity .1s
   nav
     margin: 5.5vh 0 4rem 0
     a
@@ -579,6 +579,7 @@ input
       color: white
       text-decoration: none
       width: 100%
+      transition: background .3s
       img
         margin-right: .75rem
       span
@@ -601,7 +602,7 @@ input
   .widget-timer
     padding: 1.5rem $left-side-padding
     min-width: 14rem
-    transition: all .3s
+    transition: opacity .1s
     .day, .month
       font-size: .85rem
       opacity: .5
@@ -742,10 +743,6 @@ body.two-depth
     padding-left: calc(#{$left-side-width} * 2)
   .content-container
     padding-left: calc(#{$left-side-width} * 2 + 2.5rem)
-
-#nav-rateplan.second-depth
-  .nav-group
-    padding-top: 22rem
 
 // Footer
 footer
@@ -1055,9 +1052,10 @@ footer
     vertical-align: middle
     border-bottom: 1px solid #eee
   .row-title, .dd
-    padding: 0 1.5rem
     height: 4rem
     line-height: 1rem
+  .row-title
+    padding-left: 1rem
   .roomtype-wrapper
     display: table-cell
     width: 85%
@@ -1111,7 +1109,6 @@ footer
           box-shadow: 0 0 0 1px #A4A4A4
         .ic
           height: 1.3rem
-          margin-top: 1px
         &:hover
           cursor: pointer
           &.complete
@@ -1364,10 +1361,10 @@ table
       hr
         display: none
     #nav-rateplan
-        .nav-group
-          a
-            display: inline-block
-            margin-right: 2rem
+      .nav-group
+        a
+          display: inline-block
+          margin-right: 2rem
 
   // Sub Nav
   #sub-nav

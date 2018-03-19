@@ -56,6 +56,9 @@ $( document ).ready(function() {
       case 'rateplan':
         $('#nav-rateplan').show();
         break;
+      case 'payment':
+        $('#nav-payment').show();
+        break;
       default:
         break;
     }
@@ -82,6 +85,10 @@ $( document ).ready(function() {
           $('#main-nav').addClass('two-depth');
           $('#nav-rateplan').show();
           break;
+        case 'payment':
+          $('#main-nav').addClass('two-depth');
+          $('#nav-payment').show();
+          break;
         default:
           break;
       }
@@ -103,6 +110,7 @@ slideSecondNav = function(){
   $('#main-nav.two-depth .second-depth').hide();
     var isOpend1 = false;
     var isOpend2 = false;
+    var isOpend3 = false;
 
   $('#main-nav.two-depth .first-depth a').mouseover(function(){
     if(windowWidth <= 1199) {
@@ -111,6 +119,7 @@ slideSecondNav = function(){
           $('#main-nav.two-depth .second-depth').hide();
           $('#main-nav.two-depth #nav-setting').slideDown(300);
           isOpend2 = false;
+          isOpend3 = false;
           isOpend1 = true;
         }
       }
@@ -119,7 +128,17 @@ slideSecondNav = function(){
           $('#main-nav.two-depth .second-depth').hide();
           $('#main-nav.two-depth #nav-rateplan').slideDown(300);
           isOpend1 = false;
+          isOpend3 = false;
           isOpend2 = true;
+        }
+      }
+      if($(this).hasClass('payment')) {
+        if(isOpend2 == false) {
+          $('#main-nav.two-depth .second-depth').hide();
+          $('#main-nav.two-depth #nav-payment').slideDown(300);
+          isOpend1 = false;
+          isOpend2 = false;
+          isOpend3 = true;
         }
       }
     }
@@ -130,6 +149,7 @@ slideSecondNav = function(){
       $('#main-nav.two-depth .second-depth').slideUp(300);
       isOpend1 = false;
       isOpend2 = false;
+      isOpend3 = false;
     }
   });
 }

@@ -7,21 +7,20 @@ body.two-depth(name='setting', page='daily')
   .content-container
     .artboard
       .board-title 설정 - 일자별 요금 설정
-      .row
-        .col-lg.calendar-controler
-          .form-inline
-            .year-month 2018년 1월
-            .btn-group.mx-3
-              button.btn.btn-white.border-right-0(type='button')
-                i.fa.fa-angle-left.fa-lg.text-dark
-              button.btn.btn-white.border-left-0(type='button')
-                i.fa.fa-angle-right.fa-lg.text-dark
+      .calendar-controler.d-flex.justify-content-center
+        .form-inline
+          .year-month 2018년 1월
+          .btn-group.mx-3
+            button.btn.btn-white.border-right-0(type='button')
+              i.fa.fa-angle-left.fa-lg.text-dark
+            button.btn.btn-white.border-left-0(type='button')
+              i.fa.fa-angle-right.fa-lg.text-dark
 
-        .col-lg.status-model.d-flex.justify-content-end
-          .color-amended
-          | 강제 변경한 날
-          .color-eve
-          | 공휴일 전날
+      .status-model.d-flex.justify-content-end
+        .color-amended
+        | 강제 변경한 날
+        .color-eve
+        | 공휴일 전날
 
       .table-responsive.mt-3
         table.table-bordered.table-calendar.table-calendar-daily

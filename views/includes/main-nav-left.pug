@@ -20,7 +20,7 @@
       a.price-chart(href='/chart', title='할인요금')
         img(src='/assets/images/ic-caculator.svg')
         span 할인요금
-      a(href='#', title='정산목록')
+      a.payment(href='/payment', title='정산목록')
         img(src='/assets/images/ic-caculator.svg')
         span 정산목록
       a(href='#', title='리포트')
@@ -73,5 +73,12 @@
       a.season02(href='/rateplan') 준성수기
       a.season03(href='#') 성수기
       a.mt-5(href='#') 시즌추가
+
+  //- 정산내역 메뉴
+  #nav-payment.second-depth
+    .nav-group
+      a.history(href='/payment') 정산목록
+      a.revenue(href='/revenue') 기간별 매출목록
+
 
 
