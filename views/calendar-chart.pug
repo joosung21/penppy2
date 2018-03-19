@@ -1,0 +1,285 @@
+include ./includes/header.pug
+
+//-------- 객실달력: Chart View ---------//
+body(name='calendar')
+  include ./includes/main-nav-left.pug
+  include ./includes/sub-nav.pug
+  .content-container
+    .artboard(style='min-width: 1000px')
+      .board-title 객실 달력
+      .row
+        .col-sm-3
+          .btn-group
+            a.btn.btn-white(href='/calendar', data-toggle='tooltip', title='달력으로 보기')
+              img(src='/assets/images/view-calendar-off.svg', style='margin-top: -2px')
+            a.btn.btn-white(href='/calendar-chart', data-toggle='tooltip', title='차트로 보기')
+              img(src='/assets/images/view-chart-on.svg', style='margin-top: -2px')
+        .col-sm-6
+          .calendar-controler
+            .form-inline.justify-content-center
+              .year-month 2018년 1월
+              .btn-group.mx-3
+                button.btn.btn-white.border-right-0(type='button')
+                  i.fa.fa-angle-left.fa-lg.text-dark
+                button.btn.btn-white.border-left-0(type='button')
+                  i.fa.fa-angle-right.fa-lg.text-dark
+      .status-model.d-flex.justify-content-end.mt-2
+        .status-badge.waiting
+        | 예약대기
+        .status-badge.complete
+        | 예약완료
+        .status-badge.callonly
+        | 전화문의
+        .status-badge.blocked
+        | 예약불가
+
+      .chart-row.header.chart-header.mt-2
+        .row-title
+        .dd-wrapper
+          .dd.text-blue
+            .day 토
+            .date 30
+            .remark 비수기
+          .dd.text-red
+            .day 일
+            .date 12/31
+            .remark 비수기
+          .dd.text-red
+            .day 월
+            .date 1/1
+            .remark.holiday 새해
+          .dd
+            .day 화
+            .date 2
+            .remark 비수기
+          .dd.today
+            .day 수
+            .date 3
+            .remark 비수기
+          .dd
+            .day 목
+            .date 4
+            .remark 비수기
+          .dd
+            .day 금
+            .date 5
+            .remark 비수기
+          .dd.text-blue
+            .day 토
+            .date 6
+            .remark 준성수기
+          .dd.text-red
+            .day 일
+            .date 7
+            .remark 준성수기
+          .dd
+            .day 월
+            .date 8
+            .remark 준성수기
+          .dd
+            .day 화
+            .date 9
+            .remark 성수기
+          .dd
+            .day 수
+            .date 10
+            .remark 성수기
+          .dd
+            .day 목
+            .date 11
+            .remark 성수기
+          .dd
+            .day 금
+            .date 12
+            .remark 성수기
+
+      .bar-chart-row
+        .row-title
+          b 맨하탄
+          | (기준 2명)
+        .roomtype-wrapper
+          .chart-container
+            .chart-base
+              .dd 7만
+              .dd 7만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+            .chart-topping
+
+      .bar-chart-row
+        .row-title
+          b 아스토리아
+          | (기준 2명)
+        .roomtype-wrapper
+          .chart-container
+            .chart-base
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
+            .chart-topping
+              .block.complete(style='grid-column: 1 / span 1') 아주 긴 이름일 경우
+              .block.complete(style='grid-column: 2 / span 1') 정인혁
+              .block.waiting(style='grid-column: 3 / span 3') 박지연
+              .block.waiting(style='grid-column: 6 / span 1') 임승아
+
+      .bar-chart-row
+        .row-title
+          b 브롱스
+          | (기준 4명)
+        .roomtype-wrapper
+          .chart-container
+            .chart-base
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
+            .chart-topping
+              .block.blocked(style='grid-column: 2 / span 1')
+                img.ic(src='/assets/images/blocked.svg')
+              .block.blocked(style='grid-column: 3 / span 2')
+                img.ic(src='/assets/images/blocked.svg')
+              .block.callonly(style='grid-column: 6 / span 2')
+                img.ic(src='/assets/images/callonly.svg')
+              .block.callonly(style='grid-column: 8 / span 1')
+                img.ic(src='/assets/images/callonly.svg')
+      .bar-chart-row
+        .row-title
+          b 스테이튼 아일랜드
+          | (기준 3명)
+        .roomtype-wrapper
+          .chart-container
+            .chart-base
+              .dd 7만
+              .dd 7만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+          .chart-container
+            .chart-base
+              .dd 7만
+              .dd 7만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+          .chart-container
+            .chart-base
+              .dd 7만
+              .dd 7만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+      .bar-chart-row
+        .row-title
+          b 브롱스
+          | (기준 6명)
+        .roomtype-wrapper
+          .chart-container
+            .chart-base
+              .dd 7만
+              .dd 7만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+          .chart-container
+            .chart-base
+              .dd 7만
+              .dd 7만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+          .chart-container
+            .chart-base
+              .dd 7만
+              .dd 7만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+              .dd 5만
+
+
+
+    include ./includes/footer.pug

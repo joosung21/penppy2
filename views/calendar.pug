@@ -10,9 +10,9 @@ body(name='calendar')
       .row
         .col-sm-3
           .btn-group
-            button.btn.btn-white(type='button', data-toggle='tooltip', title='달력으로 보기')
+            a.btn.btn-white(href='/calendar', data-toggle='tooltip', title='달력으로 보기')
               img(src='/assets/images/view-calendar-on.svg', style='margin-top: -2px')
-            button.btn.btn-white(type='button', data-toggle='tooltip', title='차트로 보기')
+            a.btn.btn-white(href='/calendar-chart', data-toggle='tooltip', title='차트로 보기')
               img(src='/assets/images/view-chart-off.svg', style='margin-top: -2px')
           button.btn.btn-white.ml-3(type='button') 요금보기
         .col-sm-6
@@ -57,10 +57,19 @@ body(name='calendar')
                 .day-header
                   .date.text-red 1
                   .season 비수기
-                .room
+                .dropdown.room(data-toggle='dropdown')
                   .status-badge.available
                   .name A
                   .stock 1/6
+                //- 객실이 여러개인 경우 메뉴 표시
+                .dropdown-menu.bordered-menu.p-0
+                  a.dropdown-item(href='#')
+                    img.mr-2(src='/assets/images/add.svg', style='position: relative; top: -1px')
+                    b.mt-2 예약생성
+                  a.dropdown-item(href='#') 정인혁 010-1111-7593
+                  a.dropdown-item(href='#') 박지연 010-1111-2871
+                  a.dropdown-item(href='#') 임승아 010-1111-9774
+                  a.dropdown-item(href='#') 최상민 010-1111-1457
                 .price 68,000원
                 .room
                   .status-badge.available

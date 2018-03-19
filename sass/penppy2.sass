@@ -134,6 +134,14 @@ select.custom-select
 .text-muted
   color: #aaa !important
 
+.dropdown-menu.bordered-menu
+  .dropdown-item
+    padding: 1rem 1.5rem
+    border-bottom: 1px solid #eee
+    &:last-child
+      border: none
+
+
 //------------ CSS Style Utilities ----------//
 .text-red
   color: $red
@@ -943,7 +951,7 @@ footer
       margin-left: .5rem
       color: #aaa
 
-//---------- 할인요금 Pages --------------//
+//---------- 할인요금 & 객실달력-차트보기 Pages --------------//
 .chart-row
   @extend %display-flex
   align-items: center
@@ -976,15 +984,14 @@ footer
 
 .chart-row.header
   align-items: stretch
-  border-bottom: none
   margin-bottom: 1px
-  .row-title, .dd
-    border-top: 1px solid #bbb
+  border-bottom: 1px solid #bbb
+  border-top: 1px solid #bbb
+  padding-right: 2px
   .dd
     padding-top: 1.25rem
     cursor: pointer
-    border: 1px solid white
-    border-top: 1px solid #bbb
+    background-color: white
     .date
       font-size: 1.5rem
       font-weight: 400
@@ -997,11 +1004,12 @@ footer
       &.holiday
         color: $red
     &.today
-      border: 1px solid #222222
+      box-shadow: 0 0 0 1px #222222
+      border-right: 1px solid #222222
     &.active
       background-color: #7D90A8
-      border-color: #7D90A8
       color: white
+      box-shadow: 0 0 0 1px darken(#7D90A8, 5%)
       .remark
         color: white
 
@@ -1030,6 +1038,91 @@ footer
     position: absolute
     top: 1rem
     left: calc(-50% + 1rem)
+
+// 객실달력 - 차트보기
+.chart-row.header.chart-header
+  .row-title
+    width: calc(15% + 1px)
+  .dd-wrapper
+    width: 85%
+
+.bar-chart-row
+  display: table
+  width: 100% !important
+  .row-title
+    display: table-cell
+    width: 15%
+    vertical-align: middle
+    border-bottom: 1px solid #eee
+  .row-title, .dd
+    padding: 0 1.5rem
+    height: 4rem
+    line-height: 1rem
+  .roomtype-wrapper
+    display: table-cell
+    width: 85%
+    padding-right: 1px
+    .chart-container
+      margin-bottom: 1px
+  .chart-container
+    position: relative
+    width: 100%
+    .chart-base
+      display: grid
+      grid-template-columns: repeat(14, 1fr)
+      grid-gap: 1px
+      z-index: 0
+      .dd
+        @extend %display-flex
+        align-items: center
+        justify-content: center
+        box-shadow: 0 0 0 1px #eee
+    .chart-topping
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      display: grid
+      grid-template-columns: repeat(14, 1fr)
+      grid-gap: 1px
+      z-index: 2
+      .block
+        align-items: center
+        grid-row: 1
+        padding: 1.5rem 0rem 1.5rem 1rem
+        height: calc(4rem - 1px)
+        line-height: 1rem
+        color: white
+        transition: all .3s
+        text-overflow: ellipsis
+        white-space: nowrap
+        overflow: hidden
+        &.complete
+          background-color: $complete
+          box-shadow: 0 0 0 1px #CA445A
+        &.waiting
+          background-color: $waiting
+          box-shadow: 0 0 0 1px #3D7AD1
+        &.callonly
+          background-color: $callonly
+          box-shadow: 0 0 0 1px #DD9F1B
+        &.blocked
+          background-color: $light
+          box-shadow: 0 0 0 1px #A4A4A4
+        .ic
+          height: 1.3rem
+          margin-top: 1px
+        &:hover
+          cursor: pointer
+          &.complete
+            background-color: darken($complete, 3%)
+          &.waiting
+            background-color: darken($waiting, 3%)
+          &.callonly
+            background-color: darken($callonly, 3%)
+          &.blocked
+            background-color: darken($light, 3%)
+
 
 //---------- 업체설정 Pages --------------//
 .image-upload

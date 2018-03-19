@@ -1,12 +1,12 @@
 include ./includes/header.pug
 
-//-------- 할인설정 page ---------//
+//-------- 할인요금 page ---------//
 body(name='price-chart')
   include ./includes/main-nav-left.pug
   include ./includes/sub-nav.pug
   .content-container
     .artboard(style='min-width: 1450px')
-      .board-title 할인설정
+      .board-title 할인요금
       .calendar-controler.d-flex.justify-content-center.mb-4.mt-5
         .form-inline
           .year-month 2017.12.30(월) ~ 2018.1.12(수)
@@ -59,19 +59,19 @@ body(name='price-chart')
             .day 수
             .date 3
             .remark 비수기
-          .dd.active
+          .dd
             .day 목
             .date 4
             .remark 비수기
-          .dd
+          .dd.active
             .day 금
             .date 5
             .remark 비수기
-          .dd.text-blue
+          .dd.text-blue.active
             .day 토
             .date 6
             .remark 준성수기
-          .dd.text-red
+          .dd.text-red.active
             .day 일
             .date 7
             .remark 준성수기
