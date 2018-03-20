@@ -8,8 +8,8 @@ body
     .artboard
       .board-title 시즌달력
       .row
-        .col-md-4
-          .calendar-controler.mb-3
+        .col-md-8.calendar-group
+          .calendar-controler.d-flex.justify-content-center.mb-4
             .form-inline
               .year-month 2018년
               .btn-group.mx-3
@@ -17,63 +17,6 @@ body
                   i.fa.fa-angle-left.fa-lg.text-dark
                 button.btn.btn-white.border-left-0(type='button')
                   i.fa.fa-angle-right.fa-lg.text-dark
-
-          table.table.table-comfort.text-center.align-middle
-            thead.bg-light
-              tr
-                th 순위
-                th(style='width: 60%') 시즌명
-                th 색상
-            tbody
-              tr
-                td 01
-                td.text-left 기타5
-                td
-                  .rectangle.season08
-              tr
-                td 02
-                td.text-left 기타4
-                td
-                  .rectangle.season07
-              tr
-                td 03
-                td.text-left 기타3
-                td
-                  .rectangle.season06
-              tr
-                td 04
-                td.text-left 기타2
-                td
-                  .rectangle.season05
-              tr
-                td 05
-                td.text-left 기타1
-                td
-                  .rectangle.season04
-              tr
-                td 06
-                td.text-left 성수기
-                td
-                  .rectangle.season03
-              tr
-                td 07
-                td.text-left 준성수기
-                td
-                  .rectangle.season02
-              tr
-                td 08
-                td.text-left 비수기
-                td
-                  .rectangle.season01
-
-          .mt-4
-            button.btn.btn-white(type='button')
-              i.fa.fa-arrows-v.mr-1
-              | 우선순위 변경
-
-          .info 기간이 겹치면 우선순위 요금이 적용됩니다.
-
-        .col-md-8.calendar-group
           .month-wrapper
             .month-title 1월
             table.tabel-calendar-small
@@ -737,6 +680,62 @@ body
                   td
                   td
                   td
+
+        .col-md-4.pt-5
+          table.table.table-comfort.text-center.align-middle.mt-4
+            thead.bg-light
+              tr
+                th 순위
+                th(style='width: 60%') 시즌명
+                th 색상
+            tbody
+              tr
+                td 01
+                td.text-left 기타5
+                td
+                  .rectangle.season08
+              tr
+                td 02
+                td.text-left 기타4
+                td
+                  .rectangle.season07
+              tr
+                td 03
+                td.text-left 기타3
+                td
+                  .rectangle.season06
+              tr
+                td 04
+                td.text-left 기타2
+                td
+                  .rectangle.season05
+              tr
+                td 05
+                td.text-left 기타1
+                td
+                  .rectangle.season04
+              tr
+                td 06
+                td.text-left 성수기
+                td
+                  .rectangle.season03
+              tr
+                td 07
+                td.text-left 준성수기
+                td
+                  .rectangle.season02
+              tr
+                td 08
+                td.text-left 비수기
+                td
+                  .rectangle.season01
+
+          .mt-4
+            button.btn.btn-white(type='button')
+              i.fa.fa-arrows-v.mr-1
+              | 우선순위 변경
+
+          .info 기간이 겹치면 우선순위 요금이 적용됩니다.
 
     include ./includes/footer.pug
 

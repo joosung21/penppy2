@@ -45,6 +45,22 @@ $modal-lg:                          1000px;
 $modal-md:                          800px;
 $modal-sm:                          600px;
 
+// Badges
+$badge-font-size:                   85%;
+$badge-padding-y:                   .4em;
+$badge-pill-padding-x:              .7em;
+
+// Pagination
+$pagination-border-color:           #E5E5E5;
+$pagination-color:                  #4f4f4f;
+$pagination-hover-color:            #4f4f4f;
+$pagination-hover-bg:               white;
+$pagination-padding-x:              .85rem;
+$pagination-active-color:           #4f4f4f;
+$pagination-active-bg:              #F2F3F8;
+$pagination-active-border-color:    #E5E5E5;
+
+
 // Bootstrap and its default variables
 @import "./../node_modules/bootstrap/scss/bootstrap";
 

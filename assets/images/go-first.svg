@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow_lleft_g</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="arrow_lleft_g" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Shape" fill="#4F4F4F" transform="translate(6.700000, 10.000000) scale(-1, 1) translate(-6.700000, -10.000000) " points="3 5.4 4.4 4 10.4 10 4.4 16 3 14.6 7.6 10"></polygon>
+        <polygon id="Shape-Copy" fill="#4F4F4F" transform="translate(11.700000, 10.000000) scale(-1, 1) translate(-11.700000, -10.000000) " points="8 5.4 9.4 4 15.4 10 9.4 16 8 14.6 12.6 10"></polygon>
+    </g>
+</svg>

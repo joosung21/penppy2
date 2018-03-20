@@ -7,6 +7,7 @@ $red: #F4516C
 $light: #C4C4C4
 $white-gray: #f8f9fb
 $border-color: #E5E5E5
+$washed-navy: #7D90A8
 
 $available: #BDDDFF
 $waiting: $blue
@@ -141,6 +142,18 @@ select.custom-select
     &:last-child
       border: none
 
+.badge-dark
+  background-color: $washed-navy
+
+.pagination
+  .page-link.icon
+    padding: .4rem .4rem
+  .page-item.disabled
+    .page-link.icon
+      img
+        opacity: .4
+
+
 
 //------------ CSS Style Utilities ----------//
 .text-red
@@ -194,8 +207,8 @@ a:focus, a:active, .btn:focus, .btn:active
   i.fa
     color: #929292
   &.active
-    background-color: #7D90A8
-    border-color: #7D90A8
+    background-color: $washed-navy
+    border-color: $washed-navy
     color: white
   &.focus
     outline: none !important
@@ -207,7 +220,7 @@ a:focus, a:active, .btn:focus, .btn:active
       background-color: $white-gray
       color: #4F4F4F
       + .btn-white
-        border-left: 1px solid #7D90A8
+        border-left: 1px solid $washed-navy
 
 .grabbable
   cursor: move
@@ -1004,9 +1017,9 @@ footer
       box-shadow: 0 0 0 1px #222222
       border-right: 1px solid #222222
     &.active
-      background-color: #7D90A8
+      background-color: $washed-navy
       color: white
-      box-shadow: 0 0 0 1px darken(#7D90A8, 5%)
+      box-shadow: 0 0 0 1px darken($washed-navy, 5%)
       .remark
         color: white
 
@@ -1194,7 +1207,6 @@ table
     margin: 0 auto
 
 .calendar-group
-  margin-top: 4rem
   .month-wrapper
     float: left
     height: 18rem

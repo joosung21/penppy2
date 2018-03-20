@@ -9,7 +9,7 @@ body.two-depth(name='payment', page='history')
       .board-title 정산목록
       p.mb-5 매주 금요일에 지난주(월요일~일요일) 이용 건에 대해 입금해 드립니다.
       .form-group.row
-        label.col-sm-2.pt-1 지금일
+        label.col-sm-2.pt-1 지급일
         .col-sm-10
           .form-inline
             input.form-control.form-control-datepicker(type='text', value='2017.07.16(수)', size='18')
@@ -32,22 +32,22 @@ body.two-depth(name='payment', page='history')
           | 국민은행 436902-04-112722 (예금주 조영수)
 
       .d-flex.mb-3
-        select.custom-select.mr-2(style='width: 13rem')
+        select.custom-select.mr-2(style='width: 10rem')
           option(selected) 20씩 보기
           option 30개씩 보기
           option 50개씩 보기
           option 100개씩 보기
-        select.custom-select(style='width: 13rem')
+        select.custom-select(style='width: 10rem')
           option(selected) 모든 정산상태
           option 정산대기
           option 정산완료
         .text-muted.ml-auto 16건의 정산목록을 불러왔습니다.
 
-      table.table.text-center
+      table.table.text-center.align-middle
         thead.bg-light
           tr
             th 지급일
-            th 기간
+            th(style='width: 35%') 기간
             th 총 결제금액
             th 정산금액
             th 내역보기
@@ -56,5 +56,202 @@ body.two-depth(name='payment', page='history')
           tr
             td 2017.02.09(목)
             td.text-left 2017.01.30(월) ~ 2017.02.05(일)
-            td test2
+            td 3,630,000원
+            td.text-right
+              span.badge.badge-pill.badge-dark.mr-2 수기정산 2건
+              | 514,500원
+            td
+              button.btn.btn-small.btn-white(type='button', data-toggle='modal', data-keyboard='true', data-target='#detailModal') 판매내역(8건)
+            td
+              span.text-red 정산대기
+          tr
+            td 2017.02.09(목)
+            td.text-left 2017.01.30(월) ~ 2017.02.05(일)
+            td 3,630,000원
+            td.text-right
+              | 514,500원
+            td
+              button.btn.btn-small.btn-white(type='button') 판매내역(8건)
+            td
+              | 정산완료
+          tr
+            td 2017.02.09(목)
+            td.text-left 2017.01.30(월) ~ 2017.02.05(일)
+            td 3,630,000원
+            td.text-right
+              | 514,500원
+            td
+              button.btn.btn-small.btn-white(type='button') 판매내역(8건)
+            td
+              | 정산완료
+          tr
+            td 2017.02.09(목)
+            td.text-left 2017.01.30(월) ~ 2017.02.05(일)
+            td 3,630,000원
+            td.text-right
+              span.badge.badge-pill.badge-dark.mr-2 수기정산 2건
+              | 514,500원
+            td
+              button.btn.btn-small.btn-white(type='button') 판매내역(120건)
+            td
+              | 정산완료
+          tr
+            td 2017.02.09(목)
+            td.text-left 2017.01.30(월) ~ 2017.02.05(일)
+            td 3,630,000원
+            td.text-right
+              | 514,500원
+            td
+              button.btn.btn-small.btn-white(type='button') 판매내역(8건)
+            td
+              | 정산완료
+
+      nav.mt-5
+        ul.pagination.justify-content-center
+          li.page-item.disabled
+            .page-link.icon
+              img(src='/assets/images/go-first.svg')
+          li.page-item.disabled
+            .page-link.icon
+              img(src='/assets/images/go-pre.svg')
+          li.page-item.active
+            span.page-link 1
+          li.page-item
+            a.page-link(href='#') 2
+          li.page-item
+            a.page-link(href='#') 3
+          li.page-item
+            a.page-link(href='#') 4
+          li.page-item
+            a.page-link(href='#') 5
+          li.page-item
+            span.page-link.icon
+              img(src='/assets/images/go-next.svg')
+          li.page-item
+            span.page-link.icon
+              img(src='/assets/images/go-last.svg')
+
+    include ./includes/footer.pug
+
+//- 판매내역 Modal
+#detailModal.modal.fade(tabindex='-1')
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h5#exampleModalLabel.modal-title 판매내역
+        a.close(data-dismiss='modal')
+          img(src='/assets/images/close.svg')
+      .modal-body
+        .form-group.row
+          label.col-sm-2 기간
+          .col-sm-10
+            | 2017.01.30(월) ~ 2017.02.05(일)
+        h6 정산요약
+        table.table.text-center.align-middle
+          thead.bg-light
+            tr
+              th 총 결제금액
+              th 중계수수료
+              th 수기정산
+              th 최종 정산금액
+          tbody
+            tr
+              td 210,000원
+              td -21,900원
+              td -30,000원
+              td
+                b.text-blue 158,100원
+        h6.mt-5 예약목록
+        table.table.text-center.align-middle
+          thead.bg-light
+            tr
+              th 예약번호
+              th 판매일시
+              th 판매채널
+              th 객실명
+              th 고객명
+              th 입실일
+              th 판매금액
+              th 중계 수수료율
+              th 정산금액
+          tbody
+            tr
+              td ZR-P2ACQ7VNU
+              td
+                | 2017-03-20
+                br
+                | 12:41
+              td 티몬
+              td 하늘
+              td 김지영
+              td
+                | 2017.03.20
+                br
+                | (1박)
+              td
+                del.text-muted 300,000원
+                br
+                | 90,000원
+                .text-red (3일전 취소)
+              td 15%
+              td
+                .text-blue 76,500원
+            tr
+              td ZR-P2ACQ7VNU
+              td
+                | 2017-03-20
+                br
+                | 12:41
+              td 홈페이지
+              td 해
+              td 이민성
+              td
+                | 2017.03.20
+                br
+                | (1박)
+              td 120,000원
+              td 7%
+              td
+                .text-blue 111,600원
+
+        nav.mt-5
+          ul.pagination.justify-content-center
+            li.page-item.disabled
+              .page-link.icon
+                img(src='/assets/images/go-first.svg')
+            li.page-item.disabled
+              .page-link.icon
+                img(src='/assets/images/go-pre.svg')
+            li.page-item.active
+              span.page-link 1
+            li.page-item
+              a.page-link(href='#') 2
+            li.page-item
+              a.page-link(href='#') 3
+            li.page-item
+              a.page-link(href='#') 4
+            li.page-item
+              a.page-link(href='#') 5
+            li.page-item
+              span.page-link.icon
+                img(src='/assets/images/go-next.svg')
+            li.page-item
+              span.page-link.icon
+                img(src='/assets/images/go-last.svg')
+
+        h6.mt-5 수기정산
+        table.table.text-center.align-middle
+          thead.bg-light
+            tr
+              th 내역
+              th(style='width: 20%') 금액
+          tbody
+            tr
+              td.text-left 지난주 미지급 금액
+              td 20,000원
+            tr
+              td.text-left 예치금 차감
+              td -50,000원
+
+
 

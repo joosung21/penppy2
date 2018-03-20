@@ -1,0 +1,178 @@
+include ./includes/header.pug
+
+//-------- 기간별 매출목록 Page ---------//
+body.two-depth(name='payment', page='revenue')
+  include ./includes/main-nav-left.pug
+  include ./includes/sub-nav.pug
+  .content-container
+    .artboard
+      .board-title 기간별 매출목록
+
+      .d-flex.mb-3
+        select.custom-select.mr-2(style='width: 8rem')
+          option(selected) 2018년
+          option 2017년
+          option 2016년
+        select.custom-select(style='width: 13rem')
+          option(selected) 전체 판매채널
+          option 실시간 예약창 카드결제
+          option 네이버
+          option 티몬
+          option 야놀자 펜션
+
+      table.table.text-center.align-middle.border
+        thead.bg-light
+          tr
+            th.border-right(rowspan='2') 기간
+            th.border-right(rowspan='2') 고객 결제금액(매출)
+            th.pb-2(colspan='3') 예약대행 수수료(매입)
+            th.border-left(rowspan='2') 정산금액
+            th.border-left(rowspan='2') 엑셀 다운받기
+          tr
+            th.font-weight-normal 수수료 금액
+            th.font-weight-normal 공급가액
+            th.font-weight-normal 부가세
+        tbody
+          tr
+            td.border-right 2018.01
+            td.border-right 200,000원
+            td 30,000원
+            td 27,273원
+            td 2,727원
+            td.border-left 170,000원
+            td.border-left
+              a.btn.btn-white(href='#')
+                img.mr-1(src='/assets/images/download.svg')
+                | 엑셀 다운받기
+          tr
+            td.border-right 2018.02
+            td.border-right 100,000원
+            td 15,000원
+            td 13,636원
+            td 1,363원
+            td.border-left 85,000원
+            td.border-left
+              a.btn.btn-white(href='#')
+                img.mr-1(src='/assets/images/download.svg')
+                | 엑셀 다운받기
+          tr
+            td.border-right 2018.03
+            td.border-right 0원
+            td 0원
+            td 0원
+            td 0원
+            td.border-left 0원
+            td.border-left
+          tr
+            td.border-right 2018.04
+            td.border-right 0원
+            td 0원
+            td 0원
+            td 0원
+            td.border-left 0원
+            td.border-left
+          tr
+            td.border-right 2018.05
+            td.border-right 0원
+            td 0원
+            td 0원
+            td 0원
+            td.border-left 0원
+            td.border-left
+          tr
+            td.border-right 2018.06
+            td.border-right 0원
+            td 0원
+            td 0원
+            td 0원
+            td.border-left 0원
+            td.border-left
+          tr
+            td.border-right 2018.07
+            td.border-right 0원
+            td 0원
+            td 0원
+            td 0원
+            td.border-left 0원
+            td.border-left
+          tr
+            td.border-right 2018.08
+            td.border-right 0원
+            td 0원
+            td 0원
+            td 0원
+            td.border-left 0원
+            td.border-left
+          tr
+            td.border-right 2018.09
+            td.border-right 0원
+            td 0원
+            td 0원
+            td 0원
+            td.border-left 0원
+            td.border-left
+          tr
+            td.border-right 2018.10
+            td.border-right 0원
+            td 0원
+            td 0원
+            td 0원
+            td.border-left 0원
+            td.border-left
+          tr
+            td.border-right 2018.11
+            td.border-right 0원
+            td 0원
+            td 0원
+            td 0원
+            td.border-left 0원
+            td.border-left
+          tr
+            td.border-right 2018.12
+            td.border-right 0원
+            td 0원
+            td 0원
+            td 0원
+            td.border-left 0원
+            td.border-left
+        tfoot.bg-light
+          tr
+            td.border-right
+              | 2018년 1,2분기 계
+              br
+              | (1월~6월)
+            td.border-right 300,000원
+            td 45,000원
+            td 40,909원
+            td 4,091원
+            td.border-left 255,000원
+            td.border-left
+              a.btn.btn-white(href='#')
+                img.mr-1(src='/assets/images/download.svg')
+                | 엑셀 다운받기
+          tr
+            td.border-right
+              | 2018년 3,4분기 계
+              br
+              | (7월~12월)
+            td.border-right 0원
+            td 0원
+            td 0원
+            td 0원
+            td.border-left 0원
+            td.border-left
+          tr
+            th.border-right
+              | 2018년 계
+            th.border-right 300,000원
+            th 45,000원
+            th 40,909원
+            th 4,091원
+            th.border-left 255,000원
+            th.border-left
+              a.btn.btn-white(href='#')
+                img.mr-1(src='/assets/images/download.svg')
+                | 엑셀 다운받기
+
+    include ./includes/footer.pug
+

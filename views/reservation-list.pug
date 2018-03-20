@@ -105,11 +105,7 @@ body(name='reservation-list')
             td
               span.text-blue 입금대기
             td.text-left
-              b.mr-1 요청사항:
               | 늦게 도착할것 같아서 도착하기 두시간 정도전에 전화 드리고 바베큐 좀 부탁드립니다.
-              br
-              b.mr-1 도착예정:
-              | 23:00
             td.text-left
               | 위메프티켓 J4C3I5GLDL 9K
           tr
@@ -140,11 +136,7 @@ body(name='reservation-list')
             td
               span.text-red 예약취소
             td.text-left
-              b.mr-1 추가인원 현장결제:
-              | 20,000원
-              br
-              b.mr-1 도착예정:
-              | 23:00
+              | 추가인원 현장결제: 20,000원
             td.text-left
               | 5만원 먼저 입금
               br
@@ -180,6 +172,30 @@ body(name='reservation-list')
               | 예약완료
             td.text-left
             td.text-left
+      nav.mt-5
+        ul.pagination.justify-content-center
+          li.page-item.disabled
+            .page-link.icon
+              img(src='/assets/images/go-first.svg')
+          li.page-item.disabled
+            .page-link.icon
+              img(src='/assets/images/go-pre.svg')
+          li.page-item.active
+            span.page-link 1
+          li.page-item
+            a.page-link(href='#') 2
+          li.page-item
+            a.page-link(href='#') 3
+          li.page-item
+            a.page-link(href='#') 4
+          li.page-item
+            a.page-link(href='#') 5
+          li.page-item
+            span.page-link.icon
+              img(src='/assets/images/go-next.svg')
+          li.page-item
+            span.page-link.icon
+              img(src='/assets/images/go-last.svg')
 
     include ./includes/footer.pug
 
