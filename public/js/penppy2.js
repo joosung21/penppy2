@@ -3,7 +3,7 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
 
-// Slider Open and Close
+// Bottom Slider Open & Close
 function openSlider(){
   $('.slider-ui').removeClass('hidden');
   $('.slider-ui').addClass('show');
@@ -12,6 +12,14 @@ function closeSlider(){
   $('.slider-ui').removeClass('show');
   $('.slider-ui').addClass('hidden');
   $('.room-line.assign-ui').removeClass('show')
+}
+
+// PMS Slider Open & Close
+function openPmsSlider(){
+  $('.pms-slider').fadeIn(300);
+}
+function closePmsSlider(){
+  $('.pms-slider').fadeOut(300);
 }
 
 
@@ -102,6 +110,10 @@ $( document ).ready(function() {
   if( windowWidth <= 1199 ) {
     slideSecondNav();
   }
+
+  // Hide PMS Slider
+  $('.pms-slider').hide();
+
 
 });
 

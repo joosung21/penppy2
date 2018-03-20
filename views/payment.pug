@@ -9,13 +9,13 @@ body.two-depth(name='payment', page='history')
       .board-title 정산목록
       p.mb-5 매주 금요일에 지난주(월요일~일요일) 이용 건에 대해 입금해 드립니다.
       .form-group.row
-        label.col-sm-2.pt-1 지급일
-        .col-sm-10
+        label.col-sm-1.pt-1 지급일
+        .col-sm-11
           .form-inline
             input.form-control.form-control-datepicker(type='text', value='2017.07.16(수)', size='18')
             span.px-2 ~
             input.form-control.form-control-datepicker.mr-2(type='text', value='2017.08.20(목)', size='18')
-            button.btn.btn-white(type='button') 불러오기
+            button.btn.btn-white.btn-small(type='button') 불러오기
             .btn-group.btn-group-toggle.d-flex.align-items-center.ml-3(data-toggle='buttons')
               label.btn.btn-white.active
                 input(type='radio', name='radio1', autocomplete='off', checked)
@@ -27,8 +27,8 @@ body.two-depth(name='payment', page='history')
                 input(type='radio', name='radio3', autocomplete='off')
                 | 최근 1년
       .form-group.row
-        label.col-sm-2 정산계좌
-        .col-sm-10
+        label.col-sm-1 정산계좌
+        .col-sm-11
           | 국민은행 436902-04-112722 (예금주 조영수)
 
       .d-flex.mb-3
@@ -138,7 +138,7 @@ body.two-depth(name='payment', page='history')
   .modal-dialog.modal-lg
     .modal-content
       .modal-header
-        h5#exampleModalLabel.modal-title 판매내역
+        h5.modal-title 판매내역
         a.close(data-dismiss='modal')
           img(src='/assets/images/close.svg')
       .modal-body

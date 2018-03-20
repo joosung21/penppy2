@@ -66,10 +66,18 @@ body(name='calendar')
                   a.dropdown-item(href='#')
                     img.mr-2(src='/assets/images/add.svg', style='position: relative; top: -1px')
                     b.mt-2 예약생성
-                  a.dropdown-item(href='#') 정인혁 010-1111-7593
-                  a.dropdown-item(href='#') 박지연 010-1111-2871
-                  a.dropdown-item(href='#') 임승아 010-1111-9774
-                  a.dropdown-item(href='#') 최상민 010-1111-1457
+                  a.dropdown-item(href='javascript: openPmsSlider();')
+                    .form-row
+                      .col-8 정인혁 010-1111-7593
+                      .col-4.text-muted (티몬)
+                  a.dropdown-item(href='#')
+                    .form-row
+                      .col-8 박지연 010-1111-2871
+                      .col-4.text-muted (PC예약창)
+                  a.dropdown-item(href='#')
+                    .form-row
+                      .col-8 임승아 010-1111-9774
+                      .col-4.text-muted (네이버)
                 .price 68,000원
                 .room
                   .status-badge.available
@@ -584,7 +592,5 @@ body(name='calendar')
 
     include ./includes/footer.pug
 
-
-
-
+include ./includes/pms-slider.pug
 

@@ -23,7 +23,7 @@
       a.payment(href='/payment', title='정산목록')
         img(src='/assets/images/ic-caculator.svg')
         span 정산목록
-      a(href='#', title='리포트')
+      a.report(href='#', title='리포트')
         img(src='/assets/images/ic-caculator.svg')
         span 리포트
       a.setting(href='/setting', title='설정')
@@ -39,46 +39,49 @@
 
   //- 업체설정 메뉴
   #nav-setting.second-depth
-    .nav-group
-      .group-title 판매설정
-      .pl-2
-        a.basic(href='/setting/basic') 기본설정
-        a.property(href='/setting/property') 숙소정보
-        a.rooms(href='/setting/rooms') 객실정보
-        a.policy(href='/setting/policy') 취소환불정책
-        a.auto(href='/setting/auto') 자동할인 설정
-        a.daily(href='/setting/daily') 일자별 요금 설정
-    hr
-    .nav-group
-      .group-title 실시간 예약창
-      .pl-2
-        a.bp(href='/setting/bp') 예약창 기본설정
-        a.service(href='/setting/service') 부가서비스
-        a.multiday(href='/setting/multiday') 연박 설정
-        a.notice(href='/setting/notice') 팝업 공지사항
-        a.sms(href='/setting/sms') 문자발송 정보
-        a.url(href='/setting/url') 홈페이지 설치안내
-    hr
-    .nav-group
-      .group-title 온라인 판매대행
-      .pl-2
-        a.gds(href='/setting/gds') 판매사 연동신청
-        a.gds-status(href='/setting/gds-status') 판매사 연동현황
+    .wrapper
+      .nav-group
+        .group-title 판매설정
+        .pl-2
+          a.basic(href='/setting/basic') 기본설정
+          a.property(href='/setting/property') 숙소정보
+          a.rooms(href='/setting/rooms') 객실정보
+          a.policy(href='/setting/policy') 취소환불정책
+          a.auto(href='/setting/auto') 자동할인 설정
+          a.daily(href='/setting/daily') 일자별 요금 설정
+      hr
+      .nav-group
+        .group-title 실시간 예약창
+        .pl-2
+          a.bp(href='/setting/bp') 예약창 기본설정
+          a.service(href='/setting/service') 부가서비스
+          a.multiday(href='/setting/multiday') 연박 설정
+          a.notice(href='/setting/notice') 팝업 공지사항
+          a.sms(href='/setting/sms') 문자발송 정보
+          a.url(href='/setting/url') 홈페이지 설치안내
+      hr
+      .nav-group
+        .group-title 온라인 판매대행
+        .pl-2
+          a.gds(href='/setting/gds') 판매사 연동신청
+          a.gds-status(href='/setting/gds-status') 판매사 연동현황
 
   //- 요금설정 메뉴
   #nav-rateplan.second-depth
-    .nav-group
-      a.season00(href='#') 전체시즌
-      a.season01(href='#') 비수기
-      a.season02(href='/rateplan') 준성수기
-      a.season03(href='#') 성수기
-      a.mt-5(href='#') 시즌추가
+    .wrapper
+      .nav-group
+        a.season00(href='#') 전체시즌
+        a.season01(href='#') 비수기
+        a.season02(href='/rateplan') 준성수기
+        a.season03(href='#') 성수기
+        a.mt-5(href='#') 시즌추가
 
   //- 정산내역 메뉴
   #nav-payment.second-depth
-    .nav-group
-      a.history(href='/payment') 정산목록
-      a.revenue(href='/revenue') 기간별 매출목록
+    .wrapper
+      .nav-group
+        a.history(href='/payment') 정산목록
+        a.revenue(href='/revenue') 기간별 매출목록
 
 
 

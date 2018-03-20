@@ -1,0 +1,155 @@
+.pms-slider
+  .layover(onclick='closePmsSlider()')
+  .pms-slider-board
+    .pms-slider-header
+      h5.modal-title 예약조회
+      img.x(src='/assets/images/close.svg', onclick='closePmsSlider()')
+
+    .pms-slider-body
+      .form-slim
+        .label 예약자
+        input.input.pb-1(type='text', value='정인혁', style='font-size: 1.8rem')
+        span.underline
+      .form-slim.mt-4.mb-2
+        .label 예약상태
+        select.custom-select
+          option 예약완료
+          option 입금대기
+          option 예약취소
+      .form-slim
+        .label 예약상태
+        input.input(type='text', value='#8329152', readonly)
+      .form-slim
+        .label 판매채널
+        input.input(type='text', value='PC예약창', readonly)
+      .form-slim
+        .label 예약일시
+        input.input(type='text', value='2018-03-20 15:27', readonly)
+      .form-slim
+        .label 입실일
+        input.input(type='text', value='2018-03-20(1박)')
+        span.underline
+      .form-slim
+        .label 퇴실일
+        input.input(type='text', value='2018-03-21')
+        span.underline
+      .py-3
+      .label.mb-0 객실
+      .row.mb-3
+        .col.pt-1
+          | 하늘채 사랑방
+          br
+          button.btn.btn-white.btn-close.mt-1(type='button', data-placement='bottom', data-toggle='tooltip', title='삭제')
+            i.fa.fa-times.fa-lg
+        .col
+          .input-group.mb-2
+            .input-group-prepend
+              .input-group-text 성인
+            input.form-control.text-right(typr='number', min='1', max='99', value='2')
+          .input-group.mb-2
+            .input-group-prepend
+              .input-group-text 아동
+            input.form-control.text-right(typr='number', min='0', max='99', value='0')
+          .input-group.mb-2
+            .input-group-prepend
+              .input-group-text 유아
+            input.form-control.text-right(typr='number', min='0', max='99', value='0')
+      .row.mb-3
+        .col.pt-1
+          | 정원 테라스방
+          br
+          button.btn.btn-white.btn-close.mt-1(type='button', data-placement='bottom', data-toggle='tooltip', title='삭제')
+            i.fa.fa-times.fa-lg
+        .col
+          .input-group.mb-2
+            .input-group-prepend
+              .input-group-text 성인
+            input.form-control.text-right(typr='number', min='1', max='99', value='2')
+          .input-group.mb-2
+            .input-group-prepend
+              .input-group-text 아동
+            input.form-control.text-right(typr='number', min='0', max='99', value='0')
+          .input-group.mb-2
+            .input-group-prepend
+              .input-group-text 유아
+            input.form-control.text-right(typr='number', min='0', max='99', value='0')
+          .text-right
+            button.btn.btn-white.btn-small(type='button')
+              i.fa.fa-plus.fa-lg.mr-1
+              | 객실 추가
+      .py-3
+      .label 부가서비스
+      .form-row.mb-3
+        .col-9.pt-1 숯,그릴(2인)(10,000원)
+        .col-3
+          select.custom-select
+            option 0
+            option 1
+            option(selected) 2
+            option 3
+      .form-row.mb-3
+        .col-9.pt-1 바베큐 캠프파이어 이벤트(20인)(190,000원)
+        .col-3
+          select.custom-select
+            option 0
+            option 1
+            option 2
+            option 3
+      .py-3
+      .form-slim
+        .label 도착예정시간
+        input.input(type='text', value='15:00')
+        span.underline
+      .form-slim
+        .label 퇴실예정시간
+        input.input(type='text', value='11:00')
+        span.underline
+      .form-slim
+        .label 연락처
+        input.input(type='text', value='010-1345-5504')
+        span.underline
+      .py-3
+      .label 고객 요청사항
+      .form-slim
+        textarea.input(rows='3')
+          | 늦게 도착할수도 있을것 같아서 도착하기 두시간 정도 전에 전화드리고 바베큐 좀 부탁드릴게요
+        span.underline
+      .py-3
+      .label.mt-3 손님맞이 준비
+      label.custom-control.custom-checkbox.custom-control-inline.mr-4
+        input.custom-control-input(type='checkbox')
+        span.custom-control-label 차량픽업
+      label.custom-control.custom-checkbox.custom-control-inline
+        input.custom-control-input(type='checkbox')
+        span.custom-control-label 바베큐
+      label.custom-control.custom-checkbox.custom-control-inline
+        input.custom-control-input(type='checkbox')
+        span.custom-control-label 조식
+      .py-3
+      .label.mt-3 관리자 메모
+      .form-slim
+        textarea.input(rows='1')
+          | 위메프티켓 J4C3I5GLDL9K
+        span.underline
+
+
+    .pms-slider-footer
+      .form-slim.mb-2
+        .label
+          b(style='color: #4F4F4F; font-size: 1rem') 총 결제금액
+        input.input.text-blue(type='text', value='370,000원')
+        span.underline
+      .form-slim
+        .label 카드
+        input.input(type='text', value='230,000원', readonly)
+      .form-slim
+        .label 카드 수기결제
+        input.input(type='text', value='100,000원', readonly)
+      .form-slim
+        .label 현장결제
+        input.input(type='text', value='40,000원')
+        span.underline
+      .text-right.mt-3
+        button.btn.btn-white.btn-small(type='button') 요금표 상세보기
+
+    button.btn.btn-primary.btn-lg.pms-btn(type='button', onclick='closePmsSlider()') 저장

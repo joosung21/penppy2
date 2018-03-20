@@ -14,26 +14,26 @@ body.two-depth(name='rateplan', page='season02')
 
       .board-container(style='max-width:none')
         .form-group.row
-          label.col-sm-2.pt-1 시즌명
+          label.col-sm-1.pt-1 시즌명
           .col-sm-6
             input.form-control(type='text', value='준성수기', disabled)
         .form-group.row
-          label.col-sm-2.pt-1 기간
+          label.col-sm-1.pt-1 기간
           .col-sm-10
-            .mb-2
-              | 2017년 7월 16일 ~ 2017년 8월 11일
-              button.btn.btn-white.btn-sm.p-1.ml-2.mb-1(type='button')
+            .mb-3
+              | 2017.07.16(화) ~ 2017.08.11(토)
+              button.btn.btn-white.btn-close.ml-2(type='button', data-placement='right', data-toggle='tooltip', title='삭제')
                 i.fa.fa-times.fa-lg
-            .mb-2
-              | 2017년 9월 1일 ~ 2017년 9월 4일
-              button.btn.btn-white.btn-sm.p-1.ml-2.mb-1(type='button')
+            .mb-3
+              | 2017.09.01(금) ~ 2017.09.04(일)
+              button.btn.btn-white.btn-close.ml-2(type='button', data-placement='right', data-toggle='tooltip', title='삭제')
                 i.fa.fa-times.fa-lg
-            .mb-2
-              | 2017년 12월 22일 ~ 2017년 12월 22일
-              button.btn.btn-white.btn-sm.p-1.ml-2.mb-1(type='button')
+            .mb-3
+              | 2017.12.22(일) ~ 2017.12.22(금)
+              button.btn.btn-white.btn-close.ml-2(type='button', data-placement='right', data-toggle='tooltip', title='삭제')
                 i.fa.fa-times.fa-lg
             .form-inline.my-3
-              button.btn.btn-white.mr-1(type='button')
+              button.btn.btn-white.btn-small.mr-1(type='button', data-placement='right', data-toggle='tooltip', title='삭제')
                 i.fa.fa-plus.fa-lg.mr-1
                 | 기간 추가
               input.form-control.form-control-datepicker(type='text', value='2017.07.16(수)', size='18')
