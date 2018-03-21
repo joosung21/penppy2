@@ -63,10 +63,10 @@ body(name='calendar')
                   .stock 1/6
                 //- 객실이 여러개인 경우 메뉴 표시
                 .dropdown-menu.bordered-menu.p-0
-                  a.dropdown-item(href='#')
+                  a.dropdown-item(href='javascript: openPmsSlider("create");')
                     img.mr-2(src='/assets/images/add.svg', style='position: relative; top: -1px')
                     b.mt-2 예약생성
-                  a.dropdown-item(href='javascript: openPmsSlider();')
+                  a.dropdown-item(href='javascript: openPmsSlider("edit");')
                     .form-row
                       .col-8 정인혁 010-1111-7593
                       .col-4.text-muted (티몬)

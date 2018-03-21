@@ -216,8 +216,9 @@ a:focus, a:active, .btn:focus, .btn:active
 
 .btn-close
   font-size: .9rem
-  line-height: .9rem
-  padding: 3px 2px
+  height: 1.6rem
+  line-height: 1rem
+  padding: .1rem .1rem
 
 .btn-group-radio
   .btn-white
@@ -288,57 +289,44 @@ hr.table-devider
   &.bs-datepicker
     .bs-datepicker-container
       padding: 0
-
       .bs-datepicker-head
         height: 60px
         padding: 15px 0
         background-color: #fff
         text-align: center
-
         button
           font-size: 14px
-
         .previous
           > span
             color: $onda
-
         .next
           > span
             color: $onda
-
         .current
           > span
             color: #222
-
       .bs-datepicker-body
         border: 0
         padding: 0
         margin: 0 20px 20px
-
         table
           border-collapse: collapse
-
           thead
             border-top: 1px solid #000
             border-bottom: 1px solid #000
-
           th
             padding: 8px 0
             color: #222
             font-size: 12px
             font-weight: 300
-
           th.saturday
             color: #157FFC
-
           th.holiday
             color: #d0021b
-
         td
           &.selected
             span
               background-color: $onda
-
           span
             display: inline-block
             width: 100%
@@ -350,13 +338,10 @@ hr.table-devider
             line-height: 40px
             &:not(.is-other-month, .selected)
               color: #222
-
           span.disabled
             background-color: #efefef
-
           span.selected
             background-color: $onda
-
           span.today
             &:after
               content: ""
@@ -373,10 +358,8 @@ hr.table-devider
             &.selected
               &:after
                 background-color: #fff
-
           span.saturday:not(.is-other-month)
             color: #157FFC
-
           span.holiday:not(.is-other-month)
             color: #d0021b
         td.week
@@ -971,12 +954,12 @@ footer
     height: 100vh
     background-color: white
     box-shadow: 0 0 .7rem 0 rgba(0,0,0,.25rem)
-    transition: all .5s
     .label
       font-size: .85rem
       color: #929292
       margin-bottom: .45rem
     .pms-slider-header
+      flex-shrink: 0
       @extend %display-flex
       align-items: center
       width: 100%
@@ -990,6 +973,7 @@ footer
       margin-right: 1rem
       overflow-y: scroll
     .pms-slider-footer
+      flex-shrink: 0
       padding: 2rem 2.5rem 2.5rem 2.5rem
       background-color: $white-gray
       width: 100%
@@ -999,8 +983,33 @@ footer
     ::-webkit-scrollbar-thumb
       background-color: rgba(black, .1)
       -webkit-box-shadow: 0 0 1px rgba(black, .1)
+  .toggle-btn
+    @extend %display-flex
+    align-items: center
+    background-color: #F2F3F8
+    padding: 1.8rem 2.5rem
+    cursor: pointer
+    transition: all .3s
+    font-size: .85rem
+    img
+      margin-left: auto
+    &:hover
+      background-color: darken(#F2F3F8, 2%)
+  #buttons
+    flex-shrink: 0
+    background-color: #F2F3F8
+    ul
+      margin-bottom: 0
+      li
+        transition: all .3s
+        padding: 1.2rem 2.5rem
+        border-bottom: 1px solid $border-color
+        cursor: pointer
+        &:hover
+          background-color: darken(#F2F3F8, 2%)
   .pms-btn
-    padding: .8rem 0 1.7rem 0
+    flex-shrink: 0
+    padding: .8rem 0
     border-radius: 0
 
 //-- Slim Form

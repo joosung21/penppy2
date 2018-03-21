@@ -15,8 +15,14 @@ function closeSlider(){
 }
 
 // PMS Slider Open & Close
-function openPmsSlider(){
-  $('.pms-slider').fadeIn(300);
+function openPmsSlider(type){
+  if(type === 'edit'){
+    $('.pms-slider#edit').fadeIn(300);
+  } else if(type === 'create'){
+    $('.pms-slider#create').fadeIn(300, function() {
+      $('#name').focus();
+    });
+  }
 }
 function closePmsSlider(){
   $('.pms-slider').fadeOut(300);
@@ -113,7 +119,6 @@ $( document ).ready(function() {
 
   // Hide PMS Slider
   $('.pms-slider').hide();
-
 
 });
 

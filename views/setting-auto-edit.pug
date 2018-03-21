@@ -30,30 +30,43 @@ body.two-depth(name='setting', page='auto')
                 option %
                 option 원
               span 할인
-            .input-group.mb-2(style='width: 21rem')
-              .input-group-prepend
-                .input-group-text.justify-content-end(style='width: 7rem') 입실 3일전
-              input.form-control.text-right(type='text', value='30')
-              .input-group-append
-                .input-group-text % 자동할인
-            .input-group.mb-2(style='width: 21rem')
-              .input-group-prepend
-                .input-group-text.justify-content-end(style='width: 7rem') 입실 3일전
-              input.form-control.text-right(type='text', value='40')
-              .input-group-append
-                .input-group-text % 자동할인
-            .input-group.mb-2(style='width: 21rem')
-              .input-group-prepend
-                .input-group-text.justify-content-end(style='width: 7rem') 입실 3일전
-              input.form-control.text-right(type='text', value='50')
-              .input-group-append
-                .input-group-text % 자동할인
-            .input-group.mb-2(style='width: 21rem')
-              .input-group-prepend
-                .input-group-text.justify-content-end(style='width: 7rem') 입실 3일전
-              input.form-control.text-right(type='text', value='70')
-              .input-group-append
-                .input-group-text % 자동할인
+            .form-inline
+              .input-group.mb-2(style='width: 21rem')
+                .input-group-prepend
+                  .input-group-text.justify-content-end(style='width: 7rem') 입실 3일전
+                input.form-control.text-right(type='text', value='30')
+                .input-group-append
+                  .input-group-text % 자동할인
+              button.btn.btn-white.btn-close.ml-2.mb-1(type='button', data-toggle='tooltip', title='삭제')
+                i.fa.fa-times.fa-lg
+            .form-inline
+              .input-group.mb-2(style='width: 21rem')
+                .input-group-prepend
+                  .input-group-text.justify-content-end(style='width: 7rem') 입실 2일전
+                input.form-control.text-right(type='text', value='40')
+                .input-group-append
+                  .input-group-text % 자동할인
+              button.btn.btn-white.btn-close.ml-2.mb-1(type='button', data-toggle='tooltip', title='삭제')
+                i.fa.fa-times.fa-lg
+            .form-inline
+              .input-group.mb-2(style='width: 21rem')
+                .input-group-prepend
+                  .input-group-text.justify-content-end(style='width: 7rem') 입실 1일전
+                input.form-control.text-right(type='text', value='50')
+                .input-group-append
+                  .input-group-text % 자동할인
+              button.btn.btn-white.btn-close.ml-2.mb-1(type='button', data-toggle='tooltip', title='삭제')
+                i.fa.fa-times.fa-lg
+            .form-inline
+              .input-group.mb-2(style='width: 21rem')
+                .input-group-prepend
+                  .input-group-text.justify-content-end(style='width: 7rem') 입실 당일
+                input.form-control.text-right(type='text', value='70')
+                .input-group-append
+                  .input-group-text % 자동할인
+              button.btn.btn-white.btn-close.ml-2.mb-1(type='button', data-toggle='tooltip', title='삭제')
+                i.fa.fa-times.fa-lg
+
             button.btn.btn-white.btn-small(type='button')
               i.fa.fa-plus.fa-lg.mr-1
               | 추가
