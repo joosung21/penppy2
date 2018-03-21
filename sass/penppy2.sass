@@ -984,15 +984,25 @@ footer
       background-color: rgba(black, .1)
       -webkit-box-shadow: 0 0 1px rgba(black, .1)
   .toggle-btn
-    @extend %display-flex
-    align-items: center
+    position: relative
     background-color: #F2F3F8
     padding: 1.5rem 2.5rem
     cursor: pointer
     transition: all .3s
     font-size: .85rem
-    img
-      margin-left: auto
+    &:after
+      content: ''
+      position: absolute
+      right: 2rem
+      top: 47%
+      width: 20px
+      height: 20px
+      background: url('/assets/images/arrow-up.svg') 0 0 no-repeat
+      transition: all .3s
+  .toggle-btn[aria-expanded="true"]
+    &:after
+      background: url('/assets/images/arrow-down.svg') 0 0 no-repeat
+
   #buttons
     flex-shrink: 0
     background-color: #F2F3F8
