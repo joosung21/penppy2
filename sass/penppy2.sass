@@ -1219,15 +1219,8 @@ footer
         align-items: center
         justify-content: center
         box-shadow: 0 0 0 1px #eee
-    .chart-topping
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      display: grid
-      grid-template-columns: repeat(14, 1fr)
-      grid-gap: 1px
-      z-index: 2
+        cursor: pointer
+        z-index: 0
       .block
         align-items: center
         grid-row: 1
@@ -1239,6 +1232,7 @@ footer
         text-overflow: ellipsis
         white-space: nowrap
         overflow: hidden
+        z-index: 1
         &.complete
           background-color: $complete
           box-shadow: 0 0 0 1px #CA445A

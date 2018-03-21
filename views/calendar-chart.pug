@@ -114,7 +114,6 @@ body(name='calendar')
               .dd 5만
               .dd 5만
               .dd 5만
-            .chart-topping
 
       .bar-chart-row
         .row-title
@@ -123,6 +122,10 @@ body(name='calendar')
         .roomtype-wrapper
           .chart-container
             .chart-base
+              .block.complete(style='grid-column: 1 / span 1', onclick='javascript: openPmsSlider("edit");') 아주 긴 이름일 경우
+              .block.complete(style='grid-column: 2 / span 1', onclick='javascript: openPmsSlider("edit");') 정인혁
+              .block.waiting(style='grid-column: 3 / span 3', onclick='javascript: openPmsSlider("edit");') 박지연
+              .block.waiting(style='grid-column: 6 / span 1', onclick='javascript: openPmsSlider("edit");') 임승아
               .dd 5.5만
               .dd 5.5만
               .dd 5.5만
@@ -131,17 +134,6 @@ body(name='calendar')
               .dd 5.5만
               .dd 5.5만
               .dd 5.5만
-              .dd 5.5만
-              .dd 5.5만
-              .dd 5.5만
-              .dd 5.5만
-              .dd 5.5만
-              .dd 5.5만
-            .chart-topping
-              .block.complete(style='grid-column: 1 / span 1') 아주 긴 이름일 경우
-              .block.complete(style='grid-column: 2 / span 1') 정인혁
-              .block.waiting(style='grid-column: 3 / span 3') 박지연
-              .block.waiting(style='grid-column: 6 / span 1') 임승아
 
       .bar-chart-row
         .row-title
@@ -152,27 +144,18 @@ body(name='calendar')
             .chart-base
               .dd 5.5만
               .dd 5.5만
-              .dd 5.5만
-              .dd 5.5만
-              .dd 5.5만
-              .dd 5.5만
-              .dd 5.5만
-              .dd 5.5만
-              .dd 5.5만
-              .dd 5.5만
-              .dd 5.5만
-              .dd 5.5만
-              .dd 5.5만
-              .dd 5.5만
-            .chart-topping
-              .block.blocked(style='grid-column: 2 / span 1')
-                img.ic(src='/assets/images/blocked.svg')
               .block.blocked(style='grid-column: 3 / span 2')
                 img.ic(src='/assets/images/blocked.svg')
+              .dd 5.5만
               .block.callonly(style='grid-column: 6 / span 2')
                 img.ic(src='/assets/images/callonly.svg')
-              .block.callonly(style='grid-column: 8 / span 1')
-                img.ic(src='/assets/images/callonly.svg')
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
+              .dd 5.5만
       .bar-chart-row
         .row-title
           b 스테이튼 아일랜드
@@ -280,6 +263,6 @@ body(name='calendar')
               .dd 5만
               .dd 5만
 
-
-
     include ./includes/footer.pug
+
+include ./includes/pms-slider.pug

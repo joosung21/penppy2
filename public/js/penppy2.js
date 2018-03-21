@@ -118,7 +118,12 @@ $( document ).ready(function() {
   }
 
   // Hide PMS Slider
-  $('.pms-slider#create').hide();
+  $('.pms-slider').hide();
+
+  // Chart-base Create Reservation
+  $('.chart-base .dd').click(function(){
+    openPmsSlider('create');
+  });
 
 });
 
