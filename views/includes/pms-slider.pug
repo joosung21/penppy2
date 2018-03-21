@@ -1,4 +1,4 @@
-//- 예약수정
+//- 예약조회
 .pms-slider#edit
   .layover(onclick='closePmsSlider()')
   .pms-slider-board
@@ -28,11 +28,11 @@
         input.input(type='text', value='2018-03-20 15:27', readonly)
       .form-slim
         .label 입실일
-        input.input(type='text', value='2018-03-20(1박)', data-toggle='modal', data-keyboard='true', data-target='#roomAddModal')
+        input.input.pencil(type='text', value='2018-03-20(1박)', data-toggle='modal', data-keyboard='true', data-target='#roomAddModal')
         span.underline
       .form-slim
         .label 퇴실일
-        input.input(type='text', value='2018-03-21', data-toggle='modal', data-keyboard='true', data-target='#roomAddModal')
+        input.input.pencil(type='text', value='2018-03-21', data-toggle='modal', data-keyboard='true', data-target='#roomAddModal')
         span.underline
       .py-3
       .label.mb-0 객실
@@ -40,7 +40,7 @@
         .col.pt-1
           | 하늘채 사랑방
           br
-          button.btn.btn-white.btn-close.ml-1(type='button', data-placement='bottom', data-toggle='tooltip', title='삭제')
+          button.btn.btn-white.btn-close.mt-1(type='button', data-placement='bottom', data-toggle='tooltip', title='삭제')
             i.fa.fa-times.fa-lg
         .col
           .input-group.mb-2
@@ -75,7 +75,7 @@
               .input-group-text 유아
             input.form-control.text-right(type='number', min='0', max='99', value='0')
           .text-right
-            button.btn.btn-white.btn-small(type='button')
+            button.btn.btn-white.btn-small(type='button', data-toggle='modal', data-keyboard='true', data-target='#roomAddModal')
               i.fa.fa-plus.fa-lg.mr-1
               | 객실 추가
       .py-3
@@ -99,15 +99,15 @@
       .py-3
       .form-slim
         .label 도착예정시간
-        input.input(type='text', value='15:00')
+        input.input.pencil(type='text', value='15:00')
         span.underline
       .form-slim
         .label 퇴실예정시간
-        input.input(type='text', value='11:00')
+        input.input.pencil(type='text', value='11:00')
         span.underline
       .form-slim
         .label 연락처
-        input.input(type='text', value='010-1345-5504')
+        input.input.pencil(type='text', value='010-1345-5504')
         span.underline
       .py-3
       .label 고객 요청사항
@@ -133,37 +133,38 @@
           | 위메프티켓 J4C3I5GLDL9K
         span.underline
 
-
-    .pms-slider-footer
-      .form-slim.mb-2
-        .label
-          b(style='color: #4F4F4F; font-size: 1rem') 총 결제금액
-        input.input.text-blue(type='text', value='370,000원')
-        span.underline
-      .form-slim
-        .label 카드
-        input.input(type='text', value='230,000원', readonly)
-      .form-slim
-        .label 카드 수기결제
-        input.input(type='text', value='100,000원', readonly)
-      .form-slim
-        .label 현장결제
-        input.input(type='text', value='40,000원')
-        span.underline
-      .text-right.mt-3
-        button.btn.btn-white.btn-small(type='button') 요금표 상세보기
-
-    .toggle-btn(data-toggle='collapse', href='#buttons')
-      span.text-muted 예약관리
-      img(src='/assets/images/arrow-down.svg')
-
-    #buttons.collapse
-      ul.list-unstyled
-        li key-in 카드 수기결제
-        li 영수증 출력
-        li 현금 영수증 발급
-        li 문자발송내역
-        li 변경내역
+    #accordion
+      .toggle-btn.bg-light(data-toggle='collapse', href='#price-summary')
+        span.text-muted 요금보기
+        img(src='/assets/images/arrow-up.svg')
+      .pms-slider-footer
+        .form-slim.mb-0
+          .label(style='bottom: 1px')
+            b(style='color: #4F4F4F; font-size: 1rem;') 총 결제금액
+          input.input.text-blue(type='text', value='370,000원', readonly, style='font-weight: 600')
+        #price-summary.collapse.pb-2(data-parent='#accordion')
+          .form-slim.mt-2
+            .label 카드
+            input.input(type='text', value='230,000원', readonly)
+          .form-slim
+            .label 카드 수기결제
+            input.input(type='text', value='100,000원', readonly)
+          .form-slim
+            .label 현장결제
+            input.input(type='text', value='40,000원')
+            span.underline
+          .text-right.mt-3
+            button.btn.btn-white.btn-small(type='button') 요금표 상세보기
+      .toggle-btn(data-toggle='collapse', href='#buttons')
+        span.text-muted 예약관리
+        img(src='/assets/images/arrow-up.svg')
+      #buttons.collapse(data-parent='#accordion')
+        ul.list-unstyled
+          li key-in 카드 수기결제
+          li 영수증 출력
+          li 현금 영수증 발급
+          li 문자발송내역
+          li 변경내역
 
     button.btn.btn-primary.btn-lg.pms-btn(type='button', onclick='closePmsSlider()') 저장
 
@@ -201,7 +202,7 @@
         .col.pt-1
           | 하늘채 사랑방
           br
-          button.btn.btn-white.btn-close.ml-1(type='button', data-placement='bottom', data-toggle='tooltip', title='삭제')
+          button.btn.btn-white.btn-close.mt-1(type='button', data-placement='bottom', data-toggle='tooltip', title='삭제')
             i.fa.fa-times.fa-lg
         .col
           .input-group.mb-2
@@ -236,7 +237,7 @@
               .input-group-text 유아
             input.form-control.text-right(type='number', min='0', max='99', value='0')
           .text-right
-            button.btn.btn-white.btn-small(type='button')
+            button.btn.btn-white.btn-small(type='button', data-toggle='modal', data-keyboard='true', data-target='#roomAddModal')
               i.fa.fa-plus.fa-lg.mr-1
               | 객실 추가
       .py-3
@@ -290,6 +291,7 @@
       .label.mt-3 관리자 메모
       .form-slim
         textarea.input(rows='1')
+        span.underline
       .py-3
       .label.mt-3 입금문자 발송
       label.custom-control.custom-checkbox

@@ -974,7 +974,7 @@ footer
       overflow-y: scroll
     .pms-slider-footer
       flex-shrink: 0
-      padding: 2rem 2.5rem 2.5rem 2.5rem
+      padding: 0rem 2.5rem 1rem 2.5rem
       background-color: $white-gray
       width: 100%
     ::-webkit-scrollbar
@@ -987,14 +987,12 @@ footer
     @extend %display-flex
     align-items: center
     background-color: #F2F3F8
-    padding: 1.8rem 2.5rem
+    padding: 1.5rem 2.5rem
     cursor: pointer
     transition: all .3s
     font-size: .85rem
     img
       margin-left: auto
-    &:hover
-      background-color: darken(#F2F3F8, 2%)
   #buttons
     flex-shrink: 0
     background-color: #F2F3F8
@@ -1025,7 +1023,7 @@ footer
   .input
     background-color: transparent
     border: none
-    border-bottom: 2px solid $border-color
+    border-bottom: 1px solid $border-color
     box-sizing: border-box
     padding: .5rem 0 .5rem 5rem
     position: relative
@@ -1036,6 +1034,9 @@ footer
       outline: none
     &:read-only
       border: none
+    &.pencil
+      padding-right: 1.5rem
+      background: url('/assets/images/pencil.svg') center right no-repeat
   textarea.input
     line-height: 1.5rem
     text-align: left

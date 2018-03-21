@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="13px" height="8px" viewBox="0 0 13 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="12px" height="6px" viewBox="0 0 12 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
-    <title>열기</title>
+    <title>위로</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="모달_예약조회" transform="translate(-1841.000000, -1460.000000)" fill="#222222">
-            <g id="모달" transform="translate(1560.000000, 0.000000)">
-                <g id="결제정보" transform="translate(0.000000, 1173.000000)">
-                    <g id="예약관리" transform="translate(0.000000, 265.000000)">
-                        <g id="열기" transform="translate(278.000000, 16.000000)">
-                            <polygon id="Shape" transform="translate(9.700000, 10.000000) rotate(90.000000) translate(-9.700000, -10.000000) " points="6 5.4 7.4 4 13.4 10 7.4 16 6 14.6 10.6 10"></polygon>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="모달_예약조회(총결제금액열렸을떄)" transform="translate(-287.000000, -1190.000000)" stroke="#222222">
+            <g id="모달" transform="translate(-1.000000, 0.000000)">
+                <g id="결제정보" transform="translate(0.000000, 1172.000000)">
+                    <g id="총-결제금액">
+                        <g id="아래로" transform="translate(284.000000, 11.000000)">
+                            <g id="Group" transform="translate(10.000000, 10.000000) scale(1, -1) translate(-10.000000, -10.000000) translate(4.500000, 7.000000)">
+                                <path d="M0.5,0.5 L5.5,5.5" id="Line" transform="translate(3.000000, 3.000000) scale(1, -1) translate(-3.000000, -3.000000) "></path>
+                                <path d="M5.5,0.5 L10.5,5.5" id="Line-Copy" transform="translate(8.000000, 3.000000) scale(-1, -1) translate(-8.000000, -3.000000) "></path>
+                            </g>
                         </g>
                     </g>
                 </g>
