@@ -118,7 +118,7 @@ $( document ).ready(function() {
   }
 
   // Hide PMS Slider
-  $('.pms-slider#create').hide();
+  $('.pms-slider').hide();
 
 });
 

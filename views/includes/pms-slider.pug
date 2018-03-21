@@ -151,7 +151,7 @@
             input.input(type='text', value='100,000원', readonly)
           .form-slim
             .label 현장결제
-            input.input(type='text', value='40,000원')
+            input.input.pencil(type='text', value='40,000원')
             span.underline
           .text-right.mt-3
             button.btn.btn-white.btn-small(type='button') 요금표 상세보기
@@ -190,11 +190,11 @@
           option 예약취소
       .form-slim
         .label 입실일
-        input.input(type='text', value='2018-03-20(1박)', data-toggle='modal', data-keyboard='true', data-target='#roomAddModal')
+        input.input.pencil(type='text', value='2018-03-20(1박)', data-toggle='modal', data-keyboard='true', data-target='#roomAddModal')
         span.underline
       .form-slim
         .label 퇴실일
-        input.input(type='text', value='2018-03-21', data-toggle='modal', data-keyboard='true', data-target='#roomAddModal')
+        input.input.pencil(type='text', value='2018-03-21', data-toggle='modal', data-keyboard='true', data-target='#roomAddModal')
         span.underline
       .py-3
       .label.mb-0 객실
@@ -261,15 +261,15 @@
       .py-3
       .form-slim
         .label 도착예정시간
-        input.input(type='text', value='')
+        input.input.pencil(type='text', value='')
         span.underline
       .form-slim
         .label 퇴실예정시간
-        input.input(type='text', value='')
+        input.input.pencil(type='text', value='')
         span.underline
       .form-slim
         .label 연락처
-        input.input(type='text', value='')
+        input.input.pencil(type='text', value='')
         span.underline
       .py-3
       .label 고객 요청사항
@@ -299,23 +299,26 @@
         span.custom-control-label 고객에게 입금안내 문자를 발송합니다.
         span.underline
 
-
-    .pms-slider-footer
-      .form-slim.mb-2
-        .label
-          b(style='color: #4F4F4F; font-size: 1rem') 총 결제금액
-        input.input.text-blue(type='text', value='370,000원')
-        span.underline
-      .form-slim
-        .label 무통장입금
-        input.input(type='text', value='250,000원')
-        span.underline
-      .form-slim
-        .label 현장결제
-        input.input(type='text', value='0원')
-        span.underline
-      .text-right.mt-3
-        button.btn.btn-white.btn-small(type='button') 요금표 상세보기
+    #accordion
+      .toggle-btn.bg-light(data-toggle='collapse', href='#price-summary2')
+        span.text-muted 요금보기
+        img(src='/assets/images/arrow-up.svg')
+      .pms-slider-footer
+        .form-slim.mb-0
+          .label(style='bottom: 1px')
+            b(style='color: #4F4F4F; font-size: 1rem;') 총 결제금액
+          input.input.text-blue(type='text', value='370,000원', readonly, style='font-weight: 600')
+        #price-summary2.collapse.pb-2(data-parent='#accordion')
+          .form-slim
+            .label 무통장입금
+            input.input.pencil(type='text', value='250,000원')
+            span.underline
+          .form-slim
+            .label 현장결제
+            input.input.pencil(type='text', value='0원')
+            span.underline
+          .text-right.mt-3
+            button.btn.btn-white.btn-small(type='button') 요금표 상세보기
 
     button.btn.btn-primary.btn-lg.pms-btn(type='button', onclick='closePmsSlider()') 저장
 
