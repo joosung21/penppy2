@@ -1,0 +1,184 @@
+include ./includes/header.pug
+
+//-------- 대쉬보드 Page ---------//
+body
+  include ./includes/main-nav-left.pug
+  include ./includes/sub-nav.pug
+  .content-container
+    .artboard.transparent(style='min-width: 1000px')
+      .d-flex
+        .dashboard-unit.dashboard-summary(style='flex: 1 1 auto')
+          .date
+            .head Today
+            .text 2018.3.20(화)
+          .big-numbers
+            .unit
+              .number 17
+              .text 입금대기
+            .unit
+              .number 3
+              .text 예약완료
+            .unit
+              .number.zero 0
+              .text 예약취소
+            .unit
+              .number 1
+              .text 미입금취소
+
+        .dashboard-unit.dashboard-weather(style='flex: 0 0 20rem')
+          h5 제주도
+      .d-flex
+        div(style='flex: 0 1 40%')
+          .dashboard-unit
+            .title 오늘 입실
+            table.table.text-center.align-middle.mb-0
+              thead.bg-light
+                tr
+                  th 도착예정시간
+                  th 객실명
+                  th 예약자
+                  th 손님맞이 준비
+              tbody
+                //- tr
+                  td.empty(colspan='4') 오늘 입실이 없습니다.
+                tr
+                  td 15:20
+                  td
+                    | 하늘채 사랑방
+                    .small.text-muted 성인2, 아동0, 유아1
+                  td
+                    | 정우성
+                    br
+                    | 010-5503-9903
+                  td
+                    | 픽업, 바베큐, 조식
+                tr
+                  td --:--
+                  td
+                    | 하늘채 사랑방
+                    .small.text-muted 성인2, 아동0, 유아1
+                  td
+                    | 정우성
+                    br
+                    | 010-5503-9903
+                  td
+                    | 픽업, 바베큐, 조식
+                tr
+                  td --:--
+                  td
+                    | 하늘채 사랑방
+                    .small.text-muted 성인2, 아동0, 유아1
+                  td
+                    | 정우성
+                    br
+                    | 010-5503-9903
+                  td
+                tr
+                  td 15:20
+                  td
+                    | 하늘채 사랑방
+                    .small.text-muted 성인2, 아동0, 유아1
+                  td
+                    | 정우성
+                    br
+                    | 010-5503-9903
+                  td
+                tr
+                  td --:--
+                  td
+                    | 하늘채 사랑방
+                    .small.text-muted 성인2, 아동0, 유아1
+                  td
+                    | 정우성
+                    br
+                    | 010-5503-9903
+                  td
+
+          .dashboard-unit
+            .title 오늘 퇴실
+            table.table.text-center.align-middle.mb-0
+              thead.bg-light
+                tr
+                  th 퇴실예정시간
+                  th 객실명
+                  th 예약자
+                  th 퇴실 체크
+              tbody
+                //- tr
+                  td.empty(colspan='4') 오늘 퇴실이 없습니다.
+                tr
+                  td 15:20
+                  td
+                    | 하늘채 사랑방
+                    .small.text-muted 성인2, 아동0, 유아1
+                  td
+                    | 정우성
+                    br
+                    | 010-5503-9903
+                  td.checkbox
+                    label.custom-control.custom-checkbox
+                      input.custom-control-input(type='checkbox')
+                      span.custom-control-label
+                tr
+                  td 15:20
+                  td
+                    | 하늘채 사랑방
+                    .small.text-muted 성인2, 아동0, 유아1
+                  td
+                    | 정우성
+                    br
+                    | 010-5503-9903
+                  td.checkbox
+                    label.custom-control.custom-checkbox
+                      input.custom-control-input(type='checkbox')
+                      span.custom-control-label
+                tr
+                  td 15:20
+                  td
+                    | 하늘채 사랑방
+                    .small.text-muted 성인2, 아동0, 유아1
+                  td
+                    | 정우성
+                    br
+                    | 010-5503-9903
+                  td.checkbox
+                    label.custom-control.custom-checkbox
+                      input.custom-control-input(type='checkbox')
+                      span.custom-control-label
+
+        div(style='flex: 1 1 auto; margin-left: 2.5rem')
+          .dashboard-unit.dashboard-occupancy
+            .title 월별 객실 가동률
+            .header
+              .year-month 2018년 1월
+              .btn-group.mx-3
+                button.btn.btn-white.border-right-0.py-1.px-2(type='button')
+                  i.fa.fa-angle-left.text-dark
+                button.btn.btn-white.border-left-0.py-1.px-2(type='button')
+                  i.fa.fa-angle-right.text-dark
+              .text.ml-auto
+                span 예약가능일
+                span.big 14일
+              .text
+                span 공실
+                span.big 70%
+              button.btn.btn-white.mr-2(type='button') 할인설정
+              button.btn.btn-white(type='button') 자동할인설정
+            img.img-fluid(src='/assets/images/temp-graph.png')
+
+
+
+          .d-flex.align-items-stretch
+            div(style='flex: 1 1 auto')
+              .dashboard-unit
+                .title 공지사항
+              .dashboard-unit
+                .title App
+            div(style='flex: 0 0 20rem; margin-left: 2.5rem; padding-bottom: 2.5rem')
+              .dashboard-unit(style='height: 100%')
+                .title 이용문의
+      .dashboard-unit
+        .title 판매사 연동
+
+
+    include ./includes/footer.pug

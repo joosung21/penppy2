@@ -8,24 +8,26 @@ body(name='calendar')
     .artboard(style='min-width: 1000px')
       .board-title 객실 달력
       .row
-        .col-sm-3
+        .col-sm-2
           .btn-group
             a.btn.btn-white(href='/calendar', data-toggle='tooltip', title='달력으로 보기')
               img(src='/assets/images/view-calendar-off.svg', style='margin-top: -2px')
             a.btn.btn-white(href='/calendar-chart', data-toggle='tooltip', title='차트로 보기')
               img(src='/assets/images/view-chart-on.svg', style='margin-top: -2px')
-        .col-sm-6
+        .col-sm-8
           .calendar-controler
             .form-inline.justify-content-center
-              .year-month 2018년 1월
+              .year-month 2017.12.30(월)~2018.1.12(수)
               .btn-group.mx-3
                 button.btn.btn-white.border-right-0(type='button')
                   i.fa.fa-angle-left.fa-lg.text-dark
                 button.btn.btn-white.border-left-0(type='button')
                   i.fa.fa-angle-right.fa-lg.text-dark
+                button.btn.btn-white.btn-small.ml-2(type='button') 시작일 변경
+
       .status-model.d-flex.justify-content-end.mt-2
         .status-badge.waiting
-        | 예약대기
+        | 입금대기
         .status-badge.complete
         | 예약완료
         .status-badge.callonly
