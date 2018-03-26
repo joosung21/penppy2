@@ -1,0 +1,281 @@
+include ./includes/header.pug
+
+//-------- 레포트 Page ---------//
+body(name='report')
+  include ./includes/main-nav-left.pug
+  include ./includes/sub-nav.pug
+  .content-container
+    .artboard
+      .board-title
+        | 레포트
+
+      .row
+        .col-6
+          h4 바 차트
+          canvas#barChart(width='100%')
+          script.
+            var ctx = document.getElementById("barChart");
+            var myChart = new Chart(ctx, {
+              type: 'bar',
+              data: {
+                labels: ["1월", "2월", "3월", "4월", "5월", "6월"],
+                datasets: [{
+                  label: '매출',
+                  data: [2500000, 1200000, 900000, 2400000, 3450000, 6750000],
+                  backgroundColor: '#67ABFF'
+                }]
+              },
+              options: {
+                scales: {
+                  yAxes: [{
+                    ticks: {
+                      beginAtZero:true
+                    }
+                  }]
+                }
+              }
+            });
+
+        .col-6
+          h4 라인 차트
+          canvas#lineChart(width='100%')
+          script.
+            var ctx = document.getElementById("lineChart");
+            var myChart = new Chart(ctx, {
+              type: 'line',
+              data: {
+                labels: ["1월", "2월", "3월", "4월", "5월", "6월"],
+                datasets: [{
+                  label: '매출',
+                  data: [2500000, 1200000, 900000, 2400000, 3450000, 6750000],
+                  borderColor: '#67ABFF',
+                  fill: false,
+                }]
+              },
+              options: {
+                scales: {
+                  yAxes: [{
+                    ticks: {
+                      beginAtZero:true
+                    }
+                  }]
+                }
+              }
+            });
+
+      .py-5
+
+      .row
+        .col-6
+          h4 바 차트 컬러풀
+          canvas#barChart2(width='100%')
+          script.
+            var ctx = document.getElementById("barChart2");
+            var myChart = new Chart(ctx, {
+              type: 'bar',
+              data: {
+                labels: ["1월", "2월", "3월", "4월", "5월", "6월"],
+                datasets: [{
+                  label: '매출',
+                  data: [2500000, 1200000, 900000, 2400000, 3450000, 6750000],
+                  backgroundColor: ['#FFCD56', '#36A2EB', '#FF6384', '#7ED321', '#BD10E0', '#4A90E2']
+                }]
+              },
+              options: {
+                scales: {
+                  yAxes: [{
+                    ticks: {
+                      beginAtZero:true
+                    }
+                  }]
+                }
+              }
+            });
+
+        .col-6
+          h4 라인 차트 배경(유)
+          canvas#lineChart2(width='100%')
+          script.
+            var ctx = document.getElementById("lineChart2");
+            var myChart = new Chart(ctx, {
+              type: 'line',
+              data: {
+                labels: ["1월", "2월", "3월", "4월", "5월", "6월"],
+                datasets: [{
+                  label: '매출',
+                  data: [2500000, 1200000, 900000, 2400000, 3450000, 6750000],
+                  backgroundColor: '#67ABFF'
+                }]
+              },
+              options: {
+                scales: {
+                  yAxes: [{
+                    ticks: {
+                      beginAtZero:true
+                    }
+                  }]
+                }
+              }
+            });
+
+      .py-5
+
+      .row
+        .col-6
+          h4 바 차트 Stacked
+          canvas#barChart3(width='100%')
+          script.
+            var ctx = document.getElementById("barChart3");
+            var myChart = new Chart(ctx, {
+              type: 'bar',
+              data: {
+                labels: ["1월", "2월", "3월", "4월", "5월", "6월"],
+                datasets: [{
+                    label: '티몬',
+                    data: [100, 194, 35, 51, 27, 39],
+                    backgroundColor: '#FFCD56'
+                  },
+                  {
+                    label: '네아버',
+                    data: [80, 100, 17, 22, 14, 22],
+                    backgroundColor: '#36A2EB'
+                  },
+                  {
+                    label: '올스테이',
+                    data: [7, 9, 12, 1, 13, 2],
+                    backgroundColor: '#FF6384'
+                  },
+                  {
+                    label: '에어비앤비',
+                    data: [17, 19, 32, 21, 19, 7],
+                    backgroundColor: '#7ED321'
+                  }
+                ]
+              },
+              options: {
+                scales: {
+                  yAxes: [{
+                    stacked: true,
+                    ticks: {
+                      beginAtZero: true
+                    }
+                  }],
+                  xAxes: [{
+                    stacked: true,
+                    ticks: {
+                      beginAtZero: true
+                    }
+                  }]
+
+                }
+              }
+            });
+
+        .col-6
+          h4 라인 차트 멀티라인
+          canvas#lineChart3(width='100%')
+          script.
+            var ctx = document.getElementById("lineChart3");
+            var myChart = new Chart(ctx, {
+              type: 'line',
+              data: {
+                labels: ["1월", "2월", "3월", "4월", "5월", "6월"],
+                datasets: [{
+                    label: '티몬',
+                    data: [100, 194, 35, 51, 27, 39],
+                    borderColor: '#FFCD56',
+                    fill: false,
+                  },
+                  {
+                    label: '네아버',
+                    data: [80, 100, 17, 22, 14, 22],
+                    borderColor: '#36A2EB',
+                    fill: false,
+                  },
+                  {
+                    label: '올스테이',
+                    data: [7, 9, 12, 1, 13, 2],
+                    borderColor: '#FF6384',
+                    fill: false,
+                  },
+                  {
+                    label: '에어비앤비',
+                    data: [17, 19, 32, 21, 19, 7],
+                    borderColor: '#7ED321',
+                    fill: false,
+                  }
+                ]},
+              options: {
+                scales: {
+                  yAxes: [{
+                    ticks: {
+                      beginAtZero:true
+                    }
+                  }]
+                }
+              }
+            });
+
+      .py-5
+
+      .row
+
+        .col-4
+          h4 레이다 차트
+          canvas#radarChart(style='width: 100%; height: 40vh',)
+          script.
+            var ctx = document.getElementById("radarChart");
+            var myChart = new Chart(ctx, {
+              type: 'radar',
+              data: {
+                labels: ["네이버", "티몬", "올스테이", "실시간 예약창", "떠나요", "에어비엔비"],
+                datasets: [{
+                    label: '판매량',
+                    data: [17, 23, 15, 7, 12, 15],
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, .8)'
+                }]
+              },
+              options: {
+              }
+            });
+
+
+        .col-4
+          h4 도넛 차트
+          canvas#doughnutChart(style='width: 100%; height: 40vh',)
+          script.
+            var ctx = document.getElementById("doughnutChart");
+            var myChart = new Chart(ctx, {
+              type: 'doughnut',
+              data: {
+                labels: ["해", "달", "별"],
+                datasets: [{
+                    label: '판매량',
+                    data: [20, 10, 4],
+                    backgroundColor: ['#FFCD56', '#36A2EB', '#FF6384'],
+                }]
+              },
+              options: {
+              }
+            });
+
+        .col-4
+          h4 파이 차트
+          canvas#pieChart(style='width: 100%; height: 40vh',)
+          script.
+            var ctx = document.getElementById("pieChart");
+            var myChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                labels: ["해", "달", "별"],
+                datasets: [{
+                    label: '판매량',
+                    data: [24, 35, 41],
+                    backgroundColor: ['#FFCD56', '#36A2EB', '#FF6384'],
+                }]
+              },
+              options: {
+              }
+            });
+
