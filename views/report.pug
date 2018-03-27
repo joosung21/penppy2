@@ -12,6 +12,7 @@ body(name='report')
       .row
         .col-6
           h4 바 차트
+          .py-2
           canvas#barChart(width='100%')
           script.
             var ctx = document.getElementById("barChart");
@@ -20,16 +21,20 @@ body(name='report')
               data: {
                 labels: ["1월", "2월", "3월", "4월", "5월", "6월"],
                 datasets: [{
-                  label: '매출',
                   data: [2500000, 1200000, 900000, 2400000, 3450000, 6750000],
-                  backgroundColor: '#67ABFF'
+                  backgroundColor: '#67ABFF',
                 }]
               },
               options: {
+                legend: {
+                  display: false
+                },
                 scales: {
                   yAxes: [{
                     ticks: {
-                      beginAtZero:true
+                      callback: function(value, index, values) {
+                        return value.toLocaleString("ko-KR",{style:"currency", currency:"KRW"});
+                      }
                     }
                   }]
                 }
@@ -38,6 +43,7 @@ body(name='report')
 
         .col-6
           h4 라인 차트
+          .py-2
           canvas#lineChart(width='100%')
           script.
             var ctx = document.getElementById("lineChart");
@@ -53,10 +59,15 @@ body(name='report')
                 }]
               },
               options: {
+                legend: {
+                  display: false
+                },
                 scales: {
                   yAxes: [{
                     ticks: {
-                      beginAtZero:true
+                      callback: function(value, index, values) {
+                        return value.toLocaleString("ko-KR",{style:"currency", currency:"KRW"});
+                      }
                     }
                   }]
                 }
@@ -68,6 +79,7 @@ body(name='report')
       .row
         .col-6
           h4 바 차트 컬러풀
+          .py-2
           canvas#barChart2(width='100%')
           script.
             var ctx = document.getElementById("barChart2");
@@ -82,10 +94,15 @@ body(name='report')
                 }]
               },
               options: {
+                legend: {
+                  display: false
+                },
                 scales: {
                   yAxes: [{
                     ticks: {
-                      beginAtZero:true
+                      callback: function(value, index, values) {
+                        return value.toLocaleString("ko-KR",{style:"currency", currency:"KRW"});
+                      }
                     }
                   }]
                 }
@@ -94,6 +111,7 @@ body(name='report')
 
         .col-6
           h4 라인 차트 배경(유)
+          .py-2
           canvas#lineChart2(width='100%')
           script.
             var ctx = document.getElementById("lineChart2");
@@ -108,10 +126,15 @@ body(name='report')
                 }]
               },
               options: {
+                legend: {
+                  display: false
+                },
                 scales: {
                   yAxes: [{
                     ticks: {
-                      beginAtZero:true
+                      callback: function(value, index, values) {
+                        return value.toLocaleString("ko-KR",{style:"currency", currency:"KRW"});
+                      }
                     }
                   }]
                 }
@@ -206,13 +229,6 @@ body(name='report')
                   }
                 ]},
               options: {
-                scales: {
-                  yAxes: [{
-                    ticks: {
-                      beginAtZero:true
-                    }
-                  }]
-                }
               }
             });
 
@@ -260,6 +276,38 @@ body(name='report')
               }
             });
 
+        .col-4
+          h4 도넛 차트(가운데 합계표시)
+          canvas#doughnutChart2(style='width: 100%; height: 40vh',)
+          script.
+            var ctx = document.getElementById("doughnutChart2");
+            var myChart = new Chart(ctx, {
+              type: 'doughnut',
+              data: {
+                labels: ["해", "달", "별"],
+                datasets: [{
+                    label: '판매량',
+                    data: [20, 10, 4],
+                    backgroundColor: ['#FFCD56', '#36A2EB', '#FF6384'],
+                }]
+              },
+              options: {
+              },
+              plugins: [{
+                id: 'my-plugin',
+                afterDraw: function (chart, option) {
+                  chart.ctx.fillStyle = '#4F4F4F'
+                  chart.ctx.textBaseline = 'middle'
+                  chart.ctx.textAlign = 'center'
+                  chart.ctx.font = '4rem "Spoqa Han Sans"'
+                  chart.ctx.fillText('34', chart.canvas.width / 2, chart.canvas.height / 2 + 15)
+                }
+              }]
+            });
+
+      .py-5
+
+      .row
         .col-4
           h4 파이 차트
           canvas#pieChart(style='width: 100%; height: 40vh',)
