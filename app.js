@@ -9,6 +9,7 @@ app.use('/assets/', express.static('assets'))
 app.use('/node_modules/', express.static('node_modules'))
 
 app.get('/', function (req, res){res.render('dashboard')})
+app.get('/login', function (req, res){res.render('login')})
 app.get('/reservation-list', function (req, res){res.render('reservation-list')})
 app.get('/room-block', function (req, res){res.render('room-block')})
 app.get('/calendar', function (req, res){res.render('calendar')})

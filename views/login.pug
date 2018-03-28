@@ -1,0 +1,121 @@
+include ./includes/header.pug
+
+//-------- Login Page ---------//
+body
+  .login
+    .d-flex.justify-content-between
+      img(src='/assets/images/O.svg')
+      img(src='/assets/images/N.svg')
+
+    .row
+      .col-sm-6.col-lg-5.col-xl-4.mx-auto
+        .text-center
+          img(src='/assets/images/bi-onda-white.svg')
+        .login-box
+          h4.text-center.mb-4
+            b.mr-2 펜션
+            | 파트너 로그인
+          input.form-control.mb-2(type='text', placeholder='이메일 주소')
+          input.form-control.mb-2(type='text', placeholder='비밀번호')
+          button.btn.btn-primary.btn-lg.btn-block.btn-login(type='button', data-toggle='modal', data-keyboard='true', data-target='#selectPropertyModal') 로그인
+          .d-flex.justify-content-between.mt-3
+            label.custom-control.custom-checkbox
+              input.custom-control-input(type='checkbox', checked)
+              span.custom-control-label.text-muted
+                small(style='position: relative; top: -1px') 아이디 저장
+            div
+              a.mt-1.text-muted.small(href='#', data-toggle='modal', data-keyboard='true', data-target='#findIdModal') 아이디
+              a.mt-1.text-muted.small(href='#', data-toggle='modal', data-keyboard='true', data-target='#findPwModal') /비밀번호 찾기
+
+    .d-flex.justify-content-between
+      img(src='/assets/images/D.svg')
+      img(src='/assets/images/A.svg')
+
+//- 아이디찾기 Modal
+#findIdModal.modal.fade(tabindex='-1')
+  .modal-dialog.modal-sm
+    .modal-content
+      .modal-header
+        h5.modal-title 아이디 찾기
+        a.close(data-dismiss='modal')
+          img(src='/assets/images/close.svg')
+      .modal-body
+        .form-group.row
+          label.col-sm-2.pt-1 이름
+          .col-sm-10
+            input.form-control(type='text')
+        .form-group.row
+          label.col-sm-2.pt-1 전화번호
+          .col-sm-10
+            input.form-control(type='text')
+        .text-center.py-3
+          -
+            var message01 = `
+              swal({
+                title: "아이디를 찾았습니다.",
+                text: "damon.cho@onda.me",
+                confirmButtonText: "확인",
+              });
+            `
+          button.btn.btn-primary.btn-lg(type='button', data-dismiss='modal', onclick= message01) 확인
+
+//- 비밀번호 찾기 Modal
+#findPwModal.modal.fade(tabindex='-1')
+  .modal-dialog.modal-sm
+    .modal-content
+      .modal-header
+        h5.modal-title 비밀번호 찾기
+        a.close(data-dismiss='modal')
+          img(src='/assets/images/close.svg')
+      .modal-body
+        .form-group.row
+          label.col-sm-3.pt-1 이메일 주소
+          .col-sm-9
+            input.form-control(type='text')
+        .text-center.py-3
+          -
+            var message02 = `
+              swal({
+                title: "비밀번호 재설정 링크가<br>이메일과 핸드폰 문자로 전송되었습니다.",
+                confirmButtonText: "확인",
+                showCancelButton: true,
+                cancelButtonText: '재전송'
+              });
+            `
+          button.btn.btn-primary.btn-lg(type='button', data-dismiss='modal', onclick= message02) 비밀번호 재설정 링크전송
+
+//- 숙소선택 Modal
+#selectPropertyModal.modal.fade(tabindex='-1')
+  .modal-dialog.modal-sm
+    .modal-content
+      .modal-header
+        h5.modal-title 숙소 선택
+        a.close(data-dismiss='modal')
+          img(src='/assets/images/close.svg')
+      .modal-body.search-select-modal
+        .search
+          .input-group
+            input.form-control(type="text", placeholder='숙소명을 입력하세요.', style='width: 22rem')
+            .input-group-append
+              button.btn.btn-primary.py-0.px-2(type='button')
+                img(src='/assets/images/search_white.svg', style='margin-top: -.2rem')
+        ul.list-unstyled
+          li 전주 부경당 펜션
+          li 뷰펜션
+          li 강릉 쉼이 있는 집
+          li 전주 부경당 펜션
+          li 뷰펜션
+          li 강릉 쉼이 있는 집
+          li 전주 부경당 펜션
+          li 뷰펜션
+          li 강릉 쉼이 있는 집
+          li 전주 부경당 펜션
+          li 뷰펜션
+          li 강릉 쉼이 있는 집
+
+//- 임시 링크
+script.
+  $('li').click(function(){
+    location.href='/'
+  });
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>O</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="로그인" transform="translate(-30.000000, -30.000000)" fill="#FEFEFE">
+            <g id="BG">
+                <g id="O" transform="translate(30.000000, 30.000000)">
+                    <path d="M15,1.2760491 C7.41650014,1.2760491 1.27176706,7.42078219 1.27176706,15.004282 C1.27176706,22.5834999 7.41650014,28.7282329 15,28.7282329 C22.5834999,28.7282329 28.7282329,22.5834999 28.7282329,15.004282 C28.7282329,7.42078219 22.5834999,1.2760491 15,1.2760491 M15,30.004282 C6.71424493,30.004282 0,23.2857551 0,15.004282 C0,6.71852698 6.71424493,0 15,0 C23.2857551,0 30,6.71852698 30,15.004282 C30,23.2857551 23.2857551,30.004282 15,30.004282"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

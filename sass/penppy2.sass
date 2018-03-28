@@ -474,6 +474,10 @@ hr.table-devider
       &.swal2-confirm
         background-color: $onda !important
 
+    .swal2-actions
+      button
+        border-radius: 2px
+
 
 /* The switch - the box around the slider
 .switch
@@ -773,7 +777,50 @@ footer
   font-size: .9rem
   border-top: 1px solid $border-color
 
-//----------- 대쉬보드 ------------------//
+
+//----------- 로그인 ---------------//
+.login
+  @extend %display-flex
+  flex-direction: column
+  justify-content: space-between
+  width: 100vw
+  height: 100vh
+  background: url('/assets/images/login-bg-01.png') no-repeat center bottom 20%
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+  padding: 2rem
+  .login-box
+    background-color: white
+    border-radius: 5px
+    padding: 3rem 7vw
+    margin: 2rem 0 7rem 0
+  .btn-login
+    font-size: 1.4rem
+    padding: .7rem 0
+
+.search-select-modal
+  padding-top: 0
+  .search
+    background-color: $white-gray
+    padding: 1.5rem 2.5rem
+    margin: 0 -2.5rem
+  ul
+    margin: 0
+    li
+      padding: 1rem
+      border-bottom: 1px solid $border-color
+      cursor: pointer
+      transition: all .3s
+      &:hover
+        background-color: #FAFAFA
+
+
+
+
+
+//----------- 대쉬보드 ---------------//
 .artboard.transparent
   background-color: transparent
   box-shadow: none
