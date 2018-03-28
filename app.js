@@ -52,6 +52,10 @@ app.get('/bp-mobile-book', function (req, res){res.render('bp-mobile-book')})
 app.get('/bp-pc', function (req, res){res.render('bp-pc')})
 app.get('/bp-pc-book', function (req, res){res.render('bp-pc-book')})
 
+// Error Pages
+app.get('/maintnence', function (req, res){res.render('maintnence')})
+app.get('*', function (req, res){res.render('404')})
+
 
 app.listen(3200, function () {
   console.log('App listening on port 3200!')
