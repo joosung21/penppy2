@@ -165,12 +165,10 @@ body
           input.custom-control-input(type='checkbox', checked)
           span.custom-control-label 상품판매 약관에 동의합니다.
         .text-center.py-3
-          button.btn.btn-primary.btn-lg(type='button', data-dismiss='modal') 확인
+          button.btn.btn-primary.btn-lg(type='button', data-dismiss='modal', onclick='location.href="/"') 확인
 
 //- 임시 스크립트: 모달
 script.
-  $('#agreementModal').modal();
-
   $('li').click(function(){
     $('#selectPropertyModal').modal('hide');
     $('#agreementModal').modal();
