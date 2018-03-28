@@ -748,6 +748,14 @@ input
     margin: -1.5rem -3rem 3rem -3rem
   .board-container
     max-width: 900px
+  .section-board
+    background-color: white
+    padding: 3rem
+    @extend %box-shadow
+    margin-bottom: 2.5rem
+    h4
+      font-weight: 600
+      font-size: 1.3rem
 
 // Two Depth Layout
 body.two-depth
@@ -1469,7 +1477,7 @@ table
           &.season08
             background-color: $cal-season08
 
-// 문자발송 정보 //
+// 문자발송 정보
 .sms-form
   background-color: #F0F7FF
   border-radius: 10px
@@ -1483,7 +1491,7 @@ table
   font-size: .85rem
   color: #4f4f4f
 
-// 판매사 연동신청 //
+// 판매사 연동신청
 .bi-wrapper
   border: 1px solid $border-color
   float: left
@@ -1500,7 +1508,7 @@ table
     padding: .5rem 0
     border-top: 1px solid $border-color
 
-// 판매사 연동현황 //
+// 판매사 연동현황
 .table-gds-status
   margin: 0
   td
@@ -1513,6 +1521,51 @@ table
     .bi
       height: 1.3rem
       margin-right: .5rem
+
+// 통계
+.summary
+  .revenue
+    font-size: 2.2rem
+    .number
+      font-size: 3.5rem
+      line-height: 3.5rem
+      color: $blue
+      font-weight: 600
+      margin-right: .3rem
+  table
+    width: 85%
+    margin: .75rem 0 .2rem 0
+    td
+      width: 33.3%
+      padding: .75rem 1.2rem
+
+.brief
+  text-align: center
+  border-left: 1px solid $border-color
+  padding: 0 2.5rem
+  &:first-child
+    border: none
+  h4
+    margin-bottom: .3rem
+    white-space: nowrap
+  .value
+    padding: 2.4rem 0
+    font-size: 1.3rem
+    white-space: nowrap
+    .number
+      font-size: 2rem
+      color: $blue
+      margin-right: .3rem
+      font-weight: 400
+      position: relative
+      top: .1rem
+  .seperate
+    margin-top: 1rem
+    div
+      @extend %display-flex
+      justify-content: space-between
+      line-height: 1.7rem
+
 
 
 
