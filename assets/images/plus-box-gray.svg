@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="35px" viewBox="0 0 36 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0.5" y="0" width="35" height="35" rx="2"></rect>
+    </defs>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="메인" transform="translate(-1475.000000, -946.000000)">
+            <g id="BODY" transform="translate(250.000000, 101.000000)">
+                <g id="공지사항" transform="translate(720.000000, 822.000000)">
+                    <g id="Group-2" transform="translate(505.000000, 23.000000)">
+                        <g id="btn">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <rect stroke="#E5E5E5" stroke-width="1" x="1" y="0.5" width="34" height="34" rx="2"></rect>
+                        </g>
+                        <g id="add" transform="translate(10.500000, 9.229560)" fill="#929292">
+                            <g id="Page-1">
+                                <polygon id="Fill-1" transform="translate(7.500000, 7.500000) rotate(90.000000) translate(-7.500000, -7.500000) " points="0 8 15 8 15 7 0 7"></polygon>
+                                <polygon id="Fill-1" points="0 8 15 8 15 7 0 7"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

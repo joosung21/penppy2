@@ -43,6 +43,11 @@ $left-side-padding: 2rem
   border-color: $navy-blue
 .btn-light
   background-color: #F2F3F8
+
+.btn-outline-primary
+  &:hover, &:active
+    color: white
+
 .table-bordered
   thead
     th, td
@@ -111,6 +116,14 @@ $left-side-padding: 2rem
     background-color: $white-gray
     color: #929292
 
+.table.table-hover
+  tbody
+    tr
+      &:hover
+        td
+          background-color: #FBFBFC
+          cursor: pointer
+
 input::placeholder, textarea::placeholder
   color: #929292
 
@@ -164,6 +177,8 @@ select.custom-select
   color: $onda
 .text-dark
   color: #4f4f4f
+.text-emerald
+  color: #64C2D0
 .font-xsmall
   font-size: 0.85rem
 .font-small
@@ -180,6 +195,13 @@ body
   margin-bottom: 40px
   label
     font-weight: 400
+
+label.label-nessesary
+  &:after
+    content: '*'
+    color: $red
+    padding-left: .25rem
+
 a
   cursor: pointer
 
@@ -552,6 +574,22 @@ input
   input:checked + .slider:after
     content: '불가'
 
+// Link List
+ul.link-list
+  li
+    &:hover
+      background-color: #FBFBFC
+
+
+
+
+
+
+
+
+
+
+
 
 //----------- Layout -----------//
 #main-nav
@@ -845,7 +883,13 @@ footer
     td.empty
       height: 20rem
 
+
+.dashboard-summary, .dashboard-weather
+  height: 17rem
+
 .dashboard-summary
+  transition: all .7s
+  overflow: hidden
   .date
     text-align: center
     margin-bottom: 1rem
@@ -872,10 +916,69 @@ footer
       .text
         line-height: 1rem
 
+.dashboard-summary.hidden
+  flex: 0 1 0 !important
+  padding: 0
+  *
+    transition: all .3s
+    opacity: 0
+
 .dashboard-weather
+  position: relative
   margin-left: 2.5rem
   background-color: $onda
   color: white
+  transition: all .7s
+  cursor: pointer
+  .weather-wrapper
+    @extend %display-flex
+    height: calc(100% - 1.2rem)
+    justify-content: space-between
+    .weather-day
+      @extend %display-flex
+      flex-direction: column
+      transition: all .5s
+      width: 14rem
+      .degree
+        font-size: 2.7rem
+        .marker
+          vertical-align: top
+          position: relative
+          top: -.5rem
+          left: .2rem
+        .number
+          font-size: 4rem
+          line-height: 4.7rem
+          font-weight: 400
+      .weather
+        margin-top: auto
+        font-size: 1.4rem
+        font-weight: 400
+        *
+          vertical-align: middle
+        img
+          margin-left: .5rem
+      + .weather-day
+        margin-left: -14rem
+        opacity: 0
+
+.dashboard-weather:after
+  position: absolute
+  content: ''
+  right: 2rem
+  bottom: 2rem
+  background: url('/assets/images/plus-box.svg') 0 0 no-repeat
+  width: 36px
+  height: 35px
+  transition: all .3s
+
+.dashboard-weather.expended
+  flex: 1 1 100% !important
+  margin-left: 0
+  .weather-day
+    opacity: 1 !important
+  &:after
+    opacity: 0
 
 .dashboard-occupancy
   .header
