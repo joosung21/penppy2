@@ -1,0 +1,31 @@
+include ./includes/header.pug
+
+//-------- 직원관리 ---------//
+body
+  include ./includes/main-nav-left.pug
+  include ./includes/sub-nav.pug
+  .content-container
+    .artboard
+      .board-title 직원관리
+      table.table.table-hover.text-center.align-middle
+        thead.bg-light
+          tr
+            th(style='width: 18rem') 이름
+            th 이메일
+            th(style='width: 18rem') 로그인 일시
+        tbody
+          tr(onclick='location.href="/member-edit"')
+            td 김지호
+            td jiho11@naver.com
+            td 2018-03-05 15:32
+          tr(onclick='location.href="/member-edit"')
+            td 이윤정
+            td betty234@gmail.com
+            td 2018-03-05 15:32
+      .text-right
+        a.btn.btn-white(href='/member-edit')
+          i.fa.fa-plus.mr-1
+          | 직원등록
+
+
+    include ./includes/footer.pug

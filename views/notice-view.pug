@@ -1,0 +1,34 @@
+include ./includes/header.pug
+
+//-------- 공지사항: View ---------//
+body
+  include ./includes/main-nav-left.pug
+  include ./includes/sub-nav.pug
+  .content-container
+    .artboard
+      .board-title 공지사항
+      .form-group.row
+        label.col-3.col-lg-2 제목
+        .col-9.col-lg-10 서버 이전 작업 안내
+      .form-group.row
+        label.col-3.col-lg-2 내용
+        .col-9.col-lg-10
+          p(style='white-space: pre-wrap').
+            안녕하세요.^^ ONDA 운영담당자 입니다.
+
+            다양한 판매채널을 확장하면서 좀 더 안정적인서버를 사용하기 위해 서버이전작업 진행예정 중입니다.
+            진행일시: 2017년 11월 8일 AM 03:00 ~ AM 05:00
+
+            서버작업이 진행되면 판매되고 있는 예약과 취소가 잠시 중단되게 됩니다.
+            하여 예약률이 낮은 새벽시간대 작업을 진행 할 예정입니다.
+            불편을 드려 죄송합니다.
+            더나은 서비스와 더 많은 예약 보내드리기 위해 노력하는 ONDA가 되겠습니다.
+            감사합니다.
+      .form-group.row
+        label.col-3.col-lg-2 등록일
+        .col-9.col-lg-10 2018.03.05(월) 15:32
+
+      .text-center.pt-4
+          a.btn.btn-primary.btn-lg(href='/notice') 목록
+
+    include ./includes/footer.pug

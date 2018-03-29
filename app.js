@@ -24,6 +24,9 @@ app.get('/revenue', function (req, res){res.render('revenue')})
 app.get('/agreement', function (req, res){res.render('agreement')})
 app.get('/notice', function (req, res){res.render('notice')})
 app.get('/notice-view', function (req, res){res.render('notice-view')})
+app.get('/account', function (req, res){res.render('account')})
+app.get('/member', function (req, res){res.render('member')})
+app.get('/member-edit', function (req, res){res.render('member-edit')})
 
 // 업체설정
 app.get('/setting', function (req, res){res.render('setting-basic')})

@@ -1,0 +1,65 @@
+include ./includes/header.pug
+
+//-------- 멤버관리 ---------//
+body
+  include ./includes/main-nav-left.pug
+  include ./includes/sub-nav.pug
+  .content-container
+    .artboard
+      .board-title 멤버관리
+      .board-container
+        .form-group.row
+          label.label-necessary.col-sm-2.pt-1 이름
+          .col-sm-10
+            input.form-control(type='text', value='조영수')
+        .form-group.row
+          label.label-necessary.col-sm-2.pt-1 연락처
+          .col-sm-10
+            input.form-control(type='text', value='010-1205-5300')
+        .form-group.row
+          label.label-necessary.col-sm-2.pt-1 이메일(아이디)
+          .col-sm-10
+            input.form-control(type='text', value='damon@naver.com')
+        .form-group.row
+          label.label-necessary.col-sm-2.pt-1 비밀번호
+          .col-sm-10
+            input.form-control(type='text')
+        .form-group.row
+          label.label-necessary.col-sm-2.pt-1 권한
+          .col-sm-10
+            label.custom-control.custom-checkbox.mr-4
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 예약목록
+            label.custom-control.custom-checkbox.mr-4
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 객실달력
+            label.custom-control.custom-checkbox.mr-4
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 방막기
+            label.custom-control.custom-checkbox.mr-4
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 기본요금
+            label.custom-control.custom-checkbox.mr-4
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 할인요금
+            label.custom-control.custom-checkbox.mr-4
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 정산목록
+            label.custom-control.custom-checkbox.mr-4
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 통계
+            label.custom-control.custom-checkbox.mr-4
+              input.custom-control-input(type='checkbox')
+              span.custom-control-label 설정
+
+        .row.text-center.pt-4.no-gutters
+          .col-8.offset-2
+            button.btn.btn-secondary.btn-lg.mr-1(type='button') 취소
+            button.btn.btn-primary.btn-lg(type='button') 저장
+          .col-2.text-right
+            button.btn.btn-white(type='button')
+              i.fa.fa-trash.fa-lg.mr-2
+              | 삭제
+
+
+    include ./includes/footer.pug

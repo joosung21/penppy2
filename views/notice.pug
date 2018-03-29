@@ -14,23 +14,15 @@ body
             th 제목
             th(style='width: 18rem') 등록일
         tbody
-          tr
+          tr(onclick='location.href="/notice-view"')
             td
               img(src='/assets/images/bell.svg')
             td.text-left 서버 이전 작업 안내
             td 2018.03.05(월) 15:32
-          tr
+          tr(onclick='location.href="/notice-view"')
             td 01
             td.text-left ONDA 온다 베타 런칭 안내
             td 2018.02.14(수) 07:08
-
-      .text-right
-        a.btn.btn-white(href='/notice-view')
-          i.fa.fa-plus.mr-1
-          | 공지사항 등록
-
-
-
 
 
     include ./includes/footer.pug
