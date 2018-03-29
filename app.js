@@ -22,6 +22,8 @@ app.get('/season-year-calendar', function (req, res){res.render('season-year-cal
 app.get('/payment', function (req, res){res.render('payment')})
 app.get('/revenue', function (req, res){res.render('revenue')})
 app.get('/agreement', function (req, res){res.render('agreement')})
+app.get('/notice', function (req, res){res.render('notice')})
+app.get('/notice-view', function (req, res){res.render('notice-view')})
 
 // 업체설정
 app.get('/setting', function (req, res){res.render('setting-basic')})

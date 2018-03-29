@@ -141,6 +141,13 @@ select.custom-select
   opacity: 1
   margin: -.12rem 0
 
+.modal-tail
+  margin-left: -2.5rem
+  margin-right: -2.5rem
+  margin-bottom: -2.7rem
+  margin-top: 5rem
+  padding: .75rem 2.5rem .25rem 2.5rem
+
 .form-inline
   .custom-select
     width: auto
@@ -577,8 +584,7 @@ ul.link-list
     padding: 1rem 0
     border-bottom: 1px solid $border-color
     cursor: pointer
-    &:hover
-      background-color: #FBFBFC
+
 
 
 
@@ -963,9 +969,6 @@ footer
           vertical-align: middle
         img
           margin-left: .5rem
-      + .weather-day
-        margin-left: -14rem
-        opacity: 0
 
 .dashboard-weather:after
   position: absolute
@@ -975,15 +978,16 @@ footer
   background: url('/assets/images/plus-box.svg') 0 0 no-repeat
   width: 36px
   height: 35px
-  transition: all .3s
 
-.dashboard-weather.expended
-  flex: 1 1 100% !important
+.dashboard-weather-expend
+  display: none
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
   margin-left: 0
-  .weather-day
-    opacity: 1 !important
   &:after
-    opacity: 0
+    display: none
 
 .dashboard-occupancy
   .header
@@ -1001,12 +1005,12 @@ footer
         font-size: 1.3rem
 
 .logo-list
-  margin-top: -1.5rem
+  margin-top: -2rem
   li
     text-align: center
-    padding: .5rem 0
+    padding-top: 1rem
     img
-      width: 70%
+      width: 8.5rem
 
 
 

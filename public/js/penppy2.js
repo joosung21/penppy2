@@ -79,12 +79,10 @@ $( document ).ready(function() {
 
   // Dashboard Weather Expend
   $('.dashboard-weather').mouseover(function(){
-    $('.dashboard-summary').addClass('hidden');
-    $(this).addClass('expended');
+    $('.dashboard-weather-expend').show();
   });
-  $('.dashboard-weather').mouseout(function(){
-    $('.dashboard-summary').removeClass('hidden');
-    $(this).removeClass('expended');
+  $('.dashboard-weather-expend').mouseout(function(){
+    $(this).hide();
   });
 
   // DEMO 지울 것: 할인설정 저장버튼 슬라이더

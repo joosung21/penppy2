@@ -6,7 +6,7 @@ body
   include ./includes/sub-nav.pug
   .content-container
     .artboard.transparent(style='min-width: 1000px')
-      .d-flex
+      .d-flex(style='position: relative')
         .dashboard-unit.dashboard-summary(style='flex: 1 1 auto')
           .date
             .head Today
@@ -26,6 +26,18 @@ body
               .text 미입금취소
 
         .dashboard-unit.dashboard-weather(style='flex: 0 0 20rem')
+          h6 제주도 제주시
+          .weather-wrapper
+            .weather-day
+              .degree
+                span.number 17
+                span.marker °
+              .weather
+                span.text 맑음
+                img(src='/assets/images/weather-01.svg')
+              .date 3월 20일 화요일
+
+        .dashboard-unit.dashboard-weather.dashboard-weather-expend
           h6 제주도 제주시
           .weather-wrapper
             .weather-day
@@ -89,7 +101,7 @@ body
         .col-xl-5
           .row
             .col-6.col-xl-12
-              .dashboard-unit
+              .dashboard-unit(style='min-height: 37rem')
                 .title 오늘 입실
                 table.table.table-hover.text-center.align-middle.mb-0
                   thead.bg-light
@@ -101,7 +113,7 @@ body
                   tbody
                     //- tr
                       td.empty(colspan='4') 오늘 입실이 없습니다.
-                    tr
+                    tr(onclick='openPmsSlider("edit")')
                       td 15:20
                       td
                         | 하늘채 사랑방
@@ -112,7 +124,7 @@ body
                         | 010-5503-9903
                       td
                         | 픽업, 바베큐, 조식
-                    tr
+                    tr(onclick='openPmsSlider("edit")')
                       td --:--
                       td
                         | 하늘채 사랑방
@@ -123,7 +135,7 @@ body
                         | 010-5503-9903
                       td
                         | 픽업, 바베큐, 조식
-                    tr
+                    tr(onclick='openPmsSlider("edit")')
                       td --:--
                       td
                         | 하늘채 사랑방
@@ -133,7 +145,7 @@ body
                         br
                         | 010-5503-9903
                       td
-                    tr
+                    tr(onclick='openPmsSlider("edit")')
                       td 15:20
                       td
                         | 하늘채 사랑방
@@ -143,7 +155,7 @@ body
                         br
                         | 010-5503-9903
                       td
-                    tr
+                    tr(onclick='openPmsSlider("edit")')
                       td --:--
                       td
                         | 하늘채 사랑방
@@ -154,7 +166,7 @@ body
                         | 010-5503-9903
                       td
             .col-6.col-xl-12
-              .dashboard-unit
+              .dashboard-unit(style='min-height: 29rem')
                 .title 오늘 퇴실
                 table.table.table-hover.text-center.align-middle.mb-0
                   thead.bg-light
@@ -166,7 +178,7 @@ body
                   tbody
                     //- tr
                       td.empty(colspan='4') 오늘 퇴실이 없습니다.
-                    tr
+                    tr(onclick='openPmsSlider("edit")')
                       td 15:20
                       td
                         | 하늘채 사랑방
@@ -179,7 +191,7 @@ body
                         label.custom-control.custom-checkbox
                           input.custom-control-input(type='checkbox')
                           span.custom-control-label
-                    tr
+                    tr(onclick='openPmsSlider("edit")')
                       td 15:20
                       td
                         | 하늘채 사랑방
@@ -192,7 +204,7 @@ body
                         label.custom-control.custom-checkbox
                           input.custom-control-input(type='checkbox', checked)
                           span.custom-control-label
-                    tr
+                    tr(onclick='openPmsSlider("edit")')
                       td 15:20
                       td
                         | 하늘채 사랑방
@@ -207,7 +219,7 @@ body
                           span.custom-control-label
 
         .col-xl-7
-          .dashboard-unit.dashboard-occupancy
+          .dashboard-unit.dashboard-occupancy(style='min-height: 37rem')
             .title 월별 객실 가동률
             .header
               .year-month 2018년 1월
@@ -223,21 +235,21 @@ body
               a.btn.btn-outline-primary(href='/setting/auto-edit') 자동할인설정
             img.w-100(src='/assets/images/temp-graph.png')
 
-          .d-flex.align-items-stretch
+          .d-flex.align-items-stretch(style='min-height: 29rem')
             div(style='flex: 1 1 auto')
               .dashboard-unit
                 .title.d-flex.justify-content-between.mb-0
                   | 공지사항
-                  a(href='#')
+                  a(href='/notice')
                     img(src='/assets/images/plus-box-gray.svg')
                 ul.link-list.list-unstyled.m-0
-                  li.row.no-gutters
+                  li.row.no-gutters(onclick='location.href="/notice-view"')
                     .col-8
                       img.mr-2(src='/assets/images/bell.svg')
                       | [온다 APP] ‘자동예약수집’ 기능 업데이트 안내
                     .col-4.text-right
                       | 2018.03.05(월)
-                  li.row.no-gutters
+                  li.row.no-gutters(onclick='location.href="/notice-view"')
                     .col-8
                       | 서버 이전 작업 안내
                     .col-4.text-right
@@ -271,7 +283,7 @@ body
             .mt-2
               a.btn.btn-white(href='#') 판매사 연동 신청하기
           .col-md-8
-            ul.list-unstyled.logo-list.row
+            ul.list-unstyled.logo-list.row.no-gutters
               li.col-lg-2.col-sm-4
                 img(src='/assets/images/bi/bi-01.png')
               li.col-lg-2.col-sm-4
@@ -296,6 +308,35 @@ body
                 img(src='/assets/images/bi/bi-11.png')
 
 
-
-
     include ./includes/footer.pug
+
+//- 공지사항 Modal
+#noticeModal.modal.fade(tabindex='-1')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h5.modal-title 서버 이전 작업 안내
+        a.close(data-dismiss='modal')
+          img(src='/assets/images/close.svg')
+      .modal-body
+        p(style='white-space: pre-wrap').
+          안녕하세요.^^ ONDA 운영담당자 입니다.
+
+          다양한 판매채널을 확장하면서 좀 더 안정적인서버를 사용하기 위해 서버이전작업 진행 예정중입니다.
+          진행일시: 2017년 11월 8일 AM 03:00 ~ AM 05:00
+
+          서버작업이 진행되면 판매되고 있는 예약과 취소가 잠시 중단되게 됩니다.
+          하여 예약률이 낮은 새벽시간대 작업을 진행 할 예정입니다.
+          불편을 드려 죄송합니다.
+          더나은 서비스와 더 많은 예약 보내드리기 위해 노력하는 ONDA가 되겠습니다.
+          감사합니다.
+        .modal-tail.bg-light
+          label.custom-control.custom-checkbox
+            input.custom-control-input(type='checkbox')
+            span.custom-control-label.text-muted
+              small(style='position: relative; top: -1px') 더이상 보지 않기
+
+include ./includes/pms-slider.pug
+
+script.
+  $('#noticeModal').modal();
