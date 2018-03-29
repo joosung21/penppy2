@@ -35,7 +35,7 @@ body
               .weather
                 span.text 맑음
                 img(src='/assets/images/weather-01.svg')
-              .date 2018년 3월 20일 화요일
+              .date 3월 20일 화요일
             .weather-day
               .degree
                 span.number -9
@@ -43,7 +43,7 @@ body
               .weather
                 span.text 눈
                 img(src='/assets/images/weather-01.svg')
-              .date 2018년 3월 21일 수요일
+              .date 3월 21일 수요일
             .weather-day
               .degree
                 span.number -4
@@ -51,7 +51,7 @@ body
               .weather
                 span.text 맑음
                 img(src='/assets/images/weather-01.svg')
-              .date 2018년 3월 22일 목요일
+              .date 3월 22일 목요일
             .weather-day
               .degree
                 span.number 12
@@ -59,7 +59,7 @@ body
               .weather
                 span.text 흐림
                 img(src='/assets/images/weather-01.svg')
-              .date 2018년 3월 23일 금요일
+              .date 3월 23일 금요일
             .weather-day
               .degree
                 span.number 20
@@ -67,7 +67,7 @@ body
               .weather
                 span.text 맑음
                 img(src='/assets/images/weather-01.svg')
-              .date 2018년 3월 24일 토요일
+              .date 3월 24일 토요일
             .weather-day
               .degree
                 span.number 16
@@ -75,7 +75,7 @@ body
               .weather
                 span.text 맑음
                 img(src='/assets/images/weather-01.svg')
-              .date 2018년 3월 25일 일요일
+              .date 3월 25일 일요일
             .weather-day
               .degree
                 span.number -3
@@ -83,128 +83,130 @@ body
               .weather
                 span.text 비
                 img(src='/assets/images/weather-01.svg')
-              .date 2018년 3월 26일 월요일
+              .date 3월 26일 월요일
 
-      .d-flex
-        div(style='flex: 0 1 40%')
-          .dashboard-unit
-            .title 오늘 입실
-            table.table.table-hover.text-center.align-middle.mb-0
-              thead.bg-light
-                tr
-                  th 도착예정시간
-                  th 객실명
-                  th 예약자
-                  th 손님맞이 준비
-              tbody
-                //- tr
-                  td.empty(colspan='4') 오늘 입실이 없습니다.
-                tr
-                  td 15:20
-                  td
-                    | 하늘채 사랑방
-                    .small.text-muted 성인2, 아동0, 유아1
-                  td
-                    | 정우성
-                    br
-                    | 010-5503-9903
-                  td
-                    | 픽업, 바베큐, 조식
-                tr
-                  td --:--
-                  td
-                    | 하늘채 사랑방
-                    .small.text-muted 성인2, 아동0, 유아1
-                  td
-                    | 정우성
-                    br
-                    | 010-5503-9903
-                  td
-                    | 픽업, 바베큐, 조식
-                tr
-                  td --:--
-                  td
-                    | 하늘채 사랑방
-                    .small.text-muted 성인2, 아동0, 유아1
-                  td
-                    | 정우성
-                    br
-                    | 010-5503-9903
-                  td
-                tr
-                  td 15:20
-                  td
-                    | 하늘채 사랑방
-                    .small.text-muted 성인2, 아동0, 유아1
-                  td
-                    | 정우성
-                    br
-                    | 010-5503-9903
-                  td
-                tr
-                  td --:--
-                  td
-                    | 하늘채 사랑방
-                    .small.text-muted 성인2, 아동0, 유아1
-                  td
-                    | 정우성
-                    br
-                    | 010-5503-9903
-                  td
+      .row
+        .col-xl-5
+          .row
+            .col-6.col-xl-12
+              .dashboard-unit
+                .title 오늘 입실
+                table.table.table-hover.text-center.align-middle.mb-0
+                  thead.bg-light
+                    tr
+                      th 도착예정시간
+                      th 객실명
+                      th 예약자
+                      th 손님맞이 준비
+                  tbody
+                    //- tr
+                      td.empty(colspan='4') 오늘 입실이 없습니다.
+                    tr
+                      td 15:20
+                      td
+                        | 하늘채 사랑방
+                        .small.text-muted 성인2, 아동0, 유아1
+                      td
+                        | 정우성
+                        br
+                        | 010-5503-9903
+                      td
+                        | 픽업, 바베큐, 조식
+                    tr
+                      td --:--
+                      td
+                        | 하늘채 사랑방
+                        .small.text-muted 성인2, 아동0, 유아1
+                      td
+                        | 정우성
+                        br
+                        | 010-5503-9903
+                      td
+                        | 픽업, 바베큐, 조식
+                    tr
+                      td --:--
+                      td
+                        | 하늘채 사랑방
+                        .small.text-muted 성인2, 아동0, 유아1
+                      td
+                        | 정우성
+                        br
+                        | 010-5503-9903
+                      td
+                    tr
+                      td 15:20
+                      td
+                        | 하늘채 사랑방
+                        .small.text-muted 성인2, 아동0, 유아1
+                      td
+                        | 정우성
+                        br
+                        | 010-5503-9903
+                      td
+                    tr
+                      td --:--
+                      td
+                        | 하늘채 사랑방
+                        .small.text-muted 성인2, 아동0, 유아1
+                      td
+                        | 정우성
+                        br
+                        | 010-5503-9903
+                      td
+            .col-6.col-xl-12
+              .dashboard-unit
+                .title 오늘 퇴실
+                table.table.table-hover.text-center.align-middle.mb-0
+                  thead.bg-light
+                    tr
+                      th 퇴실예정시간
+                      th 객실명
+                      th 예약자
+                      th 퇴실 체크
+                  tbody
+                    //- tr
+                      td.empty(colspan='4') 오늘 퇴실이 없습니다.
+                    tr
+                      td 15:20
+                      td
+                        | 하늘채 사랑방
+                        .small.text-muted 성인2, 아동0, 유아1
+                      td
+                        | 정우성
+                        br
+                        | 010-5503-9903
+                      td.checkbox
+                        label.custom-control.custom-checkbox
+                          input.custom-control-input(type='checkbox')
+                          span.custom-control-label
+                    tr
+                      td 15:20
+                      td
+                        | 하늘채 사랑방
+                        .small.text-muted 성인2, 아동0, 유아1
+                      td
+                        | 정우성
+                        br
+                        | 010-5503-9903
+                      td.checkbox
+                        label.custom-control.custom-checkbox
+                          input.custom-control-input(type='checkbox', checked)
+                          span.custom-control-label
+                    tr
+                      td 15:20
+                      td
+                        | 하늘채 사랑방
+                        .small.text-muted 성인2, 아동0, 유아1
+                      td
+                        | 정우성
+                        br
+                        | 010-5503-9903
+                      td.checkbox
+                        label.custom-control.custom-checkbox
+                          input.custom-control-input(type='checkbox', checked)
+                          span.custom-control-label
 
-          .dashboard-unit
-            .title 오늘 퇴실
-            table.table.table-hover.text-center.align-middle.mb-0
-              thead.bg-light
-                tr
-                  th 퇴실예정시간
-                  th 객실명
-                  th 예약자
-                  th 퇴실 체크
-              tbody
-                //- tr
-                  td.empty(colspan='4') 오늘 퇴실이 없습니다.
-                tr
-                  td 15:20
-                  td
-                    | 하늘채 사랑방
-                    .small.text-muted 성인2, 아동0, 유아1
-                  td
-                    | 정우성
-                    br
-                    | 010-5503-9903
-                  td.checkbox
-                    label.custom-control.custom-checkbox
-                      input.custom-control-input(type='checkbox')
-                      span.custom-control-label
-                tr
-                  td 15:20
-                  td
-                    | 하늘채 사랑방
-                    .small.text-muted 성인2, 아동0, 유아1
-                  td
-                    | 정우성
-                    br
-                    | 010-5503-9903
-                  td.checkbox
-                    label.custom-control.custom-checkbox
-                      input.custom-control-input(type='checkbox', checked)
-                      span.custom-control-label
-                tr
-                  td 15:20
-                  td
-                    | 하늘채 사랑방
-                    .small.text-muted 성인2, 아동0, 유아1
-                  td
-                    | 정우성
-                    br
-                    | 010-5503-9903
-                  td.checkbox
-                    label.custom-control.custom-checkbox
-                      input.custom-control-input(type='checkbox', checked)
-                      span.custom-control-label
-
-        div(style='flex: 1 1 auto; margin-left: 2.5rem')
+        .col-xl-7
           .dashboard-unit.dashboard-occupancy
             .title 월별 객실 가동률
             .header
@@ -224,23 +226,76 @@ body
           .d-flex.align-items-stretch
             div(style='flex: 1 1 auto')
               .dashboard-unit
-                .title.d-flex.justify-content-between
+                .title.d-flex.justify-content-between.mb-0
                   | 공지사항
                   a(href='#')
                     img(src='/assets/images/plus-box-gray.svg')
-                ul.link-list.list-unstyled
-                  li.row
+                ul.link-list.list-unstyled.m-0
+                  li.row.no-gutters
                     .col-8
+                      img.mr-2(src='/assets/images/bell.svg')
                       | [온다 APP] ‘자동예약수집’ 기능 업데이트 안내
                     .col-4.text-right
                       | 2018.03.05(월)
+                  li.row.no-gutters
+                    .col-8
+                      | 서버 이전 작업 안내
+                    .col-4.text-right
+                      | 2018.03.05(월)
               .dashboard-unit
-                .title App
+                .title
+                  | App
+                  span 쉽고 편한 예약관리 앱, ONDA 펜션관리!
+                .row.no-gutters
+                  .col.mr-1
+                    a.btn.btn-primary.btn-block.p-3(href='https://play.google.com/store/apps/details?id=io.tport.pensionpms', target='_blank')
+                      img(src='/assets/images/google-play.png')
+                  .col
+                    a.btn.btn-primary.btn-block.p-3(href='#', target='_blank')
+                      img(src='/assets/images/app-store.png')
+
             div(style='flex: 0 0 20rem; margin-left: 2.5rem; padding-bottom: 2.5rem')
               .dashboard-unit(style='height: 100%')
                 .title 메뉴얼
+                ul.link-list.list-unstyled.m-0
+                  li 사장님 페이지 사용법
+                  li 가격/할인 설정
+                  li 수기예약, 방막기, 정산확인
+                  li 온다앱 이용메뉴얼
+                  li 기타문의 &amp; 수정요청
       .dashboard-unit
         .title 판매사 연동
+        .row
+          .col-md-4
+            | ONDA와 제휴 된 다양한 판매사에 상품을 판매해보세요.
+            .mt-2
+              a.btn.btn-white(href='#') 판매사 연동 신청하기
+          .col-md-8
+            ul.list-unstyled.logo-list.row
+              li.col-lg-2.col-sm-4
+                img(src='/assets/images/bi/bi-01.png')
+              li.col-lg-2.col-sm-4
+                img(src='/assets/images/bi/bi-02.png')
+              li.col-lg-2.col-sm-4
+                img(src='/assets/images/bi/bi-03.png')
+              li.col-lg-2.col-sm-4
+                img(src='/assets/images/bi/bi-04.png')
+              li.col-lg-2.col-sm-4
+                img(src='/assets/images/bi/bi-05.png')
+              li.col-lg-2.col-sm-4
+                img(src='/assets/images/bi/bi-06.png')
+              li.col-lg-2.col-sm-4
+                img(src='/assets/images/bi/bi-07.png')
+              li.col-lg-2.col-sm-4
+                img(src='/assets/images/bi/bi-08.png')
+              li.col-lg-2.col-sm-4
+                img(src='/assets/images/bi/bi-09.png')
+              li.col-lg-2.col-sm-4
+                img(src='/assets/images/bi/bi-10.png')
+              li.col-lg-2.col-sm-4
+                img(src='/assets/images/bi/bi-11.png')
+
+
 
 
     include ./includes/footer.pug
