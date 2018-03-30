@@ -81,7 +81,7 @@ $( document ).ready(function() {
   $('.dashboard-weather').mouseover(function(){
     $('.dashboard-weather-expend').show();
   });
-  $('.dashboard-weather-expend').mouseout(function(){
+  $('.dashboard-weather').mouseout(function(){
     $(this).hide();
   });
 
