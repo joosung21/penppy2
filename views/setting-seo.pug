@@ -1,0 +1,114 @@
+include ./includes/header.pug
+
+//-------- 업체설정: 자동방막기 Page ---------//
+body.two-depth(name='setting', page='seo')
+  include ./includes/main-nav-left.pug
+  include ./includes/sub-nav.pug
+  .content-container
+    .artboard
+      .board-title
+        | 검색엔진 최적화 설정
+        small.text-red.font-weight-bold.ml-1 (admin)
+
+      ul.nav.nav-tabs
+        li.nav-item
+          a.nav-link.active(href='#') 실시간 예약창
+        li.nav-item
+          a.nav-link(href='#') 무료 홈페이지
+
+      .text-right.py-4 사장님의 실시간 예약창, 무료 홈페이지가 포털 사이트(네이버, 다음, 구글 등) 상단에 검색될 수 있도록 검색 키워드를 관리합니다.
+
+      table.table.table-comfort.table-bordered.align-middle
+        thead.bg-light
+          tr
+            th.text-center(style='width: 35%') 검색요소
+            th.text-center 검색 키워드
+        tbody
+          tr
+            td
+              | 페이지의 표준 URL
+              .small.text-muted og : url
+            td
+              input.form-control(type='text', value='https://app.onda.me/v2/booking/6982')
+          tr
+            td
+              | 콘텐츠 제목
+              .small.text-muted og : title
+            td
+              input.form-control(type='text', value='제주도 제주시 조이토마토 펜션 | 조이토마토 실시간 예약하기')
+          tr
+            td
+              | 콘텐츠 설명 (미리보기에서 제목 아래에 표시)
+              .small.text-muted og : description
+            td
+              textarea.form-control(rows='5')
+                | 조이토마토 펜션, 단체/MT, 풀빌라, 레스토랑, 조식, 짐보관, 마사지, 해수욕장, 수목원 주변
+          tr
+            td
+              | 웹 사이트의 이름
+              .small.text-muted og : site_name
+            td
+              input.form-control(type='text', value='조이토마토 실시간 예약하기 | ONDA(온다) 제공')
+          tr
+            td
+              | 콘텐츠를 공유 시 표시되는 이미지의 URL
+              .small.text-muted og : image
+            td
+              img.img-thumbnail(src='/assets/images/temp-room-01.jpg', style='width: 15rem')
+              button.btn.btn-white.btn-small.ml-3.align-bottom(type='button')
+                img(src='/assets/images/ic-camera.svg', style='position:relative; top:-2px; margin-right: 5px')
+                span 대표 이미지 변경
+          tr
+            td
+              | 숙박업소의 주소
+              .small.text-muted business : contact_data : street_address
+            td
+              input.form-control(type='text', value='경기도 포천시 일동면 운악청계로1480번길 90-116')
+          tr
+            td
+              | 숙박업소의 지방/도시
+              .small.text-muted business : contact_data : locality
+            td
+              input.form-control(type='text', value='경기도 포천시 일동면')
+          tr
+            td
+              | 우편번호
+              .small.text-muted business : contact_data : postal_code
+            td
+              input.form-control(type='text', value='11111')
+          tr
+            td
+              | 국가
+              .small.text-muted business : contact_data : country_name
+            td
+              input.form-control(type='text', value='대한민국')
+          tr
+            td
+              | 연락처
+              .small.text-muted business : contact_data : phone_number
+            td
+              input.form-control(type='text', value='010-4941-3966')
+          tr
+            td
+              | 해당 사업의 홈페이지 주소
+              .small.text-muted business : contact_data : website
+            td
+              input.form-control(type='text', value='http://www.joytomato.co.kr/')
+          tr
+            td
+              | 위도
+              .small.text-muted place : location : latitude
+            td
+              input.form-control(type='text', value='37.937654')
+          tr
+            td
+              | 경도
+              .small.text-muted place : location : longitude
+            td
+              input.form-control(type='text', value='127.348478')
+
+      .text-center.pt-4
+        button.btn.btn-primary.btn-lg(type='button') 저장
+
+
+    include ./includes/footer.pug
