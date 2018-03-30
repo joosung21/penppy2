@@ -1,0 +1,67 @@
+include ./includes/header.pug
+
+//-------- 업체설정: 자동방막기 Page ---------//
+body.two-depth(name='setting', page='crawling')
+  include ./includes/main-nav-left.pug
+  include ./includes/sub-nav.pug
+  .content-container
+    .artboard
+      .board-title 자동 방막기 설정
+
+      p
+        | 사장님이 관리중인 사이트의 예약내역과 방막기/방열기 내역을 자동으로 가져옵니다.
+        br
+        | 로그인 정보는 암호화되어 저장됩니다.
+
+      table.table.table-comfort.table-bordered.text-center.align-middle
+        thead.bg-light
+          tr
+            th 사이트
+            th 로그인 정보
+            th 연동범위
+            th 상태
+        tbody
+          tr
+            td 야놀자
+            td
+              .form-inline
+                input.form-control(type='text', value='데이먼 해달별 펜션')
+                input.form-control.ml-3(type='text', placeholder='아이디')
+                input.form-control.ml-3(type='text', placeholder='비밀번호')
+                button.btn.btn-white.ml-3(type='button') 연결하기
+            td.text-left
+              | 예약내역 가져오기
+              br
+              | 방막기/방열기 가져오기
+            td.text-left
+              | 연동대기
+          tr
+            td 떠나요
+            td
+              .form-inline
+                input.form-control(type='text', value='데이먼 해달별 펜션', disabled)
+                button.btn.btn-white.ml-3(type='button') 동기화
+                button.btn.btn-white.ml-3(type='button') 연결끊기
+            td.text-left
+              | 예약내역 가져오기
+            td.text-left
+              | 연동중
+              .small.text-red
+                | 숙소명 불일치
+              .small.text-red
+                | 객실명(2개) 불일치
+          tr
+            td 우리펜션
+            td
+              .form-inline
+                input.form-control(type='text', value='데이먼 해달별 펜션', disabled)
+                button.btn.btn-white.ml-3(type='button') 동기화
+                button.btn.btn-white.ml-3(type='button') 연결끊기
+            td.text-left
+              | 예약내역 가져오기
+              br
+              | 방막기/방열기 가져오기
+            td.text-left
+              | 연동중
+
+    include ./includes/footer.pug

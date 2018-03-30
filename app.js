@@ -50,6 +50,7 @@ app.get('/setting/auto-edit', function (req, res){res.render('setting-auto-edit'
 app.get('/setting/multiday', function (req, res){res.render('setting-multiday')})
 app.get('/setting/multiday-edit', function (req, res){res.render('setting-multiday-edit')})
 app.get('/setting/history', function (req, res){res.render('setting-history')})
+app.get('/setting/crawling', function (req, res){res.render('setting-crawling')})
 
 // 모바일 BP
 app.get('/bp-mobile', function (req, res){res.render('bp-mobile')})
