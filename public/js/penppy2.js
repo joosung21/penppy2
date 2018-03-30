@@ -82,7 +82,7 @@ $( document ).ready(function() {
     $('.dashboard-weather-expend').show();
   });
   $('.dashboard-weather').mouseout(function(){
-    $(this).hide();
+    $('.dashboard-weather-expend').hide();
   });
 
   // DEMO 지울 것: 할인설정 저장버튼 슬라이더
