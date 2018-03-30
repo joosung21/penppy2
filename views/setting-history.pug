@@ -1,0 +1,240 @@
+include ./includes/header.pug
+
+//-------- 업체설정: 팝업 공지사항 Page ---------//
+body.two-depth(name='setting', page='history')
+  include ./includes/main-nav-left.pug
+  include ./includes/sub-nav.pug
+  .content-container
+    .artboard
+      .board-title 변경내역 조회
+
+      .form-inline.mb-3
+        input.form-control.form-control-datepicker(type='text', value='2017.07.16(수)', size='18')
+        span.px-2 ~
+        input.form-control.form-control-datepicker(type='text', value='2017.08.20(목)', size='18')
+        .btn-group.btn-group-toggle.d-flex.align-items-center.ml-3(data-toggle='buttons')
+          label.btn.btn-white.active
+            input(type='radio', name='radio1', autocomplete='off', checked)
+            | 어제
+          label.btn.btn-white
+            input(type='radio', name='radio2', autocomplete='off')
+            | 오늘
+          label.btn.btn-white
+            input(type='radio', name='radio3', autocomplete='off')
+            | 최근 1주
+          label.btn.btn-white
+            input(type='radio', name='radio3', autocomplete='off')
+            | 최근 1개월
+        select.custom-select.ml-3
+          option 전체 변경 내역
+          option 방막기
+          option 방열기
+          option 전화문의만 받기
+          option 기본요금 설정
+          option 할인요금 설정
+          option 시즌 설정
+
+        button.btn.btn-primary.ml-3(type='button') 불러오기
+
+      table.table.table-comfort.text-center.align-middle
+        thead.bg-light
+          tr
+            th(style='width: 13rem') 변경일시
+            th 변경담당자
+            th 변경내용
+            th 상세내용
+        tbody
+          tr
+            td 2018-03-15 15:32
+            td
+              | 소모라
+              .text-muted 192.168.0.15
+            td 방막기
+            td.text-left
+              div
+                b 객실:
+                | 해,달,별
+              div
+                b 기간:
+                | 2018.03.10(월)
+              div
+                b 메모:
+                | 객실공사
+          tr
+            td 2018-03-15 15:32
+            td
+              | 윤슬기
+              .text-muted 192.168.0.15
+            td 방막기
+            td.text-left
+              div
+                b 객실:
+                | 해,달,별
+              div
+                b 기간:
+                | 2018.03.10, 2018.03.11, 2018.03.12
+              div
+                b 메모:
+                | 객실공사
+          tr
+            td 2018-03-15 15:32
+            td
+              | 권혁준
+              .text-muted 192.168.0.15
+            td 방막기
+            td.text-left
+              div
+                b 객실:
+                | 해,달,별
+              div
+                b 기간:
+                | 2018.03.10~2013.04.09
+              div
+                b 메모:
+                | 객실공사
+          tr
+            td 2018-03-15 15:32
+            td
+              | 김보람
+              .text-muted 192.168.0.15
+            td 방막기
+            td.text-left
+              div
+                b 객실:
+                | 해,달,별
+              div
+                b 기간:
+                | 2018.03.10~2013.04.09(월,화)
+              div
+                b 메모:
+                |
+          tr
+            td 2018-03-15 15:32
+            td
+              | 권혁준
+              .text-muted 192.168.0.15
+            td 기본요금 설정
+            td.text-left
+              div
+                b 객실:
+                | 황토동-은하수 201호
+              div
+                b 시즌:
+                | 준성수기
+              div
+                b 기본요금:
+                | 일요일 120,000, 주중 100,000, 금요일 120,000, 토요일 140,000
+              div
+                b 추가인원:
+                | 성인 20,000, 아동 10,000, 유아 5,000
+          tr
+            td 2018-03-15 15:32
+            td
+              | 소모라
+              .text-muted 192.168.0.15
+            td 방막기
+            td.text-left
+              div
+                b 객실:
+                | 해,달,별
+              div
+                b 기간:
+                | 2018.03.10(월)
+              div
+                b 메모:
+                | 객실공사
+          tr
+            td 2018-03-15 15:32
+            td
+              | 윤슬기
+              .text-muted 192.168.0.15
+            td 방막기
+            td.text-left
+              div
+                b 객실:
+                | 해,달,별
+              div
+                b 기간:
+                | 2018.03.10, 2018.03.11, 2018.03.12
+              div
+                b 메모:
+                | 객실공사
+          tr
+            td 2018-03-15 15:32
+            td
+              | 권혁준
+              .text-muted 192.168.0.15
+            td 방막기
+            td.text-left
+              div
+                b 객실:
+                | 해,달,별
+              div
+                b 기간:
+                | 2018.03.10~2013.04.09
+              div
+                b 메모:
+                | 객실공사
+          tr
+            td 2018-03-15 15:32
+            td
+              | 김보람
+              .text-muted 192.168.0.15
+            td 방막기
+            td.text-left
+              div
+                b 객실:
+                | 해,달,별
+              div
+                b 기간:
+                | 2018.03.10~2013.04.09(월,화)
+              div
+                b 메모:
+                |
+          tr
+            td 2018-03-15 15:32
+            td
+              | 권혁준
+              .text-muted 192.168.0.15
+            td 기본요금 설정
+            td.text-left
+              div
+                b 객실:
+                | 황토동-은하수 201호
+              div
+                b 시즌:
+                | 준성수기
+              div
+                b 기본요금:
+                | 일요일 120,000, 주중 100,000, 금요일 120,000, 토요일 140,000
+              div
+                b 추가인원:
+                | 성인 20,000, 아동 10,000, 유아 5,000
+
+
+      nav.mt-5
+        ul.pagination.justify-content-center
+          li.page-item.disabled
+            .page-link.icon
+              img(src='/assets/images/go-first.svg')
+          li.page-item.disabled
+            .page-link.icon
+              img(src='/assets/images/go-pre.svg')
+          li.page-item.active
+            span.page-link 1
+          li.page-item
+            a.page-link(href='#') 2
+          li.page-item
+            a.page-link(href='#') 3
+          li.page-item
+            a.page-link(href='#') 4
+          li.page-item
+            a.page-link(href='#') 5
+          li.page-item
+            span.page-link.icon
+              img(src='/assets/images/go-next.svg')
+          li.page-item
+            span.page-link.icon
+              img(src='/assets/images/go-last.svg')
+
+    include ./includes/footer.pug
