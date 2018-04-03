@@ -9,7 +9,7 @@ body(name='room-block')
       .board-title 방막기
       .row
         .col-sm-2
-          button.btn.btn-white(type='button', data-toggle='modal', data-keyboard='true', data-target='#periodBlockModal')
+          button.btn.btn-white(type='button', data-toggle='modal', data-target='#periodBlockModal')
             img.mr-2(src='/assets/images/ic-calendar-gray.svg')
             | 기간지정 일괄 방막기
         .col-sm-8
@@ -227,7 +227,7 @@ body(name='room-block')
     .slider-ui.slider-ui-white.text-center.hidden
       .row.pt-2
         .offset-1.col-11
-          button.btn.btn-dark.btn-lg.mr-1(type='button', data-toggle='modal', data-keyboard='true', data-target='#blockModal') 방막기
+          button.btn.btn-dark.btn-lg.mr-1(type='button', data-toggle='modal', data-target='#blockModal') 방막기
           button.btn.btn-primary.btn-lg(type='button', onclick='closeSlider()') 방열기
 
 //- 방막기 Modal

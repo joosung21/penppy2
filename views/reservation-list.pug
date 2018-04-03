@@ -66,7 +66,7 @@ body(name='reservation-list')
         button.btn.btn-white.ml-auto(type='button')
           img.mr-1(src='/assets/images/download.svg')
           | 엑셀 다운받기
-      table.table.text-center.align-middle
+      table.table.text-center.align-middle.table-hover
         thead.bg-light
           tr
             th.text-left.pl-4(style='width: 10%') 판매채널/예약일시
@@ -79,7 +79,7 @@ body(name='reservation-list')
             th(style='width: 15%') 고객 요청사항
             th(style='width: 15%') 관리자 메모
         tbody
-          tr
+          tr(onclick='openPmsSlider("edit")')
             td.text-left.pl-4
               | PC 예약창
               br
@@ -97,7 +97,7 @@ body(name='reservation-list')
               br
               | 010-1111-2222
               br
-              button.btn.btn-white.btn-small.warning-mark.mt-2(type='button', data-toggle='modal', data-keyboard='true', data-target='#smsModal') SMS
+              button.btn.btn-white.btn-small.warning-mark.mt-2(type='button', data-toggle='modal', data-target='#smsModal') SMS
             td
               | 230,000원
             td
@@ -108,7 +108,7 @@ body(name='reservation-list')
               | 늦게 도착할것 같아서 도착하기 두시간 정도전에 전화 드리고 바베큐 좀 부탁드립니다.
             td.text-left
               | 위메프티켓 J4C3I5GLDL 9K
-          tr
+          tr(onclick='openPmsSlider("edit")')
             td.text-left.pl-4
               | Mobile 예약창
               br
@@ -134,14 +134,14 @@ body(name='reservation-list')
             td
               | 판매사결제
             td
-              span.text-red 예약취소
+              | 예약완료
             td.text-left
               | 추가인원 현장결제: 20,000원
             td.text-left
               | 5만원 먼저 입금
               br
               | 129,000원은 당일결제
-          tr
+          tr(onclick='openPmsSlider("canceled")')
             td.text-left.pl-4
               | 11번가
               br
@@ -169,7 +169,7 @@ body(name='reservation-list')
             td
               | 무통장입금
             td
-              | 예약완료
+              span.text-red 예약취소
             td.text-left
             td.text-left
       nav.mt-5
@@ -275,3 +275,5 @@ body(name='reservation-list')
               td
                 | 전송완료
 
+//- 예약창 슬라이드
+include ./includes/pms-slider.pug

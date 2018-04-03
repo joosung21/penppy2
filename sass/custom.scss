@@ -47,6 +47,9 @@ $font-weight-bold:            400;
 // Table
 $table-hover-bg:             white;
 
+// Input Y padding Addjustment
+$input-btn-padding-y:         .37rem;
+
 // Modal
 $modal-inner-padding:         2.5rem;
 $modal-header-padding:        1.5rem 0 1.5rem 2.5rem;
@@ -69,6 +72,8 @@ $pagination-active-color:           #4f4f4f;
 $pagination-active-bg:              #F2F3F8;
 $pagination-active-border-color:    #E5E5E5;
 
+// Dropdown
+$dropdown-link-hover-bg:            #fafafc;
 
 // Bootstrap and its default variables
 @import "./../node_modules/bootstrap/scss/bootstrap";

@@ -22,6 +22,8 @@ function openPmsSlider(type){
     $('.pms-slider#create').fadeIn(300, function() {
       $('#name').focus();
     });
+  } else if(type === 'canceled'){
+    $('.pms-slider#canceled').fadeIn(300);
   }
 }
 function closePmsSlider(){
