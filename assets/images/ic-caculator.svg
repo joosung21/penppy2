@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="17px" height="20px" viewBox="0 0 17 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+<svg width="18px" height="20px" viewBox="0 0 18 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
     <title>icon_정산목록</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="업체설정_객실등록" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-32.000000, -301.000000)">
-        <g id="GNB">
-            <g id="1depth">
-                <g id="icon_정산목록" transform="translate(30.000000, 301.000000)">
-                    <g id="Page-1" transform="translate(2.000000, 0.000000)">
-                        <path d="M4.752,6.353 L12.492,6.353 L12.492,4.543 L4.752,4.543 L4.752,6.353 Z M3.816,7.29 L13.429,7.29 L13.429,3.607 L3.816,3.607 L3.816,7.29 Z" id="Fill-2" fill="#FFFFFF"></path>
-                        <path d="M0.5,19.5 L16.5,19.5 L16.5,0.5 L0.5,0.5 L0.5,19.5 Z" id="Fill-1" stroke="#FFFFFF"></path>
-                        <polygon id="Fill-3" fill="#FFFFFF" points="4.392 15.784 5.416 15.784 5.416 14.825 4.392 14.825"></polygon>
-                        <polygon id="Fill-4" fill="#FFFFFF" points="4.392 12.712 5.416 12.712 5.416 11.752 4.392 11.752"></polygon>
-                        <polygon id="Fill-5" fill="#FFFFFF" points="4.392 9.64 5.416 9.64 5.416 8.68 4.392 8.68"></polygon>
-                        <polygon id="Fill-6" fill="#FFFFFF" points="8.093 15.784 9.117 15.784 9.117 14.825 8.093 14.825"></polygon>
-                        <polygon id="Fill-7" fill="#FFFFFF" points="8.093 12.712 9.117 12.712 9.117 11.752 8.093 11.752"></polygon>
-                        <polygon id="Fill-8" fill="#FFFFFF" points="8.093 9.64 9.117 9.64 9.117 8.68 8.093 8.68"></polygon>
-                        <polygon id="Fill-9" fill="#FFFFFF" points="11.695 15.784 12.719 15.784 12.719 14.825 11.695 14.825"></polygon>
-                        <polygon id="Fill-10" fill="#FFFFFF" points="11.695 12.712 12.719 12.712 12.719 11.752 11.695 11.752"></polygon>
-                        <polygon id="Fill-11" fill="#FFFFFF" points="11.695 9.64 12.719 9.64 12.719 8.68 11.695 8.68"></polygon>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="메인(GNB-접혔을떄)" transform="translate(-30.000000, -395.000000)">
+            <g id="GNB">
+                <g id="1depth">
+                    <g id="icon_정산목록" transform="translate(29.000000, 395.000000)">
+                        <g id="Page-1" transform="translate(1.000000, 0.000000)">
+                            <path d="M4.97368147,6.353 L13.0252783,6.353 L13.0252783,4.543 L4.97368147,4.543 L4.97368147,6.353 Z M4,7.29 L14,7.29 L14,3.607 L4,3.607 L4,7.29 Z" id="Fill-2" fill="#FFFFFF"></path>
+                            <rect id="Rectangle" stroke="#FFFFFF" x="0.5" y="1" width="17" height="18" rx="2"></rect>
+                            <polygon id="Fill-3" fill="#FFFFFF" points="4.392 16.0590004 5.416 16.0590004 5.416 15.1000004 4.392 15.1000004"></polygon>
+                            <polygon id="Fill-4" fill="#FFFFFF" points="4.392 12.96 5.416 12.96 5.416 12 4.392 12"></polygon>
+                            <polygon id="Fill-5" fill="#FFFFFF" points="4.392 9.96 5.416 9.96 5.416 9 4.392 9"></polygon>
+                            <polygon id="Fill-6" fill="#FFFFFF" points="8.60000038 16.0590004 9.62400038 16.0590004 9.62400038 15.1000004 8.60000038 15.1000004"></polygon>
+                            <polygon id="Fill-7" fill="#FFFFFF" points="8.60000038 12.96 9.62400038 12.96 9.62400038 12 8.60000038 12"></polygon>
+                            <polygon id="Fill-8" fill="#FFFFFF" points="8.60000038 9.96 9.62400038 9.96 9.62400038 9 8.60000038 9"></polygon>
+                            <polygon id="Fill-9" fill="#FFFFFF" points="12.695 16.0590004 13.719 16.0590004 13.719 15.1000004 12.695 15.1000004"></polygon>
+                            <polygon id="Fill-10" fill="#FFFFFF" points="12.695 12.96 13.719 12.96 13.719 12 12.695 12"></polygon>
+                            <polygon id="Fill-11" fill="#FFFFFF" points="12.695 9.96 13.719 9.96 13.719 9 12.695 9"></polygon>
+                        </g>
                     </g>
                 </g>
             </g>

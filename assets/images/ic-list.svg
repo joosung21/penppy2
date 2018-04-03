@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="21px" height="16px" viewBox="0 0 21 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+<svg width="20px" height="17px" viewBox="0 0 20 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
     <title>icon_예약목록</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="업체설정_객실등록" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-29.000000, -147.000000)" stroke-linecap="round" stroke-linejoin="round">
-        <g id="GNB" stroke="#FFFFFF" stroke-width="1.2">
-            <g id="1depth">
-                <g id="icon_예약목록" transform="translate(30.000000, 145.000000)">
-                    <path d="M0.5598,2.7999 L19,2.7999" id="Stroke-3"></path>
-                    <path d="M0.5598,9.6398 L19,9.6398" id="Stroke-11"></path>
-                    <path d="M0.5598,16.4801 L19,16.4801" id="Stroke-17"></path>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="메인(GNB-접혔을떄)" transform="translate(-30.000000, -140.000000)" stroke="#FFFFFF">
+            <g id="GNB">
+                <g id="1depth">
+                    <g id="icon_예약목록" transform="translate(30.000000, 139.000000)">
+                        <path d="M7,10 L19,10" id="Stroke-3-Copy" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M7,16.5 L19,16.5" id="Stroke-3-Copy-2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M3.97907081,8.52088639 C3.9512223,8.49303787 3.90608259,8.49303787 3.87817701,8.52088639 L2.07030609,10.6711571 L1.1218016,9.55139563 C1.09395308,9.52354712 1.04881338,9.52354712 1.02090779,9.55139563 C0.99300221,9.57924415 0.993059276,9.62438386 1.02090779,9.65228944 L2.01991626,10.8224978 C2.03326985,10.8358514 2.05147411,10.8433842 2.07036316,10.8433842 C2.08925222,10.8433842 2.10739941,10.8358514 2.12081006,10.8224978 L3.97907081,8.62178019 C4.0069764,8.59393168 4.0069764,8.54879197 3.97907081,8.52088639" id="Fill-1-Copy" stroke-width="0.8" fill="#FFFFFF" fill-rule="evenodd"></path>
+                        <path d="M3.97907081,15.0208864 C3.9512223,14.9930379 3.90608259,14.9930379 3.87817701,15.0208864 L2.07030609,17.1711571 L1.1218016,16.0513956 C1.09395308,16.0235471 1.04881338,16.0235471 1.02090779,16.0513956 C0.99300221,16.0792442 0.993059276,16.1243839 1.02090779,16.1522894 L2.01991626,17.3224978 C2.03326985,17.3358514 2.05147411,17.3433842 2.07036316,17.3433842 C2.08925222,17.3433842 2.10739941,17.3358514 2.12081006,17.3224978 L3.97907081,15.1217802 C4.0069764,15.0939317 4.0069764,15.048792 3.97907081,15.0208864" id="Fill-1-Copy-2" stroke-width="0.8" fill="#FFFFFF" fill-rule="evenodd"></path>
+                        <path d="M7,3.5 L19,3.5" id="Stroke-3" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M3.97907081,2.02088639 C3.9512223,1.99303787 3.90608259,1.99303787 3.87817701,2.02088639 L2.07030609,4.17115709 L1.1218016,3.05139563 C1.09395308,3.02354712 1.04881338,3.02354712 1.02090779,3.05139563 C0.99300221,3.07924415 0.993059276,3.12438386 1.02090779,3.15228944 L2.01991626,4.3224978 C2.03326985,4.33585139 2.05147411,4.34338419 2.07036316,4.34338419 C2.08925222,4.34338419 2.10739941,4.33585139 2.12081006,4.3224978 L3.97907081,2.12178019 C4.0069764,2.09393168 4.0069764,2.04879197 3.97907081,2.02088639" id="Fill-1" stroke-width="0.8" fill="#FFFFFF" fill-rule="evenodd"></path>
+                    </g>
                 </g>
             </g>
         </g>
