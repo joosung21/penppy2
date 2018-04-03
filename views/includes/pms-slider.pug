@@ -138,7 +138,7 @@
 
       .buttons
         button.btn.btn-white(type='button', data-toggle='modal', data-target='#receiptModal') 영수증 인쇄
-        button.btn.btn-white(type='button') 현금영수증 발행
+        button.btn.btn-white(type='button', data-toggle='modal', data-target='#cashTaxModal') 현금영수증 발행
         button.btn.btn-white(type='button', data-toggle='dropdown') 신용카드 매입전표
         .dropdown-menu.dropdown-menu-right.bordered-menu.p-0
           a.dropdown-item(href='#')
@@ -162,8 +162,8 @@
               .col-7.text-right 5,000원
               .col-3
                 small.text-muted (0017)
-        button.btn.btn-white(type='button') 문자발송내역
-        button.btn.btn-white(type='button') 변경내역
+        button.btn.btn-white(type='button', data-toggle='modal', data-target='#smsModal') 문자발송내역
+        button.btn.btn-white(type='button', data-toggle='modal', data-target='#historyModal') 변경내역
 
 
     #accordion
@@ -420,7 +420,7 @@
 
       .buttons
         button.btn.btn-white(type='button', data-toggle='modal', data-target='#receiptModal') 영수증 인쇄
-        button.btn.btn-white(type='button') 현금영수증 발행
+        button.btn.btn-white(type='button', data-toggle='modal', data-target='#cashTaxModal') 현금영수증 발행
         button.btn.btn-white(type='button', data-toggle='dropdown') 신용카드 매입전표
         .dropdown-menu.dropdown-menu-right.bordered-menu.p-0
           a.dropdown-item(href='#')
@@ -444,8 +444,8 @@
               .col-7.text-right 5,000원
               .col-3
                 small.text-muted (0017)
-        button.btn.btn-white(type='button') 문자발송내역
-        button.btn.btn-white(type='button') 변경내역
+        button.btn.btn-white(type='button', data-toggle='modal', data-target='#smsModal') 문자발송내역
+        button.btn.btn-white(type='button', data-toggle='modal', data-target='#historyModal') 변경내역
 
     #accordion2
       .toggle-btn.bg-light(data-toggle='collapse', href='#price-summary2')
@@ -850,6 +850,81 @@
         .text-center.pt-5
           button.btn.btn-primary.btn-lg(type='button', data-dismiss='modal') 요청
 
+//- 현금영수증 발행 Modal
+#cashTaxModal.modal.fade(tabindex='-1')
+  .modal-dialog.modal-sm
+    .modal-content
+      .modal-header
+        h5.modal-title 현금영수증 발행
+        a.close(data-dismiss='modal')
+          img(src='/assets/images/close.svg')
+      .modal-body
+        .form-group.row
+          label.col-sm-3 총 금액
+          .col-sm-9
+            | 150,000원
+            .small.text-muted
+              | 무통장입금 100,000원
+              br
+              | 현금 50,000원
+        .form-group.row
+          label.col-sm-3.pt-1 발행금액
+          .col-sm-9
+            input.form-control(type='text', value='150,000')
+        .form-group.row
+          label.col-sm-3 구분
+          .col-sm-9
+            label.custom-control.custom-radio.custom-control-inline.mr-4
+              input.custom-control-input(type='radio', name='radio1', checked)
+              span.custom-control-label 개인
+            label.custom-control.custom-radio.custom-control-inline
+              input.custom-control-input(type='radio', name='radio1')
+              span.custom-control-label 사업자
+
+        //- 개인일 경우
+        //- .form-group.row
+          label.col-sm-3.pt-1 번호입력
+          .col-sm-9
+            label.custom-control.custom-radio.custom-control-inline.mr-4
+              input.custom-control-input(type='radio', name='radio2', checked)
+              span.custom-control-label 핸드폰
+            label.custom-control.custom-radio.custom-control-inline
+              input.custom-control-input(type='radio', name='radio2')
+              span.custom-control-label 국세청 현금영수증 카드번호
+            //- 핸드폰
+            .form-inline.mt-2
+              input.form-control(type='text', style='width: 4rem')
+              span.px-2 -
+              input.form-control(type='text', style='width: 5rem')
+              span.px-2 -
+              input.form-control(type='text', style='width: 5rem')
+            //- 국세청 현금영수증 카드번호
+            //- .form-inline.mt-2
+              input.form-control(type='text', style='width: 5rem')
+              span.px-2 -
+              input.form-control(type='text', style='width: 5rem')
+              span.px-2 -
+              input.form-control(type='text', style='width: 5rem')
+              span.px-2 -
+              input.form-control(type='text', style='width: 7rem')
+
+        //- 사업자일 경우
+        .form-group.row
+          label.col-sm-3.pt-1 사업자 번호
+          .col-sm-9
+            .form-inline
+              input.form-control(type='text', style='width: 4rem')
+              span.px-2 -
+              input.form-control(type='text', style='width: 3rem')
+              span.px-2 -
+              input.form-control(type='text', style='width: 5rem')
+        .form-group.row
+          label.col-sm-3.pt-1 업체명
+          .col-sm-9
+            input.form-control(type='text')
+        .text-center.pt-5
+          button.btn.btn-primary.btn-lg(type='button', data-dismiss='modal') 발행
+
 //- 청구요금 수정 Modal
 #editInvoiceModal.modal.fade(tabindex='-1')
   .modal-dialog.modal-lg
@@ -1044,10 +1119,9 @@
               th 잔액
               th.text-right 0원
 
-        .text-center.pt-5
-          | 상기 금액을 영수하였습니다.
-          br
-          | 2018.04.03
+        .text-center.pt-5(style='width: 14rem; margin: 0 auto')
+          .mb-2 상기 금액을 영수하였습니다.
+          input.form-control-plaintext.text-center(type='text', value='2018.04.03')
 
         .text-center.pt-5.d-print-none
           button.btn.btn-primary.btn-lg(type='button', onclick="printDiv('printReceiptArea')") 인쇄
@@ -1057,3 +1131,106 @@
             | 데이먼 해달별 펜션
             small.text-muted.ml-2 서울특별시 중구 소월로 50 ㅣ +82-2-753-4512
           img(src='/assets/images/onda-logo.svg', style='width: 50px')
+
+//- 변경내역 Modal
+#historyModal.modal.fade(tabindex='-1')
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h5.modal-title 변경내역
+        a.close(data-dismiss='modal')
+          img(src='/assets/images/close.svg')
+      .modal-body
+        table.table.align-middle.text-center
+          thead.bg-light
+            tr
+              th(style='width: 12rem') 변경일시
+              th 내용
+          tbody
+            tr
+              td 2017-03-20 15:20
+              td.text-left 조영수님 카드 수기결제 [100,000]
+            tr
+              td 2017-03-20 15:20
+              td.text-left 조영수님 달방 퇴실일 변경 [2018.03.21] 에서 [2018.03.22]
+            tr
+              td 2017-03-20 15:20
+              td.text-left 조영수님 예약상태 변경 [입금대기] 에서 [예약완료]
+            tr
+              td 2017-03-20 15:20
+              td.text-left 조영수님 신규예약생성
+
+//- 문자발송내역 Modal
+#smsModal.modal.fade(tabindex='-1')
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h5.modal-title SMS 발신내역
+        a.close(data-dismiss='modal')
+          img(src='/assets/images/close.svg')
+      .modal-body
+        table.table.text-center.align-middle
+          thead.bg-light
+            tr
+              th(style='width: 42%') 메세지
+              th 발신번호
+              th 수신번호
+              th 발송일시
+              th 상태
+          tbody
+            tr
+              td.text-left
+                | [ONDA(티포트)] 예약이 취소되었습니다.
+                br
+                | - 예약채널: TMON
+                br
+                | - 예약번호: TM-P5GGUKA4T
+                br
+                | - 예약자명: 박혜연
+                br
+                | - 연락처: 01029972659
+                br
+                | - 업체명: [파주]임진강리조트
+                br
+                | - 객실명: 콘도(온돌)
+                br
+                | - 이용기간: 2018.03.24.(토)~2018.03.25.(일) (1박 2일)
+                br
+                |- 결제금액: 55,000원
+              td 1544-3812
+              td 010-1111-2222
+              td
+                | 2017.03.20
+                br
+                | 15:20
+              td
+                span.text-red 전송실패
+                br
+                | 1111 전달
+            tr
+              td.text-left
+                | [ONDA(티포트)] 예약이 취소되었습니다.
+                br
+                | - 예약채널: TMON
+                br
+                | - 예약번호: TM-P5GGUKA4T
+                br
+                | - 예약자명: 박혜연
+                br
+                | - 연락처: 01029972659
+                br
+                | - 업체명: [파주]임진강리조트
+                br
+                | - 객실명: 콘도(온돌)
+                br
+                | - 이용기간: 2018.03.24.(토)~2018.03.25.(일) (1박 2일)
+                br
+                |- 결제금액: 55,000원
+              td 1544-3812
+              td 010-1111-2222
+              td
+                | 2017.03.20
+                br
+                | 15:20
+              td
+                | 전송완료

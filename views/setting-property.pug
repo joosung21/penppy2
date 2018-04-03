@@ -55,12 +55,12 @@ body.two-depth(name='setting', page='property')
           label.col-sm-2.pt-1 수영장 보유여부
           .col-sm-10
             .d-flex.align-items-center
-              .custom-control.custom-radio.custom-control-inline.mr-4
-                input#radio3.custom-control-input(type='radio', name='poolRadio')
-                span.custom-control-label(for='radio3') 미보유
-              .custom-control.custom-radio.custom-control-inline
-                input#radio4.custom-control-input(type='radio', name='poolRadio', checked)
-                span.custom-control-label(for='radio4') 보유
+              label.custom-control.custom-radio.custom-control-inline.mr-4
+                input.custom-control-input(type='radio', name='radio1', checked)
+                span.custom-control-label 미보유
+              label.custom-control.custom-radio.custom-control-inline
+                input.custom-control-input(type='radio', name='radio1')
+                span.custom-control-label 보유
               .form-inline
                 select.custom-select.mr-3(style='width: 10rem')
                   option(selected) 오픈기간
