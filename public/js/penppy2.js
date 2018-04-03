@@ -14,6 +14,19 @@ function closeSlider(){
   $('.room-line.assign-ui').removeClass('show')
 }
 
+// Print Layer
+function printDiv(divName) {
+  var printContents = document.getElementById(divName).innerHTML;
+  var originalContents = document.body.innerHTML;
+
+  document.body.innerHTML = printContents;
+
+  window.print();
+
+  document.body.innerHTML = originalContents;
+}
+
+
 // PMS Slider Open & Close
 function openPmsSlider(type){
   if(type === 'edit'){

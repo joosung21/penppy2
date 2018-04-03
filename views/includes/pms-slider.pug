@@ -31,11 +31,11 @@
         input.input(type='text', value='2018-03-20 15:27', readonly)
       .form-slim
         .label 입실일
-        input.input.pencil(type='text', value='2018-03-20(1박)', data-toggle='modal', data-target='#roomAddModal')
+        input.input.pencil(type='text', value='2018-03-20(1박)', data-toggle='modal', data-target='#roomAddModal', readonly)
         span.underline
       .form-slim
         .label 퇴실일
-        input.input.pencil(type='text', value='2018-03-21', data-toggle='modal', data-target='#roomAddModal')
+        input.input.pencil(type='text', value='2018-03-21', data-toggle='modal', data-target='#roomAddModal', readonly)
         span.underline
       .py-3
       .label.mb-0 객실
@@ -137,7 +137,7 @@
         span.underline
 
       .buttons
-        button.btn.btn-white(type='button') 영수증 인쇄
+        button.btn.btn-white(type='button', data-toggle='modal', data-target='#receiptModal') 영수증 인쇄
         button.btn.btn-white(type='button') 현금영수증 발행
         button.btn.btn-white(type='button', data-toggle='dropdown') 신용카드 매입전표
         .dropdown-menu.dropdown-menu-right.bordered-menu.p-0
@@ -313,11 +313,11 @@
         input.input(type='text', value='2018-03-20 15:27', readonly)
       .form-slim
         .label 입실일
-        input.input.pencil(type='text', value='2018-03-20(1박)', data-toggle='modal', data-target='#roomAddModal')
+        input.input.pencil(type='text', value='2018-03-20(1박)', data-toggle='modal', data-target='#roomAddModal', readonly)
         span.underline
       .form-slim
         .label 퇴실일
-        input.input.pencil(type='text', value='2018-03-21', data-toggle='modal', data-target='#roomAddModal')
+        input.input.pencil(type='text', value='2018-03-21', data-toggle='modal', data-target='#roomAddModal', readonly)
         span.underline
       .py-3
       .label.mb-0 객실
@@ -419,7 +419,7 @@
         span.underline
 
       .buttons
-        button.btn.btn-white(type='button') 영수증 인쇄
+        button.btn.btn-white(type='button', data-toggle='modal', data-target='#receiptModal') 영수증 인쇄
         button.btn.btn-white(type='button') 현금영수증 발행
         button.btn.btn-white(type='button', data-toggle='dropdown') 신용카드 매입전표
         .dropdown-menu.dropdown-menu-right.bordered-menu.p-0
@@ -498,11 +498,11 @@
           option 예약취소
       .form-slim
         .label 입실일
-        input.input.pencil(type='text', value='2018-03-20(1박)', data-toggle='modal', data-target='#roomAddModal')
+        input.input.pencil(type='text', value='2018-03-20(1박)', data-toggle='modal', data-target='#roomAddModal', readonly)
         span.underline
       .form-slim
         .label 퇴실일
-        input.input.pencil(type='text', value='2018-03-21', data-toggle='modal', data-target='#roomAddModal')
+        input.input.pencil(type='text', value='2018-03-21', data-toggle='modal', data-target='#roomAddModal', readonly)
         span.underline
       .py-3
       .label.mb-0 객실
@@ -938,3 +938,122 @@
         .text-center.pt-5
           button.btn.btn-primary.btn-lg(type='button', data-dismiss='modal') 저장
 
+
+//- 영수증 인쇄 Modal
+#receiptModal.modal.fade(tabindex='-1')
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h5.modal-title 영수증 인쇄
+        a.close(data-dismiss='modal')
+          img(src='/assets/images/close.svg')
+      .modal-body#printReceiptArea
+        h5.text-center.mt-5 영수증
+        .text-center.mb-5 조영수 고객님 010-5122-4447
+        h6.mb-2 청구내역
+        table.table.align-middle.text-center(style='border-top: 2px solid #929292')
+          thead.bg-light
+          tbody
+            tr
+              td(rowspan='2', style='width: 12rem') 2018.04.01(월)
+              td(rowspan='2', style='min-width: 8rem') 객실
+              td.text-left 하늘채 사랑방
+              td(style='width: 5rem') 1박
+              td.text-right(style='width: 10rem') 76,000
+            tr
+              td.text-left
+                img.pb-2.pr-2(src='/assets/images/tree.svg')
+                | 추가인원(성인1명, 유아1명)
+              td 2명
+              td.text-right(style='width: 10rem') 15,000
+            tr
+              td(rowspan='2') 2018.04.02(화)
+              td(rowspan='2') 객실
+              td.text-left 달맞이방
+              td 1박
+              td.text-right(style='width: 10rem') 120,000
+            tr
+              td.text-left
+                img.pb-2.pr-2(src='/assets/images/tree.svg')
+                | 추가인원(성인1명, 유아1명)
+              td 2명
+              td.text-right(style='width: 10rem') 27,000
+            tr
+              td 2018.04.02(화)
+              td 부가서비스
+              td.text-left 4인 바베큐
+              td 1개
+              td.text-right(style='width: 10rem') 60,000
+            tr
+              td 2018.04.02(화)
+              td 수기입력
+              td.text-left 침구추가
+              td 1개
+              td.text-right(style='width: 10rem') 10,000
+          tfoot.bg-light
+            tr
+              th(colspan='3')
+              th 총 금액
+              th.text-right 298,000원
+
+        .py-3
+
+        h6.mb-2 지불내역
+        table.table.align-middle.text-center(style='border-top: 2px solid #929292')
+          thead.bg-light
+          tbody
+            tr
+              td(rowspan='2', style='width: 12rem') 2018-03-20 15:27
+              td(rowspan='2', style='min-width: 5.2rem')
+              td.text-left 판매사 결제(티몬)
+              td(style='width: 5rem')
+              td.text-right(style='width: 10rem') 80,000
+            tr
+              td.text-left
+                img.pb-2.pr-2(src='/assets/images/tree.svg')
+                | 할인
+              td
+              td.text-right(style='width: 10rem') 30,000
+            tr
+              td(rowspan='4')  2018-03-20 15:27
+              td(rowspan='4')
+              td.text-left 카드(6078)
+              td
+              td.text-right(style='width: 10rem') 50,000
+            tr
+              td.text-left 무통장입금
+              td
+              td.text-right(style='width: 10rem') 40,000
+            tr
+              td.text-left 현금 결제
+              td
+              td.text-right(style='width: 10rem') 80,000
+            tr
+              td.text-left 환불
+              td
+              td.text-right(style='width: 10rem')
+                .text-red -30,000
+
+          tfoot.bg-light
+            tr
+              th(colspan='3')
+              th 총 금액
+              th.text-right 298,000원
+            tr
+              th(colspan='3')
+              th 잔액
+              th.text-right 0원
+
+        .text-center.pt-5
+          | 상기 금액을 영수하였습니다.
+          br
+          | 2018.04.03
+
+        .text-center.pt-5.d-print-none
+          button.btn.btn-primary.btn-lg(type='button', onclick="printDiv('printReceiptArea')") 인쇄
+
+        .d-flex.justify-content-between.mt-5
+          div
+            | 데이먼 해달별 펜션
+            small.text-muted.ml-2 서울특별시 중구 소월로 50 ㅣ +82-2-753-4512
+          img(src='/assets/images/onda-logo.svg', style='width: 50px')
