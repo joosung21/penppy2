@@ -3,8 +3,9 @@ $onda: #67ABFF
 $white-gray: #f8f9fb
 
 %display-flex
+  display: table-cell // ie9
+  display: -ms-flexbox // ie10
   display: -webkit-box
-  display: -ms-flexbox
   display: flex
 
 html

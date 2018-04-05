@@ -30,8 +30,9 @@ $left-side-padding: 2rem
   background-size: cover
 
 %display-flex
+  display: table-cell // ie9
+  display: -ms-flexbox // ie10
   display: -webkit-box
-  display: -ms-flexbox
   display: flex
 
 //------------ Bootstrap Overides ----------//

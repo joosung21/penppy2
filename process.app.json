@@ -1,8 +1,4 @@
 {
-  /**
-   * Application configuration section
-   * http://pm2.keymetrics.io/docs/usage/application-declaration/
-   */
   "apps" : [
     {
       "name": "prototype-penppy2",
@@ -20,10 +16,6 @@
     }
   ],
 
-  /**
-   * Deployment section
-   * http://pm2.keymetrics.io/docs/usage/deployment/
-   */
   "deploy" : {
     "production" : {},
     "dev" : {}
