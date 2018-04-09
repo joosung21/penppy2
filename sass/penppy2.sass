@@ -185,8 +185,13 @@ select.custom-select
   background-color: $washed-navy
 
 .pagination
+  .page-link
+    height: 2.3rem
+    padding: .45rem .65rem
   .page-link.icon
-    padding: .4rem .4rem
+    padding: .38rem .45rem .45rem .45rem
+    img
+      width: 1.2rem
   .page-item.disabled
     .page-link.icon
       img
@@ -1814,12 +1819,15 @@ table
         a
           width: auto
           display: inline-block
-          padding: 1.3rem 1.4rem
+          padding: 1.3rem 2.0rem
           font-size: 1.2rem
+          &.home
+            display: none
           img
-            position: relative
-            top: -2px
-            margin-right: .5rem
+            display: none
+            // position: relative
+            // top: -2px
+            // margin-right: .5rem
         .foldOpt
           display: none
 
@@ -1831,17 +1839,24 @@ table
       width: 100%
       position: absolute
       padding-left: 16rem
+      height: auto
       .wrapper
-        height: auto
         display: block
+        width: fit-content
+        margin-left: auto
+        margin-right: 5.5rem
+        height: auto
       .nav-group
         display: inline-block
+        height: auto
         vertical-align: top
         padding: 2rem 2.5rem
         .group-title
           margin-bottom: .5rem
         .pl-2
           padding-left: 0 !important
+        .mt-5
+          margin: 0 !important
       hr
         display: none
     #nav-rateplan, #nav-payment

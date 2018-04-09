@@ -53,14 +53,6 @@ app.get('/setting/history', function (req, res){res.render('setting-history')})
 app.get('/setting/crawling', function (req, res){res.render('setting-crawling')})
 app.get('/setting/seo', function (req, res){res.render('setting-seo')})
 
-// 모바일 BP
-app.get('/bp-mobile', function (req, res){res.render('bp-mobile')})
-app.get('/bp-mobile-book', function (req, res){res.render('bp-mobile-book')})
-
-// PC BP
-app.get('/bp-pc', function (req, res){res.render('bp-pc')})
-app.get('/bp-pc-book', function (req, res){res.render('bp-pc-book')})
-
 // Error Pages
 app.get('/maintnence', function (req, res){res.render('maintnence')})
 app.get('*', function (req, res){res.render('404')})

@@ -102,12 +102,13 @@ $( document ).ready(function() {
     openSlider();
   });
 
-  // Responsive: Second Depth Show
+  // Responsive: Second Depth Show & hide
+  $('#main-navztwo-depth');
 
   // Resize Detect
   $(window).resize(function() {
     windowWidth = $(window).width();
-    if( windowWidth >= 1200 ) {
+    if( windowWidth >= 1400 ) {
       var thisPage = $('body').attr('name');
       switch(thisPage) {
         case 'setting':
@@ -126,13 +127,13 @@ $( document ).ready(function() {
           break;
       }
     }
-    if( windowWidth <= 1199 ) {
+    if( windowWidth <= 1399 ) {
       slideSecondNav();
     }
   });
 
   // Slide Second Nav
-  if( windowWidth <= 1199 ) {
+  if( windowWidth <= 1399 ) {
     slideSecondNav();
   }
 
@@ -154,7 +155,7 @@ slideSecondNav = function(){
     var isOpend3 = false;
 
   $('#main-nav.two-depth .first-depth a').mouseover(function(){
-    if(windowWidth <= 1199) {
+    if(windowWidth <= 1399) {
       if($(this).hasClass('setting')) {
         if(isOpend1 == false) {
           $('#main-nav.two-depth .second-depth').hide();
@@ -186,7 +187,7 @@ slideSecondNav = function(){
   });
   $('#main-nav').mouseleave(function(){
     // console.log(windowWidth)
-    if(windowWidth <= 1199) {
+    if(windowWidth <= 1399) {
       $('#main-nav.two-depth .second-depth').slideUp(300);
       isOpend1 = false;
       isOpend2 = false;
