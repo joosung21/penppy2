@@ -1366,7 +1366,7 @@ footer
 .chart-row
   @extend %display-flex
   align-items: center
-  border-bottom: 1px solid lighten($border-color, 2%)
+  // border-bottom: 1px solid lighten($border-color, 2%)
   .row-title
     width: 12%
     padding-left: 2rem
@@ -1378,13 +1378,23 @@ footer
       position: relative
       width: calc( 100% / 14)
       text-align: center
-      padding: .7rem .4rem
+      padding: .7rem 0
       height: 100%
       *
         text-align: center
+      .basic-price
+        padding-right: .25rem
+      &:first-child
+        input.form-control
+          border-left: 1px solid $border-color
       .form-control
         text-align: right
         min-width: 6rem
+        border-radius: 0
+        border-left: none
+        &:focus
+          outline: none !important
+          box-shadow: inset 0 0 0 1px $onda !important
       .discount
         color: $red
         text-align: right
@@ -1449,7 +1459,7 @@ footer
 .chart-row.basic-price
   .dd
     text-align: right
-    padding-right: 1.2rem
+    padding-right: 0
 
 .set-start-day
   position: relative
@@ -1885,4 +1895,8 @@ table
     .dd-wrapper
       .dd
         input.form-control
-          width: 4rem
+          min-width: 4.5rem
+
+  // 객실달력 페이지
+  .table-calendar tbody .price
+    padding-left: 1.7rem
