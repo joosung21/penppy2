@@ -798,6 +798,7 @@ ul.link-list
 
 // Artboard
 .artboard
+  min-width: 1000px
   background-color: white
   padding: 3rem 3rem 4rem 3rem
   @extend %box-shadow
@@ -1787,13 +1788,6 @@ table
 
 
 
-
-
-
-
-
-
-
 //---------- Responsive: Smaller than 1400px ----------//
 @media only screen and (max-width: 1399px)
   html
@@ -1894,8 +1888,11 @@ table
       width: 12rem
     .dd-wrapper
       .dd
-        input.form-control
+        .form-control
           min-width: 4.5rem
+        .form-control, .form-control-plaintext, .discount
+          padding-right: .5rem !important
+          padding-left: .5rem !important
 
   // 객실달력 페이지
   .table-calendar tbody .price
