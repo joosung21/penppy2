@@ -181,6 +181,9 @@ select.custom-select
     &:last-child
       border: none
 
+.badge
+  font-weight: 300
+
 .badge-dark
   background-color: $washed-navy
 
@@ -693,7 +696,7 @@ ul.link-list
     .wrapper
       @extend %display-flex
       flex-direction: column
-      justify-content: center
+      justify-content: flex-start
       height: 100vh
 
 #main-nav.two-depth
@@ -715,6 +718,12 @@ ul.link-list
   hr
     border-color: lighten($navy-blue, 7%)
     margin: 0 1.8rem
+  #nav-rateplan
+    .nav-group
+      margin-top: 20.8rem
+  #nav-payment
+    .nav-group
+      margin-top: 28.7rem
 
 // Sub Nav
 #sub-nav
@@ -1793,7 +1802,7 @@ table
 //---------- Responsive: Smaller than 1400px ----------//
 @media only screen and (max-width: 1399px)
   html
-    font-size: 12px
+    font-size: 13px
   .content-container
     padding: 2.5rem !important
   .status-badge
@@ -1827,13 +1836,26 @@ table
           display: inline-block
           padding: 1.3rem 2.0rem
           font-size: 1.2rem
+          position: relative
           &.home
             display: none
           img
             display: none
-            // position: relative
-            // top: -2px
-            // margin-right: .5rem
+          &.rateplan, &.setting, &.payment
+            &.hover
+              &::after
+                position: absolute
+                bottom: -1.5rem
+                left: 3.5rem
+                width: 20px
+                height: 20px
+                content: ''
+                background-color: white
+                border-radius: 2px
+                transform: rotate(45deg)
+          &.setting
+            &::after
+              left: 2.5rem !important
         .foldOpt
           display: none
 
@@ -1846,6 +1868,8 @@ table
       position: absolute
       padding-left: 16rem
       height: auto
+      background-color: white
+      border-bottom: 1px solid $border-color
       .wrapper
         display: block
         width: fit-content
@@ -1856,9 +1880,17 @@ table
         display: inline-block
         height: auto
         vertical-align: top
+        margin-top: 0 !important
         padding: 2rem 2.5rem
+        a
+          color: #4c4c4c
+          font-weight: 400
+          &.active
+            color: $onda
         .group-title
           margin-bottom: .5rem
+          color: #666
+          font-weight: 400
         .pl-2
           padding-left: 0 !important
         .mt-5

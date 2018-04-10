@@ -154,41 +154,49 @@ slideSecondNav = function(){
     var isOpend2 = false;
     var isOpend3 = false;
 
-  $('#main-nav.two-depth .first-depth a').mouseover(function(){
-    if(windowWidth <= 1399) {
-      if($(this).hasClass('setting')) {
-        if(isOpend1 == false) {
+  $('#main-nav.two-depth .first-depth a').each(function(){
+    $(this).mouseover(function(){
+      if(windowWidth <= 1399) {
+        if($(this).hasClass('setting')) {
+          if(isOpend1 == false) {
+            $('#main-nav.two-depth .second-depth').hide();
+            $('#main-nav.two-depth #nav-setting').slideDown(0);
+            $('a').removeClass('hover');
+            $(this).addClass('hover');
+            isOpend2 = false;
+            isOpend3 = false;
+            isOpend1 = true;
+          }
+        } else if($(this).hasClass('rateplan')) {
+          if(isOpend2 == false) {
+            $('#main-nav.two-depth .second-depth').hide();
+            $('#main-nav.two-depth #nav-rateplan').slideDown(0);
+            $('a').removeClass('hover');
+            $(this).addClass('hover');
+            isOpend1 = false;
+            isOpend3 = false;
+            isOpend2 = true;
+          }
+        } else if($(this).hasClass('payment')) {
+          if(isOpend3 == false) {
+            $('#main-nav.two-depth .second-depth').hide();
+            $('#main-nav.two-depth #nav-payment').slideDown(0);
+            $('a').removeClass('hover');
+            $(this).addClass('hover');
+            isOpend1 = false;
+            isOpend2 = false;
+            isOpend3 = true;
+          }
+        } else {
           $('#main-nav.two-depth .second-depth').hide();
-          $('#main-nav.two-depth #nav-setting').slideDown(300);
-          isOpend2 = false;
-          isOpend3 = false;
-          isOpend1 = true;
         }
       }
-      if($(this).hasClass('rateplan')) {
-        if(isOpend2 == false) {
-          $('#main-nav.two-depth .second-depth').hide();
-          $('#main-nav.two-depth #nav-rateplan').slideDown(300);
-          isOpend1 = false;
-          isOpend3 = false;
-          isOpend2 = true;
-        }
-      }
-      if($(this).hasClass('payment')) {
-        if(isOpend2 == false) {
-          $('#main-nav.two-depth .second-depth').hide();
-          $('#main-nav.two-depth #nav-payment').slideDown(300);
-          isOpend1 = false;
-          isOpend2 = false;
-          isOpend3 = true;
-        }
-      }
-    }
-  });
+    });
+  })
   $('#main-nav').mouseleave(function(){
-    // console.log(windowWidth)
     if(windowWidth <= 1399) {
-      $('#main-nav.two-depth .second-depth').slideUp(300);
+      $('#main-nav.two-depth .second-depth').slideUp(0);
+      $('a').removeClass('hover');
       isOpend1 = false;
       isOpend2 = false;
       isOpend3 = false;
