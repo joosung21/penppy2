@@ -666,6 +666,9 @@ ul.link-list
         background-color: darken($onda, 1%)
       &.active
         background-color: $navy-blue
+    .nav-dropdown
+      .nav-link
+        transition: none
     a.home
       display: none
     .foldOpt
@@ -691,6 +694,38 @@ ul.link-list
         width: auto
         flex-shrink: 0
         font-size: 1.1rem
+
+    .nav-dropdown
+      position: relative
+      display: inline-block
+    .dropdown-content
+      display: none
+      position: absolute
+      background-color: white
+      min-width: 160px
+      box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1)
+      z-index: 1
+      padding: 1rem 1rem 1.5rem 1rem
+      .small
+        color: #bbb
+        margin: 1rem 1rem 1rem 1rem
+      a
+        color: #4C4C4C
+        padding: .35rem 1rem
+        text-decoration: none
+        display: block
+        font-weight: 400
+      &.setting
+        right: 0
+        width: 50rem
+    .nav-dropdown:hover
+      .dropdown-content
+        display: block
+      .dropbtn
+        background-color: white
+        color: #4c4c4c
+        font-weight: 400
+
 
 // Two Depth Nav
 #main-nav
@@ -1871,6 +1906,13 @@ table
       //     display: none
     .first-depth-top
       display: flex
+      // nav
+      //   .nav-link
+      //     transition: background .1s
+      //     &:hover
+      //       background-color: white !important
+      //       color: #4C4C4C
+      //       font-weight: 400
 
   // Two Depth Nav
   #main-nav
