@@ -40,7 +40,7 @@
       a.nav-link.calendar(href='/calendar') 객실달력
       a.nav-link.room-block(href='/room-block') 방막기
       .nav-dropdown
-        a.nav-link.dropbtn.rateplan 기본요금
+        a.nav-link.dropbtn.rateplan(href='/rateplan') 기본요금
         .dropdown-content
           a(href='/rateplan') 전체시즌
           a(href='/rateplan') 비수기
@@ -49,16 +49,16 @@
           a(href='/rateplan') + 시즌추가
       a.nav-link.price-chart(href='/chart') 할인요금
       .nav-dropdown
-        a.nav-link.dropbtn.payment 정산목록
+        a.nav-link.dropbtn.payment(href='/payment') 정산목록
         .dropdown-content
           a(href='/payment') 정산목록
           a(href='/revenue') 기간별 매출목록
       a.nav-link.report(href='/report') 통계
       .nav-dropdown
-        a.nav-link.dropbtn.setting 설정
+        a.nav-link.dropbtn.setting(href='/setting/basic') 설정
         .dropdown-content.setting
-          .row.no-gutters
-            .col
+          .d-flex.justify-content-between
+            div
               .small 판매설정
               a(href='/setting/basic') 기본설정
               a(href='/setting/property') 숙소정보
@@ -68,7 +68,7 @@
               a(href='/setting/daily') 일자별 요금 설정
               a(href='/setting/crawling') 자동방막기 설정
               a(href='/setting/seo') 검색엔진 최적화
-            .col
+            div
               .small 실시간 예약창
               a(href='/setting/bp') 예약창 기본설정
               a(href='/setting/service') 부가서비스
@@ -76,11 +76,11 @@
               a(href='/setting/notice') 팝업 공지사항
               a(href='/setting/sms') 문자발송 정보
               a(href='/setting/url') 홈페이지 설치안내
-            .col
+            div
               .small 온라인 판매대행
               a(href='/setting/gds') 판매사 연동신청
               a(href='/setting/gds-status') 판매사 연동현황
-            .col
+            div
               .small 변경내역
               a(href='/setting/history') 변경내역 조회
 
