@@ -2,35 +2,90 @@
   .first-depth
     a.brand(href='/') 데이먼 해달별펜션
     nav
-      a.home(href='/', title='홈')
+      a.nav-link.home(href='/', title='홈')
         img(src='/assets/images/ic-home.svg')
-      a.reservation-list(href='/reservation-list', title='예약목록')
+      a.nav-link.reservation-list(href='/reservation-list', title='예약목록')
         img(src='/assets/images/ic-list.svg')
         span 예약목록
-      a.calendar(href='/calendar', title='객실달력')
+      a.nav-link.calendar(href='/calendar', title='객실달력')
         img(src='/assets/images/ic-calendar.svg')
         span 객실달력
-      a.room-block(href='/room-block', title='방막기')
+      a.nav-link.room-block(href='/room-block', title='방막기')
         img(src='/assets/images/ic-block.svg')
         span 방막기
-      a.rateplan(href='/rateplan', title='기본요금')
+      a.nav-link.rateplan.dropdown(href='/rateplan', title='기본요금')
         img(src='/assets/images/ic-w.svg')
         span 기본요금
-      a.price-chart(href='/chart', title='할인요금')
+      a.nav-link.price-chart(href='/chart', title='할인요금')
         img(src='/assets/images/ic-slide.svg')
         span 할인요금
-      a.payment(href='/payment', title='정산목록')
+      a.nav-link.payment(href='/payment', title='정산목록')
         img(src='/assets/images/ic-caculator.svg')
         span 정산목록
-      a.report(href='/report', title='통계')
+      a.nav-link.report(href='/report', title='통계')
         img(src='/assets/images/ic-chart.svg')
         span 통계
-      a.setting(href='/setting', title='설정')
+      a.nav-link.setting(href='/setting', title='설정')
         img(src='/assets/images/ic-gear.svg')
         span 설정
-      a.foldOpt(onclick='foldNav()', title='메뉴 펼치기')
+      a.nav-link.foldOpt(onclick='foldNav()', title='메뉴 펼치기')
         img(src='/assets/images/ic-arrow.svg')
         span.small(style='margin-top: 2px') 메뉴접기
+
+  //- Main-nav Top
+  .first-depth-top
+    a.brand(href='/') 데이먼 해달별펜션
+    nav
+      a.nav-link.reservation-list(href='/reservation-list') 예약목록
+      a.nav-link.calendar(href='/calendar') 객실달력
+      a.nav-link.room-block(href='/room-block') 방막기
+      div
+        a.nav-link.rateplan.dropdown(href='/rateplan', data-toggle='dropdown') 기본요금
+        .dropdown-menu.m-0
+          a.dropdown-item(href='/rateplan') 전체시즌
+          a.dropdown-item(href='/rateplan') 비수기
+          a.dropdown-item(href='/rateplan') 준성수기
+          a.dropdown-item(href='/rateplan') 성수기
+          .dropdown-divider
+          a.dropdown-item(href='/rateplan')
+            i.fa.fa-plus
+            | 시즌추가
+      a.nav-link.price-chart(href='/chart') 할인요금
+      div
+        a.nav-link.payment.dropdown(href='/payment', data-toggle='dropdown') 정산목록
+        .dropdown-menu.m-0
+          a.dropdown-item(href='/payment') 정산목록
+          a.dropdown-item(href='/revenue') 기간별 매출목록
+      a.nav-link.report(href='/report') 통계
+      div
+        a.nav-link.setting.dropdown(href='/setting', data-toggle='dropdown') 설정
+        .dropdown-menu.m-0
+          .row.no-gutters
+            .col
+              .small.text-muted.px-4.py-2 판매설정
+              a.dropdown-item(href='/setting/basic') 기본설정
+              a.dropdown-item(href='/setting/property') 숙소정보
+              a.dropdown-item(href='/setting/rooms') 객실정보
+              a.dropdown-item(href='/setting/policy') 취소환불정책
+              a.dropdown-item(href='/setting/auto') 자동할인 설정
+              a.dropdown-item(href='/setting/daily') 일자별 요금 설정
+              a.dropdown-item(href='/setting/crawling') 자동방막기 설정
+              a.dropdown-item(href='/setting/seo') 검색엔진 최적화 설정
+            .col
+              .small.text-muted.px-4.py-2 실시간 예약창
+              a.dropdown-item(href='/setting/bp') 예약창 기본설정
+              a.dropdown-item(href='/setting/service') 부가서비스
+              a.dropdown-item(href='/setting/multiday') 연박 설정
+              a.dropdown-item(href='/setting/notice') 팝업 공지사항
+              a.dropdown-item(href='/setting/sms') 문자발송 정보
+              a.dropdown-item(href='/setting/url') 홈페이지 설치안내
+            .col
+              .small.text-muted.px-4.py-2 온라인 판매대행
+              a.dropdown-item(href='/setting/gds') 판매사 연동신청
+              a.dropdown-item(href='/setting/gds-status') 판매사 연동현황
+            .col
+              .small.text-muted.px-4.py-2 변경내역
+              a.dropdown-item(href='/setting/history') 변경내역 조회
 
   //- 업체설정 메뉴
   #nav-setting.second-depth
@@ -68,7 +123,7 @@
         .pl-2
           a.history(href='/setting/history') 변경내역 조회
 
-  //- 요금설정 메뉴
+  //- 기본요금 메뉴
   #nav-rateplan.second-depth
     .wrapper
       .nav-group

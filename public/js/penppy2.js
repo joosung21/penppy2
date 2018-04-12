@@ -102,40 +102,38 @@ $( document ).ready(function() {
     openSlider();
   });
 
-  // Responsive: Second Depth Show & hide
-  $('#main-navztwo-depth');
 
   // Resize Detect
-  $(window).resize(function() {
-    windowWidth = $(window).width();
-    if( windowWidth >= 1400 ) {
-      var thisPage = $('body').attr('name');
-      switch(thisPage) {
-        case 'setting':
-          $('#main-nav').addClass('two-depth');
-          $('#nav-setting').show();
-          break;
-        case 'rateplan':
-          $('#main-nav').addClass('two-depth');
-          $('#nav-rateplan').show();
-          break;
-        case 'payment':
-          $('#main-nav').addClass('two-depth');
-          $('#nav-payment').show();
-          break;
-        default:
-          break;
-      }
-    }
-    if( windowWidth <= 1399 ) {
-      slideSecondNav();
-    }
-  });
+  // $(window).resize(function() {
+  //   windowWidth = $(window).width();
+  //   if( windowWidth >= 1400 ) {
+  //     var thisPage = $('body').attr('name');
+  //     switch(thisPage) {
+  //       case 'setting':
+  //         $('#main-nav').addClass('two-depth');
+  //         $('#nav-setting').show();
+  //         break;
+  //       case 'rateplan':
+  //         $('#main-nav').addClass('two-depth');
+  //         $('#nav-rateplan').show();
+  //         break;
+  //       case 'payment':
+  //         $('#main-nav').addClass('two-depth');
+  //         $('#nav-payment').show();
+  //         break;
+  //       default:
+  //         break;
+  //     }
+  //   }
+  //   if( windowWidth <= 1399 ) {
+  //     slideSecondNav();
+  //   }
+  // });
 
   // Slide Second Nav
-  if( windowWidth <= 1399 ) {
-    slideSecondNav();
-  }
+  // if( windowWidth <= 1399 ) {
+  //   slideSecondNav();
+  // }
 
   // Hide PMS Slider
   $('.pms-slider').hide();
@@ -148,61 +146,61 @@ $( document ).ready(function() {
 });
 
 // Slide Down Nav
-slideSecondNav = function(){
-  $('#main-nav.two-depth .second-depth').hide();
-    var isOpend1 = false;
-    var isOpend2 = false;
-    var isOpend3 = false;
+// slideSecondNav = function(){
+//   $('#main-nav.two-depth .second-depth').hide();
+//     var isOpend1 = false;
+//     var isOpend2 = false;
+//     var isOpend3 = false;
 
-  $('#main-nav.two-depth .first-depth a').each(function(){
-    $(this).mouseover(function(){
-      if(windowWidth <= 1399) {
-        if($(this).hasClass('setting')) {
-          if(isOpend1 == false) {
-            $('#main-nav.two-depth .second-depth').hide();
-            $('#main-nav.two-depth #nav-setting').slideDown(0);
-            $('a').removeClass('hover');
-            $(this).addClass('hover');
-            isOpend2 = false;
-            isOpend3 = false;
-            isOpend1 = true;
-          }
-        } else if($(this).hasClass('rateplan')) {
-          if(isOpend2 == false) {
-            $('#main-nav.two-depth .second-depth').hide();
-            $('#main-nav.two-depth #nav-rateplan').slideDown(0);
-            $('a').removeClass('hover');
-            $(this).addClass('hover');
-            isOpend1 = false;
-            isOpend3 = false;
-            isOpend2 = true;
-          }
-        } else if($(this).hasClass('payment')) {
-          if(isOpend3 == false) {
-            $('#main-nav.two-depth .second-depth').hide();
-            $('#main-nav.two-depth #nav-payment').slideDown(0);
-            $('a').removeClass('hover');
-            $(this).addClass('hover');
-            isOpend1 = false;
-            isOpend2 = false;
-            isOpend3 = true;
-          }
-        } else {
-          $('#main-nav.two-depth .second-depth').hide();
-        }
-      }
-    });
-  })
-  $('#main-nav').mouseleave(function(){
-    if(windowWidth <= 1399) {
-      $('#main-nav.two-depth .second-depth').slideUp(0);
-      $('a').removeClass('hover');
-      isOpend1 = false;
-      isOpend2 = false;
-      isOpend3 = false;
-    }
-  });
-}
+//   $('#main-nav.two-depth .first-depth a').each(function(){
+//     $(this).mouseover(function(){
+//       if(windowWidth <= 1399) {
+//         if($(this).hasClass('setting')) {
+//           if(isOpend1 == false) {
+//             $('#main-nav.two-depth .second-depth').hide();
+//             $('#main-nav.two-depth #nav-setting').slideDown(0);
+//             $('a').removeClass('hover');
+//             $(this).addClass('hover');
+//             isOpend2 = false;
+//             isOpend3 = false;
+//             isOpend1 = true;
+//           }
+//         } else if($(this).hasClass('rateplan')) {
+//           if(isOpend2 == false) {
+//             $('#main-nav.two-depth .second-depth').hide();
+//             $('#main-nav.two-depth #nav-rateplan').slideDown(0);
+//             $('a').removeClass('hover');
+//             $(this).addClass('hover');
+//             isOpend1 = false;
+//             isOpend3 = false;
+//             isOpend2 = true;
+//           }
+//         } else if($(this).hasClass('payment')) {
+//           if(isOpend3 == false) {
+//             $('#main-nav.two-depth .second-depth').hide();
+//             $('#main-nav.two-depth #nav-payment').slideDown(0);
+//             $('a').removeClass('hover');
+//             $(this).addClass('hover');
+//             isOpend1 = false;
+//             isOpend2 = false;
+//             isOpend3 = true;
+//           }
+//         } else {
+//           $('#main-nav.two-depth .second-depth').hide();
+//         }
+//       }
+//     });
+//   })
+//   $('#main-nav').mouseleave(function(){
+//     if(windowWidth <= 1399) {
+//       $('#main-nav.two-depth .second-depth').slideUp(0);
+//       $('a').removeClass('hover');
+//       isOpend1 = false;
+//       isOpend2 = false;
+//       isOpend3 = false;
+//     }
+//   });
+// }
 
 // Fold Nav
 foldNav = function(){
