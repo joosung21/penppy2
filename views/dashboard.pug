@@ -101,7 +101,7 @@ body(name='home')
         .col-lg-5
           .row
             .col-6.col-lg-12
-              .dashboard-unit(style='min-height: 37rem')
+              .dashboard-unit(style='min-height: 33rem')
                 .title 오늘 입실
                 table.table.table-hover.text-center.align-middle.mb-0
                   thead.bg-light
@@ -135,26 +135,6 @@ body(name='home')
                         | 010-5503-9903
                       td
                         | 픽업, 바베큐, 조식
-                    tr(onclick='openPmsSlider("edit")')
-                      td --:--
-                      td
-                        | 하늘채 사랑방
-                        .small.text-muted 성인2, 아동0, 유아1
-                      td
-                        | 정우성
-                        br
-                        | 010-5503-9903
-                      td
-                    tr(onclick='openPmsSlider("edit")')
-                      td 15:20
-                      td
-                        | 하늘채 사랑방
-                        .small.text-muted 성인2, 아동0, 유아1
-                      td
-                        | 정우성
-                        br
-                        | 010-5503-9903
-                      td
                     tr(onclick='openPmsSlider("edit")')
                       td --:--
                       td
@@ -219,7 +199,7 @@ body(name='home')
                           span.custom-control-label
 
         .col-lg-7
-          .dashboard-unit.dashboard-occupancy(style='min-height: 37rem')
+          .dashboard-unit.dashboard-occupancy(style='min-height: 33rem')
             .title 월별 객실 가동률
             .header
               .year-month 2018년 1월
@@ -233,7 +213,7 @@ body(name='home')
                 span.big 70%
               a.btn.btn-outline-primary.mr-2(href='/chart') 할인설정
               a.btn.btn-outline-primary(href='/setting/auto-edit') 자동할인설정
-            img.w-100(src='/assets/images/temp-graph.png')
+            img.w-100(src='/assets/images/temp-graph.png', style='max-height: 20rem')
 
           .d-flex.align-items-stretch(style='min-height: 29rem')
             div(style='flex: 1 1 auto')
@@ -244,13 +224,13 @@ body(name='home')
                     img(src='/assets/images/plus-box-gray.svg')
                 ul.link-list.list-unstyled.m-0
                   li.row.no-gutters(onclick='location.href="/notice-view"')
-                    .col-8
+                    .col-8.text-truncate
                       img.mr-2(src='/assets/images/bell.svg')
                       | [온다 APP] ‘자동예약수집’ 기능 업데이트 안내
                     .col-4.text-right
                       | 2018.03.05(월)
                   li.row.no-gutters(onclick='location.href="/notice-view"')
-                    .col-8
+                    .col-8.text-truncate
                       | 서버 이전 작업 안내
                     .col-4.text-right
                       | 2018.03.05(월)
