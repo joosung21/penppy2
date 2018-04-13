@@ -31,6 +31,50 @@ body
       img(src='/assets/images/D.svg')
       img(src='/assets/images/A.svg')
 
+//- 회원정보 업데이트 안내 Modal
+#updateModal.modal.fade(tabindex='-1')
+  .modal-dialog.modal-sm
+    .modal-content
+      .modal-header
+        h5.modal-title 회원정보 업데이트 안내
+        a.close(data-dismiss='modal')
+          img(src='/assets/images/close.svg')
+      .modal-body
+        p.text-center.mb-5
+          | ONDA가 파트너님의 회원정보를 안전하게 보호하기 위해
+          br
+          | 로그인 정보를 다시한번 확인합니다.
+          br
+          | 이메일 아이디와 비밀번호 입력 후 회원정보를 업데이트해주세요.
+        .form-group.row
+          label.label-necessary.col-sm-3.pt-1 이메일 아이디
+          .col-sm-9
+            input.form-control(type='text')
+        .form-group.row
+          label.label-necessary.col-sm-3.pt-1 비밀번호
+          .col-sm-9
+            input.form-control(type='password')
+        .form-group.row
+          label.label-necessary.col-sm-3.pt-1 비밀번호 확인
+          .col-sm-9
+            input.form-control(type='password')
+        .form-group.row
+          label.col-sm-3.pt-1 이름
+          .col-sm-9
+            input.form-control(type='text')
+        .form-group.row
+          label.col-sm-3.pt-1 이름
+          .col-sm-9
+            .form-row
+              .col-5
+                select.custom-select
+                  option (+82) 대한민국
+              .col-7
+                input.form-control(type='text', value='010-1205-5300')
+        .text-center.py-3
+          button.btn.btn-secondary.btn-lg.mr-1(type='button', data-dismiss='modal') 다음에
+          button.btn.btn-primary.btn-lg(type='button', data-dismiss='modal') 확인
+
 //- 아이디찾기 Modal
 #findIdModal.modal.fade(tabindex='-1')
   .modal-dialog.modal-sm
@@ -202,3 +246,4 @@ script.
     $('#agreementModal').modal();
   });
 
+  $('#updateModal').modal();

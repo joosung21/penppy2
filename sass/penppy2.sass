@@ -46,6 +46,8 @@ $left-side-padding: 2rem
   background-color: #F2F3F8
 
 .btn-outline-primary
+  border-color: #4275C4
+  color: #4275C4
   &:hover, &:active
     color: white
 
@@ -226,7 +228,7 @@ body
 .form-group
   margin-bottom: 40px
   label
-    font-weight: 400
+    font-weight: 600
 
 label.label-necessary
   &:after
@@ -629,7 +631,6 @@ ul.link-list
   background-color: $onda
   z-index: 3
   color: white
-  font-weight: 100
   // transition: width .3s
   .first-dapth
     @extend %display-flex
@@ -1908,3 +1909,7 @@ table
   // 객실달력 페이지
   .table-calendar tbody .price
     padding-left: 1.7rem
+
+  // Dashboard
+  .dashboard-checkout
+    min-height: 29.2rem !important
