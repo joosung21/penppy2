@@ -966,6 +966,8 @@ footer
   table
     td.empty
       height: 20rem
+.dashboard-right
+  padding-left: 2.5rem !important
 
 
 .dashboard-summary, .dashboard-weather
@@ -1076,6 +1078,10 @@ footer
       .big
         margin-left: .5rem
         font-size: 1.3rem
+.dashboard-manual
+  flex: 0 0 20rem
+  margin-left: 2.5rem
+  padding-bottom: 2.5rem
 
 .logo-list
   margin-top: -2rem
@@ -1850,9 +1856,9 @@ table
 //---------- Responsive: Smaller than 1400px ----------//
 @media only screen and (max-width: 1399px)
   html
-    font-size: 13px
+    font-size: 12px
   .content-container
-    padding: 2.5rem !important
+    padding: 1.5rem 0 !important
   .status-badge
     padding: .15rem
     &.callonly
@@ -1909,5 +1915,19 @@ table
     padding-left: 1.7rem
 
   // Dashboard
+  .dashboard-right
+    padding-left: .9rem !important
   .dashboard-checkout
     min-height: 29.2rem !important
+  .dashboard-unit
+    margin-bottom: .9rem
+    padding: 2rem
+  .dashboard-weather
+    margin-left: .9rem
+  .dashboard-manual
+    margin-left: .9rem
+
+  // footer
+  footer
+    padding: 1rem 1rem 0 1rem
+    margin: auto 0 0 0

@@ -5,7 +5,7 @@ body(name='home')
   include ./includes/main-nav-left.pug
   include ./includes/sub-nav.pug
   .content-container
-    .artboard.transparent(style='min-width: 1260px')
+    .artboard.transparent(style='min-width: 1100px')
       .d-flex(style='position: relative')
         .dashboard-unit.dashboard-summary(style='flex: 1 1 auto')
           .date
@@ -97,8 +97,8 @@ body(name='home')
                 img(src='/assets/images/weather-01.svg')
               .date 3월 26일 월요일
 
-      .row
-        .col-5
+      .row.no-gutters
+        .col-5.dashboard-left
           .row
             .col-12
               .dashboard-unit(style='min-height: 27rem')
@@ -198,7 +198,7 @@ body(name='home')
                           input.custom-control-input(type='checkbox', checked)
                           span.custom-control-label
 
-        .col-7
+        .col-7.dashboard-right
           .dashboard-unit.dashboard-occupancy(style='min-height: 27rem')
             .title 월별 객실 가동률
             .header
@@ -238,15 +238,15 @@ body(name='home')
                 .title
                   | App
                   span 쉽고 편한 예약관리 앱, ONDA 펜션관리!
-                .row.no-gutters
-                  .col.mr-1
-                    a.btn.btn-primary.btn-block.p-3(href='https://play.google.com/store/apps/details?id=io.tport.pensionpms', target='_blank')
+                .form-row.no-gutters
+                  .col
+                    a.btn.btn-primary.btn-block.p-3.mb-2.mb-xl-0(href='https://play.google.com/store/apps/details?id=io.tport.pensionpms', target='_blank')
                       img(src='/assets/images/google-play.png')
                   .col
                     a.btn.btn-primary.btn-block.p-3(href='#', target='_blank')
                       img(src='/assets/images/app-store.png')
 
-            div(style='flex: 0 0 20rem; margin-left: 2.5rem; padding-bottom: 2.5rem')
+            .dashboard-manual
               .dashboard-unit(style='height: 100%')
                 .title 메뉴얼
                 ul.link-list.list-unstyled.m-0
