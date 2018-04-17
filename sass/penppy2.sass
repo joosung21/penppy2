@@ -787,7 +787,7 @@ ul.link-list
   background-color: white
   @extend %box-shadow
   z-index: 2
-  min-width: 1000px
+  min-width: 950px
   a
     color: #4f4f4f
     padding: 1rem
@@ -816,8 +816,9 @@ ul.link-list
   flex-direction: column
   background-color: #f2f3f8
   min-height: 100vh
+  width: 100vw
   padding: 7rem 2.5rem 0 calc(#{$left-side-width} + 2.5rem)
-
+  overflow: scroll
 
 // Folded: Main Nav, Sub Nav, Container
 #main-nav.folded
@@ -1871,7 +1872,7 @@ table
     position: relative
     display: block
     width: 100%
-    min-width: 1050px
+    min-width: 950px
     height: auto
     .first-depth
       display: none !important
