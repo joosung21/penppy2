@@ -32,30 +32,62 @@ body
         .form-group.row
           label.label-necessary.col-sm-2.pt-1 권한
           .col-sm-10
-            label.custom-control.custom-checkbox.mr-4
-              input.custom-control-input(type='checkbox')
-              span.custom-control-label 예약목록
-            label.custom-control.custom-checkbox.mr-4
-              input.custom-control-input(type='checkbox')
-              span.custom-control-label 객실달력
-            label.custom-control.custom-checkbox.mr-4
-              input.custom-control-input(type='checkbox')
-              span.custom-control-label 방막기
-            label.custom-control.custom-checkbox.mr-4
-              input.custom-control-input(type='checkbox')
-              span.custom-control-label 기본요금
-            label.custom-control.custom-checkbox.mr-4
-              input.custom-control-input(type='checkbox')
-              span.custom-control-label 할인요금
-            label.custom-control.custom-checkbox.mr-4
-              input.custom-control-input(type='checkbox')
-              span.custom-control-label 정산목록
-            label.custom-control.custom-checkbox.mr-4
-              input.custom-control-input(type='checkbox')
-              span.custom-control-label 통계
-            label.custom-control.custom-checkbox.mr-4
-              input.custom-control-input(type='checkbox')
-              span.custom-control-label 설정
+            .row
+              .col-3
+                .small.mb-2 스탭 권한
+                label.custom-control.custom-checkbox.mr-4
+                  input.custom-control-input(type='checkbox')
+                  span.custom-control-label 예약목록
+                label.custom-control.custom-checkbox.mr-4
+                  input.custom-control-input(type='checkbox')
+                  span.custom-control-label 객실달력
+                label.custom-control.custom-checkbox.mr-4
+                  input.custom-control-input(type='checkbox')
+                  span.custom-control-label 방막기
+                label.custom-control.custom-checkbox.mr-4
+                  input.custom-control-input(type='checkbox')
+                  span.custom-control-label 기본요금
+                label.custom-control.custom-checkbox.mr-4
+                  input.custom-control-input(type='checkbox')
+                  span.custom-control-label 할인요금
+                label.custom-control.custom-checkbox.mr-4
+                  input.custom-control-input(type='checkbox')
+                  span.custom-control-label 정산목록
+              .col-3
+                .small.mb-2 관리자 권한
+                label.custom-control.custom-checkbox.mr-4
+                  input.custom-control-input(type='checkbox')
+                  span.custom-control-label 통계
+                label.custom-control.custom-checkbox.mr-4
+                  input.custom-control-input(type='checkbox')
+                  span.custom-control-label 정산정보
+                label.custom-control.custom-checkbox.mr-4
+                  input.custom-control-input(type='checkbox')
+                  span.custom-control-label 직원관리
+                label.custom-control.custom-checkbox.mr-4
+                  input.custom-control-input(type='checkbox')
+                  span.custom-control-label 변경내역 조회
+              .col-6
+                .small.mb-2 설정변경 권한
+                label.custom-control.custom-checkbox.mr-4
+                  input.custom-control-input(type='checkbox')
+                  span.custom-control-label 판매설정
+                .pl-4.mb-3
+                  .small.pl-1.text-muted
+                    | 기본설정, 숙소정보, 객실정보, 취환불정책, 자동할인 설정, 일자별 요금 설정, 자동방막기 설정, 검색엔진 최적화
+                label.custom-control.custom-checkbox.mr-4
+                  input.custom-control-input(type='checkbox')
+                  span.custom-control-label 실시간 예약창 설정
+                .pl-4.mb-3
+                  .small.pl-1.text-muted
+                    | 예약창 기본설정, 부가서비스, 연박 설정, 팝업 공지사항, 문자발송 정보, 홈페이지 설치안내
+                label.custom-control.custom-checkbox.mr-4
+                  input.custom-control-input(type='checkbox')
+                  span.custom-control-label 온라인 판매대행 설정
+                .pl-4.mb-3
+                  .small.pl-1.text-muted
+                    | 판매사 연동신청, 판매사 연동현황
+
 
         .row.text-center.pt-4.no-gutters
           .col-8.offset-2
