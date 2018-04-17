@@ -1016,7 +1016,6 @@ footer
   background-color: $onda
   color: white
   transition: all .7s
-  cursor: pointer
   .weather-wrapper
     @extend %display-flex
     height: calc(100% - 1.2rem)
@@ -1056,14 +1055,24 @@ footer
   height: 35px
 
 .dashboard-weather-expend
-  display: none
   position: absolute
-  left: 0
+  right: -100%
   top: 0
-  width: 100%
+  width: 29rem
   margin-left: 0
+  transition: all .4s
+  transition-delay: .2s
   &:after
     display: none
+  .weather-day
+    opacity: 0
+
+.dashboard-weather-expend.show
+  display: block
+  right: 0
+  width: 100%
+  .weather-day
+    opacity: 1
 
 .dashboard-occupancy
   .header

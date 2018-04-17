@@ -6,7 +6,7 @@ body(name='home')
   include ./includes/sub-nav.pug
   .content-container
     .artboard.transparent(style='min-width: 1100px')
-      .d-flex(style='position: relative')
+      .d-flex(style='position: relative; overflow: hidden')
         .dashboard-unit.dashboard-summary(style='flex: 1 1 auto')
           .date
             .head Today
@@ -320,4 +320,4 @@ body(name='home')
 include ./includes/pms-slider.pug
 
 script.
-  $('#noticeModal').modal();
+  //- $('#noticeModal').modal();
