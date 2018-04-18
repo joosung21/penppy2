@@ -38,7 +38,8 @@ body.two-depth(name='payment', page='history')
           option 50개씩 보기
           option 100개씩 보기
         select.custom-select(style='width: 10rem')
-          option(selected) 모든 정산상태
+          option(selected, disabled) 정산상태
+          option 전체
           option 정산대기
           option 정산완료
         .text-muted.ml-auto 16건의 정산목록을 불러왔습니다.

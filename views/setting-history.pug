@@ -26,7 +26,8 @@ body.two-depth(name='setting', page='history')
             input(type='radio', name='radio3', autocomplete='off')
             | 최근 1개월
         select.custom-select.ml-3
-          option 전체 변경 내역
+          option(selected, disabled) 변경내역선택
+          option 전체
           option 방막기
           option 방열기
           option 전화문의만 받기
