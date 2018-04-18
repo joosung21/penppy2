@@ -26,76 +26,75 @@ body(name='home')
               .text 미입금취소
 
         .dashboard-unit.dashboard-weather(style='flex: 0 0 20rem')
-          h6 제주도 제주시
+          .area 제주도 제주시
           .weather-wrapper
             .weather-day
-              .degree
-                span.number 17
-                span.marker °
-              .weather
-                span.text 맑음
-                img(src='/assets/images/weather-01.svg')
-              .date 3월 20일 화요일
+              .day 오늘
+              .weather-icon
+                img(src='/assets/images/weather-01.png')
+              .text
+                | 10° / 19°
+                br
+                | 흐린뒤 비
 
         .dashboard-unit.dashboard-weather.dashboard-weather-expend
-          h6 제주도 제주시
           .weather-wrapper
             .weather-day
-              .degree
-                span.number 17
-                span.marker °
-              .weather
-                span.text 맑음
-                img(src='/assets/images/weather-01.svg')
-              .date 3월 20일 화요일
+              .day 오늘
+              .weather-icon
+                img(src='/assets/images/weather-01.png')
+              .text
+                | 10° / 19°
+                br
+                | 흐린뒤 비
             .weather-day
-              .degree
-                span.number -9
-                span.marker °
-              .weather
-                span.text 눈
-                img(src='/assets/images/weather-01.svg')
-              .date 3월 21일 수요일
+              .day 수
+              .weather-icon
+                img(src='/assets/images/weather-02.png')
+              .text
+                | 10° / 19°
+                br
+                | 비
             .weather-day
-              .degree
-                span.number -4
-                span.marker °
-              .weather
-                span.text 맑음
-                img(src='/assets/images/weather-01.svg')
-              .date 3월 22일 목요일
+              .day 목
+              .weather-icon
+                img(src='/assets/images/weather-03.png')
+              .text
+                | 10° / 19°
+                br
+                | 비온뒤 갬
             .weather-day
-              .degree
-                span.number 12
-                span.marker °
-              .weather
-                span.text 흐림
-                img(src='/assets/images/weather-01.svg')
-              .date 3월 23일 금요일
+              .day 금
+              .weather-icon
+                img(src='/assets/images/weather-04.png')
+              .text
+                | 10° / 19°
+                br
+                | 구름많음
             .weather-day
-              .degree
-                span.number 20
-                span.marker °
-              .weather
-                span.text 맑음
-                img(src='/assets/images/weather-01.svg')
-              .date 3월 24일 토요일
+              .day 토
+              .weather-icon
+                img(src='/assets/images/weather-05.png')
+              .text
+                | 10° / 19°
+                br
+                | 맑음
             .weather-day
-              .degree
-                span.number 16
-                span.marker °
-              .weather
-                span.text 맑음
-                img(src='/assets/images/weather-01.svg')
-              .date 3월 25일 일요일
+              .day 일
+              .weather-icon
+                img(src='/assets/images/weather-06.png')
+              .text
+                | 10° / 19°
+                br
+                | 한때 눈
             .weather-day
-              .degree
-                span.number -3
-                span.marker °
-              .weather
-                span.text 비
-                img(src='/assets/images/weather-01.svg')
-              .date 3월 26일 월요일
+              .day 월
+              .weather-icon
+                img(src='/assets/images/weather-07.png')
+              .text
+                | 10° / 19°
+                br
+                | 눈
 
       .row.no-gutters
         .col-5.dashboard-left
@@ -248,12 +247,12 @@ body(name='home')
 
             .dashboard-manual
               .dashboard-unit(style='height: 100%')
-                .title 메뉴얼
+                .title 매뉴얼
                 ul.link-list.list-unstyled.m-0
                   li 사장님 페이지 사용법
                   li 가격/할인 설정
                   li 수기예약, 방막기, 정산확인
-                  li 온다앱 이용메뉴얼
+                  li 온다앱 이용매뉴얼
                   li 기타문의 &amp; 수정요청
       .dashboard-unit
         .title 판매사 연동

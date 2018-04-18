@@ -123,24 +123,25 @@ body.two-depth(name='setting', page='bp')
         .form-group.row
           label.col-sm-3.pt-1 자동취소 사용여부
           .col-sm-9
-            label.custom-control.custom-radio.custom-control-inline.mr-4
-              input.custom-control-input(type='radio', name='radio1', checked)
-              span.custom-control-label 미사용
             label.custom-control.custom-radio.custom-control-inline
               input.custom-control-input(type='radio', name='radio1')
               span.custom-control-label 사용
+            label.custom-control.custom-radio.custom-control-inline.mr-4
+              input.custom-control-input(type='radio', name='radio1', checked)
+              span.custom-control-label 사용안함
             .info
               | 입금대기시간이 초과되면 자동으로 예약이 취소됩니다.
         .form-group.row
           label.col-sm-3.pt-1 자동취소 보류시간
           .col-sm-9
             .form-inline
-              label.custom-control.custom-radio.custom-control-inline.mr-4
-                input.custom-control-input(type='radio', name='radio2')
-                span.custom-control-label 미사용
               label.custom-control.custom-radio.custom-control-inline
                 input.custom-control-input(type='radio', name='radio2', checked)
                 span.custom-control-label 사용
+              label.custom-control.custom-radio.custom-control-inline.mr-4
+                input.custom-control-input(type='radio', name='radio2')
+                span.custom-control-label 사용안함
+            .form-inline.mt-3
               input.form-control(type='text', value='23:00')
               .px-2 ~
               input.form-control(type='text', value='07:00')
@@ -168,12 +169,13 @@ body.two-depth(name='setting', page='bp')
           label.col-sm-3.pt-1 당일예약 허용여부
           .col-sm-9
             .form-inline
-              label.custom-control.custom-radio.custom-control-inline.mr-4
-                input.custom-control-input(type='radio', name='radio5')
-                span.custom-control-label 비허용
               label.custom-control.custom-radio.custom-control-inline
                 input.custom-control-input(type='radio', name='radio5', checked)
                 span.custom-control-label 허용
+              label.custom-control.custom-radio.custom-control-inline.mr-4
+                input.custom-control-input(type='radio', name='radio5')
+                span.custom-control-label 허용안함
+            .form-inline.mt-3
               select.custom-select.mr-2
                 option 당일 24시
               span 까지

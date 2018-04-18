@@ -535,80 +535,6 @@ hr.table-devider
       button
         border-radius: 2px
 
-
-/* The switch - the box around the slider
-.switch
-  position: relative
-  display: inline-block
-  width: 76px
-  height: 28px
-  margin: 6px 0 0 0
-  input
-    display: none
-  &.disabled
-    .slider
-      background-color: #eaeaea
-.slider
-  position: absolute
-  cursor: pointer
-  top: 0
-  left: 0
-  right: 0
-  bottom: 0
-  background-color: $onda
-  -webkit-transition: .3s
-  transition: .3s
-  &:after
-    content: '판매'
-    position: absolute
-    z-index: 10
-    left: 0
-    top: 4px
-    color: #fff
-    font-size: 12px
-    width: 3.8rem
-    text-align: center
-  &:before
-    position: absolute
-    content: ' '
-    height: 26px
-    width: 26px
-    left: 49px
-    bottom: 1px
-    background-color: #fff
-    -webkit-transition: .2s
-    transition: .2s
-input
-  &:checked + .slider
-    background-color: #ccc
-    &:after
-      content: '미판매'
-      width: 7rem
-      right: 0
-      text-align: center
-      color: white
-  &:focus + .slider
-    box-shadow: 0 0 1px #ccc
-  &:checked + .slider:before
-    -webkit-transform: translateX(-48px)
-    -ms-transform: translateX(-48px)
-    transform: translateX(-48px)
-.slider.round
-  border-radius: 34px
-  &:before
-    border-radius: 50%
-
-.switch.online
-  .slider:after
-    content: '온라인'
-  input:checked + .slider:after
-    content: '현장'
-.switch.available
-  .slider:after
-    content: '가능'
-  input:checked + .slider:after
-    content: '불가'
-
 // Link List
 ul.link-list
   li
@@ -1016,6 +942,9 @@ footer
   background-color: $onda
   color: white
   transition: all .7s
+  .area
+    text-align: center
+    margin-top: -1rem
   .weather-wrapper
     @extend %display-flex
     height: calc(100% - 1.2rem)
@@ -1024,27 +953,19 @@ footer
       @extend %display-flex
       flex-direction: column
       transition: all .5s
-      width: 14rem
-      .degree
-        font-size: 2.7rem
-        .marker
-          vertical-align: top
-          position: relative
-          top: -.5rem
-          left: .2rem
-        .number
-          font-size: 4rem
-          line-height: 4.7rem
-          font-weight: 400
-      .weather
-        margin-top: auto
-        font-size: 1.4rem
-        font-weight: 400
-        *
-          vertical-align: middle
-        img
-          margin-left: .5rem
-
+      width: 15rem
+      .day
+        font-size: 1.8rem
+        text-align: center
+      .weather-icon
+        @extend %display-flex
+        width: 100%
+        height: 6rem
+        align-items: center
+        justify-content: center
+        flex-shrink: 0
+      .text
+        text-align: center
 .dashboard-weather:after
   position: absolute
   content: ''
@@ -1061,7 +982,7 @@ footer
   width: 29rem
   margin-left: 0
   transition: all .4s
-  transition-delay: .2s
+  // transition-delay: .2s
   &:after
     display: none
   .weather-day
@@ -1838,6 +1759,14 @@ table
       @extend %display-flex
       justify-content: space-between
       line-height: 1.7rem
+
+// 직원관리 페이지
+.custom-control-label
+  .outer-link
+    margin-left: .5rem
+    text-decoration: none
+    color: #929292
+
 
 
 //---------- Error Pages --------------//

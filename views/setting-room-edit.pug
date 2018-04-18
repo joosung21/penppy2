@@ -218,25 +218,24 @@ body.two-depth(name='setting', page='rooms')
         .form-group.row
           label.col-sm-2.pt-1
             | 실시간 예약창
-            .text-red.small.font-weight-bold (admin)
           .col-sm-10
-            label.custom-control.custom-radio.custom-control-inline.mr-4
-              input.custom-control-input(type='radio', name='radio5')
-              span.custom-control-label 미판매
             label.custom-control.custom-radio.custom-control-inline
               input.custom-control-input(type='radio', name='radio5', checked)
               span.custom-control-label 판매
+            label.custom-control.custom-radio.custom-control-inline.mr-4
+              input.custom-control-input(type='radio', name='radio5')
+              span.custom-control-label 판매안함
         .form-group.row
           label.col-sm-2.pt-1
             | 온라인 판매대행
             .text-red.small.font-weight-bold (admin)
           .col-sm-10
-            label.custom-control.custom-radio.custom-control-inline.mr-4
-              input.custom-control-input(type='radio', name='radio6')
-              span.custom-control-label 미판매
             label.custom-control.custom-radio.custom-control-inline
               input.custom-control-input(type='radio', name='radio6', checked)
               span.custom-control-label 판매
+            label.custom-control.custom-radio.custom-control-inline.mr-4
+              input.custom-control-input(type='radio', name='radio6')
+              span.custom-control-label 판매안함
 
         .row.text-center.pt-4.no-gutters
           .col-8.offset-2

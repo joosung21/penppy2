@@ -45,23 +45,23 @@ body.two-depth(name='setting', page='service')
         .form-group.row
           label.col-sm-2.pt-1 당일판매
           .col-sm-10
-            label.custom-control.custom-radio.custom-control-inline.mr-4
-              input.custom-control-input(type='radio', name='radio1')
-              span.custom-control-label 불가
             label.custom-control.custom-radio.custom-control-inline
               input.custom-control-input(type='radio', name='radio1', checked)
               span.custom-control-label 가능
+            label.custom-control.custom-radio.custom-control-inline.mr-4
+              input.custom-control-input(type='radio', name='radio1')
+              span.custom-control-label 불가
             .info
               | 프로포즈 이벤트, 단체식사준비 등 당일판매가 불가능한 부가서비스는 불가를 선택해주세요.
         .form-group.row
           label.col-sm-2.pt-1 판매상태
           .col-sm-10
-            label.custom-control.custom-radio.custom-control-inline.mr-4
-              input.custom-control-input(type='radio', name='radio1')
-              span.custom-control-label 미판매
             label.custom-control.custom-radio.custom-control-inline
               input.custom-control-input(type='radio', name='radio1', checked)
               span.custom-control-label 판매
+            label.custom-control.custom-radio.custom-control-inline.mr-4
+              input.custom-control-input(type='radio', name='radio1')
+              span.custom-control-label 판매안함
 
         .row.text-center.pt-4.no-gutters
           .col-8.offset-2
