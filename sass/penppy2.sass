@@ -1460,17 +1460,17 @@ footer
         text-align: center
       .basic-price
         padding-right: .25rem
-      &:first-child
-        input.form-control
-          border-left: 1px solid $border-color
       .form-control
         text-align: right
         min-width: 6rem
         border-radius: 0
-        border-left: none
+        border-right: none
         &:focus
           outline: none !important
           box-shadow: inset 0 0 0 1px $onda !important
+      &:last-child
+        input.form-control
+          border-right: 1px solid $border-color
       .discount
         color: $red
         text-align: right
