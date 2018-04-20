@@ -1,0 +1,19 @@
+include ./includes/header.pug
+
+body
+  .lead.text-center.mt-2(style='min-width: 816px') 모바일 달력 예약창
+  .mobile-bp-prototype
+    div
+      .lead.text-center.mb-2
+        | 360 x 640
+        br
+        | Small Phones
+      .device(style='width: 360px; height: 640px;')
+        iframe(src='http://13.125.138.100:3400/bp-calendar', frameborder='0', scrolling='yes', style='width: 100%; height: 100%')
+    div
+      .lead.text-center.mb-2
+        | 414 x 736
+        br
+        | Damon's Phone
+      .device(style='width: 414px; height: 736px;')
+        iframe(src='http://13.125.138.100:3400/bp-calendar', frameborder='0', scrolling='yes', style='width: 100%; height: 100%')

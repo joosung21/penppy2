@@ -1797,7 +1797,7 @@ table
   html
     font-size: 12px
   .content-container
-    padding: 1.5rem 0 !important
+    padding: 1.5rem !important
   .status-badge
     padding: .15rem
     &.callonly
@@ -1870,3 +1870,23 @@ table
   footer
     padding: 1rem 1rem 0 1rem
     margin: auto 0 0 0
+
+
+
+
+
+
+// Temporary: Mobile BP Prototype
+.mobile-bp-prototype
+  width: 100vw
+  min-width: 816px
+  height: calc(100vh - 4rem)
+  @extend %display-flex
+  align-items: center
+  justify-content: space-around
+  .device
+    box-sizing: content-box
+    background-color: #333333
+    padding: 3rem .5rem
+    border-radius: 1rem
+    margin-bottom: 2rem

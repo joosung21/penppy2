@@ -53,10 +53,12 @@ app.get('/setting/history', function (req, res){res.render('setting-history')})
 app.get('/setting/crawling', function (req, res){res.render('setting-crawling')})
 app.get('/setting/seo', function (req, res){res.render('setting-seo')})
 
+// Temporary Prototype
+app.get('/bp-mobile-prototype', function (req, res){res.render('bp-mobile-prototype')})
+
 // Error Pages
 app.get('/maintnence', function (req, res){res.render('maintnence')})
 app.get('*', function (req, res){res.render('404')})
-
 
 app.listen(3200, function () {
   console.log('App listening on port 3200!')
