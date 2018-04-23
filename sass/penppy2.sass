@@ -703,9 +703,6 @@ ul.link-list
   position: fixed
   top: 0
   left: 0
-  @extend %display-flex
-  justify-content: flex-end
-  align-items: center
   width: 100%
   height: 4.5rem
   padding-left: $left-side-width
@@ -714,6 +711,9 @@ ul.link-list
   @extend %box-shadow
   z-index: 2
   min-width: 950px
+  .navs
+    text-align: right
+    padding: 1.5rem 0
   a
     color: #4f4f4f
     padding: 1rem
