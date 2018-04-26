@@ -1,7 +1,7 @@
 //----------- Variables -----------//
 
 $onda: #51a7ff
-$navy-blue: #4275C4
+$navy-blue: #4274c1
 $blue: #4B95FF
 $red: #F4516C
 $light: #C4C4C4
@@ -80,6 +80,8 @@ $left-side-padding: 2rem
 .table
   td
     padding: 1rem
+    &.dimed
+      opacity: .4
   thead th
     border: 0
     padding: 1.2rem .5rem
@@ -589,7 +591,7 @@ ul.link-list
         white-space: nowrap
         display: inline-block
       &:hover
-        background-color: #4274c1
+        background-color: darken($onda, 3%)
       &.active
         background-color: $navy-blue
     .nav-dropdown
@@ -750,10 +752,10 @@ ul.link-list
 
 // Folded: Main Nav, Sub Nav, Container
 #main-nav.folded
-  width: 4rem
+  width: 5.6rem
   overflow: hidden
   .first-depth
-    width: 4rem
+    width: 5.6rem
     .brand
       display: none
     .widget-timer
@@ -761,13 +763,13 @@ ul.link-list
     nav
       > a
         // transition: all .3s linear
-        padding-left: 1.3rem
+        // padding-left: 1.3rem
         width: 4rem
         span
           visibility: hidden
       a.home
         display: block
-        margin-top: -2.2rem
+        margin-top: -3.5rem
         margin-bottom: 4.5rem
         &.active
           background: none
@@ -777,11 +779,11 @@ ul.link-list
 
 #sub-nav.folded
   // transition: padding .3s
-  padding-left: 3.5rem !important
+  padding-left: 5.4rem !important
 
 .content-container.folded
   // transition: padding .3s
-  padding-left: 6.5rem !important
+  padding-left: 7.6rem !important
 
 // Artboard
 .artboard
@@ -905,6 +907,7 @@ footer
 .dashboard-summary
   transition: all .7s
   overflow: hidden
+  color: #222222
   .date
     text-align: center
     margin-bottom: 1rem
@@ -915,6 +918,7 @@ footer
     .text
       font-size: 2.1rem
       font-weight: 400
+      color: #222222
   .big-numbers
     @extend %display-flex
     width: 60%
@@ -926,6 +930,7 @@ footer
       .number
         font-size: 4.1rem
         font-weight: 400
+        color: #222222
         &.zero
           color: #E5E5E5
       .text
@@ -946,7 +951,8 @@ footer
   transition: all .7s
   .area
     text-align: center
-    margin-top: -1rem
+    margin-top: 0
+    margin-bottom: -1rem
     width: 15rem
   .weather-wrapper
     @extend %display-flex
@@ -960,6 +966,7 @@ footer
       .day
         font-size: 1.8rem
         text-align: center
+        margin-top: 1rem
       .weather-icon
         @extend %display-flex
         width: 100%
