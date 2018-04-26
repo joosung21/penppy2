@@ -18,6 +18,7 @@ $blocked: $light
 $left-side-width: 14rem
 $left-side-padding: 2rem
 
+
 //------------ Extends -------------//
 %box-shadow
   box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, .05)
@@ -538,7 +539,7 @@ hr.table-devider
 // Link List
 ul.link-list
   li
-    padding: 1rem 0
+    padding: 1.2rem 0
     border-bottom: 1px solid $border-color
     cursor: pointer
 
@@ -577,7 +578,7 @@ ul.link-list
     .nav-link
       @extend %display-flex
       align-items: center
-      padding: 1.2rem $left-side-padding
+      padding: 1rem $left-side-padding
       color: white
       text-decoration: none
       width: 100%
@@ -588,7 +589,7 @@ ul.link-list
         white-space: nowrap
         display: inline-block
       &:hover
-        background-color: darken($onda, 1%)
+        background-color: #4274c1
       &.active
         background-color: $navy-blue
     .nav-dropdown
@@ -728,12 +729,12 @@ ul.link-list
       padding-left: 4.5rem
       width: 3rem
       transition: width .3s
-      background: url('/assets/images/search.svg') 2.5rem center no-repeat
+      background: url('/assets/images/search.svg') 2.2rem center no-repeat
       cursor: pointer
       &:focus
         width: 20vw
         background-position: right 1.5rem center
-        padding-left: 2.5rem
+        padding-left: 2.2rem
         border-right: 1px solid lighten($border-color, 5%)
 
 // Content Container
@@ -743,7 +744,7 @@ ul.link-list
   background-color: #f2f3f8
   min-height: 100vh
   width: 100%
-  padding: 6.5rem 2rem 0 calc(#{$left-side-width} + 2rem)
+  padding: 6.7rem 2.2rem 0 calc(#{$left-side-width} + 2.2rem)
   overflow-x: auto
   overflow-y: hidden
 
@@ -766,7 +767,7 @@ ul.link-list
           visibility: hidden
       a.home
         display: block
-        margin-top: -2.5rem
+        margin-top: -2.2rem
         margin-bottom: 4.5rem
         &.active
           background: none
@@ -801,7 +802,7 @@ ul.link-list
     background-color: white
     padding: 3rem
     @extend %box-shadow
-    margin-bottom: 2.5rem
+    margin-bottom: 2.2rem
     h4
       font-weight: 600
       font-size: 1.3rem
@@ -811,15 +812,15 @@ body.two-depth
   #sub-nav
     padding-left: calc(#{$left-side-width} * 2)
   .content-container
-    padding-left: calc(#{$left-side-width} * 2 + 2.5rem)
+    padding-left: calc(#{$left-side-width} * 2 + 2.2rem)
 
 // Footer
 footer
   @extend %display-flex
   align-items: center
   justify-content: space-between
-  padding: 1rem 2.5rem
-  margin: auto -2.5rem 0 -2.5rem
+  padding: 1.2rem 2.2rem
+  margin: auto -2.2rem 0 -2.2rem
   font-size: .9rem
   border-top: 1px solid $border-color
 
@@ -850,8 +851,8 @@ footer
   padding-top: 0
   .search
     background-color: $white-gray
-    padding: 1.5rem 2.5rem
-    margin: 0 -2.5rem
+    padding: 1.5rem 2.2rem
+    margin: 0 -2.2rem
   ul
     margin: 0
     li
@@ -879,9 +880,9 @@ footer
 
 .dashboard-unit
   background-color: white
-  padding: 2.5rem
+  padding: 1.8rem 2.2rem
   @extend %box-shadow
-  margin-bottom: 2.5rem
+  margin-bottom: 2.2rem
   .title
     font-size: 1.2rem
     line-height: 1.2rem
@@ -895,7 +896,7 @@ footer
     td.empty
       height: 20rem
 .dashboard-right
-  padding-left: 2.5rem !important
+  padding-left: 2.2rem !important
 
 
 .dashboard-summary, .dashboard-weather
@@ -939,7 +940,7 @@ footer
 
 .dashboard-weather
   position: relative
-  margin-left: 2.5rem
+  margin-left: 2.2rem
   background-color: $onda
   color: white
   transition: all .7s
@@ -1010,11 +1011,10 @@ footer
         vertical-align: middle
       .big
         margin-left: .5rem
-        font-size: 1.3rem
+        font-size: 2rem
 .dashboard-manual
   flex: 1 1 20rem
-  margin-left: 2.5rem
-  padding-bottom: 2.5rem
+  margin-left: 2.2rem
 
 .logo-list
   margin-top: -2rem
@@ -1029,7 +1029,7 @@ footer
 //----------- 예약목록 --------------------//
 .list-top-filter
   border: 1px solid #929292
-  padding: 1.5rem 2.5rem
+  padding: 1.5rem 2.2rem
   margin-bottom: 3rem
 
 
@@ -1284,19 +1284,19 @@ footer
       @extend %display-flex
       align-items: center
       width: 100%
-      padding: 1.5rem 2.5rem
+      padding: 1.5rem 2.2rem
       border-bottom: 1px solid $border-color
       .x
         margin-left: auto
         cursor: pointer
     .pms-slider-body
-      padding: 1.5rem 1.5rem 2.5rem 2.5rem
+      padding: 1.5rem 1.5rem 2.2rem 2.2rem
       margin-right: 1rem
       overflow-y: scroll
       overflow-x: visible
     .pms-slider-footer
       flex-shrink: 0
-      padding: 0rem 2.5rem 1rem 2.5rem
+      padding: 0rem 2.2rem 1rem 2.2rem
       background-color: $white-gray
       width: 100%
       .form-slim
@@ -1785,7 +1785,7 @@ table
     font-weight: 600
   p
     font-size: 1.2rem
-    margin-bottom: 2.5rem
+    margin-bottom: 2.2rem
   .btn
     padding: .75rem 10rem
 
