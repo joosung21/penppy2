@@ -20,9 +20,9 @@ body(name='calendar')
               .year-month 2017.12.30(월)~2018.1.12(수)
               .btn-group.mx-3
                 button.btn.btn-white.border-right-0(type='button')
-                  i.fa.fa-angle-left.fa-lg.text-dark
+                  img(src='/assets/images/go-pre.svg')
                 button.btn.btn-white.border-left-0(type='button')
-                  i.fa.fa-angle-right.fa-lg.text-dark
+                  img(src='/assets/images/go-next.svg')
                 button.btn.btn-white.btn-small.ml-2(type='button') 시작일 변경
 
       .status-model.d-flex.justify-content-end.mt-2
@@ -35,7 +35,7 @@ body(name='calendar')
         .status-badge.blocked
         | 예약불가
 
-      .chart-row.header.chart-header.mt-2
+      .chart-row.header.chart-header.mt-3
         .row-title
         .dd-wrapper
           .dd.text-blue

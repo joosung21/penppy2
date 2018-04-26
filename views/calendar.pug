@@ -21,9 +21,9 @@ body(name='calendar')
               .year-month 2018년 1월
               .btn-group.mx-3
                 button.btn.btn-white.border-right-0(type='button')
-                  i.fa.fa-angle-left.fa-lg.text-dark
+                  img(src='/assets/images/go-pre.svg')
                 button.btn.btn-white.border-left-0(type='button')
-                  i.fa.fa-angle-right.fa-lg.text-dark
+                  img(src='/assets/images/go-next.svg')
       .status-model.d-flex.justify-content-end.mt-2
         .status-badge.available
         | 예약가능
@@ -69,15 +69,18 @@ body(name='calendar')
                   a.dropdown-item(href='javascript: openPmsSlider("edit");')
                     .form-row
                       .col-8 정인혁 010-1111-7593
-                      .col-4.text-muted (티몬)
+                      .col-4
+                        small.text-muted.pl-2.pt-1 (티몬)
                   a.dropdown-item(href='#')
                     .form-row
                       .col-8 박지연 010-1111-2871
-                      .col-4.text-muted (PC예약창)
+                      .col-4
+                        .small.text-muted.pl-2.pt-1 (PC예약창)
                   a.dropdown-item(href='#')
                     .form-row
                       .col-8 임승아 010-1111-9774
-                      .col-4.text-muted (네이버)
+                      .col-4
+                        .small.text-muted.pl-2.pt-1 (네이버)
                 .price 68,000원
                 .room
                   .status-badge.available

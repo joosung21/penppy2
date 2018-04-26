@@ -170,13 +170,13 @@
       .toggle-btn.bg-light(data-toggle='collapse', href='#price-summary')
         span.text-muted 결제내역 상세보기
       .pms-slider-footer
-        .form-slim.mb-0
+        .form-slim
           .label(style='bottom: 1px')
             b(style='color: #4F4F4F; font-size: 1rem;') 총 결제금액
           input.input.text-blue.border-0(type='text', value='370,000원', readonly, style='font-weight: 600')
 
         //-- 결제내역 상세보기: 실시간 예약창 - 무통장입금
-        //- #price-summary.collapse.pb-2(data-parent='#accordion')
+        //- #price-summary.collapse.pb-3(data-parent='#accordion')
           .form-slim
             .label 무통장 입금
             input.input.pencil(type='text', value='370,000원')
@@ -185,7 +185,7 @@
             button.btn.btn-white.btn-small(type='button', data-toggle='modal', data-target='#editInvoiceModal') 청구요금 수정
 
         //-- 결제내역 상세보기: 실시간 예약창 - 카드결제
-        //- #price-summary.collapse.pb-2(data-parent='#accordion')
+        //- #price-summary.collapse.pb-3(data-parent='#accordion')
           .form-slim
             .label 카드 (6079)
             input.input.pencil(type='text', value='350,000원', data-toggle='dropdown', readonly)
@@ -197,7 +197,7 @@
             button.btn.btn-white.btn-small(type='button', data-toggle='modal', data-target='#editInvoiceModal') 청구요금 수정
 
         //-- 결제내역 상세보기: 실시간 예약창 - 무통장입금, 현장결제
-        //- #price-summary.collapse.pb-2(data-parent='#accordion')
+        //- #price-summary.collapse.pb-3(data-parent='#accordion')
           .form-slim
             .label 카드 (6079)
             input.input.pencil(type='text', value='350,000원', data-toggle='dropdown', readonly)
@@ -213,7 +213,7 @@
             button.btn.btn-white.btn-small(type='button', data-toggle='modal', data-target='#editInvoiceModal') 청구요금 수정
 
         //-- 결제내역 상세보기: 실시간 예약창 - 카드결제, 현장결제
-        //- #price-summary.collapse.pb-2(data-parent='#accordion')
+        //- #price-summary.collapse.pb-3(data-parent='#accordion')
           .form-slim
             .label 무통장입금
             input.input.pencil(type='text', value='350,000원')
@@ -226,7 +226,7 @@
             button.btn.btn-white.btn-small(type='button', data-toggle='modal', data-target='#editInvoiceModal') 청구요금 수정
 
         //-- 결제내역 상세보기: GDS 결제
-        //- #price-summary.collapse.pb-2(data-parent='#accordion')
+        //- #price-summary.collapse.pb-3(data-parent='#accordion')
           .form-slim
             .label 판매사 결제(티몬)
             input.input.border-0(type='text', value='370,000원', readonly)
@@ -234,7 +234,7 @@
             button.btn.btn-white.btn-small(type='button', data-toggle='modal', data-target='#editInvoiceModal') 청구요금 수정
 
         //-- 결제내역 상세보기: 초과금 발생
-        //- #price-summary.collapse.pb-2(data-parent='#accordion')
+        //- #price-summary.collapse.pb-3(data-parent='#accordion')
           .form-slim
             .label 판매사 결제(티몬)
             input.input.border-0(type='text', value='400,000원', readonly)
@@ -245,7 +245,7 @@
             button.btn.btn-white.btn-small(type='button', data-toggle='modal', data-target='#editInvoiceModal') 청구요금 수정
 
         //-- 결제내역 상세보기: 예약변경 미수금 발생
-        #price-summary.collapse.pb-2(data-parent='#accordion')
+        #price-summary.collapse.pb-3(data-parent='#accordion')
           .form-slim
             .label 무통장입금
             input.input.pencil(type='text', value='310,000원')
