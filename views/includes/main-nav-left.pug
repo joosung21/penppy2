@@ -1,9 +1,11 @@
 #main-nav
   .first-depth
-    a.brand(href='/') 데이먼 해달별펜션
+    .top-wrapper
+      a.brand(href='/') 데이먼 해달별펜션
+      nav.m-0
+        a.nav-link.home(href='/', title='홈')
+          img(src='/assets/images/ic-home.svg')
     nav
-      a.nav-link.home(href='/', title='홈')
-        img(src='/assets/images/ic-home.svg')
       a.nav-link.reservation-list(href='/reservation-list', title='예약목록')
         img(src='/assets/images/ic-list.svg')
         span 예약목록
