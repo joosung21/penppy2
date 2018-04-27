@@ -17,6 +17,7 @@ body(name='calendar')
                   img(src='/assets/images/go-pre.svg')
                 button.btn.btn-white.border-left-0(type='button')
                   img(src='/assets/images/go-next.svg')
+              button.btn.btn-white 오늘
         .col-3.text-right
           .btn-group
             a.btn.btn-white(href='/calendar', data-toggle='tooltip', title='달력으로 보기')
@@ -81,7 +82,9 @@ body(name='calendar')
                       .col-8 임승아 010-1111-9774
                       .col-4
                         .small.text-muted.pl-2.pt-1 (네이버)
-                .price 68,000원
+                .price
+                  del.small.text-muted.d-block 68,000원
+                  | 55,000원
                 .room
                   .status-badge.available
                   .name B(테라스)
@@ -89,9 +92,9 @@ body(name='calendar')
                 .price 90,000원
                 .room
                   .status-badge.complete
-                  .name.dimed S(복층스파)
-                  .stock.dimed 2/2
-                .price.dimed 170,000
+                  .name S(복층스파)
+                  .stock 2/2
+                .price 170,000
               td
                 .day-header
                   .date 2
@@ -352,8 +355,8 @@ body(name='calendar')
                   .stock 4/5
                 .room
                   .status-badge.complete
-                  .name.dimed S(복층스파)
-                  .stock.dimed 2/2
+                  .name S(복층스파)
+                  .stock 2/2
               td
                 .day-header
                   .date 18
@@ -489,16 +492,16 @@ body(name='calendar')
                   .season 비수기
                 .room
                   .status-badge.complete
-                  .name.dimed A
-                  .stock.dimed 1/6
+                  .name A
+                  .stock 1/6
                 .room
                   .status-badge.complete
-                  .name.dimed B(테라스)
-                  .stock.dimed 4/5
+                  .name B(테라스)
+                  .stock 4/5
                 .room
                   .status-badge.blocked
-                  .name.dimed S(복층스파)
-                  .stock.dimed 2/2
+                  .name S(복층스파)
+                  .stock 2/2
               td
                 .day-header
                   .date.text-blue 27
@@ -513,8 +516,8 @@ body(name='calendar')
                   .stock 4/5
                 .room
                   .status-badge.blocked
-                  .name.dimed S(복층스파)
-                  .stock.dimed 2/2
+                  .name S(복층스파)
+                  .stock 2/2
             tr
               td
                 .day-header

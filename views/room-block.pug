@@ -17,6 +17,7 @@ body(name='room-block')
                   img(src='/assets/images/go-pre.svg')
                 button.btn.btn-white.border-left-0(type='button')
                   img(src='/assets/images/go-next.svg')
+              button.btn.btn-white 오늘
         .col-2.text-right
           button.btn.btn-white(type='button', data-toggle='modal', data-target='#periodBlockModal')
             img.mr-2(src='/assets/images/ic-calendar-gray.svg')
@@ -141,7 +142,7 @@ body(name='room-block')
                   input.custom-control-input(type='checkbox', onclick='openSlider()')
                   span.custom-control-label.d-block
                     .room
-                      .status-badge.available
+                      .status-badge.complete
                       .name S(복층스파)
                       .stock 2/2
               td
