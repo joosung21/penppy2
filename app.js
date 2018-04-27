@@ -14,7 +14,6 @@ app.get('/reservation-list', function (req, res){res.render('reservation-list')}
 app.get('/room-block', function (req, res){res.render('room-block')})
 app.get('/calendar', function (req, res){res.render('calendar')})
 app.get('/calendar-chart', function (req, res){res.render('calendar-chart')})
-app.get('/calendar-week', function (req, res){res.render('calendar-week')})
 app.get('/rateplan', function (req, res){res.render('rateplan')})
 app.get('/chart', function (req, res){res.render('chart')})
 app.get('/report', function (req, res){res.render('report')})

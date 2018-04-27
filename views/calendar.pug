@@ -8,14 +8,7 @@ body(name='calendar')
     .artboard
       .board-title 객실 달력
       .row
-        .col-sm-3
-          .btn-group
-            a.btn.btn-white(href='/calendar', data-toggle='tooltip', title='달력으로 보기')
-              img(src='/assets/images/view-calendar-on.svg', style='margin-top: -2px')
-            a.btn.btn-white(href='/calendar-chart', data-toggle='tooltip', title='차트로 보기')
-              img(src='/assets/images/view-chart-off.svg', style='margin-top: -2px')
-          button.btn.btn-white.ml-3(type='button') 요금보기
-        .col-sm-6
+        .col-6.offset-3
           .calendar-controler
             .form-inline.justify-content-center
               .year-month 2018년 1월
@@ -24,17 +17,24 @@ body(name='calendar')
                   img(src='/assets/images/go-pre.svg')
                 button.btn.btn-white.border-left-0(type='button')
                   img(src='/assets/images/go-next.svg')
+        .col-3.text-right
+          .btn-group
+            a.btn.btn-white(href='/calendar', data-toggle='tooltip', title='달력으로 보기')
+              img(src='/assets/images/view-calendar-on.svg', style='margin-top: -2px')
+            a.btn.btn-white(href='/calendar-chart', data-toggle='tooltip', title='차트로 보기')
+              img(src='/assets/images/view-chart-off.svg', style='margin-top: -2px')
+          button.btn.btn-white.ml-3(type='button') 요금보기
       .status-model.d-flex.justify-content-start.mt-2
         .status-badge.available
-        | 예약가능
+        span.mr-3 예약가능
         .status-badge.waiting
-        | 입금대기
+        span.mr-3 입금대기
         .status-badge.complete
-        | 예약완료
+        span.mr-3 예약완료
         .status-badge.callonly
-        | 전화문의
+        span.mr-3 전화문의
         .status-badge.blocked
-        | 예약불가
+        span.mr-3 예약불가
 
       .table-responsive.mt-3
         table.table-bordered.table-calendar

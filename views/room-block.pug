@@ -8,11 +8,7 @@ body(name='room-block')
     .artboard
       .board-title 방막기
       .row
-        .col-sm-2
-          button.btn.btn-white(type='button', data-toggle='modal', data-target='#periodBlockModal')
-            img.mr-2(src='/assets/images/ic-calendar-gray.svg')
-            | 기간지정 일괄 방막기
-        .col-sm-8
+        .col-8.offset-2
           .calendar-controler
             .form-inline.justify-content-center
               .year-month 2018년 1월
@@ -21,17 +17,21 @@ body(name='room-block')
                   img(src='/assets/images/go-pre.svg')
                 button.btn.btn-white.border-left-0(type='button')
                   img(src='/assets/images/go-next.svg')
-      .status-model.d-flex.justify-content-end
+        .col-2.text-right
+          button.btn.btn-white(type='button', data-toggle='modal', data-target='#periodBlockModal')
+            img.mr-2(src='/assets/images/ic-calendar-gray.svg')
+            | 기간지정 일괄 방막기
+      .status-model.d-flex.justify-content-start
         .status-badge.available
-        | 예약가능
+        span.mr-3 예약가능
         .status-badge.waiting
-        | 입금대기
+        span.mr-3 입금대기
         .status-badge.complete
-        | 예약완료
+        span.mr-3 예약완료
         .status-badge.callonly
-        | 전화문의
+        span.mr-3 전화문의
         .status-badge.blocked
-        | 예약불가
+        span.mr-3 예약불가
 
       .table-responsive.mt-3
         table.table-bordered.table-calendar
