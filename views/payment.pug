@@ -72,7 +72,7 @@ body.two-depth(name='payment', page='history')
             td.text-right
               | 514,500원
             td
-              button.btn.btn-small.btn-white(type='button') 판매내역(8건)
+              button.btn.btn-small.btn-white(type='button', data-toggle='modal', data-target='#detailModal') 판매내역(8건)
             td
               | 정산완료
           tr
@@ -82,7 +82,7 @@ body.two-depth(name='payment', page='history')
             td.text-right
               | 514,500원
             td
-              button.btn.btn-small.btn-white(type='button') 판매내역(8건)
+              button.btn.btn-small.btn-white(type='button', data-toggle='modal', data-target='#detailModal') 판매내역(8건)
             td
               | 정산완료
           tr
@@ -93,7 +93,7 @@ body.two-depth(name='payment', page='history')
               span.badge.badge-pill.badge-dark.mr-2 수기정산 2건
               | 514,500원
             td
-              button.btn.btn-small.btn-white(type='button') 판매내역(120건)
+              button.btn.btn-small.btn-white(type='button', data-toggle='modal', data-target='#detailModal') 판매내역(120건)
             td
               | 정산완료
           tr
@@ -103,7 +103,7 @@ body.two-depth(name='payment', page='history')
             td.text-right
               | 514,500원
             td
-              button.btn.btn-small.btn-white(type='button') 판매내역(8건)
+              button.btn.btn-small.btn-white(type='button', data-toggle='modal', data-target='#detailModal') 판매내역(8건)
             td
               | 정산완료
 
@@ -135,7 +135,7 @@ body.two-depth(name='payment', page='history')
     include ./includes/footer.pug
 
 //- 판매내역 Modal
-#detailModal.modal.fade(tabindex='-1')
+#detailModal.modal(tabindex='-1')
   .modal-dialog.modal-lg
     .modal-content
       .modal-header
@@ -143,77 +143,83 @@ body.two-depth(name='payment', page='history')
         a.close(data-dismiss='modal')
           img(src='/assets/images/close.svg')
       .modal-body
-        .form-group.row
-          label.col-sm-2 기간
-          .col-sm-10
-            | 2017.01.30(월) ~ 2017.02.05(일)
-        h6 정산요약
+        h6
+          | 기간
+          span.font-weight-normal.ml-2 2017.01.30(월) ~ 2017.02.05(일)
         table.table.text-center.align-middle
           thead.bg-light
             tr
-              th 총 결제금액
-              th 중계수수료
-              th 수기정산
+              th 총 매출
+              th 수수료
               th 최종 정산금액
           tbody
             tr
               td 210,000원
               td -21,900원
-              td -30,000원
               td
                 b.text-blue 158,100원
         h6.mt-5 예약목록
         table.table.text-center.align-middle
           thead.bg-light
             tr
-              th 예약번호
-              th 판매일시
-              th 판매채널
-              th 객실명
+              th 숙소명
               th 고객명
-              th 입실일
+              th 판매채널
+              th 결제구분
               th 판매금액
-              th 중계 수수료율
+              th 수수료율
+              th 수수료
               th 정산금액
+              th 예약정보
           tbody
             tr
-              td ZR-P2ACQ7VNU
+              td 전주 부경당 펜션
+              td 이지선
+              td 펜션PMS (카드결제)
               td
-                | 2017-03-20
-                br
-                | 12:41
-              td 티몬
-              td 하늘
-              td 김지영
-              td
-                | 2017.03.20
-                br
-                | (1박)
+                | 판매사 결제
+                .small.text-muted 2018-03-20 15:27
               td
                 del.text-muted 300,000원
                 br
                 | 90,000원
                 .text-red (3일전 취소)
-              td 15%
+              td 15.00%
+              td 18,000원
               td
                 .text-blue 76,500원
+              td
+                button.btn.btn-white(type='button') 보기
             tr
-              td ZR-P2ACQ7VNU
+              td 전주 부경당 펜션
+              td 김초이
+              td 11st
               td
-                | 2017-03-20
-                br
-                | 12:41
-              td 홈페이지
-              td 해
-              td 이민성
+                | 실시간 예약창
+                .small.text-muted 2018-03-20 15:27
               td
-                | 2017.03.20
-                br
-                | (1박)
-              td 120,000원
-              td 7%
+                | 110,000원
+              td 7.00%
+              td 2,205원
               td
-                .text-blue 111,600원
+                .text-blue 123,500원
+              td
+                button.btn.btn-white(type='button') 보기
+            tr
+              td 전주 부경당 펜션
+              td 청연루
+              td 티몬
+              td
+                | 수기결제
+                .small.text-muted 2018-03-20 15:27
+              td
+                | 110,000원
+              td 7.00%
+              td 1,400원
+              td
+                .text-blue 18,600원
+              td
+                button.btn.btn-white(type='button') 보기
 
         nav.mt-5
           ul.pagination.justify-content-center
@@ -244,15 +250,58 @@ body.two-depth(name='payment', page='history')
         table.table.text-center.align-middle
           thead.bg-light
             tr
-              th 내역
-              th(style='width: 20%') 금액
+              th 구분
+              th(style='width: 16rem') 상품명
+              th 판매금액
+              th 수수료율
+              th 수수료
+              th 정산금액
+              th 관리
           tbody
             tr
-              td.text-left 지난주 미지급 금액
-              td 20,000원
+              td 예약완료
+              td 2018-04-08 한벽루 임유빈(PMS 수기정산 추가)
+              td 90,000원
+              td 15.00%
+              td 18,000원
+              td
+                .text-blue 76,500원
+              td
+                button.btn.btn-white.mr-2(type='button') 수정
+                button.btn.btn-white(type='button') 삭제
             tr
-              td.text-left 예치금 차감
-              td -50,000원
+              td
+                .text-red 예약취소
+              td 2018-03-31 달 김정옥(정산이후 전액취소처리건 상계반영)
+              td 90,000원
+              td 15.00%
+              td 18,000원
+              td
+                .text-blue 76,500원
+              td
+                button.btn.btn-white.mr-2(type='button') 수정
+                button.btn.btn-white(type='button') 삭제
+            tr
+              td
+                select.custom-select
+                  option 예약완료
+              td
+                input.form-control(type='text')
+              td
+                input.form-control.text-right(type='text', style='width: 6rem')
+              td
+                .form-inline
+                  input.form-control(type='text', style='width: 4rem')
+                  span.pl-1 %
+              td
+                input.form-control.text-right(type='text', style='width: 5rem')
+              td
+                input.form-control.text-right(type='text', style='width: 6rem')
+              td
+                button.btn.btn-white(type='button') 저장
 
-
+        .text-right
+          button.btn.btn-white(type='button', data-toggle='modal', data-target='#roomAddModal')
+            i.fa.fa-plus.fa-lg.mr-1
+            | 수기정산 등록
 

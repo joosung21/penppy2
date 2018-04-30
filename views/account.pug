@@ -90,5 +90,29 @@ body
         .text-center.pt-4
           button.btn.btn-primary.btn-lg(type='button') 저장
 
+        h6.mt-5 정산정보 변경내역
+        table.table.text-center.align-middle
+          thead.bg-light
+            tr
+              th 적용일
+              th 변경내용
+              th 변경자
+          tbody
+            tr
+              td 2018-04-12(목)
+              td.text-left
+                div
+                  b 정산계좌 :
+                  span.ml-2 국민은행, 867701-04-107624, (주)더스토리평창
+                div
+                  b 사업장 소재지 :
+                  span.ml-2 강원도 평창군 봉편면 안흥도1길 25-5, 101호
+                div
+                  b 대표자 :
+                  span.ml-2 박양배
+              td
+                | 김학범
+                .small.text-muted 2018-03-20 15:27
+
 
     include ./includes/footer.pug
