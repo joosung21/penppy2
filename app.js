@@ -50,6 +50,7 @@ app.get('/setting/multiday', function (req, res){res.render('setting-multiday')}
 app.get('/setting/multiday-edit', function (req, res){res.render('setting-multiday-edit')})
 app.get('/setting/history', function (req, res){res.render('setting-history')})
 app.get('/setting/crawling', function (req, res){res.render('setting-crawling')})
+app.get('/setting/website', function (req, res){res.render('setting-website')})
 app.get('/setting/seo', function (req, res){res.render('setting-seo')})
 
 // Temporary Prototype
