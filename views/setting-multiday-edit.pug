@@ -91,12 +91,12 @@ body.two-depth(name='setting', page='multiday')
             span.text-red.ml-1 실시간 예약창에만 적용
             | 됩니다.
             br
-            | 위 기간동안
-            span.text-red.ml-1 모든 판매사에서는 판매가 중지
-            | 됩니다.
-            label.custom-control.custom-checkbox.mr-4.mt-2
-              input.custom-control-input(type='checkbox')
-              span.custom-control-label 동의
+            .form-inline
+              | 위 기간동안
+              span.text-red.ml-1 모든 판매사
+              select.custom-select.ml-2
+                option 판마안함
+                option 판매
 
         .row.text-center.pt-4.no-gutters
           .col-8.offset-2
