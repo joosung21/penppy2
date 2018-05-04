@@ -9,6 +9,17 @@ body.two-depth(name='setting', page='url')
       .board-title 홈페이지 설치안내
       .board-container
         .form-group.row
+          label.col-sm-2.pt-1
+            | 대표도메인
+            .text-red.small.font-weight-bold (admin)
+          .col-sm-10
+            .input-group(style='width: 43.5rem')
+              input.form-control(type='text', value='7250')
+              .input-group-append
+                button.btn.btn-primary(type='button') 저장
+
+            .info 대표 도메인은 '숫자' 또는 '영문'만 입력 가능합니다.
+        .form-group.row
           label.col-sm-2.pt-1 실시간 예약창 주소
           .col-sm-10
             .mb-1 캘린더형 (큰 달력)
