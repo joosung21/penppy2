@@ -22,7 +22,7 @@ body(name='room-block')
           button.btn.btn-white(type='button', data-toggle='modal', data-target='#periodBlockModal')
             img.mr-2(src='/assets/images/ic-calendar-gray.svg')
             | 기간지정 일괄 방막기
-      .status-model.d-flex.justify-content-start
+      .status-model.d-flex.justify-content-start.mt-2
         .status-badge.available
         span.mr-3 예약가능
         .status-badge.waiting
@@ -264,7 +264,7 @@ body(name='room-block')
 
 //- 기간지정 일괄 방막기 Modal
 #periodBlockModal.modal.fade(tabindex='-1')
-  .modal-dialog.modal-sm
+  .modal-dialog
     .modal-content
       .modal-header
         h5.modal-title 기간지정 일괄 방막기
@@ -278,7 +278,7 @@ body(name='room-block')
               input.form-control.form-control-datepicker(type='text', value='2017.07.16(수)', size='18')
               span.px-2 ~
               input.form-control.form-control-datepicker.mr-2(type='text', value='2017.08.20(목)', size='18')
-            .form-inline.mt-3
+            .form-inline.mt-2
               .btn-group.btn-group-toggle.d-flex.align-items-center.mr-3(data-toggle='buttons')
                 label.btn.btn-white.active
                   input(type='checkbox', autocomplete='off', checked)
@@ -307,7 +307,7 @@ body(name='room-block')
                 u 일~목
               button.btn.btn-white.btn-sm.border-0(type='button')
                 u 금~토
-        .form-group.row
+        .form-group.row.mt-5
           label.col-sm-2.pt-1 기능 선택
           .col-sm-10
             label.custom-control.custom-radio.custom-control-inline.mr-4
@@ -336,5 +336,5 @@ body(name='room-block')
           .col-sm-10
             textarea.form-control(rows='4')
 
-        .text-center.pt-5
+        .text-center.pt-2
           button.btn.btn-primary.btn-lg(type='button', data-dismiss='modal') 저장

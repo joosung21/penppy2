@@ -52,6 +52,10 @@ $left-side-padding: 2rem
   &:hover, &:active
     color: white
 
+label
+  &.custom-control-inline
+    margin-bottom: 0
+
 .table-bordered
   thead
     th, td
@@ -1128,6 +1132,11 @@ footer
       background-position: 3px 3px
     &.blocked
       background-position: 2px 2px
+    &:before
+      left: calc(50% - 5px)
+      top: calc(50% - 5px)
+      font-size: 10px
+      line-height: 10px
   .color-amended, .color-eve
     display: inline-block
     width: 1.2rem
@@ -1240,12 +1249,13 @@ footer
   height: 12px
   box-sizing: content-box
   padding: 8px
+  border-radius: 2px
   &:before
     position: absolute
-    left: calc(50% - 6px)
-    top: calc(50% - 6px)
-    font-size: 12px
-    line-height: 12px
+    left: calc(50% - 7px)
+    top: calc(50% - 7px)
+    font-size: 14px
+    line-height: 14px
     font-weight: 400
   &.available
     background-color: $available
@@ -1881,6 +1891,11 @@ table
     padding: 1.5rem !important
   .status-badge
     padding: .15rem
+    &:before
+      left: calc(50% - 5px)
+      top: calc(50% - 5px)
+      font-size: 10px
+      line-height: 10px
     &.callonly
       background-position: 3px 3px
     &.blocked
