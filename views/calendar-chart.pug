@@ -7,33 +7,33 @@ body(name='calendar')
   .content-container
     .artboard(style='min-width: 1000px')
       .board-title 객실 달력
+      .text-center
+        .calendar-controler
+          .form-inline.justify-content-center
+            .year-month 2017.12.30(월)~2018.1.12(수)
+            .btn-group.mx-3
+              button.btn.btn-white.border-right-0(type='button')
+                img(src='/assets/images/go-pre.svg')
+              button.btn.btn-white.border-left-0(type='button')
+                img(src='/assets/images/go-next.svg')
+              button.btn.btn-white.btn-small.ml-2(type='button') 시작일 변경
       .row
-        .col-8.offset-2
-          .calendar-controler
-            .form-inline.justify-content-center
-              .year-month 2017.12.30(월)~2018.1.12(수)
-              .btn-group.mx-3
-                button.btn.btn-white.border-right-0(type='button')
-                  img(src='/assets/images/go-pre.svg')
-                button.btn.btn-white.border-left-0(type='button')
-                  img(src='/assets/images/go-next.svg')
-                button.btn.btn-white.btn-small.ml-2(type='button') 시작일 변경
-        .col-2.text-right
+        .col
+          .status-model.d-flex.justify-content-start.mt-3
+            .status-badge.waiting
+            span.mr-3 입금대기
+            .status-badge.complete
+            span.mr-3 예약완료
+            .status-badge.callonly
+            span.mr-3 전화문의
+            .status-badge.blocked
+            span.mr-3 예약불가
+        .col.text-right
           .btn-group
             a.btn.btn-white(href='/calendar', data-toggle='tooltip', title='달력으로 보기')
               img(src='/assets/images/view-calendar-off.svg', style='margin-top: -2px')
             a.btn.btn-white(href='/calendar-chart', data-toggle='tooltip', title='차트로 보기')
               img(src='/assets/images/view-chart-on.svg', style='margin-top: -2px')
-
-      .status-model.d-flex.justify-content-start.mt-2
-        .status-badge.waiting
-        span.mr-3 입금대기
-        .status-badge.complete
-        span.mr-3 예약완료
-        .status-badge.callonly
-        span.mr-3 전화문의
-        .status-badge.blocked
-        span.mr-3 예약불가
 
       .chart-row.header.chart-header.mt-3
         .row-title

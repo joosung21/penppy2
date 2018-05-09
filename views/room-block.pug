@@ -7,33 +7,33 @@ body(name='room-block')
   .content-container
     .artboard
       .board-title 방막기
+      .text-center
+        .calendar-controler
+          .form-inline.justify-content-center
+            .year-month 2018년 1월
+            .btn-group.mx-3
+              button.btn.btn-white.border-right-0(type='button')
+                img(src='/assets/images/go-pre.svg')
+              button.btn.btn-white.border-left-0(type='button')
+                img(src='/assets/images/go-next.svg')
+            button.btn.btn-white 오늘
       .row
-        .col-8.offset-2
-          .calendar-controler
-            .form-inline.justify-content-center
-              .year-month 2018년 1월
-              .btn-group.mx-3
-                button.btn.btn-white.border-right-0(type='button')
-                  img(src='/assets/images/go-pre.svg')
-                button.btn.btn-white.border-left-0(type='button')
-                  img(src='/assets/images/go-next.svg')
-              button.btn.btn-white 오늘
-        .col-2.text-right
+        .col
+          .status-model.d-flex.justify-content-start.mt-3
+            .status-badge.available
+            span.mr-3 예약가능
+            .status-badge.waiting
+            span.mr-3 입금대기
+            .status-badge.complete
+            span.mr-3 예약완료
+            .status-badge.callonly
+            span.mr-3 전화문의
+            .status-badge.blocked
+            span.mr-3 예약불가
+        .col.text-right
           button.btn.btn-white(type='button', data-toggle='modal', data-target='#periodBlockModal')
             img.mr-2(src='/assets/images/ic-calendar-gray.svg')
             b 기간지정 일괄 방막기
-      .status-model.d-flex.justify-content-start.mt-2
-        .status-badge.available
-        span.mr-3 예약가능
-        .status-badge.waiting
-        span.mr-3 입금대기
-        .status-badge.complete
-        span.mr-3 예약완료
-        .status-badge.callonly
-        span.mr-3 전화문의
-        .status-badge.blocked
-        span.mr-3 예약불가
-
       .table-responsive.mt-3
         table.table-bordered.table-calendar
           thead
