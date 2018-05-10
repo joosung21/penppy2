@@ -1887,8 +1887,26 @@ table
     padding: .75rem 10rem
 
 
-
-
+// 영수증 도장
+.stamp
+  position: absolute
+  right: -12rem
+  top: -.5rem
+  height: 97px
+  width: 200px
+  color: #bf304B
+  font-weight: bold
+  transform: rotate(-5deg)
+  .background
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+  .name
+    position: absolute
+    left: 0
+    top: 35px
+    width: 100%
 
 
 //---------- Responsive: Smaller than 1500px ----------//
@@ -1979,6 +1997,16 @@ table
     margin: auto 0 0 0
 
 
+// Media Print Only
+@media print
+  .receipt-date
+    border: none
+
+
+
+
+
+
 
 // Temporary: Mobile BP Prototype
 .mobile-bp-prototype
@@ -1994,3 +2022,4 @@ table
     padding: 3rem .5rem
     border-radius: 1rem
     margin-bottom: 2rem
+

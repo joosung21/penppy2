@@ -1184,18 +1184,21 @@
               th 잔액
               th.text-right 0원
 
-        .text-center.pt-5(style='width: 14rem; margin: 0 auto')
+        .text-center.mt-5(style='width: 14rem; margin: 0 auto; position: relative')
           .mb-2 상기 금액을 영수하였습니다.
-          input.form-control-plaintext.text-center(type='text', value='2018.04.03')
+          input.form-control.text-center.mx-auto.receipt-date(type='text', value='2018.04.03', style='width: 8rem')
+          .stamp
+            .background
+              img(src='/assets/images/stamp.png')
+            .name 데이먼 해달별 펜션
 
-        .text-center.pt-5.d-print-none
+        .text-center.pt-5.mt-4.d-print-none
           button.btn.btn-primary.btn-lg(type='button', onclick="printDiv('printReceiptArea')") 인쇄
 
-        .d-flex.justify-content-between.mt-5
-          div
-            | 데이먼 해달별 펜션
-            small.text-muted.ml-2 서울특별시 중구 소월로 50 ㅣ +82-2-753-4512
-          img(src='/assets/images/onda-logo.svg', style='width: 50px')
+        .mt-5
+          | 데이먼 해달별 펜션
+          small.text-muted.ml-2 서울특별시 중구 소월로 50 ㅣ +82-2-753-4512
+
 
 //- 변경내역 Modal
 #historyModal.modal.fade(tabindex='-1')
@@ -1299,3 +1302,4 @@
                 | 15:20
               td
                 | 전송완료
+
