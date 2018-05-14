@@ -22,6 +22,10 @@ body.two-depth(name='setting', page='bp')
               br
               | 카드결제 사용을 체크하면 실시간 예약창 결제수단에 카드결제가 자동으로 추가됩니다.
         .form-group.row
+          label.col-sm-3.pt-1 예약문의 연락처
+          .col-sm-9
+            input.form-control(type='text', placeholder='000-0000-0000')
+        .form-group.row
           label.col-sm-3.pt-1 무통장입금 계좌번호
           .col-sm-9
             .form-row
@@ -51,10 +55,6 @@ body.two-depth(name='setting', page='bp')
                 button.btn.btn-white.btn-small
                   i.fa.fa-plus.fa-lg.mr-1
                   | 추가
-        .form-group.row
-          label.col-sm-3.pt-1 예약문의 연락처
-          .col-sm-9
-            input.form-control(type='text', placeholder='000-0000-0000')
         .form-group.row
           label.col-sm-3.pt-1 입금 대기시간
           .col-sm-9
