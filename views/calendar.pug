@@ -59,30 +59,30 @@ body(name='calendar')
               td
                 .day-header
                   .date.text-red 1
-                  .season 비수기
+                  .season.text-red 새해
                 .dropdown.room(data-toggle='dropdown')
                   .status-badge.available
                   .name A
                   .stock 1/6
                 //- 객실이 여러개인 경우 메뉴 표시
-                .dropdown-menu.bordered-menu.p-0
+                .dropdown-menu.bordered-menu.p-0(style='width: 27rem')
                   a.dropdown-item(href='javascript: openPmsSlider("create");')
                     img.mr-2(src='/assets/images/add.svg', style='position: relative; top: -1px')
                     b.mt-2 예약생성
                   a.dropdown-item(href='javascript: openPmsSlider("edit");')
                     .form-row
-                      .col-8 정인혁 010-1111-7593
-                      .col-4
+                      .col-9 [예약완료] 정인혁 010-1111-7593
+                      .col-3
                         small.text-muted.pl-2.pt-1 (티몬)
                   a.dropdown-item(href='#')
                     .form-row
-                      .col-8 박지연 010-1111-2871
-                      .col-4
+                      .col-9 [예약완료] 박지연 010-1111-2871
+                      .col-3
                         .small.text-muted.pl-2.pt-1 (PC예약창)
                   a.dropdown-item(href='#')
                     .form-row
-                      .col-8 임승아 010-1111-9774
-                      .col-4
+                      .col-9 [입금대기] 임승아 010-1111-9774
+                      .col-3
                         .small.text-muted.pl-2.pt-1 (네이버)
                 .price
                   del.small.text-muted.d-block 68,000원
@@ -100,7 +100,7 @@ body(name='calendar')
               td
                 .day-header
                   .date 2
-                  .season 비수기
+                  .season.text-muted 비수기
                 .room
                   .status-badge.available
                   .name A
@@ -116,7 +116,7 @@ body(name='calendar')
               td
                 .day-header
                   .date 3
-                  .season 비수기
+                  .season.text-muted 비수기
                 .room
                   .status-badge.available
                   .name A
@@ -132,7 +132,7 @@ body(name='calendar')
               td
                 .day-header
                   .date 4
-                  .season 비수기
+                  .season.text-muted 비수기
                 .room
                   .status-badge.available
                   .name A
@@ -148,7 +148,7 @@ body(name='calendar')
               td
                 .day-header
                   .date 5
-                  .season 비수기
+                  .season.text-muted 비수기
                 .room
                   .status-badge.available
                   .name A
@@ -164,7 +164,7 @@ body(name='calendar')
               td
                 .day-header
                   .date.text-blue 6
-                  .season 비수기
+                  .season.text-muted 비수기
                 .room
                   .status-badge.available
                   .name A
@@ -181,7 +181,7 @@ body(name='calendar')
               td
                 .day-header
                   .date.text-red 7
-                  .season 비수기
+                  .season.text-muted 비수기
                 .room
                   .status-badge.available
                   .name A
@@ -197,7 +197,7 @@ body(name='calendar')
               td
                 .day-header
                   .date 8
-                  .season 비수기
+                  .season.text-red 성수기
                 .room
                   .status-badge.available
                   .name A
@@ -213,7 +213,7 @@ body(name='calendar')
               td
                 .day-header
                   .date 9
-                  .season 비수기
+                  .season.text-red 성수기
                 .room
                   .status-badge.available
                   .name A
@@ -229,7 +229,7 @@ body(name='calendar')
               td
                 .day-header
                   .date 10
-                  .season 비수기
+                  .season.text-red 성수기
                 .room
                   .status-badge.available
                   .name A
@@ -245,7 +245,7 @@ body(name='calendar')
               td
                 .day-header
                   .date 11
-                  .season 비수기
+                  .season.text-red 성수기
                 .room
                   .status-badge.available
                   .name A
@@ -261,7 +261,7 @@ body(name='calendar')
               td
                 .day-header
                   .date 12
-                  .season 비수기
+                  .season.text-red 성수기
                 .room
                   .status-badge.available
                   .name A
@@ -277,7 +277,7 @@ body(name='calendar')
               td
                 .day-header
                   .date.text-blue 13
-                  .season 비수기
+                  .season.text-muted 비수기
                 .room
                   .status-badge.available
                   .name A
@@ -294,7 +294,7 @@ body(name='calendar')
               td
                 .day-header
                   .date.text-red 14
-                  .season 비수기
+                  .season.text-muted 비수기
                 .room
                   .status-badge.available
                   .name A
@@ -310,7 +310,7 @@ body(name='calendar')
               td
                 .day-header
                   .date 15
-                  .season 비수기
+                  .season.text-warning 준성수기
                 .room
                   .status-badge.available
                   .name A
@@ -326,7 +326,7 @@ body(name='calendar')
               td
                 .day-header
                   .date 16
-                  .season 비수기
+                  .season.text-warning 준성수기
                 .room
                   .status-badge.available
                   .name A
@@ -342,7 +342,7 @@ body(name='calendar')
               td.today
                 .day-header
                   .date 17
-                  .season 비수기
+                  .season.text-warning 준성수기
                 .room
                   .status-badge.available
                   .name A
@@ -362,7 +362,7 @@ body(name='calendar')
               td
                 .day-header
                   .date 18
-                  .season 비수기
+                  .season.text-muted 비수기
                 .room
                   .status-badge.available
                   .name A
@@ -378,7 +378,7 @@ body(name='calendar')
               td
                 .day-header
                   .date 19
-                  .season 비수기
+                  .season.text-green 업주시즌명A
                 .room
                   .status-badge.available
                   .name A
@@ -394,7 +394,7 @@ body(name='calendar')
               td
                 .day-header
                   .date.text-blue 20
-                  .season 비수기
+                  .season.text-green 업주시즌명B
                 .room
                   .status-badge.callonly
                   .name A
@@ -411,7 +411,7 @@ body(name='calendar')
               td
                 .day-header
                   .date.text-red 21
-                  .season 비수기
+                  .season.text-muted 비수기
                 .room
                   .status-badge.available
                   .name A
@@ -427,7 +427,7 @@ body(name='calendar')
               td
                 .day-header
                   .date 22
-                  .season 비수기
+                  .season.text-muted 비수기
                 .room
                   .status-badge.available
                   .name A
@@ -443,7 +443,7 @@ body(name='calendar')
               td
                 .day-header
                   .date 23
-                  .season 비수기
+                  .season.text-muted 비수기
                 .room
                   .status-badge.available
                   .name A
@@ -459,7 +459,7 @@ body(name='calendar')
               td
                 .day-header
                   .date 24
-                  .season 비수기
+                  .season.text-muted 비수기
                 .room
                   .status-badge.available
                   .name A
@@ -475,7 +475,7 @@ body(name='calendar')
               td
                 .day-header
                   .date 25
-                  .season 비수기
+                  .season.text-muted 비수기
                 .room
                   .status-badge.available
                   .name A
@@ -491,7 +491,7 @@ body(name='calendar')
               td
                 .day-header
                   .date 26
-                  .season 비수기
+                  .season.text-muted 비수기
                 .room
                   .status-badge.complete
                   .name A
@@ -507,7 +507,7 @@ body(name='calendar')
               td
                 .day-header
                   .date.text-blue 27
-                  .season 비수기
+                  .season.text-muted 비수기
                 .room
                   .status-badge.waiting
                   .name A
@@ -524,7 +524,7 @@ body(name='calendar')
               td
                 .day-header
                   .date.text-red 28
-                  .season 비수기
+                  .season.text-muted 비수기
                 .room
                   .status-badge.available
                   .name A
@@ -540,7 +540,7 @@ body(name='calendar')
               td
                 .day-header
                   .date 29
-                  .season 비수기
+                  .season.text-muted 비수기
                 .room
                   .status-badge.available
                   .name A
@@ -556,7 +556,7 @@ body(name='calendar')
               td
                 .day-header
                   .date 30
-                  .season 비수기
+                  .season.text-muted 비수기
                 .room
                   .status-badge.available
                   .name A
@@ -572,7 +572,7 @@ body(name='calendar')
               td
                 .day-header
                   .date 31
-                  .season 비수기
+                  .season.text-muted 비수기
                 .room
                   .status-badge.available
                   .name A
@@ -588,15 +588,15 @@ body(name='calendar')
               td.dimed.other-month
                 .day-header
                   .date 2/1
-                  .season 비수기
+                  .season.text-muted 비수기
               td.dimed.other-month
                 .day-header
                   .date 2
-                  .season 비수기
+                  .season.text-muted 비수기
               td.dimed.other-month
                 .day-header
                   .date.text-blue 3
-                  .season 비수기
+                  .season.text-muted 비수기
 
     include ./includes/footer.pug
 

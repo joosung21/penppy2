@@ -214,6 +214,8 @@ select.custom-select
   color: $onda
 .text-dark
   color: #4f4f4f
+.text-green
+  color: #8BCE54
 .text-emerald
   color: #64C2D0
 .font-xsmall
@@ -310,6 +312,10 @@ hr.table-devider
   margin-left: .25rem
   .custom-control-label
     padding-left: 1px
+  .custom-control-input[disabled]
+    + .custom-control-label
+        &:after
+          background-color: #E5E5E5 !important
   &.custom-checkbox
     margin-left: .2em
     .custom-control-label
@@ -326,6 +332,12 @@ hr.table-devider
         &:after
           background: $onda url('/assets/images/checkbox_check.svg') center center no-repeat
           border-color: $onda
+    .custom-control-input:checked[disabled]
+      + .custom-control-label
+        &:after
+          background: #E5E5E5 url('/assets/images/checkbox_check_gray.svg') center center no-repeat
+          border-color: #AAAAAA
+
   &.custom-radio
     .custom-control-label
       &:after
@@ -341,6 +353,12 @@ hr.table-devider
         &:after
           background: $onda url('/assets/images/Oval.svg') center center no-repeat
           border-color: $onda
+    .custom-control-input:checked[disabled]
+      + .custom-control-label
+        &:after
+          background: #E5E5E5 url('/assets/images/Oval-gray.svg') center center no-repeat
+          border-color: #AAAAAA
+
 
 // Checkbox group
 .check-group
@@ -1201,7 +1219,6 @@ footer
       margin-bottom: .5rem
       .season
         margin-left: auto
-        color: $light
         font-size: .9rem
     .room
       @extend %display-flex
@@ -1218,29 +1235,9 @@ footer
       &.dimed
         color: $light
     .price
-      padding-left: 2.4rem
+      padding-left: 2.8rem
       margin-top: -.4rem
 
-.table-calendar-week
-  th, td
-    width: 12.5%
-    vertical-align: middle
-  thead
-    th
-      text-align: left
-      .day
-        line-height: 1rem
-      .header
-        @extend %display-flex
-        justify-content: space-between
-        align-items: flex-end
-        .date
-          font-size: 2.2rem
-          line-height: 2.2rem
-          padding-top: .3rem
-        .season
-          color: $light
-        font-size: .9rem
   tbody
     .status-badge
       margin: .2rem
@@ -1494,7 +1491,8 @@ footer
       *
         text-align: center
       .basic-price
-        padding-right: .25rem
+        padding-right: .75rem
+        text-align: right
       .form-control
         text-align: right
         border-radius: 0
@@ -1540,11 +1538,8 @@ footer
       margin-top: .1rem
     .remark
       font-size: .85rem
-      color: $light
       margin-top: .1rem
       margin-bottom: .4rem
-      &.holiday
-        color: $red
     &.today
       box-shadow: 0 0 0 1px #222222
       border-right: 1px solid #222222
@@ -1553,7 +1548,7 @@ footer
       color: white
       box-shadow: 0 0 0 1px darken($washed-navy, 5%)
       .remark
-        color: white
+        color: white !important
 
 .chart-row.room-stock, .chart-row.basic-price
   border-bottom: none

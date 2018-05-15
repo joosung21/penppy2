@@ -58,8 +58,11 @@ body.two-depth(name='setting', page='website')
           label.col-2.pt-1 부대시설
           .col-10
             .card.mb-5
-              .card-header
+              .card-header.d-flex.align-items-center
                 b 부대시설1
+                button.btn.btn-white.ml-auto(type='button')
+                  i.fa.fa-trash.fa-lg.mr-1
+                  | 삭제
               .card-body
                 .form-group.row
                   label.col-sm-2.pt-1 이름
@@ -72,9 +75,6 @@ body.two-depth(name='setting', page='website')
                 .form-group.row.mb-3
                   label.col-sm-2.pt-1 사진
                   .col-sm-10
-                    button.btn.btn-white.btn-small(type='button')
-                      img(src='/assets/images/ic-camera.svg', style='position:relative; top:-2px; margin-right: 5px')
-                      span 이미지 추가
                     .image-upload.form-row.mt-2
                       .unit.grabbable.col-3(draggable='true')
                         .image(style='background-image: url("/assets/images/temp-image.jpg")')
@@ -116,14 +116,35 @@ body.two-depth(name='setting', page='website')
                           a.delete(href='#')
                             i.fa.fa-trash.fa-lg
                         input.form-control.mt-2(type='text', placeholder='사진설명')
-                .text-right
-                  button.btn.btn-white.btn-small(type='button')
-                    i.fa.fa-trash.fa-lg.mr-1
-                    | 삭제
+
+                    //- 기본
+                    .d-flex.mb-4
+                      button.btn.btn-white.btn-small.mr-3(type='button')
+                        img(src='/assets/images/ic-camera.svg', style='position:relative; top:-2px; margin-right: 5px')
+                        span 이미지 추가
+                      button.btn.btn-white.btn-small(type='button') 수정
+                      button.btn.btn-white.btn-small.ml-auto(type='button')
+                        i.fa.fa-trash.fa-lg.mr-1
+                        span 전체삭제
+
+                    //- 수정 중
+                    .d-flex.mb-4
+                      button.btn.btn-white.btn-small.mr-3(type='button')
+                        img(src='/assets/images/ic-camera.svg', style='position:relative; top:-2px; margin-right: 5px')
+                        span 이미지 추가
+                      button.btn.btn-secondary.btn-small.mr-1(type='button') 취소
+                      button.btn.btn-primary.btn-small(type='button') 저장
+                      .info.ml-2 사진순서는 드래그로 변경 가능합니다.
+                      button.btn.btn-white.btn-small.ml-auto(type='button')
+                        i.fa.fa-trash.fa-lg.mr-1
+                        span 전체삭제
 
             .card.mb-5
-              .card-header
-                b 부대시설2
+              .card-header.d-flex.align-items-center
+                b 부대시설1
+                button.btn.btn-white.ml-auto(type='button')
+                  i.fa.fa-trash.fa-lg.mr-1
+                  | 삭제
               .card-body
                 .form-group.row
                   label.col-sm-2.pt-1 이름
@@ -180,10 +201,7 @@ body.two-depth(name='setting', page='website')
                           a.delete(href='#')
                             i.fa.fa-trash.fa-lg
                         input.form-control.mt-2(type='text', placeholder='사진설명')
-                .text-right
-                  button.btn.btn-white.btn-small(type='button')
-                    i.fa.fa-trash.fa-lg.mr-1
-                    | 삭제
+
             .text-right
               button.btn.btn-white(type='button', data-toggle='modal', data-target='#roomAddModal')
                 i.fa.fa-plus.fa-lg.mr-1
