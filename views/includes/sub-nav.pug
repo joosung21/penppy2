@@ -53,7 +53,12 @@
         .form-group.row
           label.col-sm-2.pt-1 연락처
           .col-sm-10
-            input.form-control(type='text', value='010-2256-5900')
+            .form-row
+              .col-3
+                select.custom-select
+                  option (+82) 대한민국
+              .col-9
+                input.form-control(type='text', value='010-1205-5300')
         -
           var message01 = `
             swal({

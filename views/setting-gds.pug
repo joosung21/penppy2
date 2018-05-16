@@ -89,13 +89,13 @@ body.two-depth(name='setting', page='gds')
             .image
               img(src='/assets/images/bi-booking.png', alt='Booking.com')
       .text-center.pt-4
-        button.btn.btn-primary.btn-lg(type='button', data-toggle='modal', data-target='#requestModal') 판매사 연동 신청하기
+        button.btn.btn-primary.btn-lg(type='button', data-toggle='modal', data-target='#requestModal2') 판매사 연동 신청하기
 
 
     include ./includes/footer.pug
 
 //- 판매사 연동신청 Modal
-#requestModal.modal.fade(tabindex='-1')
+#requestModal2.modal.fade(tabindex='-1')
   .modal-dialog
     .modal-content
       .modal-header
@@ -142,7 +142,12 @@ body.two-depth(name='setting', page='gds')
         .form-group.row
           label.col-sm-3.pt-1 연락처
           .col-sm-9
-            input.form-control(type='text', value='010-2533-6088')
+            .form-row
+              .col-3
+                select.custom-select
+                  option (+82) 대한민국
+              .col-9
+                input.form-control(type='text', value='010-1205-5300')
         label.custom-control.custom-checkbox
           input.custom-control-input(type='checkbox')
           span.custom-control-label 판매동의 및 판매사별 취소수수료 규정에 동의합니다.
