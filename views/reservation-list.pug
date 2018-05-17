@@ -55,11 +55,12 @@ body(name='reservation-list')
           option 무통장입금
           option 카드결제
           option 판매사
-        select.custom-select
+        select.custom-select.mr-2
           option 20개씩 보기
           option 30개씩 보기
           option 50개씩 보기
           option 100개씩 보기
+        small.text-muted 16건의 예약목록을 불러왔습니다.
         button.btn.btn-white.ml-auto(type='button')
           img.mr-1(src='/assets/images/download.svg')
           | 엑셀 다운받기
@@ -71,7 +72,6 @@ body(name='reservation-list')
             th 입실일
             th 예약자
             th 결제금액
-            th 결제수단
             th 상태
             th(style='width: 15%') 고객 요청사항
             th(style='width: 15%') 관리자 메모
@@ -79,16 +79,11 @@ body(name='reservation-list')
           tr(onclick='openPmsSlider("edit")')
             td.text-left.pl-4
               | PC 예약창
-              br
-              | 2017-03-20
-              br
-              | 15:20
+              .small 2017-03-20 15:20
             td
               | 하늘채 사랑방
             td
-              | 2017.03.20
-              br
-              | (1박)
+              | 2017.03.20 (1박)
             td
               | 정우성
               br
@@ -97,8 +92,7 @@ body(name='reservation-list')
               button.btn.btn-white.btn-small.warning-mark.mt-2(type='button', data-toggle='modal', data-target='#smsModal') SMS
             td
               | 230,000원
-            td
-              | 무통장입금
+              .small 무통장입금
             td
               span.text-blue 입금대기
             td.text-left
@@ -108,18 +102,13 @@ body(name='reservation-list')
           tr(onclick='openPmsSlider("edit")')
             td.text-left.pl-4
               | Mobile 예약창
-              br
-              | 2017-03-20
-              br
-              | 15:20
+              .small 2017-03-20 15:20
             td
               | 해
               br
               | 댤
             td
-              | 2017.03.20
-              br
-              | (1박)
+              | 2017.03.20 (1박)
             td
               | 정우성
               br
@@ -130,8 +119,8 @@ body(name='reservation-list')
               | 230,000원
             td
               | 판매사결제
-            td
-              | 예약완료
+              .small 신용카드 100,000원
+              .small 현금 130,000원
             td.text-left
               | 추가인원 현장결제: 20,000원
             td.text-left
@@ -141,16 +130,11 @@ body(name='reservation-list')
           tr(onclick='openPmsSlider("canceled")')
             td.text-left.pl-4
               | 11번가
-              br
-              | 2017-03-20
-              br
-              | 15:20
+              .small 2017-03-20 15:20
             td
               | 별
             td
-              | 2017.03.20
-              br
-              | (1박)
+              | 2017.03.20 (1박)
             td
               | 정우성
               br
@@ -158,11 +142,12 @@ body(name='reservation-list')
               br
               button.btn.btn-white.btn-small.mt-2(type='button') SMS
             td
-              del.small.text-muted 300,000원
+              del.text-muted 300,000원
               br
               | 90,000원
-              br
-              span.text-red (3일전 취소)
+              .small 신용카드 50,000원
+              .small 현금 40,000원
+              .small.text-red (3일전 취소 30% 환불)
             td
               | 무통장입금
             td

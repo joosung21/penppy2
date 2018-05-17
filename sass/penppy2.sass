@@ -359,7 +359,6 @@ hr.table-devider
           background: #E5E5E5 url('/assets/images/Oval-gray.svg') center center no-repeat
           border-color: #AAAAAA
 
-
 // Checkbox group
 .check-group
   .custom-checkbox
@@ -369,6 +368,24 @@ hr.table-devider
     font-size: .9rem
     .custom-control-label
       padding-top: 1px
+
+// Dragula Styles
+.gu-mirror
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  align-items: center;
+  border: 1px solid $border-color
+  opacity: .9
+  left: inherit !important
+  @media (min-width: 1024px)
+    right: 4.5em !important
+  @media (min-width: 1450px)
+    right: 5.2rem !important
+  th
+    display: none
+  .name
+    width: 45%
 
 // Datepicker
 .theme-onda
@@ -656,6 +673,19 @@ ul.link-list
     padding: 1.2rem 0
     border-bottom: 1px solid $border-color
     cursor: pointer
+
+// order list
+ul.order-list
+  li
+    padding: 1rem
+    border-radius: 3px
+    border: 1px solid $border-color
+    margin: .5rem 0
+    cursor: move
+    cursor: grab
+    cursor: -moz-grab
+    cursor: -webkit-grab
+    user-select: none
 
 // Reservation-modal
 .reservation-modal
