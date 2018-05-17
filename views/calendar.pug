@@ -65,25 +65,23 @@ body(name='calendar')
                   .name A
                   .stock 1/6
                 //- 객실이 여러개인 경우 메뉴 표시
-                .dropdown-menu.bordered-menu.p-0(style='width: 27rem')
+                .dropdown-menu.calendar-dropdown.bordered-menu.p-0
                   a.dropdown-item(href='javascript: openPmsSlider("create");')
                     img.mr-2(src='/assets/images/add.svg', style='position: relative; top: -1px')
                     b.mt-2 예약생성
                   a.dropdown-item(href='javascript: openPmsSlider("edit");')
-                    .form-row
-                      .col-9 [예약완료] 정인혁 010-1111-7593
-                      .col-3
-                        small.text-muted.pl-2.pt-1 (티몬)
-                  a.dropdown-item(href='#')
-                    .form-row
-                      .col-9 [예약완료] 박지연 010-1111-2871
-                      .col-3
-                        .small.text-muted.pl-2.pt-1 (PC예약창)
-                  a.dropdown-item(href='#')
-                    .form-row
-                      .col-9 [입금대기] 임승아 010-1111-9774
-                      .col-3
-                        .small.text-muted.pl-2.pt-1 (네이버)
+                    .d-flex.align-items-center
+                      .status-badge.complete
+                      span 정인혁 010-1111-7593
+                      .channel (티몬)
+                  a.dropdown-item(href='javascript: openPmsSlider("edit");')
+                    .d-flex.align-items-center
+                      .status-badge.waiting
+                      span 박지연
+                  a.dropdown-item
+                    .d-flex.align-items-center
+                      .status-badge.blocked
+                      span 방막음(2개)
                 .price
                   del.small.text-muted.d-block 68,000원
                   | 55,000원

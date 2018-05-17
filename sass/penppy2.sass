@@ -1313,6 +1313,29 @@ footer
       &:after
         top: 0.5rem !important
 
+.calendar-dropdown
+  min-width: 21rem
+  .status-badge
+    position: relative
+    top: 1px
+    padding: .15rem
+    margin-right: .5rem !important
+    flex-shrink: 0
+    &.callonly
+      background-position: 3px 3px
+    &.blocked
+      background-position: 2px 2px
+    &:before
+      left: calc(50% - 5px)
+      top: calc(50% - 5px)
+      font-size: 10px
+      line-height: 10px
+  .channel
+    width: 5rem
+    font-size: .85rem
+    color: $light
+    margin-left: auto
+    padding-left: 1rem
 
 //-- Slim Form
 .form-slim
