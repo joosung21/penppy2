@@ -22,8 +22,9 @@ body.two-depth(name='setting', page='auto')
               span.px-2 ~
               input.form-control.form-control-datepicker.mr-2(type='text', value='2017.08.20(목)', size='18')
         .form-group.row
-          label.col-sm-2.pt-1 할인율
+          label.col-sm-2 할인율
           .col-sm-10
+            .info.pt-0.pb-4 할인율 설정시 기존의 할인요금에 추가로 적용됩니다.
             .form-inline.mb-2
               span 판매요금 기준
               select.custom-select.mx-2
@@ -70,6 +71,7 @@ body.two-depth(name='setting', page='auto')
             button.btn.btn-white.btn-small(type='button')
               i.fa.fa-plus.fa-lg.mr-1
               | 추가
+
         .form-group.row
           label.col-sm-2.pt-1 객실 선택
           .col-sm-10
@@ -109,9 +111,5 @@ body.two-depth(name='setting', page='auto')
             button.btn.btn-white(type='button')
               i.fa.fa-trash.fa-lg.mr-1
               b 삭제
-
-
-
-
 
     include ./includes/footer.pug

@@ -101,71 +101,75 @@ body(name='home')
           .row
             .col-12
               .dashboard-unit(style='min-height: 26rem')
-                .title 오늘 입실
+                .title
+                  | 오늘 입실
+                  small.text-muted.ml-2.pb-2 3명
                 table.table.table-hover.text-center.align-middle.mb-0
                   thead.bg-light
                     tr
-                      th 도착예정시간
-                      th 객실명
-                      th 예약자
-                      th 손님맞이 준비
+                      th.w-25 도착예정시간
+                      th.w-25 예약자
+                      th.w-25 객실명
+                      th.w-25 손님맞이 준비
                   tbody
                     tr
                       //- td.empty(colspan='4') 오늘 입실이 없습니다.
                     tr(onclick='openPmsSlider("edit")')
                       td 15:20
                       td
-                        | 하늘채 사랑방
-                        .small.text-muted 성인2, 아동0, 유아1
-                      td
                         | 정우성
                         br
                         | 010-5503-9903
+                      td
+                        | 하늘채 사랑방
+                        .small.text-muted 성인2, 아동0, 유아1
                       td
                         | 픽업, 바베큐, 조식
                     tr(onclick='openPmsSlider("edit")')
                       td --:--
                       td
-                        | 하늘채 사랑방
-                        .small.text-muted 성인2, 아동0, 유아1
-                      td
                         | 정우성
                         br
                         | 010-5503-9903
+                      td
+                        | 하늘채 사랑방
+                        .small.text-muted 성인2, 아동0, 유아1
                       td
                         | 픽업, 바베큐, 조식
                     tr(onclick='openPmsSlider("edit")')
                       td --:--
                       td
-                        | 하늘채 사랑방
-                        .small.text-muted 성인2, 아동0, 유아1
-                      td
                         | 정우성
                         br
                         | 010-5503-9903
+                      td
+                        | 하늘채 사랑방
+                        .small.text-muted 성인2, 아동0, 유아1
                       td
             .col-12
               .dashboard-unit.dashboard-checkout(style='min-height: 26rem')
-                .title 오늘 퇴실
+                .title
+                  | 오늘 퇴실
+                  small.text-muted.ml-2 3명
                 table.table.table-hover.text-center.align-middle.mb-0
                   thead.bg-light
                     tr
-                      th 퇴실예정시간
-                      th 객실명
-                      th 예약자
-                      th 퇴실 체크
+                      th.w-25 퇴실예정시간
+                      th.w-25 예약자
+                      th.w-25 객실명
+                      th.w-25 퇴실 체크
                   tbody
                     //- tr
                       td.empty(colspan='4') 오늘 퇴실이 없습니다.
                     tr(onclick='openPmsSlider("edit")')
                       td 15:20
                       td
-                        | 하늘채 사랑방
-                        .small.text-muted 성인2, 아동0, 유아1
-                      td
                         | 정우성
                         br
                         | 010-5503-9903
+                      td
+                        | 하늘채 사랑방
+                        .small.text-muted 성인2, 아동0, 유아1
                       td.checkbox
                         label.custom-control.custom-checkbox
                           input.custom-control-input(type='checkbox')
@@ -173,12 +177,12 @@ body(name='home')
                     tr(onclick='openPmsSlider("edit")')
                       td.dimed 15:20
                       td.dimed
-                        | 하늘채 사랑방
-                        .small.text-muted 성인2, 아동0, 유아1
-                      td.dimed
                         | 정우성
                         br
                         | 010-5503-9903
+                      td.dimed
+                        | 하늘채 사랑방
+                        .small.text-muted 성인2, 아동0, 유아1
                       td.checkbox
                         label.custom-control.custom-checkbox
                           input.custom-control-input(type='checkbox', checked)
@@ -186,12 +190,12 @@ body(name='home')
                     tr(onclick='openPmsSlider("edit")')
                       td.dimed 15:20
                       td.dimed
-                        | 하늘채 사랑방
-                        .small.text-muted 성인2, 아동0, 유아1
-                      td.dimed
                         | 정우성
                         br
                         | 010-5503-9903
+                      td.dimed
+                        | 하늘채 사랑방
+                        .small.text-muted 성인2, 아동0, 유아1
                       td.checkbox
                         label.custom-control.custom-checkbox
                           input.custom-control-input(type='checkbox', checked)

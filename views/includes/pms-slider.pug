@@ -82,7 +82,7 @@
               | 객실 수정
       .py-3
       .label 부가서비스
-      .form-row.mb-3
+      .form-row.mb-2
         .col-9.pt-1 숯,그릴(2인)(10,000원)
         .col-3
           select.custom-select
@@ -90,7 +90,7 @@
             option 1
             option(selected) 2
             option 3
-      .form-row.mb-3
+      .form-row.mb-2
         .col-9.pt-1 바베큐 캠프파이어 이벤트(20인)(190,000원)
         .col-3
           select.custom-select
@@ -99,14 +99,16 @@
             option 2
             option 3
       .py-3
-      .form-slim
-        .label 도착예정시간
-        input.input.pencil(type='text', value='15:00')
-        span.underline
-      .form-slim
-        .label 퇴실예정시간
-        input.input.pencil(type='text', value='11:00')
-        span.underline
+      .form-row.mb-2
+        .col-6.pt-2
+          .label 도착예정시간
+        .col-6
+          input.form-control(type='time', value='15:00')
+      .form-row.mb-3
+        .col-6.pt-2
+          .label 퇴실예정시간
+        .col-6
+          input.form-control(type='time', value='11:00')
       .form-slim
         .label 연락처
         input.input.pencil(type='text', value='010-1345-5504')
