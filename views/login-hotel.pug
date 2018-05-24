@@ -1,0 +1,133 @@
+include ./includes/header.pug
+
+//-------- Login Page: Hotel ---------//
+body
+  .login.hotel
+    .d-flex.justify-content-between
+      img(src='/assets/images/O.svg')
+      img(src='/assets/images/N.svg')
+
+    .row
+      .col-sm-6.col-lg-5.col-xl-4.mx-auto
+        .text-center
+          img(src='/assets/images/bi-onda-white.svg')
+        .login-box
+          h5.text-center.mb-4
+            b.mr-2 호텔/게스트하우스
+            span.font-weight-normal 파트너 로그인
+          input.form-control.mb-2(type='text', placeholder='이메일 주소')
+          input.form-control.mb-2(type='text', placeholder='비밀번호')
+          button.btn.btn-dark.btn-lg.btn-block.btn-login(type='button', data-toggle='modal', data-target='#selectPropertyModal') 로그인
+          .d-flex.justify-content-between.mt-3
+            label.custom-control.custom-checkbox
+              input.custom-control-input(type='checkbox', checked)
+              span.custom-control-label.text-muted
+                small(style='position: relative; top: -1px') 아이디 저장
+            div
+              a.mt-1.text-muted.small(href='#', data-toggle='modal', data-target='#findIdModal') 아이디
+              a.mt-1.text-muted.small(href='#', data-toggle='modal', data-target='#findPwModal') /비밀번호 찾기
+
+    .d-flex.justify-content-between
+      img(src='/assets/images/D.svg')
+      img(src='/assets/images/A.svg')
+
+//- 회원정보 업데이트 안내 Modal
+#updateModal.modal.fade(tabindex='-1')
+  .modal-dialog.modal-sm
+    .modal-content
+      .modal-header
+        h5.modal-title 회원정보 업데이트 안내
+        a.close(data-dismiss='modal')
+          img(src='/assets/images/close.svg')
+      .modal-body
+        p.text-center.mb-5
+          | ONDA가 파트너님의 회원정보를 안전하게 보호하기 위해
+          br
+          | 로그인 정보를 다시한번 확인합니다.
+          br
+          | 이메일 아이디와 비밀번호 입력 후 회원정보를 업데이트해주세요.
+        .form-group.row
+          label.label-necessary.col-sm-3.pt-1 이메일 아이디
+          .col-sm-9
+            input.form-control(type='text')
+        .form-group.row
+          label.label-necessary.col-sm-3.pt-1 비밀번호
+          .col-sm-9
+            input.form-control(type='password')
+        .form-group.row
+          label.label-necessary.col-sm-3.pt-1 비밀번호 확인
+          .col-sm-9
+            input.form-control(type='password')
+        .form-group.row
+          label.label-necessary.col-sm-3.pt-1 이름
+          .col-sm-9
+            input.form-control(type='text')
+        .form-group.row
+          label.label-necessary.col-sm-3.pt-1 연락처
+          .col-sm-9
+            .form-row
+              .col-5
+                select.custom-select
+                  option (+82) 대한민국
+              .col-7
+                input.form-control(type='text', value='010-1205-5300')
+        .text-center.py-3
+          button.btn.btn-secondary.btn-lg.mr-1(type='button', data-dismiss='modal') 다음에
+          button.btn.btn-dark.btn-lg(type='button', data-dismiss='modal') 확인
+
+//- 아이디찾기 Modal
+#findIdModal.modal.fade(tabindex='-1')
+  .modal-dialog.modal-sm
+    .modal-content
+      .modal-header
+        h5.modal-title 아이디 찾기
+        a.close(data-dismiss='modal')
+          img(src='/assets/images/close.svg')
+      .modal-body
+        .form-group.row
+          label.col-sm-2.pt-1 이름
+          .col-sm-10
+            input.form-control(type='text')
+        .form-group.row
+          label.col-sm-2.pt-1 전화번호
+          .col-sm-10
+            input.form-control(type='text')
+        .text-center.py-3
+          -
+            var message01 = `
+              swal({
+                title: "아이디를 찾았습니다.",
+                text: "damon.cho@onda.me",
+                confirmButtonText: "확인",
+              });
+            `
+          button.btn.btn-dark.btn-lg(type='button', data-dismiss='modal', onclick= message01) 확인
+
+//- 비밀번호 찾기 Modal
+#findPwModal.modal.fade(tabindex='-1')
+  .modal-dialog.modal-sm
+    .modal-content
+      .modal-header
+        h5.modal-title 비밀번호 찾기
+        a.close(data-dismiss='modal')
+          img(src='/assets/images/close.svg')
+      .modal-body
+        .form-group.row
+          label.col-sm-3.pt-1 이메일 주소
+          .col-sm-9
+            input.form-control(type='text')
+        .text-center.py-3
+          -
+            var message02 = `
+              swal({
+                title: "비밀번호 재설정 링크가<br>이메일과 핸드폰 문자로 전송되었습니다.",
+                confirmButtonText: "확인",
+                showCancelButton: true,
+                cancelButtonText: '재전송'
+              });
+            `
+          button.btn.btn-dark.btn-lg(type='button', data-dismiss='modal', onclick= message02) 비밀번호 재설정 링크전송
+
+
+
+
