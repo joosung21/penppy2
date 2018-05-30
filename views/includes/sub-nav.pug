@@ -15,7 +15,13 @@
       a(href='/season-year-calendar') 시즌달력
       a.dropdown(href='#', data-toggle='dropdown')
         img(src='/assets/images/user.svg')
-      .dropdown-menu
+      .dropdown-menu.pt-0
+        .bg-light.p-3
+          .input-group
+            input.form-control(type='text', placeholder='숙소명을 입력하세요.')
+            .input-group-append
+              button.btn.btn-primary.py-0.px-2(type='button')
+                img(src='/assets/images/search_white.svg', style='margin-top: -.2rem')
         .small.text-muted.px-3.pt-2 숙소선택
         a.dropdown-item(href='#') 라비앤로즈펜션
         a.dropdown-item(href='#') 노을에기댄언덕
