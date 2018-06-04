@@ -6,10 +6,14 @@ function doSomething(scroll_pos) {
   if(windowWidth > 1500) {
     if(scroll_pos > 253) {
       $('.chart-row.header').css('top', (scroll_pos - 261) + 'px');
+    } else {
+      $('.chart-row.header').css('top', 0);
     }
   } else {
     if(scroll_pos > 340) {
       $('.chart-row.header').css('top', (scroll_pos - 348) + 'px');
+    } else {
+      $('.chart-row.header').css('top', 0);
     }
   }
 }
