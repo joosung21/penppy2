@@ -2,12 +2,12 @@ var last_known_scroll_position = 0;
 var ticking = false;
 
 function doSomething(scroll_pos) {
+  var windowWidth = $(window).width();
   if(windowWidth > 1500) {
     if(scroll_pos > 253) {
       $('.chart-row.header').css('top', (scroll_pos - 261) + 'px');
     }
   } else {
-    console.log(scroll_pos);
     if(scroll_pos > 340) {
       $('.chart-row.header').css('top', (scroll_pos - 348) + 'px');
     }
