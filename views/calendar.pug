@@ -37,7 +37,21 @@ body(name='calendar')
               img(src='/assets/images/view-calendar-on.svg', style='margin-top: -2px')
             a.btn.btn-white(href='/calendar-chart', data-toggle='tooltip', title='차트로 보기')
               img(src='/assets/images/view-chart-off.svg', style='margin-top: -2px')
-          button.btn.btn-white.ml-3(type='button') 요금보기
+          button.btn.btn-white.ml-3.dropdown(type='button', data-toggle='dropdown') 요금보기
+          .dropdown-menu.dropdown-menu-right
+            .px-4.pt-3
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-label 실사간예약창
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-label 티몬
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-label 야놀자
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-label 11번가
 
       .table-responsive.mt-3
         table.table-bordered.table-calendar
@@ -82,19 +96,14 @@ body(name='calendar')
                     .d-flex.align-items-center
                       .status-badge.blocked
                       span 방막음(2개)
-                .price
-                  del.small.text-muted.d-block 68,000원
-                  | 55,000원
                 .room
                   .status-badge.available
                   .name B(테라스)
                   .stock 4/5
-                .price 90,000원
                 .room
                   .status-badge.complete
                   .name S(복층스파)
                   .stock 2/2
-                .price 170,000
               td.past-day
                 .day-header
                   .date 2
@@ -232,14 +241,64 @@ body(name='calendar')
                   .status-badge.available
                   .name A
                   .stock 1/6
+                .price
+                  .channel 실시간
+                  .value
+                    del.small.text-muted.d-block 120,000
+                    | 100,000
+                .price
+                  .channel 티몬
+                  .value
+                    | 120,000
+                .price
+                  .channel 11번가
+                  .value
+                    | 120,000
+                .price
+                  .channel 야놀자
+                  .value
+                    del.small.text-muted.d-block 120,000
+                    | 100,000
                 .room
                   .status-badge.available
                   .name B(테라스)
                   .stock 4/5
+                .price
+                  .channel 실시간
+                  .value
+                    | 120,000
+                .price
+                  .channel 티몬
+                  .value
+                    | 120,000
+                .price
+                  .channel 11번가
+                  .value
+                    | 120,000
+                .price
+                  .channel 야놀자
+                  .value
+                    | 120,000
                 .room
                   .status-badge.available
                   .name S(복층스파)
                   .stock 2/2
+                .price
+                  .channel 실시간
+                  .value
+                    | 120,000
+                .price
+                  .channel 티몬
+                  .value
+                    | 120,000
+                .price
+                  .channel 11번가
+                  .value
+                    | 120,000
+                .price
+                  .channel 야놀자
+                  .value
+                    | 120,000
               td
                 .day-header
                   .date 11
