@@ -916,7 +916,7 @@ body(name='price-chart')
           button.btn.btn-primary.btn-lg(type='button', data-dismiss='modal') 저장
 
 //- 기간지정 할인 Modal
-#periodEditModal.modal.fade(tabindex='-1')
+#periodEditModal.modal(tabindex='-1')
   .modal-dialog
     .modal-content
       .modal-header
@@ -931,41 +931,36 @@ body(name='price-chart')
               input.form-control.form-control-datepicker(type='text', value='2017.07.16(수)', size='18')
               span.px-2 ~
               input.form-control.form-control-datepicker.mr-2(type='text', value='2017.08.20(목)', size='18')
-            .form-inline.mt-2
-              button.btn.btn-white.btn-sm.border-0(type='button')
-                u 요일선택
-            //- .form-inline.mt-2
-              .btn-group.btn-group-toggle.d-flex.align-items-center.mr-3(data-toggle='buttons')
-                label.btn.btn-white.active
-                  input(type='checkbox', autocomplete='off', checked)
-                  | 월
-                label.btn.btn-white.active
-                  input(type='checkbox', autocomplete='off', checked)
-                  | 화
-                label.btn.btn-white
-                  input(type='checkbox', autocomplete='off')
-                  | 수
-                label.btn.btn-white
-                  input(type='checkbox', autocomplete='off')
-                  | 목
-                label.btn.btn-white
-                  input(type='checkbox', autocomplete='off')
-                  | 금
-                label.btn.btn-white
-                  input(type='checkbox', autocomplete='off')
-                  | 토
-                label.btn.btn-white
-                  input(type='checkbox', autocomplete='off')
-                  | 일
-              button.btn.btn-white.btn-sm.border-0(type='button')
-                u 전체
-              button.btn.btn-white.btn-sm.border-0(type='button')
-                u 일~목
-              button.btn.btn-white.btn-sm.border-0(type='button')
-                u 금~토
+              a.small.ml-2(href='#')
+                u.text-dark 날짜제외
+            .mt-2
+              button.btn.btn-dark.btn-sm.mr-2
+                | 2018.09.10
+                i.fa.fa-times.ml-2
+              button.btn.btn-dark.btn-sm.mr-2
+                | 2018.09.11
+                i.fa.fa-times.ml-2
+
+        .form-group.row
+          label.col-sm-2.pt-1 시즌선택
+          .col-sm-10
+            .form-inline
+              label.custom-control.custom-checkbox.mr-4
+                input.custom-control-input(type='checkbox', checked)
+                span.custom-control-label 비수기
+              label.custom-control.custom-checkbox.mr-4
+                input.custom-control-input(type='checkbox', checked)
+                span.custom-control-label 준성수기
+              label.custom-control.custom-checkbox.mr-4
+                input.custom-control-input(type='checkbox', checked)
+                span.custom-control-label 성수기
+              label.custom-control.custom-checkbox.mr-4
+                input.custom-control-input(type='checkbox', checked)
+                span.custom-control-label 황금연휴
+
         .form-group.row.mt-5
           label.col-sm-2.pt-1 할인률
-          .col-sm-10
+          .col-sm-5
             .form-inline.mb-3
               span.mr-2 기준요금 기준
               input.form-control.text-center.mr-1(type='number', style='width: 8rem')
@@ -973,6 +968,32 @@ body(name='price-chart')
                 option %
                 option 원
               span 할인
+            .input-group.mb-2
+              .input-group-prepend
+                .input-group-text(style='width: 7rem') 일요일
+              input.form-control(type='text')
+              .input-group-append
+                .input-group-text 원
+            .input-group.mb-2
+              .input-group-prepend
+                .input-group-text(style='width: 7rem') 주중
+              input.form-control(type='text')
+              .input-group-append
+                .input-group-text 원
+            .input-group.mb-2
+              .input-group-prepend
+                .input-group-text(style='width: 7rem') 금요일
+              input.form-control(type='text')
+              .input-group-append
+                .input-group-text 원
+            .input-group.mb-2
+              .input-group-prepend
+                .input-group-text(style='width: 7rem') 토요일
+              input.form-control(type='text')
+              .input-group-append
+                .input-group-text 원
+
+
         .form-group.row
           label.col-sm-2 객실 선택
           .col-sm-10
@@ -1016,3 +1037,7 @@ body(name='price-chart')
 
 //- Fixed Date Header
 script(src='/js/date-header.js')
+
+
+script.
+  $('#periodEditModal').modal();
