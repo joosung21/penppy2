@@ -56,24 +56,31 @@ body.two-depth(name='setting', page='bp')
                   i.fa.fa-plus.fa-lg.mr-1
                   | 추가
         .form-group.row
-          label.col-sm-3.pt-1 입금 대기시간
+          label.col-sm-3.pt-1 미입금 자동취소
           .col-sm-9
+            label.custom-control.custom-radio.custom-control-inline
+              input.custom-control-input(type='radio', name='radio1')
+              span.custom-control-label 사용
+            label.custom-control.custom-radio.custom-control-inline.mr-4
+              input.custom-control-input(type='radio', name='radio1', checked)
+              span.custom-control-label 사용안함
+            .small.mt-4.mb-2 입금 대기시간
             .form-inline
-              span.mr-2 기본
-              select.custom-select.mr-3
+              span.mr-2 당일
+              select.custom-select.mr-2
                 option 30분
                 option 1시간
                 option 2시간
                 option 3시간
                 option 4시간
                 option 5시간
-                option 6시간
+                option(selected) 6시간
                 option 7시간
                 option 8시간
                 option 9시간
                 option 10시간
                 option 11시간
-                option(selected) 12시간
+                option 12시간
                 option 13시간
                 option 14시간
                 option 15시간
@@ -113,21 +120,21 @@ body.two-depth(name='setting', page='bp')
                 option 22시간
                 option 23시간
                 option 24시간
-              span.mr-2 당일
-              select.custom-select
+              span.mr-2 2일전
+              select.custom-select.mr-3
                 option 30분
                 option 1시간
                 option 2시간
                 option 3시간
                 option 4시간
                 option 5시간
-                option(selected) 6시간
+                option 6시간
                 option 7시간
                 option 8시간
                 option 9시간
                 option 10시간
                 option 11시간
-                option 12시간
+                option(selected) 12시간
                 option 13시간
                 option 14시간
                 option 15시간
@@ -140,20 +147,9 @@ body.two-depth(name='setting', page='bp')
                 option 22시간
                 option 23시간
                 option 24시간
-        .form-group.row
-          label.col-sm-3.pt-1 자동취소 사용여부
-          .col-sm-9
-            label.custom-control.custom-radio.custom-control-inline
-              input.custom-control-input(type='radio', name='radio1')
-              span.custom-control-label 사용
-            label.custom-control.custom-radio.custom-control-inline.mr-4
-              input.custom-control-input(type='radio', name='radio1', checked)
-              span.custom-control-label 사용안함
             .info
               | 입금대기시간이 초과되면 자동으로 예약이 취소됩니다.
-        .form-group.row
-          label.col-sm-3.pt-1 자동취소 보류시간
-          .col-sm-9
+            .small.mt-4.mb-2 자동취소 보류시간
             .form-inline
               label.custom-control.custom-radio.custom-control-inline
                 input.custom-control-input(type='radio', name='radio2', checked)
@@ -166,7 +162,9 @@ body.two-depth(name='setting', page='bp')
               .px-2 ~
               input.form-control(type='text', value='07:00')
             .info
-              | 입금확인이 어려운 시간에 자동취소가 되는 것을 방지합니다. 자동취소 보류시간이 초과하면 입금확인이 안 된 모든 예약이 자동으로 취소됩니다.
+              | 입금확인이 어려운 시간에 자동취소가 되는 것을 방지합니다.
+              br
+              | 자동취소 보류시간이 초과하면 입금확인이 안 된 모든 예약이 자동으로 취소됩니다.
         .form-group.row
           label.col-sm-3.pt-1 추가인원요금 결제방법
           .col-sm-9
