@@ -655,6 +655,14 @@ body(name='calendar')
                   .date.text-blue 3
                   .season.text-muted 비수기
 
+      .d-flex.mt-4
+        button.btn.btn-white(type='button')
+          i.fa.fa-angle-left
+          | 이전달
+        button.btn.btn-white.ml-auto(type='button')
+          | 다음달
+          i.fa.fa-angle-right
+
     include ./includes/footer.pug
 
 //- 예약창 슬라이드
