@@ -154,6 +154,84 @@ body(name='reservation-list')
               span.text-red 예약취소
             td.text-left
             td.text-left
+
+
+      .py-5
+
+      //- Multi Rooms
+      table.table.text-center.align-middle.table-hover
+        thead.bg-light
+          tr
+            th.text-left.pl-4(style='width: 10rem') 판매채널/예약일시
+            th 예약자
+            th 객실
+            th 결제금액
+            th 상태
+            th(style='width: 15%') 고객 요청사항
+            th(style='width: 15%') 관리자 메모
+        tbody
+          tr
+            td.text-left.pl-4
+              | PC 예약창
+              .small 2017-03-20 15:20
+            td
+              | 정우성
+              br
+              | 010-1111-2222
+              br
+              button.btn.btn-white.btn-small.mt-2(type='button') SMS
+            td
+              .row.no-gutters.py-2.border-bottom
+                .col-6
+                  | 하늘채 사랑방
+                  .small.text-muted 성인 2,아동 1,유아 1
+                .col-6
+                  | 2017.03.20(1박)
+                  .small.text-muted ~ 2017.03.21
+              .row.no-gutters.py-2
+                .col-6
+                  | 해
+                  .small.text-muted 성인 2,아동 2,유아 0
+                .col-6
+                  | 2017.03.20(2박)
+                  .small.text-muted ~ 2017.03.22
+            td
+              | 230,000원
+              .small 무통장입금
+            td
+              span.text-blue 입금대기
+            td.text-left
+              | 늦게 도착할것 같아서 도착하기 두시간 정도전에 전화 드리고 바베큐 좀 부탁드립니다.
+            td.text-left
+              | 위메프티켓 J4C3I5GLDL 9K
+          tr
+            td.text-left.pl-4
+              | PC 예약창
+              .small 2017-03-20 15:20
+            td
+              | 정우성
+              br
+              | 010-1111-2222
+              br
+              button.btn.btn-white.btn-small.mt-2(type='button') SMS
+            td
+              .row.no-gutters.py-2
+                .col-6
+                  | 하늘채 사랑방
+                  .small.text-muted 성인 2,아동 1,유아 1
+                .col-6
+                  | 2017.03.20(1박)
+                  .small.text-muted ~ 2017.03.21
+            td
+              | 230,000원
+              .small 무통장입금
+            td
+              span.text-blue 입금대기
+            td.text-left
+              | 늦게 도착할것 같아서 도착하기 두시간 정도전에 전화 드리고 바베큐 좀 부탁드립니다.
+            td.text-left
+              | 위메프티켓 J4C3I5GLDL 9K
+
       nav.mt-5
         ul.pagination.justify-content-center
           li.page-item.disabled
